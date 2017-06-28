@@ -1,0 +1,18 @@
+Alexander Harris
+Wednesday June 28th, 2017
+foundry10 web development intern
+http://foundry10.org
+
+Greetings! My notes for the day are included below.
+
+Tom drafted three relevant questions to consider for site development moving forward.
+  who are the users? what are they interested in given what's on our site?
+  where are the confusions on our site?
+  how to re-organize the nav bar to have greater utility?
+
+Today we especially discussed the nav-bar layout and how one method of organizing it may be to provide a link/drop-down for each type of user. Where a user type may be a student, parent, teacher, researcher, or employee.
+
+Currently, I have the nav-bar dev environment live at the following url.
+http://opensource.eco/f10/
+
+I contacted Henry Woody, BoS Mathematics, who has experience with Android application development. His most recent application is called Eventi and it scored great popularity among the students of our school. I will introduce the two of you via email.
