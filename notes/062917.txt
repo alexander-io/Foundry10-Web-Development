@@ -2,3 +2,42 @@ Alexander Harris
 Wednesday June 28th, 2017
 foundry10 web development intern
 http://foundry10.org
+
+10:00am, setting out to create nav-bar
+
+Research Dark Site Styling Dos and Don'ts
+https://www.webdesignerdepot.com/2009/08/the-dos-and-donts-of-dark-web-design/
+
+  use more white space (or should it be called black space?)
+  dark designsd have a tendency to feel "heavy", and cluttering them up can reinforce that feeling
+
+  textual white space
+    because readability is a high concern for dark-themes, pay close attention to the text itself
+    one way to improve readability through the text on the page is to increase the white space by adjusting paragraph size, kerning size, and leadning size
+    another way to increase readability is to increase font size
+
+  text contrast
+    pay specific attention to the contrast of the text
+    in the same way that viewing a bright light in a dark room is harsh on the eyes, reading pure-white text on a black back ground may also be harsh
+    below is a key with differing hex colors combinations of backs and whites for backgrounds and matching fonts. They are "pleasing" to the eye. The outer hex value represents the black-ish background color and the inner hex values represent the white-ish font color
+      #background-color
+        #font-color
+
+      #000
+        #cccccc
+        #bbbbbb
+      #111
+        #dddddd
+        #cccccc
+        #bbbbbb
+      #222
+        #eeeeee
+        #dddddd
+        #cccccc
+      #333
+        #ffffff
+        #eeeeee
+        #dddddd
+
+
+Create Mock-Up for Expose Page
