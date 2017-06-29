@@ -39,5 +39,55 @@ https://www.webdesignerdepot.com/2009/08/the-dos-and-donts-of-dark-web-design/
         #eeeeee
         #dddddd
 
+    text on backgrounds via material design
+      text should be legible on the background on which it appears
+      it is recommended that :
+        dark-grey text is used on light backgrounds
+        light-grey text is used on dark backgrounds
 
-Create Mock-Up for Expose Page
+      light text on dark backgrounds
+        primary white text occurring on a colored background should do so at 100% opacity
+        secondary -> 70%
+        disabled text, hints -> 50%
+        dividers -> 12%
+
+      dark text on light backgrounds
+        the level of opacity used for text depends on whether the background is dark or light, for dark text on light backgrounds, apply the following opacity levels :
+          the most important text has an opacity of 87%
+          the secondary text which is lower in the visual hierarchy, has an opacity of 54%
+          text hints (such as text fields and labels) or disabled text should have a lower opacity of 38%
+
+
+  dealing with fonts
+    the age old debate between sans-serif and serif (utility and beauty, readability and elegance, the head and the heart)
+    there's a simple (and common sensical) trick, use serif fonts for headings, and use sans-serif for bodies of text
+
+  use minimal color schemes
+    to give their dark designs clean and uncluttered look, designers should opt for minimal color schemes
+
+    material-design dark theme
+    1. status bar,    black,    #000000
+    2. app bar,       d-grey,   #212121
+    3. Background,    grey,     #303030
+    4. cards/dialogs, l-grey,   #424242
+
+material design color theory
+  primary color
+    the primary color is the color dispalyed most frequently across the applicationns screens and componenets. It can also be used to accent elements (if there isn't a secondary color). Primary colors are indicated by the 500 value
+
+    to create contrast between elements, you can lighten the tones of the primary color, for example choose 100 or 700 to complement the primary
+
+  secondary color
+    a secondary color is used to accent select parts of the ui.
+    it can be complementary or analogous to your primary color, but it should not simply be a light or dark variation of your primary color.
+    it should contrast with elements ithat surround it and be applied sparingly as an accent
+    secondary colors are most effectively used for :
+      buttons, floating actions buttons, and button text
+      text fields, cursor, and text selection
+      progress bar
+      selection controls, buttons, and sliders
+      links
+      headlines
+
+
+TODO - Create Mock-Up for Expose Page
