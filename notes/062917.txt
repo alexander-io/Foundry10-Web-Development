@@ -2,6 +2,8 @@ Alexander Harris
 Wednesday June 28th, 2017
 foundry10 web development intern
 http://foundry10.org
+http://opensource.eco/f10
+https://github.com/alexander-io/foundry10-web-development
 
 10:00am, setting out to create nav-bar
 
@@ -89,5 +91,16 @@ material design color theory
       links
       headlines
 
+Today I worked with Andrun, the highschool intern that's developing a portfolio website. He's curious about hosting, I suggested that he research a few technologies to help him along his way : atom text-editor, Node.js javascript runtime environment, NPM node-package-manager for auxiliary Node software, express application framework for server site web-hosting.
 
-TODO - Create Mock-Up for Expose Page
+Throughout the day, I've been pushing all of my notes, work, and changes to GitHub, find the repository at github.com/alexander-io/foundry10-web-development
+
+Also, I have updated the foundry10 navigation development environment which can be found at opensource.eco/f10
+
+TODO Timeline
+  Expose Page
+  Restructure Site Layout & Links
+  Restructure Nav-Bar
+  Restructure Footer
+  Add Event Trackers
+  Sign up for newsletter
