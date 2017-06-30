@@ -1,6 +1,6 @@
 # foundry10 Web Development
 ## [Live Site](http://foundry10.org)
-## [Development Site](http://opensource.eco/f10)
+## [Development Environment](http://opensource.eco/f10)
 ![vr](public/images/ao-vr.jpg)
 
 Alexander Harris
@@ -14,6 +14,11 @@ Today I set out to create a layout for the expose/about-us page that clearly and
 
 I started today by gathering icons to represent the various on-going at foundry10. For example, I have now included icons in the project repository for a arist brush, camera aris, code-braces, gender-studies, game-controller, robotics, and a wrench. The icnons can be found at the following url :
 https://github.com/alexander-io/Foundry10-Web-Development/tree/master/public/icons
+
+
+In the development environment, I've added elements including icons, headers, links, text-bodies, and an image-banner. I've added code to ensure that the site stays mobile friendly.
+
+This morning I submitted my weekly hours to Jenna. I met with Lisa regarding my experience at foundry10 as a web developer so far. Tom provided me with the server, and file-transfer-protocol credentials for the organization's server.
 
 
 Alexander Harris
