@@ -1,0 +1,11 @@
+Alexander Harris
+Friday June 30th, 2017
+foundry10 web development intern
+http://foundry10.org
+http://opensource.eco/f10
+https://github.com/alexander-io/foundry10-web-development
+
+Today I set out to create a layout for the expose/about-us page that clearly and concisely describes the organization and their work.
+
+I started today by gathering icons to represent the various on-going at foundry10. For example, I have now included icons in the project repository for a arist brush, camera aris, code-braces, gender-studies, game-controller, robotics, and a wrench. The icnons can be found at the following url : 
+https://github.com/alexander-io/Foundry10-Web-Development/tree/master/public/icons
