@@ -5,7 +5,7 @@
 
 Alexander Harris
 Friday June 30th, 2017
-foundry10 web development intern
+foundry10 web development 
 http://foundry10.org
 http://opensource.eco/f10
 https://github.com/alexander-io/foundry10-web-development
@@ -23,7 +23,7 @@ This morning I submitted my weekly hours to Jenna. I met with Lisa regarding my 
 
 Alexander Harris
 Thursday June 29th, 2017
-foundry10 web development intern
+foundry10 web development
 http://foundry10.org
 http://opensource.eco/f10
 https://github.com/alexander-io/foundry10-web-development
@@ -114,7 +114,7 @@ material design color theory
       links
       headlines
 
-Today I worked with Andrun, the highschool intern that's developing a portfolio website. He's curious about hosting, I suggested that he research a few technologies to help him along his way : atom text-editor, Node.js javascript runtime environment, NPM node-package-manager for auxiliary Node software, express application framework for server site web-hosting.
+Today I worked with Andrun, the highschool  that's developing a portfolio website. He's curious about hosting, I suggested that he research a few technologies to help him along his way : atom text-editor, Node.js javascript runtime environment, NPM node-package-manager for auxiliary Node software, express application framework for server site web-hosting.
 
 Throughout the day, I've been pushing all of my notes, work, and changes to GitHub, find the repository at github.com/alexander-io/foundry10-web-development
 
@@ -131,7 +131,7 @@ TODO Timeline
 
 Alexander Harris
 Wednesday June 28th, 2017
-foundry10 web development intern
+foundry10 web development
 http://foundry10.org
 
 Greetings! My notes for the day are included below.
@@ -152,7 +152,7 @@ I contacted Henry Woody, BoS Mathematics, who has experience with Android applic
 
 Alexander Harris
 Tuesday June 27th, 2017
-foundry10 web development intern
+foundry10 web development
 http://foundry10.org
 
 Thanks for an excellent first day. I'll reach out to the two Android experts that I know and provide you with updates.
@@ -165,7 +165,7 @@ nav-bar
     digital audio     => .../areas-overview/digital-audio/
     early education   => .../areas-overview/early-education/
     gender studies    => .../areas-overview/girls-programs/
-    interships        => .../areas-overview/internships/
+    interships        => .../areas-overview/ships/
     robotocs          => .../areas-overview/robotics/
     automotive        => .../areas-overview/automotive/
     drama             => .../areas-overview/drama/
@@ -213,7 +213,7 @@ foundry10.org = {
   'games and learning' : '/areas-overview/games-and-learning/',
   'professional development' : '/areas-overview/professional-development/',
   'early education' : '/areas-overview/early-education/',
-  'internships' : '/areas-ovewview/internships/',
+  'ships' : '/areas-ovewview/ships/',
   'artistic design' : '/areas-overview/artistic-design/',
   'lets collaborate' : '/contact-us/'
 }
@@ -261,7 +261,7 @@ Proposal Layout
     /programs/overview/professional-developmen
     /programs/overview/virtual-reality
 
-    /programs/internships         li
+    /programs/ships         li
     /programs/apply               li
 
     /research
