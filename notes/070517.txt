@@ -1,0 +1,10 @@
+Alexander Harris
+Wednesday July 5th, 2017
+foundry10 web development intern
+http://foundry10.org
+http://opensource.eco/f10
+https://github.com/alexander-io/foundry10-web-development
+
+Today I'll start to implement some of the mock-ups that I've created.
+
+9:20am, move embeded styles from public/index.html to public/css/styles.css
