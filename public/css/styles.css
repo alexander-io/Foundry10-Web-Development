@@ -18,7 +18,8 @@ body p {
 
 body {
   width: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  overflow-x: hidden;
 }
 
 /*a { color: #CCC }*/
