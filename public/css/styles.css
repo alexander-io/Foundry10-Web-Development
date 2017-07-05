@@ -1,7 +1,7 @@
 
 body {
-  font-family: 'Righteous', cursive;
-  background-color: #303030;
+  /*font-family: 'Righteous', cursive;*/
+  background-color: white;
 }
 .card-panel {
   background-color: #424242;
@@ -14,6 +14,24 @@ div.drag-target{
 
 body p {
   color:#cccccc;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*a { color: #CCC }*/
+
+#canvas {
+  position: absolute;
+  top: 400px;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  z-index: -98;
+  pointer-events: none;
+  background-color: #aaa;
 }
 
 #f10title{
@@ -106,7 +124,7 @@ h1 {
   font-size: 1000%;
 }
 h2 {
-  font-size: 800%;
+  font-size: 650%;
 }
 h3 {
   font-size: 600%:
