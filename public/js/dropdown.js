@@ -1,4 +1,10 @@
 (function(){
+  // set booleans to track the state of the mouse's location
+  // this is useful for closing drop-down menus when mouse is both away from the nav-items and drop-down menus
+  let mouse_in_nav_item = false
+  let mouse_in_drop_down = false
+
+
   // NOTE - if you are a user, you'll want to 'bind' the navitems to the dropmenu items by referencing their ids in this function
   let build_nav_lst = () => {
     let gi = (elem) => {
@@ -17,34 +23,77 @@
     ]
   }
 
-  let drop_the_down = function(thas, n, d){
+  /*
+   * workhorse function that 'reveals' the a link-corresponding drop-down menu
+   * also , add 'mouseover' and 'mouseleave' event listeners to the nav-items -> this is useful for tracking the position of the mouse in the DOM so to close the drop-down menus when appropriate
+   * @param n, the nav-item document-object-model element
+   * @param d, the drop-down document-object-model element
+   */
+  let drop_the_down = function(n, d){
     // the the rectangle and positional data associated with 'this'
     // keep in mind that 'this' is meant to be an instance of a nav-item
-    let rect = thas.getBoundingClientRect()
+    let rect = n.getBoundingClientRect()
     d.style.visibility = 'visible'
     d.style.backgroundColor = '#ffffff'
     d.width = n.getBoundingClientRect().width+'px'
     d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width))+'px'
     d.style.top = n.getBoundingClientRect().bottom+'px'
 
+    d.addEventListener('mouseover', function(){
+      mouse_in_drop_down = true
+      console.log('mouse in drop down :', mouse_in_drop_down)
+    })
+
     // if the mouse move out of the drop down, set it to hidden
     d.addEventListener('mouseleave', function(){
       d.style.visibility = 'hidden'
+      mouse_in_drop_down = false
+      console.log('mouse in drop down :', mouse_in_drop_down)
     })
   }
 
   let add_event_listeners_to_nav_items = (nav_lst, eventtt) => {
+
+    // for all of the navigation items
     for (let i = 0; i < nav_lst.length; i++){
+
+      // add a click event listener to the nav item, changing
+      // the visibility of the corresponding drop down menu
       nav_lst[i][0].addEventListener(eventtt, function(e) {
-        if (nav_lst[i][1].style.visibility == 'hidden') drop_the_down(this, nav_lst[i][0], nav_lst[i][1])
+        if (nav_lst[i][1].style.visibility == 'hidden') drop_the_down(nav_lst[i][0], nav_lst[i][1])
         else nav_lst[i][1].style.visibility = 'hidden'
       });
+
+
+      // add an event listener to each of the nav items, listening for mouse over
+      // this is useful when attempting to close the drop-down menu items on click-away
+      nav_lst[i][0].addEventListener('mouseover', function(){
+        mouse_in_nav_item = true
+      })
+      nav_lst[i][0].addEventListener('mouseleave', function(){
+        mouse_in_nav_item = false
+      })
     }
   }
 
+  // build a list that associates the nav-item links with their corresponding drop-down menus
   let nav_lst = build_nav_lst()
   add_event_listeners_to_nav_items(nav_lst, 'click')
 
+  // select the body
+  let body = document.getElementById('body');
+  
+  // add a click event to the body of the document...
+  // if  a use clicks the document and their mouse is not over a nav-item or the drop-down,
+  // then 'close' all drop-down menu items by setting their visibility to 'hidden'
+  body.addEventListener('click', function(e) {
+    console.log(body);
+    if (!mouse_in_drop_down && !mouse_in_nav_item) {
+      for (let i = 0; i < nav_lst.length; i++){
+        nav_lst[i][1].style.visibility = 'hidden'
+      }
+    }
+  });
 })()
 /*
 * let this be a function to return an array of nav-elements that have a corresponding drop down menu
