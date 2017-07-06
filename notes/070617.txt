@@ -1,10 +1,10 @@
-Alexander Harris
-Thursday July 6th, 2017
-foundry10 web development intern
-http://foundry10.org
-http://opensail.io
-http://35.167.90.70
-https://github.com/alexander-io/foundry10-web-development
+#### Alexander Harris
+#### Thursday July 6th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
 
 This morning I met with Lisa to briefly discuss the issue I've been having accesssing the foundry10 mail server. I messaged Tom about the issue!
 
@@ -12,13 +12,42 @@ Today I have set out to refine the navigation bar (more...). One of the current 
 
 Currently there are two  usability issues with the navigation bar. First is that each drop-down menu will stay 'revealed' or 'open' while there's another active drop-down. This feels clunky -> I'd prefer to see only one drop-down menu item able to be viewed at one time. The second issue is especially pronounced when using the site on a mobile device. It's a common gesture on a mobile device to remove pop-ups (including drop-down menu items), by clicking away fromm the menu. This is not currently a feature. In order to implement this, I'll select the body element of the Document-Object-Model add a 'click' event listener to it. On 'click event', close all drop-down menus. 
 
-update 12:15pm, I have just updated the navigation bar to improive mobile usability. Here's the logic/pseudo-code that I used :
+update 12:15pm, I have just updated the navigation bar to improive mobile usability. Here's the logic/pseudo-code that I used:
 
-    For each click-event on the body of the webpage
-        if the mouse is not over a navigation-bar link and the mouse is not over the drop-down menu
-    		then close all drop-down menu items 
+    For each click-event on the body of the webpage :
+      if the mouse is not over a navigation-bar link and the mouse is not over the drop-down menu : 
+        then close all drop-down menu items 
 
+Below I'll include a code snippet describing the functionality that I've implemented
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+// set booleans to track the state of the mouse's location
+// this is useful for closing drop-down menus when mouse is both away from the nav-items and drop-down menus
+let mouse_in_nav_item = false
+let mouse_in_drop_down = false
+
+// add event listeners to the nav-items and the drop-downs to update the booleans
+// let n imply a nav-item, let d imply a drop-down menu
+n.addEventListener('mouseover', function(){
+  mouse_in_drop_down = true
+})
+n.addEventListener('mouseleave', function(){
+  mouse_in_drop_down = false
+})
+d.addEventListener('mouseover', function(){
+  mouse_in_drop_down = true
+})
+d.addEventListener('mouseleave', function(){
+  mouse_in_drop_down = false
+})
+// finally, for each click on the document body,
+//    if the mouse isn't over the nav-item or dropdown
+//        then loop through and hide all drop-downs
+body.addEventListener('click', function() {
+  if (!mouse_in_drop_down && !mouse_in_nav_item) {
+    for (let i = 0; i < nav_lst.length; i++){
+      d.style.visibility = 'hidden'
+    }
+  }
+});
+
 ```
