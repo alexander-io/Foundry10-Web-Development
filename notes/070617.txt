@@ -1,0 +1,13 @@
+Alexander Harris
+Thursday July 6th, 2017
+foundry10 web development intern
+http://foundry10.org
+http://opensail.io
+http://35.167.90.70
+https://github.com/alexander-io/foundry10-web-development
+
+This morning I met with Lisa to briefly discuss the issue I've been having accesssing the foundry10 mail server. I messaged Tom about the issue!
+
+Today I have set out to refine the navigation bar (more...). One of the current issues with the navigation bar is its readability. In my opinion, the font size for the link-titles in the navigation bar are small. For a solution, I'll apply a few style updates to the link-titles, first I'll increase the font size. Next I'll update the color and opacity. Next I'll update the letter kerning and spacing. 
+
+Currently there are two  usability issues with the navigation bar. First is that each drop-down menu will stay 'revealed' or 'open' while there's another active drop-down. This feels clunky -> I'd prefer to see only one drop-down menu item able to be viewed at one time. The second issue is especially pronounced when using the site on a mobile device. It's a common gesture on a mobile device to remove pop-ups (including drop-down menu items), by clicking away fromm the menu. This is not currently a feature. In order to implement this, I'll select the body element of the Document-Object-Model add a 'click' event listener to it. On 'click event', close all drop-down menus. 

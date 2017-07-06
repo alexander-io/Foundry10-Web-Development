@@ -1,6 +1,9 @@
 # foundry10 Web Development
 ## [Live Site](http://foundry10.org)
 ## [Development Environment](http://opensource.eco/f10)
+
+![mock-up](md_images/f10070517.png)
+
 ![vr](public/images/ao-vr.jpg)
 
 Alexander Harris
