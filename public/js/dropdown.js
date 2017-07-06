@@ -24,6 +24,16 @@
   }
 
   /*
+   * this function hides all of the drop-down menus
+   * @param nav_lst, the corresponding list of nav-items and drop-down menus
+   */
+  let hide_all_drop_down = function(nav_lst) {
+    for (let i = 0; i < nav_lst.length; i++){
+      nav_lst[i][1].style.visibility = 'hidden'
+    }
+  } 
+
+  /*
    * workhorse function that 'reveals' the a link-corresponding drop-down menu
    * also , add 'mouseover' and 'mouseleave' event listeners to the nav-items -> this is useful for tracking the position of the mouse in the DOM so to close the drop-down menus when appropriate
    * @param n, the nav-item document-object-model element
@@ -33,6 +43,7 @@
     // the the rectangle and positional data associated with 'this'
     // keep in mind that 'this' is meant to be an instance of a nav-item
     let rect = n.getBoundingClientRect()
+    hide_all_drop_down(nav_lst)
     d.style.visibility = 'visible'
     d.style.backgroundColor = '#ffffff'
     d.width = n.getBoundingClientRect().width+'px'
@@ -89,9 +100,7 @@
   body.addEventListener('click', function(e) {
     console.log(body);
     if (!mouse_in_drop_down && !mouse_in_nav_item) {
-      for (let i = 0; i < nav_lst.length; i++){
-        nav_lst[i][1].style.visibility = 'hidden'
-      }
+      hide_all_drop_down(nav_lst)
     }
   });
 })()
