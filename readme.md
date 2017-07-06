@@ -7,6 +7,23 @@
 ![vr](public/images/ao-vr.jpg)
 
 Alexander Harris
+Wednesday July 5th, 2017
+foundry10 web development intern
+http://foundry10.org
+http://opensail.io
+http://35.167.90.70
+https://github.com/alexander-io/foundry10-web-development
+
+Today I've worked toward implementing a the mock-up that I created. I especially put work into the nav-bar and the landing display.
+
+For the nav bar, I have added another layer to contain re-directing links. The bottom layer of the nav has links that trigger drop-down menus.
+
+For the landing display, I implemented the 'triangular' backdrop following inspiration from what Tom mentioned about foundry10 being an 'against the grain oranization'.
+
+I checked in with Andrun today. He seems to be making progress toward planning his project. I gave him a demonstration of localhost development.
+
+
+Alexander Harris
 Friday June 30th, 2017
 foundry10 web development 
 http://foundry10.org
