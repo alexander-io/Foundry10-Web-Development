@@ -32,8 +32,7 @@ Below I'll include a code snippet describing the functionality that I've impleme
 ```javascript
 // set booleans to track the state of the mouse's location
 // this is useful for closing drop-down menus when mouse is both away from the nav-items and drop-down menus
-let mouse_in_nav_item = false
-let mouse_in_drop_down = false
+let mouse_in_nav_item = false, mouse_in_drop_down = false
 
 // add event listeners to the nav-items and the drop-downs to update the booleans
 // let n imply a nav-item, let d imply a drop-down menu
@@ -72,8 +71,6 @@ let hide_all_drop_down = function(nav_lst) {
   }
 }
 ```
-
-
 
 #### Alexander Harris
 #### Wednesday July 5th, 2017

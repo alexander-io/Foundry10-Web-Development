@@ -1,8 +1,7 @@
 (function(){
   // set booleans to track the state of the mouse's location
   // this is useful for closing drop-down menus when mouse is both away from the nav-items and drop-down menus
-  let mouse_in_nav_item = false
-  let mouse_in_drop_down = false
+  let mouse_in_nav_item = false, mouse_in_drop_down = false
 
 
   // NOTE - if you are a user, you'll want to 'bind' the navitems to the dropmenu items by referencing their ids in this function
@@ -31,7 +30,7 @@
     for (let i = 0; i < nav_lst.length; i++){
       nav_lst[i][1].style.visibility = 'hidden'
     }
-  } 
+  }
 
   /*
    * workhorse function that 'reveals' the a link-corresponding drop-down menu
