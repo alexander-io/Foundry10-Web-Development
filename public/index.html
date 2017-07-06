@@ -64,16 +64,19 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     <div id="particles-js" style="background-color:white;position:absolute;right:0;width:100%;height:150%;z-index:-20;"></div>
     <img id="logo-click" src="icons/f10.png" class="" style="top:17%;left:56%;position:absolute;"alt="">
     <script type="text/javascript">
-    $(window).scroll(function(){
-      var theta = $(window).scrollTop() / 256 % Math.PI;
-      $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
-    })
+    // $(window).scroll(function(){
+    //   var theta = $(window).scrollTop() / 256 % Math.PI;
+    //   $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
+    // })
     </script>
 
     <div class="row">
       <div id="triangle-bottomleft">
-        <div class="circ" style="position:absolute; border-radius:50%; background-color:#ff7f2a;height:230px;width:230px; right:56%; top:52%;">
-
+        <div class="circ" id="sub-circ" style="position:absolute; border-radius:50%; background-color:#ff7f2a;height:230px;width:230px; right:56%; top:52%;">
+          <div class="sub-circ-01" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:57.5px;bottom:300px;"></div>
+          <div class="sub-circ-02" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:57.5px;top:300px;"></div>
+          <div class="sub-circ-03" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:300px;top:57.5px"></div>
+          <div class="sub-circ-04" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; right:300px;top:57.5px"></div>
         </div>
       </div>
       <style media="screen">
@@ -86,6 +89,12 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         // console.log($('#triangle-bottomleft'))
         $('#triangle-bottomleft').css("border-bottom", (window.innerWidth)+'px solid #303038')
         $('#triangle-bottomleft').css("border-right", (window.innerWidth)+'px solid transparent')
+        $(window).scroll(function(){
+          var theta = $(window).scrollTop() / 256 % Math.PI;
+          $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
+          $('#sub-circ').css({transform: 'rotate(-' + theta + 'rad)'});
+
+        })
       </script>
 
       <div class="backgrnd" style="width:100%;height:5000px;background-color:#303038;">
