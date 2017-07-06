@@ -55,12 +55,24 @@ d.addEventListener('mouseleave', function(){
 body.addEventListener('click', function() {
   if (!mouse_in_drop_down && !mouse_in_nav_item) {
     for (let i = 0; i < nav_lst.length; i++){
-      d.style.visibility = 'hidden'
+        d.style.visibility = 'hidden'
+      }
     }
-  }
 });
 
 ```
+
+
+update 12:40pm, I have just updated the navigation bar with an aforementioned correction to its functionlaity. The update that I made enforces a rule where only one drop-down menu can be visible at a time. This prevents the user from opening all drop-down menus at one time. In order to implement this, I've defined a function in the public/js/dropdown.js to hide all drop-down menus on function call. With this function in place, I simply call the hide_all_drop_down() function immediately before 'revealing' any of the drop down menu items. This enforces the rule allowing only one drop-down menu to be visible at one time. The function is captured in the following code snippet...
+
+```javascript
+let hide_all_drop_down = function(nav_lst) {
+  for (let i = 0; i < nav_lst.length; i++){
+    nav_lst[i][1].style.visibility = 'hidden' // where nav_lst[i][1] evaluates to the drop-down menu elements
+  }
+}
+```
+
 
 
 #### Alexander Harris
