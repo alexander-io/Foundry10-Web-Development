@@ -46,19 +46,19 @@
     d.style.visibility = 'visible'
     d.style.backgroundColor = '#ffffff'
     d.width = n.getBoundingClientRect().width+'px'
-    d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width))+'px'
+    d.style.left = (n.getBoundingClientRect().left) - (n.getBoundingClientRect().width*1.2)  + 'px'
     d.style.top = n.getBoundingClientRect().bottom+'px'
 
     d.addEventListener('mouseover', function(){
       mouse_in_drop_down = true
-      console.log('mouse in drop down :', mouse_in_drop_down)
+      // console.log('mouse in drop down :', mouse_in_drop_down)
     })
 
     // if the mouse move out of the drop down, set it to hidden
     d.addEventListener('mouseleave', function(){
       d.style.visibility = 'hidden'
       mouse_in_drop_down = false
-      console.log('mouse in drop down :', mouse_in_drop_down)
+      // console.log('mouse in drop down :', mouse_in_drop_down)
     })
   }
 
@@ -97,7 +97,6 @@
   // if  a use clicks the document and their mouse is not over a nav-item or the drop-down,
   // then 'close' all drop-down menu items by setting their visibility to 'hidden'
   body.addEventListener('click', function(e) {
-    console.log(body);
     if (!mouse_in_drop_down && !mouse_in_nav_item) {
       hide_all_drop_down(nav_lst)
     }
