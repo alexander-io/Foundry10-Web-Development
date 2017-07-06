@@ -389,4 +389,12 @@ Description of Foundry10 from Tom Swanson
   }
 
 
+
+
+![sketch_0001](md_images/sketches/sketch_0001.jpg)
+![sketch_0002](md_images/sketches/sketch_0002.jpg)
+![sketch_0003](md_images/sketches/sketch_0003.jpg)
+![sketch_0004](md_images/sketches/sketch_0004.jpg)
+![sketch_0005](md_images/sketches/sketch_0005.jpg)
+![sketch_0006](md_images/sketches/sketch_0006.jpg)
 ![vr](public/images/ao-vr.jpg)
