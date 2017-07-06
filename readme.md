@@ -6,13 +6,13 @@
 
 ![vr](public/images/ao-vr.jpg)
 
-Alexander Harris
-Wednesday July 5th, 2017
-foundry10 web development intern
-http://foundry10.org
-http://opensail.io
-http://35.167.90.70
-https://github.com/alexander-io/foundry10-web-development
+### Alexander Harris
+### Wednesday July 5th, 2017
+### foundry10 web development intern
+### http://foundry10.org
+### http://opensail.io
+### http://35.167.90.70
+### https://github.com/alexander-io/foundry10-web-development
 
 Today I've worked toward implementing a the mock-up that I created. I especially put work into the nav-bar and the landing display.
 
@@ -23,12 +23,12 @@ For the landing display, I implemented the 'triangular' backdrop following inspi
 I checked in with Andrun today. He seems to be making progress toward planning his project. I gave him a demonstration of localhost development.
 
 
-Alexander Harris
-Friday June 30th, 2017
-foundry10 web development 
-http://foundry10.org
-http://opensource.eco/f10
-https://github.com/alexander-io/foundry10-web-development
+### Alexander Harris
+### Friday June 30th, 2017
+### foundry10 web development 
+### http://foundry10.org
+### http://opensource.eco/f10
+### https://github.com/alexander-io/foundry10-web-development
 
 Today I set out to create a layout for the expose/about-us page that clearly and concisely describes the organization and their work.
 
@@ -41,12 +41,12 @@ In the development environment, I've added elements including icons, headers, li
 This morning I submitted my weekly hours to Jenna. I met with Lisa regarding my experience at foundry10 as a web developer so far. Tom provided me with the server, and file-transfer-protocol credentials for the organization's server.
 
 
-Alexander Harris
-Thursday June 29th, 2017
-foundry10 web development
-http://foundry10.org
-http://opensource.eco/f10
-https://github.com/alexander-io/foundry10-web-development
+### Alexander Harris
+### Thursday June 29th, 2017
+### foundry10 web development
+### http://foundry10.org
+### http://opensource.eco/f10
+### https://github.com/alexander-io/foundry10-web-development
 
 10:00am, setting out to create nav-bar
 
@@ -149,10 +149,10 @@ TODO Timeline
   Sign up for newsletter
 
 
-Alexander Harris
-Wednesday June 28th, 2017
-foundry10 web development
-http://foundry10.org
+### Alexander Harris
+### Wednesday June 28th, 2017
+### foundry10 web development
+### http://foundry10.org
 
 Greetings! My notes for the day are included below.
 
