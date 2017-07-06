@@ -1,13 +1,38 @@
 # foundry10 Web Development
 ## [Live Site](http://foundry10.org)
 ## [Development Environment](http://opensail.io)
-![dev-env](md_images/f10_070617.png)
 
-![mock-up](md_images/f10070517.png)
+![dev-env](md_images/f10_070617.png)
 
 ![mobile](md_images/mobile_070617.png)
 
-![vr](public/images/ao-vr.jpg)
+![mock-up](md_images/f10070517.png)
+
+#### Alexander Harris
+#### Thursday July 6th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+This morning I met with Lisa to briefly discuss the issue I've been having accesssing the foundry10 mail server. I messaged Tom about the issue!
+
+Today I have set out to refine the navigation bar (more...). One of the current issues with the navigation bar is its readability. In my opinion, the font size for the link-titles in the navigation bar are small. For a solution, I'll apply a few style updates to the link-titles, first I'll increase the font size. Next I'll update the color and opacity. Next I'll update the letter kerning and spacing. 
+
+Currently there are two  usability issues with the navigation bar. First is that each drop-down menu will stay 'revealed' or 'open' while there's another active drop-down. This feels clunky -> I'd prefer to see only one drop-down menu item able to be viewed at one time. The second issue is especially pronounced when using the site on a mobile device. It's a common gesture on a mobile device to remove pop-ups (including drop-down menu items), by clicking away fromm the menu. This is not currently a feature. In order to implement this, I'll select the body element of the Document-Object-Model add a 'click' event listener to it. On 'click event', close all drop-down menus. 
+
+update 12:15pm, I have just updated the navigation bar to improive mobile usability. Here's the logic/pseudo-code that I used :
+
+    For each click-event on the body of the webpage
+        if the mouse is not over a navigation-bar link and the mouse is not over the drop-down menu
+        then close all drop-down menu items 
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
 
 #### Alexander Harris
 #### Wednesday July 5th, 2017
@@ -324,3 +349,6 @@ Description of Foundry10 from Tom Swanson
   let p4 = {
     Hopefully that gives you a feel for foundry10.  As far as fees go, everything we do is free for the schools, students, teachers, and communities with which we work.  The rare times we do charge is really only for events to cover venue fees and food.  Foundry10 is privately funded by a single investor, his name is Gabe Newell of Valve Software.  When we started, we were tasked with "doing interesting things with learning", and we took that to mean we should study it as much as we can.  We also put an emphasis on student and teacher voice, making sure that most, and ideally all, of the work we do starts at the ground level with ideas from students and teachers themselves.
   }
+
+
+![vr](public/images/ao-vr.jpg)
