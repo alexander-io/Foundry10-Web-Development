@@ -6,6 +6,8 @@
 
 ![mobile](md_images/mobile_070617.png)
 
+![dropdown menu, 070617](md_images/dropdown_0001.png)
+
 ![mock-up](md_images/f10070517.png)
 
 #### Alexander Harris
@@ -32,7 +34,7 @@ Below I'll include a code snippet describing the functionality that I've impleme
 ```javascript
 // set booleans to track the state of the mouse's location
 // this is useful for closing drop-down menus when mouse is both away from the nav-items and drop-down menus
-let mouse_in_nav_item = false, mouse_in_drop_down = false
+let mouse_in_nav_item = false, mouse_in_drop_down = false 
 
 // add event listeners to the nav-items and the drop-downs to update the booleans
 // let n imply a nav-item, let d imply a drop-down menu
@@ -61,16 +63,75 @@ body.addEventListener('click', function() {
 
 ```
 
-
 update 12:40pm, I have just updated the navigation bar with an aforementioned correction to its functionlaity. The update that I made enforces a rule where only one drop-down menu can be visible at a time. This prevents the user from opening all drop-down menus at one time. In order to implement this, I've defined a function in the public/js/dropdown.js to hide all drop-down menus on function call. With this function in place, I simply call the hide_all_drop_down() function immediately before 'revealing' any of the drop down menu items. This enforces the rule allowing only one drop-down menu to be visible at one time. The function is captured in the following code snippet...
 
 ```javascript
 let hide_all_drop_down = function(nav_lst) {
   for (let i = 0; i < nav_lst.length; i++){
-    nav_lst[i][1].style.visibility = 'hidden' // where nav_lst[i][1] evaluates to the drop-down menu elements
+    nav_lst[i][1].style.visibility = 'hidden'
   }
 }
 ```
+
+update 5:09pm, after sometime confusing myself over FTP, I posted to WordPress the July 7th post titled, 'Pre-K...', to the Early Education accordian. The post can be found here http://foundry10.org/areas-overview/early-education/. In addition to creating the post, I have updated the accordian to include the new post at the top of the widget, I moved the 'old' post to the '+ show more' section
+
+I've been putting more work into the navigation bar, especially the 'Areas' section. The design as it stands feels 'cluttered' so I took all 12 of the areas and separated them out into 3 separate 'super-categories' : tech, education, and art. I'm using these 'super-categories' to guide/organize my progress on the nav bar.
+
+he current nav-bar layout has 2 columns to house 12 items, it does this in no particular order. the current layout looks like this :
+
+areas = [
+  column_01 = [
+    'artistic design',
+    'digital audio',
+    'early education', 
+    'gender studies',
+    'internships',
+    'robotics'
+  ],
+  column_02 = [
+    'automotive', 
+    'games and learning', 
+    'drama', 
+    'hip-hop', 
+    'professional development',
+    'virtual reality'
+  ]
+]
+
+the proposal re-design is this :
+
+areas = [
+  tech = [
+    'artistic design',
+    'digital audio',
+    'early education', 
+    'gender studies',
+    'internships',
+    'robotics'
+  ],
+  education = [
+    'automotive', 
+    'games and learning', 
+    'drama', 
+    'hip-hop', 
+    'professional development',
+    'virtual reality'
+  ], 
+  art = [
+    'artistic design',
+    'digital audio',
+    'drama',
+    'hip-hop'
+  ]
+]
+
+I took the proposal redesign nav-bar mock-up and notes and began implementing the 3-column navigation bar. The changes are live in the devlopment environment at opensail.io. Also, screen captured image of the navigation bar re-design is avilable in the project repository, at md_images/dropdown_0001.png.
+
+In addition to taking notes here on my computer, I also take notes in my notebook. So to more clearly demonstrate my creative process, I have uploaded images of my note-book mock-ups and sketches to the project repository. These images can be found in the md_images/sketches directory. Or, alternatively you might like to visit the project repository and scroll to the bottom of the page -> where I have included embeded images of my sketches. Here's a link to the project repository https://github.com/alexander-io/Foundry10-Web-Development
+
+I met with Andrun today. He is in the midst of learning about the document-object-model and is practicing his skill with manipulating a webpage. He has begun writing some basic html and css. So far he has implemented the shell of a navigation bar and seems to be progressing well. He seems to have very thoughtful and creative way of learning.
+
+I began designing a graphic to provide a visual represenation of the on-goings at foundry10. The graphic will chiefly consist of one large & central sphere surrounded by three orbiting spheres. The central/large sphere will represent the core of foundry10, while the orbiting spheres represent the 'super-categories' of foundry10's areas -> tech, education, and art. I plan to include relevant icons in each of the orbiting spheres that indicate tech, education, and art respectively. I have sketches for this design available in my notebook, there is a digital mock-up (a .png file) of this design available in the project repository at the md_images/f10_070617.png. Here's the link, https://github.com/alexander-io/Foundry10-Web-Development/blob/master/md_images/f10070517.png
 
 #### Alexander Harris
 #### Wednesday July 5th, 2017

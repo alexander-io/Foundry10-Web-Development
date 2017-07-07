@@ -141,12 +141,17 @@ a:link, a:visited, a:hover, a:active {
 }
 a:active{
   color:#b5a58a;
+  color:#303038;
 }
 a:link{
+  /*font-weight: bold;*/
   color: #b5a58a;
+  color:#303038;
+
 }
 a:visited{
   color:#b5a58a;
+  color:#303038;
 }
 nav {
   color:black;
@@ -229,6 +234,12 @@ body {
   background-color: #f4f4f4;
   /*opacity: 0.7;*/
 }
+
+
+div.row.hov {
+  padding:5%;
+}
+
 p{
   color: #333
 }
