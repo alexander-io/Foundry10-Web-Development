@@ -11,6 +11,84 @@
 ![mock-up](md_images/f10070517.png)
 
 #### Alexander Harris
+#### Friday July 7th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+This morning I met with Lisa and Anna regarding a naming convention used in the navigation bar. They suggested replacing the 'education' category by titling it 'collective' instead.
+
+Today I rehashed my high-school geometry skills (or lack-there-of) in order to mathematically define an equilateral triangle animation for the expose page. I want to define three points in the web page, one for each point of the triangle. These points must have a common center point and be equidistant from each other. The center point and the radius of the triangle are given. Solve for all three points in the triangle : p1, p2, and p3.
+
+Given :
+
+  const center_point = {x:0, y:0}
+  const triangle_radius = 100
+
+Determining the x,y coordinates of point 1 is simple, just assume it's directly above the center point, so... add the triangle's radius to p1.y and leave p1.x at center_point.x 
+
+  let p1 = p2 = p3 = {x:null,y:null}
+
+  p1 = {
+    x : center_point.x,
+    y : center_point.y + triangle_radius
+  }
+
+  checklist...
+    [x] p1
+    [ ] p2
+    [ ] p3
+
+Given a radius, determine the side-length of the triangle with the following :
+
+  let side_len = triangle_radius * (Math.sqrt(3))
+
+Next, point your attention toward the inscribed circle. An inscribed circle is a circle inside of a triangle that has three points which happen to be the midpoints of the triangle sides. Anyway, we can find the radius of the inscribed circle with the following :
+  
+  let inscribed_circle_radius = (Math.sqrt(3)/6) * side_len
+
+Now that we have the inscribed_circle_radius, simply add it to the radius of the triangle to derive the height of the triangle.
+
+  let triangle_height = inscribed_circle_radius + triangle_radius
+
+Okay, we have all of the necessary variables to solve for p2 and p3. To determine the y value of p2 (p2.y), simply subtract the inscribed_circle_radius from the center_point.y. To determine p2.x, subtract one half of the side_len...
+
+  p2 = {
+    x : center_point.x - (side_len/2),
+    y : center_point.y - inscribed_circle_radius
+  }
+
+Similarly, p3 has the same y value as p2.y. However, for the p3.x, instead of subtracting half of the side_length, add it to the center_point.x value. Like so...
+
+  p3 = {
+    x : center_point.x + (side_len/2),
+    y : center_point.y - inscribed_circle_radius
+  }
+
+Therefore ...
+  p1 = {
+    x : center_point.x,
+    y : center_point.y + triangle_radius
+  }
+  p2 = {
+    x : center_point.x - (side_len/2),
+    y : center_point.y - inscribed_circle_radius
+  }
+  p3 = {
+    x : center_point.x + (side_len/2),
+    y : center_point.y - inscribed_circle_radius
+  }
+
+
+I have added a number of icons to the UI. Some number of them look okay, but with the many that I've added, things feel a little busy on the web page. I will consider removing some.
+
+
+Next to deal with, there's a bug effecting the user experience of the site on a mobile device. For each visible popup window, the window will remain on screen even after a scroll event has occured. Define a function to listen for scroll events. On scroll, close drop-down windows. Let's define this functionality in public/js/dropdown.js 
+
+
+#### Alexander Harris
 #### Thursday July 6th, 2017
 #### foundry10 web development intern
 #### http://foundry10.org
