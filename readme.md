@@ -447,7 +447,8 @@ Description of Foundry10 from Tom Swanson
 
 
 
-
+![sketch_0001](md_images/sketches/sketch_0007.jpg)
+![sketch_0002](md_images/sketches/sketch_0008.jpg)
 ![sketch_0001](md_images/sketches/sketch_0001.jpg)
 ![sketch_0002](md_images/sketches/sketch_0002.jpg)
 ![sketch_0003](md_images/sketches/sketch_0003.jpg)
