@@ -1,0 +1,28 @@
+#### Alexander Harris
+#### Friday July 7th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+This morning I met with Lisa and Anna regarding a naming convention used in the navigation bar. They suggested replacing the 'education' category by titling it 'collective' instead.
+
+Today I rehashed my high-school geometry skills (or lack-there-of) in order to mathematically define an equilateral triangle animation for the expose page. I want to define three points in the web page, one for each point of the triangle. These points must have a common center point and be equidistant from each other. The center point and the radius of the triangle are given. Solve for all three points in the triangle : p1, p2, and p3.
+
+Given :
+
+	const center_point = {x:0, y:0}
+	const triangle_radius = 100
+
+Determining the x,y coordinates of point 1 is simple, just assume it's directly above the center point so...
+
+	let p1 = {x:null,y:null}
+
+Given a radius, determine the side-length of the triangle with the following :
+
+	let side_len = triangle_radius * (Math.sqrt(3))
+
+Next, point your attention toward the inscribed circle. An inscribed circle is a circle inside of a triangle that has three points which happen to be the midpoints of the triangle sides. Anyway, we can find the radius of the inscribed circle with the following :
+	
+	let inscribed_circle_radius = (Math.sqrt(3)/6) * side_len

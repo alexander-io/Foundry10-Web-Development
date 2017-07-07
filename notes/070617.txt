@@ -88,26 +88,26 @@ areas = [
 
 the proposal re-design is this :
 
-areas = [
-  tech = [
-    'robotics',
-    'virtual reality',
-    'game development',
-    'automotive'
-  ],
-  education = [
-    'early education',
-    'gender studies',
-    'professional development',
-    'internships'
-  ], 
-  art = [
-    'artistic design',
-    'digital audio',
-    'drama',
-    'hip-hop'
-  ]
-]
+	areas = [
+	  tech = [
+	    'robotics',
+	    'virtual reality',
+	    'game development',
+	    'automotive'
+	  ],
+	  education = [
+	    'early education',
+	    'gender studies',
+	    'professional development',
+	    'internships'
+	  ], 
+	  art = [
+	    'artistic design',
+	    'digital audio',
+	    'drama',
+	    'hip-hop'
+	  ]
+	]
 
 
 I took the proposal redesign nav-bar mock-up and notes and began implementing the 3-column navigation bar. The changes are live in the devlopment environment at opensail.io. Also, screen captured image of the navigation bar re-design is avilable in the project repository, at md_images/dropdown_0001.png.

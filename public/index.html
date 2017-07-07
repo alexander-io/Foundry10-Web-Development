@@ -73,11 +73,91 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
     <div class="row">
       <div id="triangle-bottomleft">
-        <div class="circ" id="sub-circ" style="position:absolute; border-radius:50%; background-color:#ff7f2a;height:230px;width:230px; right:56%; top:52%;">
-          <div class="sub-circ-01" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:57.5px;bottom:300px;"></div>
-          <div class="sub-circ-02" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:57.5px;top:300px;"></div>
+        <div class="circ" id="circ" style="position:absolute; border-radius:50%; background-color:#ff7f2a;height:230px;width:230px; right:56%; top:52%;">
+
+
+          
+          <div class="sub-circ" style="top:-75%;left:25%;">
+
+            <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
+                <img src="icons/wrench.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+            </div>
+
+            <div class="subsub-circ" style="top:-75%;left:25%;">
+              <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
+                <img src="icons/code-braces.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+              </div>
+              
+            </div>
+            <div class="subsub-circ" style="top:75%;left:-61.6025%;">
+              <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
+                <img src="icons/google-controller.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+              </div>
+              
+
+            </div>
+            <div class="subsub-circ" style="top:75%;left:111.6025%;">
+              <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
+                <img src="icons/robot.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="sub-circ" style="top:75%;left:-61.6025%;">
+
+            <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
+                  <img src="icons/brush.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+              </div>
+            
+            <div class="subsub-circ" style="top:-75%;left:25%;"></div>
+            <div class="subsub-circ" style="top:75%;left:-61.6025%;"></div>
+            <div class="subsub-circ" style="top:75%;left:111.6025%;"></div>
+          </div>
+
+          <div class="sub-circ" style="top:75%;left:111.6025%;">
+
+            <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
+                <img src="icons/wrench.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+            </div>
+            
+            <div class="subsub-circ" style="top:-75%;left:25%;"></div>
+            <div class="subsub-circ" style="top:75%;left:-61.6025%;"></div>
+            <div class="subsub-circ" style="top:75%;left:111.6025%;"></div>
+
+          </div>
+          <style type="text/css">
+
+            .sub-circ {
+              position : inherit; 
+              border-radius : 50%; 
+              background-color : #000;
+              height : 115px;
+              width : 115px;
+            }
+            .subsub-circ {
+              position : inherit; 
+              border-radius : 50%; 
+              height : 57.5px;
+              width : 57.5px;
+              background-color : #ff5f2a;
+            }
+          </style>
+
+          <!-- <div class="sub-circ-01" style="position:inherit; border-radius:50%; background-color:#fff;height:115px;width:115px;top:95%;left:-45%;"></div> -->
+
+          <!-- <div class="sub-circ-01" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px;top:67%;left:-40%;"></div> 
+          <div class="sub-circ-01" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px;top:67%;right:-40%;"></div> --> 
+
+<!-- 
+          <div class="sub-circ-01" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:57.5px;bottom:300px;"></div> -->
+
+
+
+          <!-- <div class="sub-circ-02" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:57.5px;top:300px;"></div>
           <div class="sub-circ-03" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; left:300px;top:57.5px"></div>
-          <div class="sub-circ-04" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; right:300px;top:57.5px"></div>
+          <div class="sub-circ-04" style="position:inherit; border-radius:50%; background-color:#ff7f2a;height:115px;width:115px; right:300px;top:57.5px"></div> -->
         </div>
       </div>
       <style media="screen">
@@ -93,7 +173,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         $(window).scroll(function(){
           var theta = $(window).scrollTop() / 256 % Math.PI;
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
-          $('#sub-circ').css({transform: 'rotate(-' + theta + 'rad)'});
+          $('#circ').css({transform: 'rotate(-' + theta + 'rad)'});
+          $('.sub-circ').css({transform: 'rotate(' + theta + 'rad)'});
 
         })
       </script>
@@ -293,7 +374,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
        <!-- column 2, EDUCATION -->
        <div class="col s4" style="border-left:1px solid #eeeeee">
-         <h5 class="align-center " style="text-align:center;color:#aaa">Education</h5>
+         <h5 class="align-center " style="text-align:center;color:#aaa">Collective</h5>
 
          <div class="row hov"style="padding-left:3%;padding-right:3%;padding-top:5%;">
            <span style="font-size:150%;"><a href="#">internships</a></span>
@@ -323,23 +404,23 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
          <h5 class="align-center " style="text-align:center;color:#aaa">Art</h5>
 
          <div class="row hov"style="padding-left:3%;padding-right:3%;padding-top:5%;">
-           <span style="font-size:150%;"><a href="#">gender studies</a></span>
+           <span style="font-size:150%;"><a href="#">artistic design</a></span>
            <p>Lorem ipsum dolor</p>
            <br>
          </div>
 
          <div class="row hov"style="padding-left:3%;padding-right:3%;">
-           <span style="font-size:150%;"><a href="#">hiphop</a></span>
+           <span style="font-size:150%;"><a href="#">digital audio</a></span>
            <p>Lorem ipsum dolor</p>
          </div>
 
          <div class="row hov"style="padding-left:3%;padding-right:3%;">
-           <span style="font-size:150%;"><a href="#">internships</a></span>
+           <span style="font-size:150%;"><a href="#">drama</a></span>
            <p>Lorem ipsum dolor</p>
          </div>
 
          <div class="row hov"style="padding-left:3%;padding-right:3%;">
-           <span style="font-size:150%;"><a href="#">professional development</a></span>
+           <span style="font-size:150%;"><a href="#">hip-hop</a></span>
            <p>Lorem ipsum dolor</p>
          </div>
 
