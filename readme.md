@@ -6,7 +6,7 @@
 
 ![mobile](md_images/mobile_070617.png)
 
-![dropdown menu, 070617](md_images/dropdown_0001.png)
+![dropdown menu, 070617](md_images/nav-re-design-jux_0001.png)
 
 ![mock-up](md_images/f10070517.png)
 
