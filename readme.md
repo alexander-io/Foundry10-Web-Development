@@ -102,20 +102,16 @@ the proposal re-design is this :
 
 areas = [
   tech = [
-    'artistic design',
-    'digital audio',
-    'early education', 
-    'gender studies',
-    'internships',
-    'robotics'
+    'robotics',
+    'virtual reality',
+    'game development',
+    'automotive'
   ],
   education = [
-    'automotive', 
-    'games and learning', 
-    'drama', 
-    'hip-hop', 
+    'early education',
+    'gender studies',
     'professional development',
-    'virtual reality'
+    'internships'
   ], 
   art = [
     'artistic design',
