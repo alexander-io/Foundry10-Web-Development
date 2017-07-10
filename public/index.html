@@ -51,7 +51,7 @@
         <div class="row" style="height:100%;">
           <div class="col s5" style="padding-top:40px;">
             <span><img src="icons/f10.png" style="width:
-px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down" class="hide-on-med-and-down">unleashing creativity, curiosity, and passion</span>
+px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down" style="font-size:180%;">unleashing creativity, curiosity, and passion</span>
           </div>
           <div id="nav-item-01" class="col s2 nav-item" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
             Areas
@@ -76,20 +76,35 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
     <!-- <canvas id="canvas"></canvas> -->
     <div id="particles-js" style="background-color:white;position:absolute;right:0;width:100%;height:150%;z-index:-20;"></div>
+<!--
+    <img id="logo-click" src="icons/f10.png" class="" style="top:25%;left:56%;position:absolute;"alt=""> -->
 
-    <img id="logo-click" src="icons/f10.png" class="" style="top:25%;left:56%;position:absolute;"alt="">
+    <div class="row" style="position:absolute; top:450px;height:450px;z-index:-1;background-color:#ff7f2a; width:100%;">
+    </div>
+
+    <div class="container " style="position:absolute;z-index:1; top:500px;left:50%;">
+      <div class="card-panel z-depth-5 center-align" style="position:relative;background-color:#303038;padding:5%;left:-50%;">
+        <h1 style="color:white;z-index:100; border-left:70px solid #ff7f2a;border-right:70px solid #ff7f2a;">foundry10</h1>
+      </div>
+    </div>
 
 
-    <div class="row">
-      <div id="triangle-bottomleft">
+    <!-- <div class="" style="top:700px;">
+      <div class="card panel hoverable right" style="background-color:#303038;padding:5%;z-index:25;">
+        <h4 style="color:white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+      </div>
+    </div> -->
+
+    <div class="row" >
+      <div id="triangle-bottomleft" >
 
 
-        <div class="circ" id="circ" style="position:absolute; border-radius:50%; background-color:#ff7f2a;height:230px;width:230px; right:56%; top:75%;">
+        <div class="circ" id="circ" style="position:absolute; border-radius:50%; background-color:#ff7f2a;  height:230px; width:230px;top:75%;">
+          <img id="logo-click" src="icons/f10.png" class="" style="position:relative; left: -5.5%;top:1.5%;"alt="">
 
 
-
-          <div class="sub-circ z-depth-5" style="top:-75%;left:25%;">
-            <div class="center " style="position: relative;height:100%;padding-top: 13%;">
+          <div class="sub-circ z-depth-5 pulse" style="top:-75%;left:25%;">
+            <div class="center"  style="position: relative;height:100%;padding-top: 13%;">
                 <!-- <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a> -->
                 <img src="icons/flat/009-wrench.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
             </div>
@@ -97,7 +112,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
           </div>
 
 
-          <div class="sub-circ z-depth-5" style="top:75%;left:-61.6025%;">
+          <div class="sub-circ z-depth-5 pulse " style="top:75%;left:-61.6025%;">
 
             <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
                   <img src="icons/flat/012-paint-brush-1.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
@@ -106,7 +121,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
           </div>
 
-          <div class="sub-circ z-depth-5" style="top:75%;left:111.6025%;">
+          <div class="sub-circ z-depth-5 pulse" style="top:75%;left:111.6025%;">
 
             <div class="center " style=";position: relative;height:100%;padding-top: 13%;">
                 <img src="icons/flat/007-book.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
@@ -114,7 +129,56 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
 
           </div>
+
+
+
           <style type="text/css">
+            /* Sanja */
+            /*.cbutton--effect-sanja::after {
+            	background: rgba(111,148,182,0.1);
+            }
+
+            .cbutton--effect-sanja.cbutton--click::after {
+            	-webkit-animation: anim-effect-sanja 1s ease-out forwards;
+            	animation: anim-effect-sanja 1s ease-out forwards;
+            }
+
+            @-webkit-keyframes anim-effect-sanja {
+            	0% {
+            		opacity: 1;
+            		-webkit-transform: scale3d(0.5, 0.5, 1);
+            		transform: scale3d(0.5, 0.5, 1);
+            	}
+            	25% {
+            		opacity: 1;
+            		-webkit-transform: scale3d(1, 1, 1);
+            		transform: scale3d(1, 1, 1);
+            	}
+            	100% {
+            		opacity: 0;
+            		-webkit-transform: scale3d(1, 1, 1);
+            		transform: scale3d(1, 1, 1);
+            	}
+            }
+
+            @keyframes anim-effect-sanja {
+            	0% {
+            		opacity: 1;
+            		-webkit-transform: scale3d(0.5, 0.5, 1);
+            		transform: scale3d(0.5, 0.5, 1);
+            	}
+            	25% {
+            		opacity: 1;
+            		-webkit-transform: scale3d(1, 1, 1);
+            		transform: scale3d(1, 1, 1);
+            	}
+            	100% {
+            		opacity: 0;
+            		-webkit-transform: scale3d(1, 1, 1);
+            		transform: scale3d(1, 1, 1);
+            	}
+            }*/
+
 
             .sub-circ {
               position : inherit;
@@ -134,11 +198,16 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
 
         </div>
+
+
       </div>
       <style media="screen">
       #triangle-bottomleft {
         width: 0;
         height: 0;
+
+        /*bottom:*/
+        /*top:200%;*/
       }
       </style>
       <script type="text/javascript">
@@ -149,10 +218,18 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
           var theta = $(window).scrollTop() / 256 % Math.PI;
         //   console.log(theta)
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
+
+          // console.log(window.innerWidth)
+          // console.log(window.innerHeight)
+
+
         //   $('#circ').css({transform: 'rotate(-' + theta + 'rad)'});
         //   $('.sub-circ').css({transform: 'rotate(' + theta + 'rad)'});
 
         })
+
+        let circ = document.getElementById('circ')
+        circ.style.left = '22%'
       </script>
 
       <div class="backgrnd" style="width:100%;height:5000px;background-color:#303038;">
@@ -311,7 +388,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     -->
 
      <!-- this is the hidden element that's used as the dropdown -->
-     <div id="navdrop01" class="row left-align z-depth-5" style="width:50%;position:fixed;color:#bbbbbb;visibility:hidden;">
+     <div id="navdrop01" class="row left-align z-depth-5" style="width:50%;position:fixed;color:#bbbbbb;visibility:hidden;z-index:50;">
 
      <!-- column 1, TECH -->
         <div class="col s4" style="border-right:1px solid #eeeeee;">
@@ -396,7 +473,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
      </div>
 
     <!-- this is the hidden element that's used as the dropdown -->
-    <div id="navdrop02" class="row left-align z-depth-5" style="width:35%;position:fixed;color:#bbbbbb;visibility:hidden;">
+    <div id="navdrop02" class="row left-align z-depth-5" style="width:35%;position:fixed;color:#bbbbbb;visibility:hidden;z-index:50;">
       <div class="col s6" style="border-right:1px solid #eeeeee;">
 
         <h5 class="align-center" style="color:#aaa">History</h5>
@@ -424,7 +501,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     </div>
 
     <!-- this is the hidden element that's used as the dropdown -->
-    <div id="navdrop03" class="row left-align z-depth-5" style="width:35%;position:fixed;color:#bbbbbb;visibility:hidden;">
+    <div id="navdrop03" class="row left-align z-depth-5" style="width:35%;position:fixed;color:#bbbbbb;visibility:hidden;z-index:50;">
       <div class="col s6" style="border-right:1px solid #eeeeee;">
         <h5 class="align-center" style="color:#aaa">Register</h5>
 
