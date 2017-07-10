@@ -160,6 +160,8 @@ nav {
 
 .nav-item:hover {
   background-color: #ccc;
+  cursor: pointer;
+  
 }
 .nav-item {
   text-align: center;
@@ -172,6 +174,7 @@ nav {
 
 .top-nav-item:hover {
   background-color: #fff;
+  cursor: pointer;
 
 }
 
