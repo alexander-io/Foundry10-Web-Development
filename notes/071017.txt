@@ -8,12 +8,14 @@
 
 Good morning! I've arrived at 8:25 am to the office this morning & Anna was punctual/kind enough to let me in.
 
-Today I'm setting out to accomplish 5 goals.
+Today I'm setting out to accomplish the following goals.
     1. make the accordian post
     2. clean and document html, css, and javascript (the code is getting unwieldy in some places)
     3. minify the javascript used on the web page to optimize the user experience and reduce latency
     4. modify the circle/triangular graphic to position it better on the landing page (I want to see desirable locations for the element on full, tablet, and mobile sizes)
     5. make sketches of tom's white-board notes for the wev-development modules
+    6. enlarge the text on the nav-bar, increase the height of the nav-bar (it's impossible small, especially on mobile)
+    7. meet with Andrun & the web-security group to offer direction and measure progress
 
 let done = true
 let undone = false
@@ -22,5 +24,6 @@ goals_checklist = {
     clean_document : undone,
     minify_js : undone,
     position_graphic : undone,
-    sketch_toms_notes : undone
+    sketch_toms_notes : undone,
+    group_meetings : undone
 }
