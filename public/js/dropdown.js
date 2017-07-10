@@ -42,11 +42,15 @@
     // the the rectangle and positional data associated with 'this'
     // keep in mind that 'this' is meant to be an instance of a nav-item
     let rect = n.getBoundingClientRect()
+    console.log(rect);
     hide_all_drop_down(nav_lst)
     d.style.visibility = 'visible'
     d.style.backgroundColor = '#ffffff'
     d.width = n.getBoundingClientRect().width+'px'
-    d.style.left = (n.getBoundingClientRect().left) - (n.getBoundingClientRect().width*1.2)  + 'px'
+
+
+    d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width*1.85))  + 'px'
+
     d.style.top = n.getBoundingClientRect().bottom+'px'
 
     d.addEventListener('mouseover', function(){
@@ -92,7 +96,7 @@
 
   // select the body
   let body = document.getElementById('body');
-  
+
   // add a click event to the body of the document...
   // if  a use clicks the document and their mouse is not over a nav-item or the drop-down,
   // then 'close' all drop-down menu items by setting their visibility to 'hidden'
