@@ -1,0 +1,15 @@
+#### Alexander Harris
+#### Monday July 12th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Good morning! I've arrived at 8:25 am to the office this morning & Anna was punctual/kind enough to let me in.
+
+Today I'm setting out to accomplish 4 goals.
+    1. make the accordian post
+    2. clean and document html, css, and javascript (the code is getting unwieldy in some places)
+    3. minify the javascript used on the web page to optimize the user experience and reduce latency
+    4. Modify the circle/triangular graphic to position it better on the landing page (I want to see desirable locations for the element on full, tablet, and mobile sizes)
