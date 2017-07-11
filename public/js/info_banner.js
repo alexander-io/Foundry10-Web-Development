@@ -325,7 +325,7 @@
     }
 
     let tech_click = function(){
-      
+
     }
 
 
