@@ -7,7 +7,6 @@
   let collective_circ = document.getElementById('collective-circ');
   let art_circ = document.getElementById('art-circ');
 
-
   let banner_sub_item_01 = document.getElementById('banner-sub-item-01');
   let banner_sub_item_02 = document.getElementById('banner-sub-item-02');
   let banner_sub_item_03 = document.getElementById('banner-sub-item-03');
@@ -17,6 +16,14 @@
   let banner_sub_item_title_02 = document.getElementById('banner-sub-item-02-title');
   let banner_sub_item_title_03 = document.getElementById('banner-sub-item-03-title');
   let banner_sub_item_title_04 = document.getElementById('banner-sub-item-04-title');
+
+  let banner_header = document.getElementById('banner-header');
+
+  // num_super_categories = 3
+  // num_sub_categories = 4
+  // 2D array of superXsub categories, 3x4 dimension
+  let the_array_of_glory = []
+
 
   // define a list of all of the sub items
   let sub_item_lst = []
@@ -97,9 +104,28 @@
 
 
   // take an object -> sub category
-  let display = function(element_to_display){
-    let header = document.getElementById('banner-header'), body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02');
+  let display = function(){
+    let header = document.getElementById('banner-header'), banner_body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02');
+
     // TODO : select the other elements in the DOM that need updating (i.e., the top card-panel and bottom card-panel)
+    let branch = 'tech' // initialize the bnranch to tech
+    if (info_banner_xy_array_position_tuple.super == 0) {
+      branch = 'tech'
+    } else if (info_banner_xy_array_position_tuple.super == 1) {
+      branch = 'collective'
+    } else if (info_banner_xy_array_position_tuple.super == 2) {
+      branch = 'art'
+    }
+
+    // console.log('tree branch :',  tree[branch])
+    // console.log('art branch :', tree['art'])
+
+    // test print indexing into hash table
+    console.log(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title)
+
+    header.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title
+
+
   }
 
   // each sub-category should have data associated : title, body of text, two links, two images
@@ -270,7 +296,6 @@
     }
   }
 
-    let the_array_of_glory = []
     let zero_array = function(arr){
       // initialize all values of array to 0
       for (let i = 0; i < 3; i++){
@@ -279,9 +304,73 @@
       }
     }
     zero_array(the_array_of_glory)
-    console.log(the_array_of_glory)
+
+    // i want to be able to input 0,0 and output tech > robotics...
+    // here's the full map :
+    //
+    //    0, 0 => tech > robotics
+    //    0, 1 => tech > virtual reality
+    //    0, 2 => tech > game development
+    //    0, 3 => tech > automotive
+    //
+    //    1, 0 => collective > internships
+    //    1, 1 => collective > gender studies
+    //    1, 2 => collective > early education
+    //    1, 3 => collective > professional development
+    //
+    //    2, 0 => art > artistic design
+    //    2, 1 => art > digital audio
+    //    2, 2 => art > drama
+    //    2, 3 => art > hip hop
 
 
+    // i have the x,y positions being generated from clicks in the dom,
+    // i want to assign keys into the 'tree' object at the array indices
+    // for example :
+    //    to index into the tree array for virtual reality do this...
+    //    tree['tech']['vr']
+    //
+    let assign_keys_to_array = function(arr){
+
+      arr[0][0] = 'robotics'
+      arr[0][1] = 'vr'
+      arr[0][2] = 'game_dev'
+      arr[0][3] = 'automotive'
+
+      arr[1][0] = 'intern'
+      arr[1][1] = 'gender'
+      arr[1][2] = 'early_education'
+      arr[1][3] = 'professional_development'
+
+      arr[2][0] = 'artistic'
+      arr[2][1] = 'digital_audio'
+      arr[2][2] = 'drama'
+      arr[2][3] = 'hiphop'
+
+      // arr[0]
+      // let keys = []
+      // for (x in tree){
+      //   // tree[x].order = []
+      //   for (y in tree[x]){
+      //     console.log('key :', y)
+      //     keys.push(y)
+      //   }
+      // }
+      //
+      // for (let i = 0; i < arr.length; i++){
+      //   for (let j = 0; j < arr[0].length; j++){
+      //     arr[i][j] = keys.pop()
+      //   }
+      // }
+      //
+      // console.log(arr)
+      return arr
+    }
+
+    the_array_of_glory = assign_keys_to_array(the_array_of_glory)
+    console.log('GLORY', the_array_of_glory);
+
+    // console.log('treeeeeeeee', tree['tech']['vr'])
 
     tech_circ.addEventListener('click', function(e) {
       Materialize.toast('Tech', 4000, 'circ-toast tech-toast')
@@ -318,15 +407,23 @@
       }
     }
 
+    // let this be a function to update the 'header' content in the infobanner
+    // @param twig, an object that represents a sub-category (e.x., robotics, gender-studies, automotive, etc.)
+    // why the 'twig' naming convention? root > branch > twig > stem > leaf > cell
+    let update_banner_text = function(twig){
+      console.log('current banner header :', banner_header.innerHTML)
+      banner_header.innerHTML = twig.title
+    }
+
+
+
     // the user clicked on the super category, therefore set all sub-nav elements to white and initialize the 0th sub-nav item to have a grey background
     let init_reset_sub_nav = function(){
       nav_sub_items_to_white()
       banner_sub_item_01.style.backgroundColor = '#ccc'
     }
 
-    let tech_click = function(){
 
-    }
 
 
 
@@ -389,19 +486,26 @@
 
     banner_sub_item_01.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 0
-      cl() // XXX test print coordinate tuple
+      cl() // XXX test print
+      display()
     });
     banner_sub_item_02.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 1
-      cl() // XXX test print coordinate tuple
+      cl() // XXX test print
+      display()
+
     });
     banner_sub_item_03.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 2
-      cl() // XXX test print coordinate tuple
+      cl() // XXX test print
+      display()
+
     });
     banner_sub_item_04.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 3
-      cl() // XXX test print coordinate tuple
+      cl() // XXX test print
+      display()
+
     });
 
     let cl = function(){
