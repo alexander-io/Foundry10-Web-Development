@@ -119,11 +119,13 @@
 
     // console.log('tree branch :',  tree[branch])
     // console.log('art branch :', tree['art'])
-
+    cl()
     // test print indexing into hash table
     console.log(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title)
 
     header.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title
+
+    banner_body.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].body
 
 
   }
@@ -174,7 +176,7 @@
       automotive : {
         title : 'automotive',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">automotive</span><span class="hide-on-large-only truncate">auto</span>',
-        body : 'The automotive industry is a wide range of companies and organizations involved in the design, development, manufacturing, marketing, and selling of motor vehicles,[1] some of them are called automakers. It is one of the world\'s most important economic sectors by revenue.',
+        body : 'The automotive industry is a wide range of companies and organizations involved in the design, development, manufacturing, marketing, and selling of motor vehicles, some of them are called automakers. It is one of the world\'s most important economic sectors by revenue.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -244,7 +246,7 @@
       artistic : {
         title : 'artistic design',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">artistic design</span><span class="hide-on-large-only truncate">design</span>',
-        body : 'esign is the creation of a plan or convention for the construction of an object, system or measurable human interaction (as in architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns).[1] Design has different connotations in different fields (see design disciplines below). In some cases, the direct construction of an object (as in pottery, engineering, management, coding, and graphic design) is also considered to use design thinking.',
+        body : 'esign is the creation of a plan or convention for the construction of an object, system or measurable human interaction (as in architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns). Design has different connotations in different fields (see design disciplines below). In some cases, the direct construction of an object (as in pottery, engineering, management, coding, and graphic design) is also considered to use design thinking.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -387,8 +389,8 @@
 
     // use this tuple to track what the user has selected
     let info_banner_xy_array_position_tuple = {
-      super : null,
-      sub : null
+      super : 0,
+      sub : 0
     }
 
 
@@ -443,6 +445,7 @@
       init_reset_sub_nav()
 
       // TODO : populate windows with categorical content
+      display()
     });
 
     collective.addEventListener('click', function(e) {
@@ -461,6 +464,7 @@
       // set all sub nav backgrounds to white and set the initial to grey/selected
       init_reset_sub_nav()
       // TODO : populate windows with categorical content
+      display()
 
     });
 
@@ -481,7 +485,8 @@
       init_reset_sub_nav()
 
       // TODO : populate windows with categorical content
-
+      display()
+      
     });
 
     banner_sub_item_01.addEventListener('click', function(e) {
