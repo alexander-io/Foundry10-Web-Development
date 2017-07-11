@@ -135,7 +135,7 @@
       robotics : {
         title : 'robotics',
         innerhtml_nav_text : 'robotics',
-        body : 'lorem',
+        body : 'Robotics is the interdisciplinary branch of engineering and science that includes mechanical engineering, electrical engineering, computer science, and others. Robotics deals with the design, construction, operation, and use of robots, as well as computer systems for their control, sensory feedback, and information processing.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -148,7 +148,7 @@
       vr : {
         title : 'virtual reality',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">virtual reality</span><span class="hide-on-large-only">vr</span>',
-        body : 'lorem',
+        body : 'Virtual reality (VR) is a computer technology that uses Virtual reality headsets, sometimes in combination with physical spaces or multi-projected environments, to generate realistic images, sounds and other sensations that simulate a user\'s physical presence in a virtual or imaginary environment.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -161,7 +161,7 @@
       game_dev : {
         title : 'game development',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">game development</span><span class="hide-on-large-only truncate">game dev. </span>',
-        body : 'lorem',
+        body : 'Video game development is the process of creating a video game. Development is undertaken by a game developer, which may range from one person to a large business. Traditional commercial PC and console games are normally funded by a publisher and take several years to develop.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -174,7 +174,7 @@
       automotive : {
         title : 'automotive',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">automotive</span><span class="hide-on-large-only truncate">auto</span>',
-        body : 'lorem',
+        body : 'The automotive industry is a wide range of companies and organizations involved in the design, development, manufacturing, marketing, and selling of motor vehicles,[1] some of them are called automakers. It is one of the world\'s most important economic sectors by revenue.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -190,7 +190,7 @@
       intern : {
         title : 'internships',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">internships</span><span class="hide-on-large-only truncate">intern</span>',
-        body : 'lorem',
+        body : 'Internships for professional careers are similar in some ways but not as rigorous as apprenticeships for professions, trade and vocational jobs,[3] but the lack of standardisation and oversight leaves the term open to broad interpretation.[4][5] Interns may be college or university students, high school students, or post-graduate adults.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -203,7 +203,7 @@
       gender : {
         title : 'gender studies',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">gender studies</span><span class="hide-on-large-only truncate">gender</span>',
-        body : 'lorem',
+        body : 'Gender studies is a field for interdisciplinary study devoted to gender identity and gendered representation as central categories of analysis. This field includes women\'s studies (concerning women, feminism, gender, and politics), men\'s studies and queer studies.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -216,7 +216,7 @@
       early_education : {
         title : 'early education',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">early education</span><span class="hide-on-large-only truncate">early ed.</span>',
-        body : 'lorem',
+        body : 'Early childhood education (ECE; also nursery education) is a branch of education theory which relates to the teaching of young children (formally and informally) up until the age of about eight. Infant/toddler education, a subset of early childhood education, denotes the education of children from birth to age two.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -229,7 +229,7 @@
       professional_development : {
         title : 'professional development',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">professional dev.</span><span class="hide-on-large-only truncate">pro. dev.</span>',
-        body : 'lorem',
+        body : 'Professional development is learning to earn or maintain professional credentials such as academic degrees to formal coursework, conferences and informal learning opportunities situated in practice. It has been described as intensive and collaborative, ideally incorporating an evaluative stage.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -244,7 +244,7 @@
       artistic : {
         title : 'artistic design',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">artistic design</span><span class="hide-on-large-only truncate">design</span>',
-        body : 'lorem',
+        body : 'esign is the creation of a plan or convention for the construction of an object, system or measurable human interaction (as in architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns).[1] Design has different connotations in different fields (see design disciplines below). In some cases, the direct construction of an object (as in pottery, engineering, management, coding, and graphic design) is also considered to use design thinking.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -257,7 +257,7 @@
       digital_audio : {
         title : 'digital audio',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">digital audio</span><span class="hide-on-large-only truncate">audio.</span>',
-        body : 'lorem',
+        body : 'Digital audio is a technology that can be used to record, store, generate, manipulate, and reproduce sound using audio signals that have been encoded in digital form. Following significant advances in digital audio technology during the 1970s, it gradually replaced analog audio technology in many areas of sound production.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -270,7 +270,7 @@
       drama : {
         title : 'drama',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">drama</span><span class="hide-on-large-only truncate">drama</span>',
-        body : 'lorem',
+        body : 'Drama is the specific mode of fiction represented in performance.[1] Considered as a genre of poetry in general, the dramatic mode has been contrasted with the epic and the lyrical modes ever since Aristotle\'s Poetics (c. 335 BCE)—the earliest work of dramatic theory.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -283,7 +283,7 @@
       hiphop : {
         title : 'hip-hop',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">hip hop</span><span class="hide-on-large-only truncate">hip hop</span>',
-        body : 'lorem',
+        body : 'Hip hop is a subculture and art movement developed by African Americans[1] from the South Bronx in New York City during the late 1970s.[2][3][4][5][6] While people unfamiliar with hip hop culture often use the expression "hip hop" to refer exclusively to hip hop music (also called "rap")',
         links : [
           'http://link1.org',
           'http://link1.org'
