@@ -16,19 +16,22 @@
 
   </head>
   <body id="body">
+    <overflow style="overflow-x:hidden">
+
+    </overflow>
 
 
     <nav style="background-color:#ccc; height: 150px; vertical-align:middle;">
       <div class="container" style="height:100%;">
         <div class="row" style="margin-bottom:0px;height:100%; font-size:200%;">
 
-          <div class="col s4 m4 l4 top-nav-item" style="height:100%; padding-top:40px;">
+          <div class="col s4 m4 l4 top-nav-item hoverable" style="height:100%; padding-top:40px;">
             <span style="letter-spacing:3px;font-weight:bold;color:#303038;">Research</span>
           </div>
-          <div class="col s4 m4 l4 top-nav-item" style="height:100%; padding-top:40px;">
+          <div class="col s4 m4 l4 top-nav-item hoverable" style="height:100%; padding-top:40px;">
             <span style="letter-spacing:3px;font-weight:bold;color:#303038;">Sponsors</span>
           </div>
-          <div class="col s4 m4 l4 top-nav-item" style="height:100%; padding-top:40px;">
+          <div class="col s4 m4 l4 top-nav-item hoverable" style="height:100%; padding-top:40px;">
             <span style="letter-spacing:3px; font-weight:bold;color:#303038;">Partners</span>
           </div>
         </div>
@@ -53,13 +56,13 @@
             <span><img src="icons/f10.png" style="width:
 px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down" style="font-size:180%;">unleashing creativity, curiosity, and passion</span>
           </div>
-          <div id="nav-item-01" class="col s4 m4 l2 nav-item" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+          <div id="nav-item-01" class="col s4 m4 l2 nav-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
             Areas
           </div>
-          <div id="nav-item-02" class="col s4 m4 l2 nav-item" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+          <div id="nav-item-02" class="col s4 m4 l2 nav-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
             About
           </div>
-          <div id="nav-item-03" class="col s4 m4 l2 nav-item" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+          <div id="nav-item-03" class="col s4 m4 l2 nav-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
             Collaborate
           </div>
         </div>
@@ -82,12 +85,24 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     <div class="row" style="position:absolute; top:450px;height:570px;z-index:-1;background-color:#ff7f2a; width:100%;">
     </div>
 
-    <div class="container " style="position:absolute;z-index:1; top:500px;left:50%;">
+    <!-- <div class="container " style="position:absolute;z-index:1; top:500px;left:50%;">
       <div class="card-panel z-depth-5 center-align" style="position:relative;background-color:#424242;padding:5%;left:-50%;">
         <h1 style="color:white;z-index:100; border-left:40px solid #ff7f2a;border-right:40px solid #ff7f2a;">foundry10</h1>
         <div class="" style="padding-left:20%;padding-right:20%;">
           <h5 style="color:white;">A philanthropic research organization promoting education in non-traditional settings and subjects</h5>
         </div>
+      </div>
+    </div> -->
+
+    <div class="container " style="z-index:1; position:relative;top:15em;">
+      <div class="card-panel z-depth-5 center-align" style="position:relative;background-color:#424242;padding:5%;">
+
+        <h1 style="color:white;z-index:100; border-left:40px solid #ff7f2a;border-right:40px solid #ff7f2a;">foundry10</h1>
+
+        <div class="" style="padding-left:20%;padding-right:20%;">
+          <h5 style="color:white;">A philanthropic research organization promoting education in non-traditional settings and subjects</h5>
+        </div>
+
       </div>
     </div>
 
@@ -95,7 +110,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
     <div class="row" >
       <div id="triangle-bottomleft">
-        <div class="circ z-depth-5" id="circ" style="position:absolute; border-radius:50%; background-color:#eaa22f;  height:230px; width:230px;top:75%;">
+
+        <div class="circ z-depth-5" id="circ" style="position:absolute; border-radius:50%; background-color:#eaa22f;  height:230px; width:230px;top:80em;">
           <img id="logo-click" src="icons/f10.png" class="" style="position:relative; height:90%;left: -1.5%;top:5.5%;"alt="">
 
 
@@ -108,7 +124,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
           </div>
 
 
-          <div class="sub-circ z-depth-5 pulse " style="top:75%;left:-61.6025%;">
+          <div class="sub-circ z-depth-5 pulse " style="top:75%;left:-61.6025%;z-index:50">
 
             <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
                   <img src="icons/flat/012-paint-brush-1.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
@@ -117,7 +133,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
           </div>
 
-          <div class="sub-circ z-depth-5 pulse" style="top:75%;left:111.6025%;">
+          <div class="sub-circ z-depth-5 pulse" style="top:75%;left:111.6025%;z-index:50">
 
             <div class="center " style=";position: relative;height:100%;padding-top: 13%;">
                 <img src="icons/flat/007-book.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
@@ -125,18 +141,21 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
           </div>
         </div>
       </div>
-      <div class="section z-depth-5" style="position:absolute; top:100%;background-color:#ff7f2a; width:100%;margin-top:100px;">
-        <nav  style="height: 150px;">
+
+
+      <!-- info banner -->
+      <div class="section z-depth-5" style="position:absolute; top:95em;background-color:#ff7f2a; width:100%;margin-top:100px;">
+        <nav  style="height: 150px;background-color:#eee">
           <div class="container" style="height:100%;">
             <div class="row" style="height:100%;">
 
-              <div id="banner-item-01" class="col s4 m4 l2 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;background-color:#ccc;">
+              <div id="banner-item-01" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;background-color:#ccc;">
                 Tech
               </div>
-              <div id="banner-item-02" class="col s4 m4 l2 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+              <div id="banner-item-02" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
                 Collective
               </div>
-              <div id="banner-item-03" class="col s4 m4 l2 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+              <div id="banner-item-03" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
                 Art
               </div>
             </div>
@@ -203,20 +222,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
           </script>
         </div>
-        <!-- <div class="row">
-          <div class="container">
-            <div class="col s4">
-              <div class="card-panel">
 
-              </div>
-            </div>
-            <div class="col s8">
-              <div class="card-panel">
-
-              </div>
-            </div>
-          </div>
-        </div> -->
 
 
 
@@ -232,6 +238,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       </style>
       <script type="text/javascript">
         // console.log($('#triangle-bottomleft'))
+        console.log(window.innerWidth, 'vs', screen.width);
         $('#triangle-bottomleft').css("border-bottom", (window.innerWidth)+'px solid #303038')
         $('#triangle-bottomleft').css("border-right", (window.innerWidth)+'px solid transparent')
         $(window).scroll(function(){

@@ -16,8 +16,6 @@
   sub_item_lst.push(banner_sub_item_04)
 
 
-  console.log(sub_item_lst);
-
   let relationship = {
     tech : {
       nav : tech,
@@ -51,7 +49,7 @@
     for (x in relationship){
 
       try {
-        relationship[x].nav.style.backgroundColor = 'white'
+        relationship[x].nav.style.backgroundColor = '#eee'
 
       } catch (e) {
         console.log(e)
@@ -81,27 +79,6 @@
 
 
 
-  tech.addEventListener('click', function(e) {
-    console.log('click event on tech ')
-    nav_items_to_white()
-    this.style.backgroundColor = '#ccc'
-  });
-
-  collective.addEventListener('click', function(e) {
-    console.log('click on collective')
-    nav_items_to_white()
-    this.style.backgroundColor = '#ccc'
-
-
-  });
-
-  art.addEventListener('click', function(e) {
-    console.log('click event on art')
-    nav_items_to_white()
-    this.style.backgroundColor = '#ccc'
-
-
-  });
 
   // take an object -> sub category
   let display = function(element_to_display){
@@ -263,8 +240,51 @@
           'image_path_1'
         ]
       }
-    },
+    }
   }
+
+    let the_array_of_glory = []
+    let zero_array = function(arr){
+      // initialize all values of array to 0
+      for (let i = 0; i < 3; i++){
+         arr.push(Array(4).fill(0))
+
+      }
+    }
+    // zero_array(the_array_of_glory)
+
+    tech.addEventListener('click', function(e) {
+      console.log('click event on tech ')
+      nav_items_to_white()
+      this.style.backgroundColor = '#ccc'
+
+      // TODO : update nav elements
+
+      // TODO : populate windows with categorical content
+
+
+    });
+
+    collective.addEventListener('click', function(e) {
+      console.log('click on collective')
+      nav_items_to_white()
+      this.style.backgroundColor = '#ccc'
+      // TODO : update nav elements
+
+      // TODO : populate windows with categorical content
+
+    });
+
+    art.addEventListener('click', function(e) {
+      console.log('click event on art')
+      nav_items_to_white()
+      this.style.backgroundColor = '#ccc'
+      // TODO : update nav elements
+
+      // TODO : populate windows with categorical content
+
+    });
+
 
 
 

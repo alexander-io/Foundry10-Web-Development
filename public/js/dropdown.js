@@ -32,6 +32,8 @@
     }
   }
 
+
+
   /*
    * workhorse function that 'reveals' the a link-corresponding drop-down menu
    * also , add 'mouseover' and 'mouseleave' event listeners to the nav-items -> this is useful for tracking the position of the mouse in the DOM so to close the drop-down menus when appropriate
@@ -96,6 +98,20 @@
 
   // select the body
   let body = document.getElementById('body');
+
+
+  // on scroll hide dropdown
+  let flag = true
+  $(window).scroll(function(){
+    // console.log(obj);
+    if (flag) {
+      flag = !flag
+      hide_all_drop_down(nav_lst)
+      setTimeout(function() {
+        flag = !flag
+      }, 2000);
+    }
+  })
 
   // add a click event to the body of the document...
   // if  a use clicks the document and their mouse is not over a nav-item or the drop-down,
