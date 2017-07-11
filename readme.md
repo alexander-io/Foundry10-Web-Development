@@ -6,9 +6,45 @@
 
 ![mobile](md_images/mobile_070617.png)
 
+![info_banner](md_images/info_banner.png)
+
 ![dropdown menu, 070617](md_images/nav-re-design-jux_0001.png)
 
 ![mock-up](md_images/f10070517.png)
+
+#### Alexander Harris
+#### Monday July 12th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Good morning! I've arrived at 8:25 am to the office this morning & Anna was punctual/kind enough to let me in.
+
+Today I'm setting out to accomplish the following goals.
+    1. make the accordian post
+    2. clean and document html, css, and javascript (the code is getting unwieldy in some places)
+    3. minify the javascript used on the web page to optimize the user experience and reduce latency
+    4. modify the circle/triangular graphic to position it better on the landing page (I want to see desirable locations for the element on full, tablet, and mobile sizes)
+    5. make sketches of tom's white-board notes for the wev-development modules
+    6. enlarge the text on the nav-bar, increase the height of the nav-bar (it's impossible small, especially on mobile)
+    7. meet with Andrun & the web-security group to offer direction and measure progress
+
+let done = true
+let undone = false
+
+goals_checklist = {
+    accordian_post : done,
+    clean_document : ish,
+    minify_js : undone,
+    position_graphic : done,
+    sketch_toms_notes : undone,
+    group_meetings : done
+}
+
+
+
 
 #### Alexander Harris
 #### Friday July 7th, 2017
@@ -27,7 +63,7 @@ Given :
   const center_point = {x:0, y:0}
   const triangle_radius = 100
 
-Determining the x,y coordinates of point 1 is simple, just assume it's directly above the center point, so... add the triangle's radius to p1.y and leave p1.x at center_point.x 
+Determining the x,y coordinates of point 1 is simple, just assume it's directly above the center point, so... add the triangle's radius to p1.y and leave p1.x at center_point.x
 
   let p1 = p2 = p3 = {x:null,y:null}
 
@@ -46,7 +82,7 @@ Given a radius, determine the side-length of the triangle with the following :
   let side_len = triangle_radius * (Math.sqrt(3))
 
 Next, point your attention toward the inscribed circle. An inscribed circle is a circle inside of a triangle that has three points which happen to be the midpoints of the triangle sides. Anyway, we can find the radius of the inscribed circle with the following :
-  
+
   let inscribed_circle_radius = (Math.sqrt(3)/6) * side_len
 
 Now that we have the inscribed_circle_radius, simply add it to the radius of the triangle to derive the height of the triangle.
@@ -85,7 +121,7 @@ Therefore ...
 I have added a number of icons to the UI. Some number of them look okay, but with the many that I've added, things feel a little busy on the web page. I will consider removing some.
 
 
-Next to deal with, there's a bug effecting the user experience of the site on a mobile device. For each visible popup window, the window will remain on screen even after a scroll event has occured. Define a function to listen for scroll events. On scroll, close drop-down windows. Let's define this functionality in public/js/dropdown.js 
+Next to deal with, there's a bug effecting the user experience of the site on a mobile device. For each visible popup window, the window will remain on screen even after a scroll event has occured. Define a function to listen for scroll events. On scroll, close drop-down windows. Let's define this functionality in public/js/dropdown.js
 
 
 #### Alexander Harris
@@ -98,21 +134,21 @@ Next to deal with, there's a bug effecting the user experience of the site on a 
 
 This morning I met with Lisa to briefly discuss the issue I've been having accesssing the foundry10 mail server. I messaged Tom about the issue!
 
-Today I have set out to refine the navigation bar (more...). One of the current issues with the navigation bar is its readability. In my opinion, the font size for the link-titles in the navigation bar are small. For a solution, I'll apply a few style updates to the link-titles, first I'll increase the font size. Next I'll update the color and opacity. Next I'll update the letter kerning and spacing. 
+Today I have set out to refine the navigation bar (more...). One of the current issues with the navigation bar is its readability. In my opinion, the font size for the link-titles in the navigation bar are small. For a solution, I'll apply a few style updates to the link-titles, first I'll increase the font size. Next I'll update the color and opacity. Next I'll update the letter kerning and spacing.
 
-Currently there are two  usability issues with the navigation bar. First is that each drop-down menu will stay 'revealed' or 'open' while there's another active drop-down. This feels clunky -> I'd prefer to see only one drop-down menu item able to be viewed at one time. The second issue is especially pronounced when using the site on a mobile device. It's a common gesture on a mobile device to remove pop-ups (including drop-down menu items), by clicking away fromm the menu. This is not currently a feature. In order to implement this, I'll select the body element of the Document-Object-Model add a 'click' event listener to it. On 'click event', close all drop-down menus. 
+Currently there are two  usability issues with the navigation bar. First is that each drop-down menu will stay 'revealed' or 'open' while there's another active drop-down. This feels clunky -> I'd prefer to see only one drop-down menu item able to be viewed at one time. The second issue is especially pronounced when using the site on a mobile device. It's a common gesture on a mobile device to remove pop-ups (including drop-down menu items), by clicking away fromm the menu. This is not currently a feature. In order to implement this, I'll select the body element of the Document-Object-Model add a 'click' event listener to it. On 'click event', close all drop-down menus.
 
 update 12:15pm, I have just updated the navigation bar to improive mobile usability. Here's the logic/pseudo-code that I used:
 
     For each click-event on the body of the webpage :
-      if the mouse is not over a navigation-bar link and the mouse is not over the drop-down menu : 
-        then close all drop-down menu items 
+      if the mouse is not over a navigation-bar link and the mouse is not over the drop-down menu :
+        then close all drop-down menu items
 
 Below I'll include a code snippet describing the functionality that I've implemented
 ```javascript
 // set booleans to track the state of the mouse's location
 // this is useful for closing drop-down menus when mouse is both away from the nav-items and drop-down menus
-let mouse_in_nav_item = false, mouse_in_drop_down = false 
+let mouse_in_nav_item = false, mouse_in_drop_down = false
 
 // add event listeners to the nav-items and the drop-downs to update the booleans
 // let n imply a nav-item, let d imply a drop-down menu
@@ -161,16 +197,16 @@ areas = [
   column_01 = [
     'artistic design',
     'digital audio',
-    'early education', 
+    'early education',
     'gender studies',
     'internships',
     'robotics'
   ],
   column_02 = [
-    'automotive', 
-    'games and learning', 
-    'drama', 
-    'hip-hop', 
+    'automotive',
+    'games and learning',
+    'drama',
+    'hip-hop',
     'professional development',
     'virtual reality'
   ]
@@ -190,7 +226,7 @@ areas = [
     'gender studies',
     'professional development',
     'internships'
-  ], 
+  ],
   art = [
     'artistic design',
     'digital audio',

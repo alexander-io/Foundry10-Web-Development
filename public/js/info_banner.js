@@ -105,7 +105,8 @@
 
   // take an object -> sub category
   let display = function(element_to_display){
-    let header = document.getElementById('banner-header'), body = document.getElementById('banner-body-text');
+    let header = document.getElementById('banner-header'), body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02');
+    // TODO : select the other elements in the DOM that need updating (i.e., the top card-panel and bottom card-panel)
   }
 
   // each sub-category should have data associated : title, body of text, two links, two images
