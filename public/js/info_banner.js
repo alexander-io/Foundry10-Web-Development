@@ -163,7 +163,7 @@
     collective : {
       intern : {
         title : 'internships',
-        innerhtml_nav_text : '',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">internships</span><span class="hide-on-large-only truncate">intern</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -176,7 +176,7 @@
       },
       gender : {
         title : 'gender studies',
-        innerhtml_nav_text : '',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">gender studies</span><span class="hide-on-large-only truncate">gender</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -189,7 +189,7 @@
       },
       early_education : {
         title : 'early education',
-        innerhtml_nav_text : '',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">early education</span><span class="hide-on-large-only truncate">early ed.</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -202,6 +202,7 @@
       },
       professional_development : {
         title : 'professional development',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">professional dev.</span><span class="hide-on-large-only truncate">pro. dev.</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -216,6 +217,7 @@
     art : {
       artistic : {
         title : 'artistic design',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">artistic design</span><span class="hide-on-large-only truncate">design</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -228,6 +230,7 @@
       },
       digital_audio : {
         title : 'digital audio',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">digital audio</span><span class="hide-on-large-only truncate">audio.</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -240,6 +243,7 @@
       },
       drama : {
         title : 'drama',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">drama</span><span class="hide-on-large-only truncate">drama</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -252,6 +256,7 @@
       },
       hiphop : {
         title : 'hip-hop',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">hip hop</span><span class="hide-on-large-only truncate">hip hop</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -298,8 +303,24 @@
     }
 
 
+    // update the text that exists in the navbar elements
+    let update_nav_text = function(tree_branch){
+      let i = 0;
+      for (x in tree_branch) {
+        try {
+          // console.log('tree innerhtml :', tree.tech[x].innerhtml_nav_text);
+          // console.log('innerhtml nav text :', sub_item_title_lst[i])
+          sub_item_title_lst[i].innerHTML = tree_branch[x].innerhtml_nav_text
+          ++i
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+
+
+
     tech.addEventListener('click', function(e) {
-      // console.log('click event on tech ')
       nav_items_to_white()
       this.style.backgroundColor = '#ccc'
       // user clicked tech nav event listener, that's index 0, update info_banner_xy_array_position_tuple
@@ -308,24 +329,8 @@
       info_banner_xy_array_position_tuple.sub = 0
       cl() // XXX test print coordinate tuple
 
-
-      // console.log(sub_item_title_lst);
-      // TODO : update nav elements
-      for (x in sub_item_title_lst) {
-        try {
-          // console.log('node value',sub_item_title_lst[x].nodeValue)
-          console.log('innerhtml_nav_text',sub_item_title_lst[x].innerhtml_nav_text)
-          console.log('tree innerhtml', tree);
-          // sub_item_title_lst[x].innerHTML = tree.tech[x].innerhtml_nav_text
-
-          // sub_item_title_lst[x].innerhtml_nav_text = '<span class="hide-on-med-and-down truncate">virtual reality</span><span class="hide-on-large-only">vr</span>'
-
-        } catch (e) {
-          console.log(e);
-        }
-      }
-
-
+      //  update nav elements
+      update_nav_text(tree.tech)
 
       // TODO : populate windows with categorical content
     });
@@ -340,8 +345,8 @@
       info_banner_xy_array_position_tuple.sub = 0
       cl() // XXX test print coordinate tuple
 
-      // TODO : update nav elements
-
+      // update nav elements
+      update_nav_text(tree.collective)
       // TODO : populate windows with categorical content
 
     });
@@ -356,7 +361,8 @@
       info_banner_xy_array_position_tuple.sub = 0
       cl() // XXX test print coordinate tuple
 
-      // TODO : update nav elements
+      //  update nav elements
+      update_nav_text(tree.art)
 
       // TODO : populate windows with categorical content
 
