@@ -23,7 +23,7 @@ goals_checklist = {
     accordian_post : done,
     clean_document : undone,
     minify_js : undone,
-    position_graphic : undone,
+    position_graphic : done,
     sketch_toms_notes : undone,
-    group_meetings : undone
+    group_meetings : done
 }
