@@ -3,6 +3,11 @@
   let collective = document.getElementById('banner-item-02')
   let art = document.getElementById('banner-item-03')
 
+  let tech_circ = document.getElementById('tech-circ');
+  let collective_circ = document.getElementById('collective-circ');
+  let art_circ = document.getElementById('art-circ');
+
+
   let banner_sub_item_01 = document.getElementById('banner-sub-item-01');
   let banner_sub_item_02 = document.getElementById('banner-sub-item-02');
   let banner_sub_item_03 = document.getElementById('banner-sub-item-03');
@@ -251,10 +256,26 @@
 
       }
     }
-    // zero_array(the_array_of_glory)
+    zero_array(the_array_of_glory)
+
+
+
+
+    tech_circ.addEventListener('click', function(e) {
+      Materialize.toast('Tech', 4000, 'circ-toast tech-toast')
+    });
+
+
+    art_circ.addEventListener('click', function(e) {
+      Materialize.toast('Art', 4000, 'circ-toast art-toast')
+    });
+
+    collective_circ.addEventListener('click', function(e) {
+      Materialize.toast('Collective', 4000, 'circ-toast collective-toast')
+    });
 
     tech.addEventListener('click', function(e) {
-      console.log('click event on tech ')
+      // console.log('click event on tech ')
       nav_items_to_white()
       this.style.backgroundColor = '#ccc'
 
@@ -266,7 +287,7 @@
     });
 
     collective.addEventListener('click', function(e) {
-      console.log('click on collective')
+      // console.log('click on collective')
       nav_items_to_white()
       this.style.backgroundColor = '#ccc'
       // TODO : update nav elements
@@ -276,7 +297,7 @@
     });
 
     art.addEventListener('click', function(e) {
-      console.log('click event on art')
+      // console.log('click event on art')
       nav_items_to_white()
       this.style.backgroundColor = '#ccc'
       // TODO : update nav elements
@@ -288,7 +309,7 @@
 
 
 
-  console.log(relationship)
+  // console.log(relationship)
 
 
 

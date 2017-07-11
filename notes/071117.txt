@@ -1,0 +1,11 @@
+#### Alexander Harris
+#### Tuesday July 11th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Today I'm setting out to primarily work toward two goals. First, make the expose page mobile friendly and friendly to screens that have non-standard aspect ratios. Next, program the info-banner display functionality.
+
+On the mobile/aspect-ratio front, I've identified and fixed a HUGE issue in the code. Each of the elements in the DOM were having their y-axis values (offset from top of screen) set accordign ot percentages of the available screen area. This caused undesirable overlap of elements when viewed on non-standard aspect ratio monitors. 

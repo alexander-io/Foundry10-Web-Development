@@ -22,6 +22,22 @@ html, body {
   overflow-x: hidden;
 }
 
+.circ-toast {
+  background-color: #ff7f2a;
+  text-align:center;
+  font-size: 200%;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-left: 40px solid #424242;
+
+  /*left:500px;
+  top:100px;*/
+}
+.toast {
+  right:100px;
+}
+
+
 /*a { color: #CCC }*/
 
 #canvas {
@@ -233,11 +249,12 @@ body {
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 0s;
 }
+
 .toast{
   position: fixed;
   width: 450px;
   height:150px;
-  left:100px;
+  /*left:100px;*/
   top:initial;
   bottom: 0px;
 }
@@ -270,6 +287,11 @@ p{
 }
 .pulse:hover {
   animation: none;
+}
+
+
+.tech-toast {
+
 }
 
 @-webkit-keyframes pulse {

@@ -32,7 +32,9 @@
     }
   }
 
-
+  console.log('screen width :', window.innerWidth)
+  console.log('screen height :', window.innerHeight)
+  console.log('width/height ratio :', window.innerWidth/window.innerHeight)
 
   /*
    * workhorse function that 'reveals' the a link-corresponding drop-down menu
@@ -44,14 +46,30 @@
     // the the rectangle and positional data associated with 'this'
     // keep in mind that 'this' is meant to be an instance of a nav-item
     let rect = n.getBoundingClientRect()
-    console.log(rect);
+    let d_rect = d.getBoundingClientRect()
+    // console.log(rect);
     hide_all_drop_down(nav_lst)
     d.style.visibility = 'visible'
     d.style.backgroundColor = '#ffffff'
-    d.width = n.getBoundingClientRect().width+'px'
+    // d.width = n.getBoundingClientRect().width+'px'
+
+    // console.log('dropdown width :', d_rect.width)
+
+    let nav_center_point = rect.right - (rect.width/2)
+    // console.log('nav center point :', nav_center_point);
 
 
-    d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width*1.85))  + 'px'
+    if (window.innerWidth <= 1090) {
+      d.style.left = (window.innerWidth/2) - (d_rect.width/2) + 'px'
+    } else {
+      d.style.left = (nav_center_point - (d_rect.width/2)) + 'px'
+    }
+
+
+
+    // d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width*1.85))  + 'px'
+    // d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width*1.85))  + 'px'
+
 
     d.style.top = n.getBoundingClientRect().bottom+'px'
 

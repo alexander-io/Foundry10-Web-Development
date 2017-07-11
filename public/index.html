@@ -115,7 +115,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
           <img id="logo-click" src="icons/f10.png" class="" style="position:relative; height:90%;left: -1.5%;top:5.5%;"alt="">
 
 
-          <div class="sub-circ z-depth-5 pulse" style="top:-75%;left:25%;z-index:30;">
+          <div id="tech-circ" class="sub-circ z-depth-5 pulse" style="top:-75%;left:25%;z-index:30;">
             <div class="center"  style="position: relative;height:100%;padding-top: 13%;">
                 <!-- <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a> -->
                 <img src="icons/flat/009-wrench.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
@@ -124,7 +124,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
           </div>
 
 
-          <div class="sub-circ z-depth-5 pulse " style="top:75%;left:-61.6025%;z-index:50">
+          <div id="art-circ" class="sub-circ z-depth-5 pulse " style="top:75%;left:-61.6025%;z-index:50">
 
             <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
                   <img src="icons/flat/012-paint-brush-1.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
@@ -133,7 +133,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
           </div>
 
-          <div class="sub-circ z-depth-5 pulse" style="top:75%;left:111.6025%;z-index:50">
+          <div id="collective-circ" class="sub-circ z-depth-5 pulse" style="top:75%;left:111.6025%;z-index:50">
 
             <div class="center " style=";position: relative;height:100%;padding-top: 13%;">
                 <img src="icons/flat/007-book.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
@@ -216,7 +216,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
             let adjcp01bottom = document.getElementById('adj-card-panel-01-bottom')
             let cprow = document.getElementById('card-panel-row-01')
             let rect = cp01.getBoundingClientRect()
-            console.log(cp01.getBoundingClientRect())
+            // console.log(cp01.getBoundingClientRect())
             adjcp01top.style.height = rect.height/2.1 + "px"
             adjcp01bottom.style.height = rect.height/2.1 + "px"
 
@@ -238,7 +238,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       </style>
       <script type="text/javascript">
         // console.log($('#triangle-bottomleft'))
-        console.log(window.innerWidth, 'vs', screen.width);
+        // console.log(window.innerWidth, 'vs', screen.width);
         $('#triangle-bottomleft').css("border-bottom", (window.innerWidth)+'px solid #303038')
         $('#triangle-bottomleft').css("border-right", (window.innerWidth)+'px solid transparent')
         $(window).scroll(function(){
