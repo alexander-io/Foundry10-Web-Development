@@ -103,7 +103,167 @@
 
   });
 
+  // take an object -> sub category
+  let display = function(element_to_display){
+    let header = document.getElementById('banner-header'), body = document.getElementById('banner-body-text');
+  }
 
+  // each sub-category should have data associated : title, body of text, two links, two images
+
+  let tree = {
+    // tech branch
+    tech : {
+      robotics : {
+        title : 'robotics',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      vr : {
+        title : 'virtual reality',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      game_dev : {
+        title : 'game development',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      automotive : {
+        title : 'automotive',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      }
+    },
+    // collective branch
+    collective : {
+      intern : {
+        title : 'internships',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      gender : {
+        title : 'gender studies',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      early_education : {
+        title : 'early education',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      professional_development : {
+        title : 'professional development',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      }
+    },
+    art : {
+      artistic : {
+        title : 'artistic design',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      digital_audio : {
+        title : 'digital audio',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      drama : {
+        title : 'drama',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      },
+      hiphop : {
+        title : 'hip-hop',
+        body : 'lorem',
+        links : [
+          'http://link1.org',
+          'http://link1.org'
+        ],
+        images : [
+          'image_path_1',
+          'image_path_1'
+        ]
+      }
+    },
+  }
 
 
 
