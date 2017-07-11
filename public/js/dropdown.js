@@ -47,16 +47,11 @@
     // keep in mind that 'this' is meant to be an instance of a nav-item
     let rect = n.getBoundingClientRect()
     let d_rect = d.getBoundingClientRect()
-    // console.log(rect);
     hide_all_drop_down(nav_lst)
     d.style.visibility = 'visible'
     d.style.backgroundColor = '#ffffff'
-    // d.width = n.getBoundingClientRect().width+'px'
-
-    // console.log('dropdown width :', d_rect.width)
 
     let nav_center_point = rect.right - (rect.width/2)
-    // console.log('nav center point :', nav_center_point);
 
 
     if (window.innerWidth <= 1090) {
@@ -67,8 +62,6 @@
 
 
 
-    // d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width*1.85))  + 'px'
-    // d.style.left = (n.getBoundingClientRect().left - (n.getBoundingClientRect().width*1.85))  + 'px'
 
 
     d.style.top = n.getBoundingClientRect().bottom+'px'
