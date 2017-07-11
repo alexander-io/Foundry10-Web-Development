@@ -13,12 +13,23 @@
   let banner_sub_item_03 = document.getElementById('banner-sub-item-03');
   let banner_sub_item_04 = document.getElementById('banner-sub-item-04');
 
+  let banner_sub_item_title_01 = document.getElementById('banner-sub-item-01-title');
+  let banner_sub_item_title_02 = document.getElementById('banner-sub-item-02-title');
+  let banner_sub_item_title_03 = document.getElementById('banner-sub-item-03-title');
+  let banner_sub_item_title_04 = document.getElementById('banner-sub-item-04-title');
+
   // define a list of all of the sub items
   let sub_item_lst = []
   sub_item_lst.push(banner_sub_item_01)
   sub_item_lst.push(banner_sub_item_02)
   sub_item_lst.push(banner_sub_item_03)
   sub_item_lst.push(banner_sub_item_04)
+
+  let sub_item_title_lst = []
+  sub_item_title_lst.push(banner_sub_item_title_01)
+  sub_item_title_lst.push(banner_sub_item_title_02)
+  sub_item_title_lst.push(banner_sub_item_title_03)
+  sub_item_title_lst.push(banner_sub_item_title_04)
 
 
   let relationship = {
@@ -92,12 +103,12 @@
   }
 
   // each sub-category should have data associated : title, body of text, two links, two images
-
   let tree = {
     // tech branch
     tech : {
       robotics : {
         title : 'robotics',
+        innerhtml_nav_text : 'robotics',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -110,6 +121,7 @@
       },
       vr : {
         title : 'virtual reality',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">virtual reality</span><span class="hide-on-large-only">vr</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -122,6 +134,7 @@
       },
       game_dev : {
         title : 'game development',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">game development</span><span class="hide-on-large-only truncate">game dev. </span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -134,6 +147,7 @@
       },
       automotive : {
         title : 'automotive',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">automotive</span><span class="hide-on-large-only truncate">auto</span>',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -149,6 +163,7 @@
     collective : {
       intern : {
         title : 'internships',
+        innerhtml_nav_text : '',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -161,6 +176,7 @@
       },
       gender : {
         title : 'gender studies',
+        innerhtml_nav_text : '',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -173,6 +189,7 @@
       },
       early_education : {
         title : 'early education',
+        innerhtml_nav_text : '',
         body : 'lorem',
         links : [
           'http://link1.org',
@@ -257,7 +274,7 @@
       }
     }
     zero_array(the_array_of_glory)
-
+    console.log(the_array_of_glory)
 
 
 
@@ -274,22 +291,55 @@
       Materialize.toast('Collective', 4000, 'circ-toast collective-toast')
     });
 
+    // use this tuple to track what the user has selected
+    let info_banner_xy_array_position_tuple = {
+      super : null,
+      sub : null
+    }
+
+
     tech.addEventListener('click', function(e) {
       // console.log('click event on tech ')
       nav_items_to_white()
       this.style.backgroundColor = '#ccc'
+      // user clicked tech nav event listener, that's index 0, update info_banner_xy_array_position_tuple
+      info_banner_xy_array_position_tuple.super = 0
+      // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
+      info_banner_xy_array_position_tuple.sub = 0
+      cl() // XXX test print coordinate tuple
 
+
+      // console.log(sub_item_title_lst);
       // TODO : update nav elements
+      for (x in sub_item_title_lst) {
+        try {
+          // console.log('node value',sub_item_title_lst[x].nodeValue)
+          console.log('innerhtml_nav_text',sub_item_title_lst[x].innerhtml_nav_text)
+          console.log('tree innerhtml', tree);
+          // sub_item_title_lst[x].innerHTML = tree.tech[x].innerhtml_nav_text
+
+          // sub_item_title_lst[x].innerhtml_nav_text = '<span class="hide-on-med-and-down truncate">virtual reality</span><span class="hide-on-large-only">vr</span>'
+
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+
 
       // TODO : populate windows with categorical content
-
-
     });
 
     collective.addEventListener('click', function(e) {
       // console.log('click on collective')
       nav_items_to_white()
       this.style.backgroundColor = '#ccc'
+      // user clicked collective nav event listener, that's index 1, update info_banner_xy_array_position_tuple
+      info_banner_xy_array_position_tuple.super = 1
+      // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
+      info_banner_xy_array_position_tuple.sub = 0
+      cl() // XXX test print coordinate tuple
+
       // TODO : update nav elements
 
       // TODO : populate windows with categorical content
@@ -300,15 +350,38 @@
       // console.log('click event on art')
       nav_items_to_white()
       this.style.backgroundColor = '#ccc'
+      // user clicked art nav event listener, that's index 2, update info_banner_xy_array_position_tuple
+      info_banner_xy_array_position_tuple.super = 2
+      // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
+      info_banner_xy_array_position_tuple.sub = 0
+      cl() // XXX test print coordinate tuple
+
       // TODO : update nav elements
 
       // TODO : populate windows with categorical content
 
     });
 
+    banner_sub_item_01.addEventListener('click', function(e) {
+      info_banner_xy_array_position_tuple.sub = 0
+      cl() // XXX test print coordinate tuple
+    });
+    banner_sub_item_02.addEventListener('click', function(e) {
+      info_banner_xy_array_position_tuple.sub = 1
+      cl() // XXX test print coordinate tuple
+    });
+    banner_sub_item_03.addEventListener('click', function(e) {
+      info_banner_xy_array_position_tuple.sub = 2
+      cl() // XXX test print coordinate tuple
+    });
+    banner_sub_item_04.addEventListener('click', function(e) {
+      info_banner_xy_array_position_tuple.sub = 3
+      cl() // XXX test print coordinate tuple
+    });
 
-
-
+    let cl = function(){
+      console.log(info_banner_xy_array_position_tuple)
+    }
   // console.log(relationship)
 
 

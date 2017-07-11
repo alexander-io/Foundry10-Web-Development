@@ -328,6 +328,11 @@ p{
   height : 115px;
   width : 115px;
 }
+
+.sub-circ:hover {
+  cursor: pointer;
+}
+
 .subsub-circ {
   position : inherit;
   border-radius : 50%;
