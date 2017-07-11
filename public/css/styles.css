@@ -172,6 +172,15 @@ nav {
 
 }
 
+.banner-item, .banner-sub-item {
+  text-align: center;
+}
+
+.banner-item:hover, .banner-sub-item:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
 .top-nav-item:hover {
   background-color: #fff;
   cursor: pointer;
