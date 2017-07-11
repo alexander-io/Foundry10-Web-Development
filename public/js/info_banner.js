@@ -318,6 +318,16 @@
       }
     }
 
+    // the user clicked on the super category, therefore set all sub-nav elements to white and initialize the 0th sub-nav item to have a grey background
+    let init_reset_sub_nav = function(){
+      nav_sub_items_to_white()
+      banner_sub_item_01.style.backgroundColor = '#ccc'
+    }
+
+    let tech_click = function(){
+      
+    }
+
 
 
     tech.addEventListener('click', function(e) {
@@ -329,8 +339,11 @@
       info_banner_xy_array_position_tuple.sub = 0
       cl() // XXX test print coordinate tuple
 
-      //  update nav elements
+      // update nav elements
       update_nav_text(tree.tech)
+
+      // set all sub nav backgrounds to white and set the initial to grey/selected
+      init_reset_sub_nav()
 
       // TODO : populate windows with categorical content
     });
@@ -347,6 +360,9 @@
 
       // update nav elements
       update_nav_text(tree.collective)
+
+      // set all sub nav backgrounds to white and set the initial to grey/selected
+      init_reset_sub_nav()
       // TODO : populate windows with categorical content
 
     });
@@ -363,6 +379,9 @@
 
       //  update nav elements
       update_nav_text(tree.art)
+
+      // set all sub nav backgrounds to white and set the initial to grey/selected
+      init_reset_sub_nav()
 
       // TODO : populate windows with categorical content
 
