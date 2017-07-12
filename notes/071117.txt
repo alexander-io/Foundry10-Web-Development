@@ -43,3 +43,5 @@ In modifying the navigation bar, I unintentionally made a modification that kill
     d.left = screen_center - (d.width/2)
 
   voila, this will position the dropdown menu in alignment with the screen center
+
+I've added a number of functional elements to the info-banner. Now, the info-banner 'module' has core functionality. For each click on a super-category, change the text values of the sub-category links so that they correspond to the super-category; tech => [robotics, vr, game_dev, auto]. For each click on a sub-category, update the display windows with the header and text-body content corresponding to that category. 

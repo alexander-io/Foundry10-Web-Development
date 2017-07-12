@@ -55,7 +55,8 @@
 
 
     if (window.innerWidth <= 1090) {
-      d.style.left = (window.innerWidth/2) - (d_rect.width/2) + 'px'
+      d.style.width = window.innerWidth*.75 + 'px'
+      d.style.left = (window.innerWidth/2) - (window.innerWidth*.75/2) + 'px'
     } else {
       d.style.left = (nav_center_point - (d_rect.width/2)) + 'px'
     }

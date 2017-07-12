@@ -119,9 +119,9 @@
 
     // console.log('tree branch :',  tree[branch])
     // console.log('art branch :', tree['art'])
-    cl()
+    // cl()
     // test print indexing into hash table
-    console.log(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title)
+    // console.log(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title)
 
     header.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title
 
@@ -370,7 +370,7 @@
     }
 
     the_array_of_glory = assign_keys_to_array(the_array_of_glory)
-    console.log('GLORY', the_array_of_glory);
+    // console.log('GLORY', the_array_of_glory);
 
     // console.log('treeeeeeeee', tree['tech']['vr'])
 
@@ -412,10 +412,10 @@
     // let this be a function to update the 'header' content in the infobanner
     // @param twig, an object that represents a sub-category (e.x., robotics, gender-studies, automotive, etc.)
     // why the 'twig' naming convention? root > branch > twig > stem > leaf > cell
-    let update_banner_text = function(twig){
-      console.log('current banner header :', banner_header.innerHTML)
-      banner_header.innerHTML = twig.title
-    }
+    // let update_banner_text = function(twig){
+    //   console.log('current banner header :', banner_header.innerHTML)
+    //   banner_header.innerHTML = twig.title
+    // }
 
 
 
@@ -436,7 +436,7 @@
       info_banner_xy_array_position_tuple.super = 0
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
       info_banner_xy_array_position_tuple.sub = 0
-      cl() // XXX test print coordinate tuple
+      // cl() // XXX test print coordinate tuple
 
       // update nav elements
       update_nav_text(tree.tech)
@@ -456,7 +456,7 @@
       info_banner_xy_array_position_tuple.super = 1
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
       info_banner_xy_array_position_tuple.sub = 0
-      cl() // XXX test print coordinate tuple
+      // cl() // XXX test print coordinate tuple
 
       // update nav elements
       update_nav_text(tree.collective)
@@ -476,7 +476,7 @@
       info_banner_xy_array_position_tuple.super = 2
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
       info_banner_xy_array_position_tuple.sub = 0
-      cl() // XXX test print coordinate tuple
+      // cl() // XXX test print coordinate tuple
 
       //  update nav elements
       update_nav_text(tree.art)
@@ -486,29 +486,29 @@
 
       // TODO : populate windows with categorical content
       display()
-      
+
     });
 
     banner_sub_item_01.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 0
-      cl() // XXX test print
+      // cl() // XXX test print
       display()
     });
     banner_sub_item_02.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 1
-      cl() // XXX test print
+      // cl() // XXX test print
       display()
 
     });
     banner_sub_item_03.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 2
-      cl() // XXX test print
+      // cl() // XXX test print
       display()
 
     });
     banner_sub_item_04.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 3
-      cl() // XXX test print
+      // cl() // XXX test print
       display()
 
     });
