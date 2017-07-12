@@ -105,7 +105,7 @@
 
   // take an object -> sub category
   let display = function(){
-    let header = document.getElementById('banner-header'), banner_body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02');
+    let header = document.getElementById('banner-header'), banner_body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02'), img_card_01 = document.getElementById('adj-card-panel-01-top'), img_card_02 = document.getElementById('adj-card-panel-01-bottom');
 
     // TODO : select the other elements in the DOM that need updating (i.e., the top card-panel and bottom card-panel)
     let branch = 'tech' // initialize the bnranch to tech
@@ -127,6 +127,11 @@
 
     banner_body.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].body
 
+    img_card_01.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0] + ')'
+
+    img_card_02.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[1] + ')'
+
+
 
   }
 
@@ -139,12 +144,12 @@
         innerhtml_nav_text : 'robotics',
         body : 'Robotics is the interdisciplinary branch of engineering and science that includes mechanical engineering, electrical engineering, computer science, and others. Robotics deals with the design, construction, operation, and use of robots, as well as computer systems for their control, sensory feedback, and information processing.',
         links : [
-          'http://link1.org',
-          'http://link1.org'
+          'l2',
+          'l1'
         ],
         images : [
-          'image_path_1',
-          'image_path_1'
+          'images/info_banner/DSC01400-1-e1472759462425.jpg',
+          'http://link1.org'
         ]
       },
       vr : {
@@ -156,8 +161,8 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
-          'image_path_1'
+          'images/info_banner/vr-student.jpg',
+          'images/info_banner/ao-vr.jpg'
         ]
       },
       game_dev : {
