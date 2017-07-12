@@ -2,7 +2,7 @@
 ## [Live Site](http://foundry10.org)
 ## [Development Environment](http://opensail.io)
 
-![infobanner landing](md_images/071117_dev.png)
+![infobanner landing](md_images/071117_dev_half.png)
 
 ![dev-env](md_images/f10_070617.png)
 
