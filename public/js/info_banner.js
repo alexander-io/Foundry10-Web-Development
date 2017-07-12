@@ -174,7 +174,7 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/games-and-learning.jpg',
           'image_path_1'
         ]
       },
@@ -187,8 +187,8 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
-          'image_path_1'
+          'images/info_banner/auto-tech-ov-blog-768x403.png',
+          'images/info_banner/'
         ]
       }
     },
@@ -216,7 +216,7 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/foundry10-girls-program-thumb.png',
           'image_path_1'
         ]
       },
@@ -242,7 +242,7 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/lydia-2.jpg',
           'image_path_1'
         ]
       }
@@ -257,7 +257,7 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/creativity-intern-3-768x263.jpg',
           'image_path_1'
         ]
       },
@@ -270,7 +270,7 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/audio-report-blog.png',
           'image_path_1'
         ]
       },
@@ -283,7 +283,7 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/dramatic-arts-blog-768x403.png',
           'image_path_1'
         ]
       },
@@ -296,7 +296,7 @@
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/hip-hop-dance-2.jpg',
           'image_path_1'
         ]
       }
