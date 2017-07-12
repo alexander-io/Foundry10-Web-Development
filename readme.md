@@ -2,6 +2,8 @@
 ## [Live Site](http://foundry10.org)
 ## [Development Environment](http://opensail.io)
 
+![infobanner landing](md_images/071117_dev.png)
+
 ![dev-env](md_images/f10_070617.png)
 
 ![mobile](md_images/mobile_070617.png)
@@ -13,7 +15,58 @@
 ![mock-up](md_images/f10070517.png)
 
 #### Alexander Harris
-#### Monday July 12th, 2017
+#### Tuesday July 11th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Today I'm setting out to primarily work toward two goals. First, make the expose page mobile friendly and friendly to screens that have non-standard aspect ratios. Next, program the info-banner display functionality.
+
+On the mobile/aspect-ratio front, I've identified and fixed a HUGE issue in the code. Each of the elements in the DOM were having their y-axis values (offset from top of screen) set accordign ot percentages of the available screen area. This caused undesirable overlap of elements when viewed on non-standard aspect ratio monitors. The issue was twofold, first I centreed an absolutely positioned element in a wonky way by manipulating the left-offset of a parent and the negative-left-offset of the child. This created 'overflow' to occur on mobile viewing.
+
+In modifying the navigation bar, I unintentionally made a modification that killed the UI for mobile viewing. For each revealed drop-down menu, it was positioned in the window far to the left so that it was only partially viewable. I was able to fix this with some math. Here's how I did it...
+
+  let's assume that we have some number of navigation-bar buttons and dropdown menus to place beneath them in the DOM.
+
+  calling the getBoundingClientRect() function on the nav-bar button will return (x,y) coordinate positions of the nav-bar button in the DOM, especially the distance from the left (origin) of the window to the left and right side of the nav-button element, and the width of the element.
+
+  assume 'n' is the nav-bar button element
+    n.left is the pixel distance from the left/origin of the screen to the left side of the element
+    n.right is the pixel distance from the left/origin of the screen to the right side of the element
+    n.width is the pixel distance from the left side to the right side of the element
+
+  assume 'd' is the drop-down menu
+    similar to the nav-bar element, the dropdown menu has similar properties : d.left, d.right, and d.width
+
+  find the center of the nav-bar element
+    let nav_bar_elem_center_point = n.left + (n.right - n.left)
+
+  position the dropdown menu left side first at the center point of the nav-item element, then subtract half of the width of the drop-down menu from the left/origin offset
+    d.left = nav_bar_elem_center_point - (d.width/2)
+
+  voila, this scheme will align the center of the dropdown menu with the center point of the corresponding nav-bar element. note, the above scheme works well for full-screen layouts. however, for mobile there's not enough screen width to use this scheme; if used, drop-down menus may be positioned partially offscreen. therefore, I've programmed another scheme to handle the mobile screen case... find the mobile drop-down menu scheme below...
+
+  this case is actually easier! instead of aligning the dropdown menus with their corresponding nav-bar elements, simply align all of the dropdown menus with the screen center.
+
+  assuming the same environment above with 'n' and 'd', also assume that we have access to the width of the screen with : window.innerWidth
+
+  find the center of the screen
+    let screen_center = (window.innerWidth/2)
+
+  similar to the above, first align the left side of the dropdown menu with the center of the screen then subtract half the width of the dropdown menu in pixels from the offset of the dropdown
+    d.left = screen_center - (d.width/2)
+
+  voila, this will position the dropdown menu in alignment with the screen center
+
+I've added a number of functional elements to the info-banner. Now, the info-banner 'module' has core functionality. For each click on a super-category, change the text values of the sub-category links so that they correspond to the super-category; tech => [robotics, vr, game_dev, auto]. For each click on a sub-category, update the display windows with the header and text-body content corresponding to that category.
+
+Last major update for the day, I've included a number of images in the project repository from the f10 site. For some of these images, I've associated them with sub-categories and they're populated to the display in the info_banner on category clicks.
+
+
+#### Alexander Harris
+#### Monday July 10th, 2017
 #### foundry10 web development intern
 #### http://foundry10.org
 #### http://opensail.io
