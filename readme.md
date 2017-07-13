@@ -65,7 +65,6 @@ I've added a number of functional elements to the info-banner. Now, the info-ban
 Last major update for the day, I've included a number of images in the project repository from the f10 site. For some of these images, I've associated them with sub-categories and they're populated to the display in the info_banner on category clicks.
 
 
-#### Alexander Harris
 #### Monday July 10th, 2017
 #### foundry10 web development intern
 #### http://foundry10.org
@@ -99,7 +98,6 @@ goals_checklist = {
 
 
 
-#### Alexander Harris
 #### Friday July 7th, 2017
 #### foundry10 web development intern
 #### http://foundry10.org
@@ -177,7 +175,6 @@ I have added a number of icons to the UI. Some number of them look okay, but wit
 Next to deal with, there's a bug effecting the user experience of the site on a mobile device. For each visible popup window, the window will remain on screen even after a scroll event has occured. Define a function to listen for scroll events. On scroll, close drop-down windows. Let's define this functionality in public/js/dropdown.js
 
 
-#### Alexander Harris
 #### Thursday July 6th, 2017
 #### foundry10 web development intern
 #### http://foundry10.org
@@ -296,7 +293,6 @@ I met with Andrun today. He is in the midst of learning about the document-objec
 
 I began designing a graphic to provide a visual represenation of the on-goings at foundry10. The graphic will chiefly consist of one large & central sphere surrounded by three orbiting spheres. The central/large sphere will represent the core of foundry10, while the orbiting spheres represent the 'super-categories' of foundry10's areas -> tech, education, and art. I plan to include relevant icons in each of the orbiting spheres that indicate tech, education, and art respectively. I have sketches for this design available in my notebook, there is a digital mock-up (a .png file) of this design available in the project repository at the md_images/f10_070617.png. Here's the link, https://github.com/alexander-io/Foundry10-Web-Development/blob/master/md_images/f10070517.png
 
-#### Alexander Harris
 #### Wednesday July 5th, 2017
 #### foundry10 web development intern
 #### http://foundry10.org
@@ -313,7 +309,6 @@ For the landing display, I implemented the 'triangular' backdrop following inspi
 I checked in with Andrun today. He seems to be making progress toward planning his project. I gave him a demonstration of localhost development.
 
 
-#### Alexander Harris
 #### Friday June 30th, 2017
 #### foundry10 web development
 #### http://foundry10.org
@@ -331,7 +326,6 @@ In the development environment, I've added elements including icons, headers, li
 This morning I submitted my weekly hours to Jenna. I met with Lisa regarding my experience at foundry10 as a web developer so far. Tom provided me with the server, and file-transfer-protocol credentials for the organization's server.
 
 
-#### Alexander Harris
 #### Thursday June 29th, 2017
 #### foundry10 web development
 #### http://foundry10.org
@@ -439,7 +433,6 @@ TODO Timeline
   Sign up for newsletter
 
 
-#### Alexander Harris
 #### Wednesday June 28th, 2017
 #### foundry10 web development
 #### http://foundry10.org
@@ -459,8 +452,6 @@ http://opensource.eco/f10/
 I contacted Henry Woody, BoS Mathematics, who has experience with Android application development. His most recent application is called Eventi and it scored great popularity among the students of our school. I will introduce the two of you via email.
 
 
-
-Alexander Harris
 Tuesday June 27th, 2017
 foundry10 web development
 http://foundry10.org
