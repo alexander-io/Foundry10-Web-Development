@@ -354,42 +354,26 @@
       arr[2][2] = 'drama'
       arr[2][3] = 'hiphop'
 
-      // arr[0]
-      // let keys = []
-      // for (x in tree){
-      //   // tree[x].order = []
-      //   for (y in tree[x]){
-      //     console.log('key :', y)
-      //     keys.push(y)
-      //   }
-      // }
-      //
-      // for (let i = 0; i < arr.length; i++){
-      //   for (let j = 0; j < arr[0].length; j++){
-      //     arr[i][j] = keys.pop()
-      //   }
-      // }
-      //
-      // console.log(arr)
       return arr
     }
 
+    // setup array with keys
     the_array_of_glory = assign_keys_to_array(the_array_of_glory)
-    // console.log('GLORY', the_array_of_glory);
 
-    // console.log('treeeeeeeee', tree['tech']['vr'])
 
     tech_circ.addEventListener('click', function(e) {
       Materialize.toast('Tech', 4000, 'circ-toast tech-toast')
+      tech_click()
     });
-
 
     art_circ.addEventListener('click', function(e) {
       Materialize.toast('Art', 4000, 'circ-toast art-toast')
+      art_click()
     });
 
     collective_circ.addEventListener('click', function(e) {
       Materialize.toast('Collective', 4000, 'circ-toast collective-toast')
+      collective_click()
     });
 
     // use this tuple to track what the user has selected
@@ -404,8 +388,6 @@
       let i = 0;
       for (x in tree_branch) {
         try {
-          // console.log('tree innerhtml :', tree.tech[x].innerhtml_nav_text);
-          // console.log('innerhtml nav text :', sub_item_title_lst[i])
           sub_item_title_lst[i].innerHTML = tree_branch[x].innerhtml_nav_text
           ++i
         } catch (e) {
@@ -413,14 +395,6 @@
         }
       }
     }
-
-    // let this be a function to update the 'header' content in the infobanner
-    // @param twig, an object that represents a sub-category (e.x., robotics, gender-studies, automotive, etc.)
-    // why the 'twig' naming convention? root > branch > twig > stem > leaf > cell
-    // let update_banner_text = function(twig){
-    //   console.log('current banner header :', banner_header.innerHTML)
-    //   banner_header.innerHTML = twig.title
-    // }
 
 
 
@@ -431,17 +405,14 @@
     }
 
 
-
-
-
-    tech.addEventListener('click', function(e) {
+    // user clicked on one of the 'tech' elements
+    let tech_click = function() {
       nav_items_to_white()
-      this.style.backgroundColor = '#ccc'
+      tech.style.backgroundColor = '#ccc'
       // user clicked tech nav event listener, that's index 0, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 0
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
       info_banner_xy_array_position_tuple.sub = 0
-      // cl() // XXX test print coordinate tuple
 
       // update nav elements
       update_nav_text(tree.tech)
@@ -449,39 +420,37 @@
       // set all sub nav backgrounds to white and set the initial to grey/selected
       init_reset_sub_nav()
 
-      // TODO : populate windows with categorical content
+      // populate windows with categorical content
       display()
-    });
+    }
 
-    collective.addEventListener('click', function(e) {
-      // console.log('click on collective')
+
+    // user clicked one of the collective elements
+    let collective_click = function() {
       nav_items_to_white()
-      this.style.backgroundColor = '#ccc'
+      collective.style.backgroundColor = '#ccc'
       // user clicked collective nav event listener, that's index 1, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 1
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
       info_banner_xy_array_position_tuple.sub = 0
-      // cl() // XXX test print coordinate tuple
 
       // update nav elements
       update_nav_text(tree.collective)
 
       // set all sub nav backgrounds to white and set the initial to grey/selected
       init_reset_sub_nav()
-      // TODO : populate windows with categorical content
+      // populate windows with categorical content
       display()
+    }
 
-    });
-
-    art.addEventListener('click', function(e) {
-      // console.log('click event on art')
+    // define function to handle a click on an art element
+    let art_click = function() {
       nav_items_to_white()
-      this.style.backgroundColor = '#ccc'
+      art.style.backgroundColor = '#ccc'
       // user clicked art nav event listener, that's index 2, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 2
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
       info_banner_xy_array_position_tuple.sub = 0
-      // cl() // XXX test print coordinate tuple
 
       //  update nav elements
       update_nav_text(tree.art)
@@ -489,41 +458,46 @@
       // set all sub nav backgrounds to white and set the initial to grey/selected
       init_reset_sub_nav()
 
-      // TODO : populate windows with categorical content
+      // populate windows with categorical content
       display()
+    }
+
+
+    tech.addEventListener('click', function(e) {
+      tech_click()
+    });
+
+    collective.addEventListener('click', function(e) {
+      collective_click()
+    });
+
+    art.addEventListener('click', function(e) {
+      art_click()
 
     });
 
     banner_sub_item_01.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 0
-      // cl() // XXX test print
       display()
     });
+    
     banner_sub_item_02.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 1
-      // cl() // XXX test print
       display()
-
     });
+
     banner_sub_item_03.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 2
-      // cl() // XXX test print
       display()
-
     });
+
     banner_sub_item_04.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 3
-      // cl() // XXX test print
       display()
-
     });
 
+    // XXX testing function for logging the state of the info-banner
     let cl = function(){
       console.log(info_banner_xy_array_position_tuple)
     }
-  // console.log(relationship)
-
-
-
-
 })()

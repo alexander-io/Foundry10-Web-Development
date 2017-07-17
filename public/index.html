@@ -7,32 +7,25 @@
     <link rel="stylesheet" href="/css/materialize.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>foundry10</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> -->
-
     <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
 
 
   </head>
   <body id="body">
-    <overflow style="overflow-x:hidden">
 
-    </overflow>
-
-
-    <nav style="background-color:#ccc; height: 150px; vertical-align:middle;">
+    <nav id="top-nav-nav-01" >
       <div class="container" style="height:100%;">
-        <div class="row" style="margin-bottom:0px;height:100%; font-size:200%;">
+        <div class="row" id="top-nav-row" >
 
-          <div class="col s4 m4 l4 top-nav-item hoverable" style="height:100%; padding-top:40px;">
-            <span style="letter-spacing:3px;font-weight:bold;color:#303038;">Research</span>
+          <div id="tni01" class="col s4 m4 l4 top-nav-item hoverable">
+            <span id="top-nav-span-01">Research</span>
           </div>
-          <div class="col s4 m4 l4 top-nav-item hoverable" style="height:100%; padding-top:40px;">
-            <span style="letter-spacing:3px;font-weight:bold;color:#303038;">Sponsors</span>
+          <div id="tni02" class="col s4 m4 l4 top-nav-item hoverable">
+            <span id="top-nav-span-02">Sponsors</span>
           </div>
-          <div class="col s4 m4 l4 top-nav-item hoverable" style="height:100%; padding-top:40px;">
-            <span style="letter-spacing:3px; font-weight:bold;color:#303038;">Partners</span>
+          <div id="tni03" class="col s4 m4 l4 top-nav-item hoverable">
+            <span id="top-nav-span-03">Partners</span>
           </div>
         </div>
       </div>
@@ -42,10 +35,24 @@
       #body > nav:nth-child(3)  {
           /*padding-top:2%;*/
       }
-      /*div#top-nav-item.col.s3.
-      #top-nav-item {
-        padding-top:4%;
-      }*/
+      #top-nav-span-01, #top-nav-span-02, #top-nav-span-03 {
+        letter-spacing:3px; font-weight:bold;color:#303038;
+      }
+
+      #tni01, #tni02, #tni03 {
+        height:100%; padding-top:40px;
+      }
+
+      #top-nav-row {
+        margin-bottom:0px;
+        height:100%;
+        font-size:200%;
+      }
+      #top-nav-nav-01 {
+        background-color:#ccc;
+        height: 150px;
+        vertical-align:middle;
+      }
     </style>
 
 
@@ -56,18 +63,20 @@
             <span><img src="icons/f10.png" style="width:
 px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down" style="font-size:180%;">unleashing creativity, curiosity, and passion</span>
           </div>
-          <div id="nav-item-01" class="col s4 m4 l2 nav-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+          <div id="nav-item-01" class="col s4 m4 l2 nav-item hoverable">
             Areas
           </div>
-          <div id="nav-item-02" class="col s4 m4 l2 nav-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+          <div id="nav-item-02" class="col s4 m4 l2 nav-item hoverable">
             About
           </div>
-          <div id="nav-item-03" class="col s4 m4 l2 nav-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+          <div id="nav-item-03" class="col s4 m4 l2 nav-item hoverable">
             <span class="hide-on-med-and-down truncate">Collaborate</span><span class="hide-on-large-only truncate">Collab.</span>
           </div>
         </div>
       </div>
     </nav>
+
+
 
     <ul class="side-nav" id="mobile-demo" >
       <li><a class="side-li" href="sass.html">Programs</a></li>
@@ -77,14 +86,11 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       <li><a class="side-li" href="mobile.html">Contact</a></li>
     </ul>
 
-    <!-- <canvas id="canvas"></canvas> -->
-    <div id="particles-js" style="background-color:white;position:absolute;right:0;width:100%;height:150%;z-index:-20;"></div>
-
+    <div id="particles-js"></div>
 
     <!-- banner backdrop -->
-    <div class="row" style="position:absolute; top:450px;height:570px;z-index:-1;background-color:#ff7f2a; width:100%;">
-      <div class="row z-depth-5" style="position:absolute; top:68%;height:25%;z-index:-1;background-color:white; width:100%;">
-
+    <div id="banner-backdrop-01" class="row">
+      <div id="nested-banner-backdrop-01" class="row z-depth-5" >
       </div>
     </div>
 
@@ -92,7 +98,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     <div class="container " style="z-index:1; position:relative;top:13em;">
       <div class="card-panel z-depth-5 center-align hide-on-med-and-down" style="position:relative;background-color:#424242;padding:5%; height:29em;">
 
-        <h1 style="color:white;z-index:100; border-left:40px solid #ff7f2a;border-right:40px solid #ff7f2a;">foundry10</h1>
+        <h1 id="h1-title-01" >foundry10</h1>
 
         <div class="" style="padding-left:20%;padding-right:20%;">
           <h5 style="color:white;">A philanthropic research organization promoting education in non-traditional settings and subjects</h5>
@@ -104,15 +110,11 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       <!-- small screen version -->
       <div class="card-panel z-depth-5 center-align hide-on-large-only" style="position:relative;background-color:#424242;padding:5%; height:33em;">
 
-        <h1 style="color:white;z-index:100; border-left:40px solid #ff7f2a;border-right:40px solid #ff7f2a;">foundry10</h1>
-
+        <h1 id="h1-title-02" >foundry10</h1>
         <div class="" style="padding-left:20%;padding-right:20%;">
           <h5 style="color:white;">A philanthropic research organization promoting education in non-traditional settings and subjects</h5>
         </div>
-
       </div>
-
-
     </div>
 
 
@@ -120,13 +122,12 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     <div class="row" >
       <div id="triangle-bottomleft" style="z-index:-3">
 
-        <div class="circ z-depth-5" id="circ" style="position:absolute; border-radius:50%; background-color:#eaa22f;  height:230px; width:230px;top:80em;">
+        <div class="circ z-depth-5" id="circ" >
           <img id="logo-click" src="icons/f10.png" class="" style="position:relative; height:90%;left: -1.5%;top:5.5%;"alt="">
 
 
           <div id="tech-circ" class="sub-circ z-depth-5 " style="top:-75%;left:25%;z-index:30;">
             <div class="center"  style="position: relative;height:100%;padding-top: 13%;">
-                <!-- <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a> -->
                 <img src="icons/flat/009-wrench.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
             </div>
 
@@ -138,8 +139,6 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
             <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
                   <img src="icons/flat/012-paint-brush-1.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
               </div>
-
-
           </div>
 
           <div id="collective-circ" class="sub-circ z-depth-5 " style="top:75%;left:111.6025%;z-index:50">
@@ -151,9 +150,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         </div>
       </div>
 
-
       <!-- info banner -->
-      <div class="section z-depth-5" style="position:absolute; top:95em;background-color:#ff7f2a; width:100%;margin-top:100px;padding-top:2em;z-index:0">
+      <div id="info-banner" class="section z-depth-5" >
         <nav class="fadeInLeft" style="height: 150px;background-color:#eee;">
           <div class="container" style="height:100%;">
             <div class="row" style="height:100%;">
@@ -233,8 +231,10 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         </div> -->
 
         <div id="" class="row container">
+          <!-- column -->
           <div class="col s12 m12 l8">
-            <div id="cardpanel01" class="card-panel z-depth-5" style="background-color:#424242;padding:15%;z-index:4">
+            <div id="cardpanel01" class="card-panel z-depth-5" style="background-color:#424242;padding:15%;z-index:4;height:70em;">
+
               <h4 >redefining education through <span id="banner-header" style="color:#ff7f2a;">robotics</span></h4>
               <p id="banner-body-text" style="font-size:150%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <div class="row" style="height:100px;">
@@ -265,53 +265,123 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
             let cprow = document.getElementById('card-panel-row-01')
             let rect = cp01.getBoundingClientRect()
             // console.log(cp01.getBoundingClientRect())
-            adjcp01top.style.height = rect.height/2.1 + "px"
-            adjcp01bottom.style.height = rect.height/2.1 + "px"
+            // adjcp01top.style.height = rect.height/2.1 + "px"
+            // adjcp01bottom.style.height = rect.height/2.1 + "px"
+
+            adjcp01top.style.height = rect.height/2.03 + "px"
+            adjcp01bottom.style.height = rect.height/2.03 + "px"
 
           </script>
         </div>
-
-
-
-
       </div>
-      <style media="screen">
-      #triangle-bottomleft {
-        width: 0;
-        height: 0;
 
-        /*bottom:*/
-        /*top:200%;*/
-      }
-      </style>
+
       <script type="text/javascript">
-        // console.log($('#triangle-bottomleft'))
-        // console.log(window.innerWidth, 'vs', screen.width);
+
+        // define the triangle's properties
         $('#triangle-bottomleft').css("border-bottom", (window.innerWidth)+'px solid #303038')
         $('#triangle-bottomleft').css("border-right", (window.innerWidth)+'px solid transparent')
+
+        // on scroll, rotate things
         $(window).scroll(function(){
           var theta = $(window).scrollTop() / 256 % Math.PI;
-        //   console.log(theta)
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
-
-          // console.log(window.innerWidth)
-          // console.log(window.innerHeight)
-
-
-        //   $('#circ').css({transform: 'rotate(-' + theta + 'rad)'});
-        //   $('.sub-circ').css({transform: 'rotate(' + theta + 'rad)'});
-
         })
 
         let circ = document.getElementById('circ')
-        circ.style.left = '22%'
+        circ.style.left = '0'
+        circ.style.right = '0'
+        circ.style.marginLeft = 'auto'
+        circ.style.marginRight = 'auto'
+
+
+
       </script>
 
       <div class="backgrnd" style="width:100%;height:5000px;background-color:#303038;">
         <!-- place stuff here -->
-        <div class="container">
+        <div class="container" style="position:relative; top:80em;">
           <div class="row">
             <div class="col s12">
+              <p></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6">
+
+              <!--  -->
+              <div class="EmbeddedTweet-tweet" style="background-color:white;">
+                <blockquote >
+                  <div>
+                      <div class="btn-large right">
+                      </div>
+
+                    <div class="container">
+                      <div class="row">
+                        <div class="col s12 center">
+                          <h5>foundry10</h5>
+                        </div>
+                      </div>
+                    </div>
+              		</div>
+
+              		<div >
+              			<p >Want to learn more about foundry10? Check out the revamped Tweet activity dashboard:&nbsp
+                      <a href="http://foundry10.org" data-scribe="element:url">
+                        <span class="u-hiddenVisually">http://</span>
+                        foundry10.org/
+                      </a>
+                    </p>
+              			<a  href="http://foundry10.org"  >
+        							<div >
+        								<img  src="images/ao-vr.jpg" style="width:100%;">
+        							</div>
+          						<div>
+          							<h3>Article Title</h3>
+          							<p class="tcu-resetMargin u-block TwitterCardsGrid-col--spacerTop tcu-textEllipse--multiline">
+                          What is the subject areas dashboard? The Subject area dashboard is a tool you can use to learn more about foundry10's subject areas&nbsp;and how they resonate.
+                        </p>
+          						</div>
+            				</a>
+                  </div>
+                </blockquote>
+              </div>
+             	<!--  -->
+              <style media="screen">
+                blockquote.twitter-tweet {
+                  display: inline-block;
+                  padding: 16px;
+                  margin: 10px 0;
+                  max-width: 468px;
+                  border: #ddd 1px solid;
+                  border-top-color: #eee;
+                  border-bottom-color: #bbb;
+                  border-radius: 5px;
+                  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+                  font: bold 14px/18px Helvetica, Arial, sans-serif;
+                  color: #000;
+                }
+
+                blockquote.twitter-tweet p {
+                  font: normal 18px/24px Georgia, "Times New Roman", Palatino, serif;
+                  margin: 0 5px 10px 0;
+                }
+
+                blockquote.twitter-tweet a[href^="https://twitter.com"] {
+                  font-weight: normal;
+                  color: #666;
+                  font-size: 12px;
+                }
+
+                .tcu-image-504692034473435136 {
+                  background-image: url('images/ao-vr.jpg') !important;
+                  background-size: cover !important;
+                }
+
+
+              </style>
+
+
             </div>
           </div>
         </div>

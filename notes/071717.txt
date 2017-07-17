@@ -1,0 +1,19 @@
+#### Alexander Harris
+#### Monday July 17th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Met with Tom this morning. He gave me an array of suggestions to improve the look & usability of the expose page.
+  todo_lst = [
+    'reduce drop shadow on bottom nav in info-banner',
+    'standardize the buttons',
+    'research elegant flame patterns to include on the site, or glass blowing/foundry elements',
+    'font : helvetics nueue',
+    'color scheme',
+    'remove doubly layered nav-bar to opt for single (cry)',
+    'footer',
+    'include description of expose page'
+  ]

@@ -344,3 +344,63 @@ p{
 .card-panel {
   background-color: #1a1a1a;
 }
+
+#nav-item-01, #nav-item-02, #nav-item-03 {
+  letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;
+}
+
+#particles-js {
+  background-color:white;
+  position:absolute;
+  right:0;
+  width:100%;
+  height:150%;
+  z-index:-20;
+}
+
+#banner-backdrop-01 {
+  position:absolute; top:450px;height:570px;z-index:-1;background-color:#ff7f2a; width:100%;
+}
+
+#nested-banner-backdrop-01 {
+  position:absolute;
+  top:68%;
+  height:25%;
+  z-index:-1;
+  background-color:white;
+  width:100%;
+}
+
+#h1-title-01, #h1-title-02 {
+  color:white;
+  z-index:100;
+  border-left:40px solid #ff7f2a;
+  border-right:40px solid #ff7f2a;
+}
+
+#circ {
+  position:absolute;
+  border-radius:50%; background-color:#eaa22f;
+  height:230px;
+  width:230px;
+  top:80em;
+}
+
+#info-banner {
+  position:absolute;
+  top:95em;
+  background-color:#ff7f2a;
+  width:100%;
+  margin-top:100px;
+  padding-top:2em;
+  z-index:0
+}
+
+#triangle-bottomleft {
+  width: 0;
+  height: 0;
+}
+
+.btn-large {
+  background-color: coral;
+}
