@@ -23,7 +23,7 @@ html, body {
 }
 
 .circ-toast {
-  background-color: #ff7f2a;
+  background-color: #f99d43;
   text-align:center;
   font-size: 200%;
   padding-left: 3em;
@@ -156,30 +156,36 @@ a:link, a:visited, a:hover, a:active {
   /*color : black;*/
 }
 a:active{
-  color:#ff7f2a;
+  color:#f99d43;
 }
 a:link{
   /*font-weight: bold;*/
   /*color: #b5a58a;
   color:#303038;*/
-  color: #ff7f2a;
+  color: #f99d43;
 
 }
 a:visited{
-  color:#ff7f2a;
+  color:#f99d43;
 }
 nav {
   color:black;
   background-color: white;
 }
 
-.nav-item:hover {
-  background-color: #ccc;
-  cursor: pointer;
-
+#nav-item-01, #nav-item-02, #nav-item-03 {
+  letter-spacing:3px;font-weight:bold;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;
 }
+
 .nav-item {
   text-align: center;
+  color: #eee;
+
+}
+.nav-item:hover {
+  background-color: #eee;
+  cursor: pointer;
+  color:#333;
 }
 
 .top-nav-item {
@@ -222,9 +228,9 @@ div.col.s6 {
 
 }
 
-span {
+/*span {
   color: #424242;
-}
+}*/
 body {
   font-family: 'Bellefair', serif;
 }
@@ -323,7 +329,7 @@ p{
 .sub-circ {
   position : inherit;
   border-radius : 50%;
-  background-color : #ff7f2a;
+  background-color : #f99d43;
   height : 75px;
   width : 75px;
 }
@@ -344,9 +350,7 @@ p{
   background-color: #1a1a1a;
 }
 
-#nav-item-01, #nav-item-02, #nav-item-03 {
-  letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;
-}
+
 
 #particles-js {
   background-color:white;
@@ -358,7 +362,7 @@ p{
 }
 
 #banner-backdrop-01 {
-  position:absolute; top:450px;height:570px;z-index:-1;background-color:#ff7f2a; width:100%;
+  position:absolute; top:450px;height:570px;z-index:-1;background-color:#f99d43; width:100%;
 }
 
 #nested-banner-backdrop-01 {
@@ -373,8 +377,8 @@ p{
 #h1-title-01, #h1-title-02 {
   color:white;
   z-index:100;
-  border-left:40px solid #ff7f2a;
-  border-right:40px solid #ff7f2a;
+  border-left:40px solid #f99d43;
+  border-right:40px solid #f99d43;
 }
 
 #circ {
@@ -391,7 +395,7 @@ p{
   position:absolute;
   /*top:15em;*/
   top:640px;
-  background-color:#ff7f2a;
+  background-color:#f99d43;
   width:100%;
   /*margin-top:10px;*/
   padding-top:2em;
@@ -408,7 +412,7 @@ p{
 }
 
 blockquote {
-  border-color: #ff7f2a;
+  border-color: #f99d43;
 }
 
 .article-button-row {

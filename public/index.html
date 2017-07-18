@@ -56,12 +56,12 @@
     </style>
 
 
-    <nav class="z-depth-5" id="nav" style="height: 150px;">
+    <nav class="z-depth-5" id="nav" style="height: 150px; background-color:#f09341">
       <div class="container" style="height:100%;">
         <div class="row" style="height:100%;">
           <div class="col s6 hide-on-med-and-down" style="padding-top:40px;padding-bottom:15px;height:100%;">
             <span><img src="icons/f10.png" style="width:
-px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down" style="font-size:180%;padding-bottom:15px;">unleashing creativity, curiosity, & passion</span>
+px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down " style="font-size:180%;padding-bottom:15px;color:#eee;overflow:hidden;white-space:nowrap;">creativity, curiosity, & passion</span>
           </div>
           <div id="nav-item-01" class="col s4 m4 l2 nav-item hoverable">
             Areas
@@ -222,9 +222,9 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
 
         <div class="row z-depth-5 " style="position:absolute;width:100%;height:25em; background-color:white;z-index:-1;top:40em;">
-          <!-- <div class="parallax">
-            <img src="images/ao-vr.jpg" alt="">
-          </div> -->
+          <div class="" id="parallax-02">
+            <img src="images/patterns/particles_plax.png" style="min-width:100%;" alt="">
+          </div>
         </div>
 
         <!-- <script type="text/javascript">
@@ -246,7 +246,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
                 <h2 style="color:#eee">
                   redefining education through
-                  <span id="banner-header" style="color:#ff7f2a;">
+                  <span id="banner-header" style="color:#fa9c42;">
                     robotics
                   </span>
                 </h2>
@@ -264,6 +264,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
               <script type="text/javascript">
                 $(document).ready(function(){
                   $('.parallax').parallax()
+                  $('.parallax-02').parallax()
+
                 })
               </script>
 
@@ -497,7 +499,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
                         <img  src="images/info_banner/creativity-intern-3-768x263.jpg" style="width:100%; z-index:1;position:relative;vertical-align:middle;">
                       </div>
           						<div class="article-bottom-div">
-          							<h5 style="color:#ff7f2a">Artistic Design</h5>
+          							<h5 style="color:#fa9c42">Artistic Design</h5>
           							<p >
                           What is the subject areas dashboard? The Subject area dashboard is a tool you can use to learn more about foundry10's subject areas&nbsp;and how they resonate.
                         </p>
@@ -539,7 +541,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
                         <img  src="images/ao-vr.jpg" style="width:100%; z-index:1;position:relative;vertical-align:middle;">
                       </div>
           						<div class="article-bottom-div">
-          							<h5 style="color:#ff7f2a">Technologists</h5>
+          							<h5 style="color:#fa9c42">Technologists</h5>
           							<p>
                           What is the subject areas dashboard? The Subject area dashboard is a tool you can use to learn more about foundry10's subject areas&nbsp;and how they resonate.
                         </p>
@@ -682,7 +684,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
             .article-card{
               background-color: white;
               height:20%;
-              border-left: 1em solid #ff7f2a;
+              border-left: 1em solid #fa9c42;
               padding: 1em 1em 1em 1em;
             }
 
@@ -695,7 +697,35 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
             }
           </style>
 
-        </div>
+        </div> <!-- end container -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col s6">
+              <a id="f10button" href="#">explore research</a>
+              <style media="screen">
+                #f10button {
+                  padding: 17px 45px;
+                  font: 700 14px/28px Roboto Condensed,sans-serif;
+                  border: 2px solid #fa9c42;
+                  color: #ffffff;
+                  display: inline-block;
+                  /*font: 700 16px/30px Roboto Condensed,sans-serif;*/
+                  letter-spacing: 1.5px;
+                  min-width: 275px;
+                  /*padding: 17px 70px;*/
+                  text-align: center;
+                  text-transform: uppercase;
+                  border-image: linear-gradient(to bottom right, #ffa545 0%, #cb6535 100%);
+                }
+              </style>
+            </div>
+            <div class="col s6">
+
+            </div>
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+
       </div>
     </div>
 
