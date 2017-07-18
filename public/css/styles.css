@@ -156,18 +156,17 @@ a:link, a:visited, a:hover, a:active {
   /*color : black;*/
 }
 a:active{
-  color:#b5a58a;
-  color:#303038;
+  color:#ff7f2a;
 }
 a:link{
   /*font-weight: bold;*/
-  color: #b5a58a;
-  color:#303038;
+  /*color: #b5a58a;
+  color:#303038;*/
+  color: #ff7f2a;
 
 }
 a:visited{
-  color:#b5a58a;
-  color:#303038;
+  color:#ff7f2a;
 }
 nav {
   color:black;
@@ -325,8 +324,8 @@ p{
   position : inherit;
   border-radius : 50%;
   background-color : #ff7f2a;
-  height : 115px;
-  width : 115px;
+  height : 75px;
+  width : 75px;
 }
 
 .sub-circ:hover {
@@ -381,17 +380,20 @@ p{
 #circ {
   position:absolute;
   border-radius:50%; background-color:#eaa22f;
-  height:230px;
-  width:230px;
-  top:80em;
+  height:150px;
+  width:150px;
+  top:320px;
+  /*right:0px;*/
+  /*top:80em;*/
 }
 
 #info-banner {
   position:absolute;
-  top:95em;
+  /*top:15em;*/
+  top:640px;
   background-color:#ff7f2a;
   width:100%;
-  margin-top:100px;
+  /*margin-top:10px;*/
   padding-top:2em;
   z-index:0
 }
@@ -407,4 +409,8 @@ p{
 
 blockquote {
   border-color: #ff7f2a;
+}
+
+.article-button-row {
+  padding-right: 5%;
 }
