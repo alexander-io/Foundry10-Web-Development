@@ -127,9 +127,11 @@
 
     banner_body.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].body
 
-    img_card_01.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0] + ')'
 
-    img_card_02.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[1] + ')'
+    // TODO : for each category click, need to update time image in the DOM with the image on record
+    // img_card_01.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0] + ')'
+    //
+    // img_card_02.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[1] + ')'
 
 
 
@@ -480,7 +482,7 @@
       info_banner_xy_array_position_tuple.sub = 0
       display()
     });
-    
+
     banner_sub_item_02.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 1
       display()
