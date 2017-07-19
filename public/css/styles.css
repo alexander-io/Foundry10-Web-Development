@@ -20,6 +20,7 @@ html, body {
   /*width: 100%;*/
   /*overflow: hidden;*/
   overflow-x: hidden;
+  background-color: #212121;
 }
 
 .circ-toast {
@@ -156,17 +157,17 @@ a:link, a:visited, a:hover, a:active {
   /*color : black;*/
 }
 a:active{
-  color:#f99d43;
+  /*color:#f99d43;*/
 }
 a:link{
   /*font-weight: bold;*/
   /*color: #b5a58a;
   color:#303038;*/
-  color: #f99d43;
+  /*color: #f99d43;*/
 
 }
 a:visited{
-  color:#f99d43;
+  /*color:#f99d43;*/
 }
 nav {
   color:black;
@@ -329,7 +330,7 @@ p{
 .sub-circ {
   position : inherit;
   border-radius : 50%;
-  background-color : #f99d43;
+  background-color : #ff5f2a;
   height : 75px;
   width : 75px;
 }
@@ -384,17 +385,18 @@ p{
 #circ {
   position:absolute;
   border-radius:50%; background-color:#eaa22f;
-  height:150px;
-  width:150px;
-  top:320px;
+  height:200px;
+  width:200px;
+  top:20em;
+  /*top:320px;*/
   /*right:0px;*/
   /*top:80em;*/
 }
 
 #info-banner {
-  position:absolute;
-  /*top:15em;*/
-  top:640px;
+  position:relative;
+  top:15em;
+  /*top:640px;*/
   background-color:#f99d43;
   width:100%;
   /*margin-top:10px;*/

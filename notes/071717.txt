@@ -17,3 +17,5 @@ Met with Tom this morning. He gave me an array of suggestions to improve the loo
     'footer',
     'include description of expose page'
   ]
+
+Spend most of the day programming, especially restructuring ui elements.

@@ -4,11 +4,27 @@
     <meta charset="utf-8">
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/materialize.min.js" type="text/javascript"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+
+
+    <!--  animate css -->
+     <link rel="stylesheet" href="css/animate.css">
+
+
+    <!--  sequence  -->
+    <script src="js/hammer.min.js"></script>
+    <script src="js/sequence.min.js"></script>
+    <!-- <script src="js/sequence-theme.intro.min.js"></script> -->
+
+
     <link rel="stylesheet" href="/css/materialize.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>foundry10</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 
   </head>
@@ -56,12 +72,12 @@
     </style>
 
 
-    <nav class="z-depth-5" id="nav" style="height: 150px; background-color:#f09341">
+    <!-- <nav class="z-depth-3" id="nav" style="height: 150px; background-color:#f09341; visibility:hidden;">
       <div class="container" style="height:100%;">
         <div class="row" style="height:100%;">
           <div class="col s6 hide-on-med-and-down" style="padding-top:40px;padding-bottom:15px;height:100%;">
-            <span><img src="icons/f10.png" style="width:
-px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down " style="font-size:180%;padding-bottom:15px;color:#eee;overflow:hidden;white-space:nowrap;">creativity, curiosity, & passion</span>
+            <span><img class="hide-on-med-and-up"src="icons/f10.png" style="width:
+px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-and-down " style="font-size:180%;padding-bottom:15px;color:#eee;overflow:hidden;white-space:nowrap;">foundry10</span>
           </div>
           <div id="nav-item-01" class="col s4 m4 l2 nav-item hoverable">
             Areas
@@ -74,7 +90,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
 
 
@@ -86,7 +102,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       <li><a class="side-li" href="mobile.html">Contact</a></li>
     </ul>
 
-    <div id="particles-js"></div>
+    <!-- <div id="particles-js"></div> -->
 
     <!-- banner backdrop -->
     <!-- <div id="banner-backdrop-01" class="row">
@@ -116,333 +132,677 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       </div>
     </div> -->
 
+    <a href="#about-foundry10" style="z-index:100;" class="valign-wrapper;"><i class="material-icons md-36 z-depth-5" style="font-size:100px;position:fixed;background-color:#f99d43; border-radius:50%; color:white;z-index:100;right:3%;bottom:3%;">keyboard_arrow_down</i></a>
 
 
-    <div class="row" >
-      <div id="triangle-bottomleft" style="z-index:-3">
+    <div class="container" style="color:#ffffff">
+      <div class="section">
+        <div class="col s6">
+          <h2 style="display:inline">foundry10  &nbsp  </h2>
 
-        <div class="circ z-depth-5" id="circ" >
-          <img id="logo-click" src="icons/f10.png" class="" style="position:relative; height:90%;left: -1.5%;top:5.5%;"alt="">
-
-
-          <div id="tech-circ" class="sub-circ z-depth-5 " style="top:-75%;left:25%;z-index:30;">
-            <div class="center"  style="position: relative;height:100%;padding-top: 13%;">
-                <img src="icons/flat/009-wrench.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
-            </div>
-
-          </div>
+          <a href="#about-foundry10"><i class="material-icons" style="background-color:#ff5f2a; border-radius:50%; color:black;">keyboard_arrow_down</i></a>
 
 
-          <div id="art-circ" class="sub-circ z-depth-5  " style="top:75%;left:-61.6025%;z-index:50">
 
-            <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
-                  <img src="icons/flat/012-paint-brush-1.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+
+
+          <!-- <div class="valign-wrapper">
+
+          </div> -->
+        </div>
+      </div>
+      <div class="section">
+        <div class="row">
+
+          <div class="col s6 " >
+
+            <!-- circ -->
+            <div class="circ z-depth-5" id="circ" >
+              <img id="logo-click" src="icons/f10.png" class="" style="position:relative; height:90%;left: -1.5%;top:5.5%;"alt="">
+
+
+              <div id="tech-circ" class="sub-circ z-depth-5 " style="top:-75%;left:27.5%;z-index:30;">
+                <div class="center"  style="position: relative;height:100%;padding-top: 13%;">
+                    <img src="icons/flat/009-wrench.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+                </div>
+
               </div>
+
+
+              <div id="art-circ" class="sub-circ z-depth-5  " style="top:75%;left:-61.6025%;z-index:50">
+
+                <div class="center " style=";position: relative;height:100%;padding-top: 10%;">
+                      <img src="icons/flat/012-paint-brush-1.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+                  </div>
+              </div>
+
+              <div id="collective-circ" class="sub-circ z-depth-5 " style="top:75%;left:111.6025%;z-index:50">
+
+                <div class="center " style=";position: relative;height:100%;padding-top: 13%;">
+                    <img src="icons/flat/007-book.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+                </div>
+              </div>
+            </div> <!-- end circ -->
           </div>
 
-          <div id="collective-circ" class="sub-circ z-depth-5 " style="top:75%;left:111.6025%;z-index:50">
 
-            <div class="center " style=";position: relative;height:100%;padding-top: 13%;">
-                <img src="icons/flat/007-book.png" alt="" style="width:75%;vertical-align: middle;" class="align-center ">
+          <div class="col s6">
+            <div class="intro-header-box">
+              <h1 class="" id="intro-header">foundry10</h1>
+
             </div>
+
+            <!-- <h1 class="animated">foundry10</h1> -->
+
+            <script type="text/javascript">
+
+
+
+
+              let intro_header = $('#intro-header')
+              let intr_head = document.getElementById('intro-header');
+
+              let lst_of_titles = [
+                , 'research'
+                , 'education'
+                , 'collaboration'
+                , 'foundry10'
+              ]
+
+              // define a queue struct
+              let q = {
+                lst:[],
+                enqueue : function(elem) {
+                  if (this.lst === 'undefined') this.lst = []
+                  this.lst.push(elem)},
+                dequeue : function() { return this.lst.shift() },
+                peek : function() { return lst[0] },
+                load : function(lst)  {
+                  if (this.lst == 'undefined') this.lst = []
+                  lst.filter((elem) => this.enqueue(elem))
+                }
+              }
+
+              // loat titles into queue
+              q.load(lst_of_titles)
+
+              // pass in a queue that has a loaded q.lst array (loaded with strings)
+              let animateCss = function(q , animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+                // first add the animation class to the obj, this starts the animation on func call
+                intro_header.addClass('animated ' + animationName).one(animationEnd, function(){
+                  // when the animation has ended, set visibility of elem to hidden & remove animation class
+                  intro_header.css('visibility', 'hidden')
+                  intro_header.removeClass('animated ' + animationName)
+
+                  // we have a list of strings to display in our queue, dequeue one
+                  let q_elem = q.dequeue()
+
+                  // set the innerhtml text content to correspond with the text we just dequeued
+                  intr_head.innerHTML = q_elem
+
+                  // place text node to back of queue
+                  q.enqueue(q_elem)
+
+                  // want to fade element back in smoothly, use opacity. set the opacity of the header elem to 0.0, flip switch back to visible
+                  let opacity = 0.0
+                  intro_header.css('opacity', opacity)
+                  intro_header.css('visibility', 'visible')
+                  // init gas on opacity as interval to increment and assign the opacity
+                  let gas_on_opacity = setInterval(function(){
+                    opacity += .01
+                    intro_header.css('opacity', opacity)
+                    if (opacity >= 1.0) {
+                      clearInterval(gas_on_opacity)
+                    }
+                  }, 25)
+                })
+              }
+
+
+              // finally, call the animateCss func every time unit
+              let loop_headers = setInterval(function(){
+                animateCss(q, 'fadeOut')
+              }, 7000)
+
+            </script>
+
+
+
+            <h5>lorem ipsum dolor sit amet ui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</h5>
+
+
+            <!-- <ul id="top-ul">
+              <li class="top-li"><a class="top-li-a" href="#">technology</a></li>
+              <li class="top-li"><a class="top-li-a" href="#">technology</a></li>
+              <li class="top-li"><a class="top-li-a" href="#">technology</a></li>
+            </ul> -->
+
+            <div class="row">
+              <a class="trip-link" href="#">
+                <div class="col s4 trip-link">
+                  <div class="wrapper">
+                    <h5 class="center-align">research</h5>
+                  </div>
+                </div>
+              </a>
+
+              <a class="trip-link" href="#">
+                <div class="col s4 trip-link">
+                  <div class="wrapper">
+                    <h5 class="center-align">about us</h5>
+                  </div>
+                </div>
+              </a>
+
+              <a class="trip-link" href="#">
+                <div class="col s4 trip-link">
+                  <div class="wrapper">
+
+                    <h5 class="center-align">contact</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <style media="screen">
+              .trip-link {
+                color: white;
+                /*border-bottom: 3px solid currentColor;*/
+              }
+
+              .col.s4.trip-link {
+                /*padding: 1em;*/
+              }
+
+              .wrapper {
+                padding-bottom: 1em;
+                border-bottom: 3px solid #ff5f2a;
+              }
+            </style>
+
+
           </div>
         </div>
       </div>
+    </div> <!-- end container -->
 
-      <!-- info banner -->
-      <div id="info-banner" class="section z-depth-5" >
-        <nav class="fadeInLeft" style="height: 150px;background-color:#eee;">
-          <div class="container" style="height:100%;">
-            <div class="row" style="height:100%;">
+    <div class="section" id="bottom-of-top-sect"style="z-index:4;position:relative;">
+      <div class="row" style="margin-top:5em;">
+        <div class="col s4" style="background-color: grey; height: 750px;border:30px solid #212121;">
 
-              <div id="banner-item-01" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;background-color:#ccc;">
-                Tech
+          <div class="graphic-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+          <div class="header-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+          <div class="text-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+
+        </div>
+        <div class="col s4" style="background-color: grey; height: 750px;border:30px solid #212121;">
+
+          <div class="graphic-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+          <div class="header-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+          <div class="text-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+
+        </div>
+        <div class="col s4" style="background-color: grey; height: 750px;border:30px solid #212121;">
+
+          <div class="graphic-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+          <div class="header-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+          <div class="text-container" style="height:33.3%;background-color:white; border: 10px solid grey">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" style="background-color:white;z-index:-1;">
+
+      <div id="particles-js" style=" position:absolute;z-index:0">
+      </div>
+
+
+
+
+      <!-- <div class="container" style="background-color:blue; z-index:100; height:100px;width:100px;">
+        <h4>about the foundry</h4>
+
+
+      </div> -->
+
+      <div id="triangle-bottomleft" style="z-index:5; position:relative;">
+
+        <!-- <div id="particles-js" style="height:100%;width:100%;position:absolute;left:0px;z-index:5;"></div> -->
+        <!-- <div id="particles-js" ></div> -->
+
+        <!-- <div class="particle-div" style="background-image:url('images/patterns/pattern-01.png'); height:100px;width:100px;position:absolute;left:0px;z-index:5;">
+
+        </div> -->
+
+
+      </div> <!-- end triangle -->
+
+    </div> <!-- end section -->
+
+    <div class="" id="bottom-div-top-sect" style="z-index:50;position:absolute; width:100%;top:91%;">
+      <div class="container">
+
+
+        <div class="row" style="">
+          <div class="col s8 offset-s2">
+            <div class="card-panel hoverable z-depth-5" style="z-index:20;background-color:#3c3c3c">
+
+              <a  id="finger-print"><i class="material-icons" style="font-size:100px;background-color:#f99d43; border-radius:50%; color:black;z-index:0;position:absolute;top:-50px;">fingerprint</i></a>
+
+              <h1 id="about-foundry10"class="center-align"style="color:white;">
+                About foundry10
+              </h1>
+              <h5 class="center-align"style="color:white;border-left:10px solid #f99d43;padding: 0 20px 0 20px">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </h5>
+
+              <br>
+              <hr>
+              <br>
+
+              <div class="center-align">
+                <a class="f10button center-align waves-effect" href="#">explore research</a>
               </div>
-              <div id="banner-item-02" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
-                Collective
-              </div>
-              <div id="banner-item-03" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
-                Art
-              </div>
+
             </div>
           </div>
-        </nav>
-        <div class="row z-depth-5">
-          <nav  style="height: 100px;">
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      let fingerprint = document.getElementById('finger-print');
+      let b_div = document.getElementById('bottom-div-top-sect');
+      let triangle = document.getElementById('triangle-bottomleft');
+      let bb_div = document.getElementById('bottom-of-top-sect');
+
+
+      let bb_div_rect = bb_div.getBoundingClientRect()
+      let triangle_rect = triangle.getBoundingClientRect()
+      let b_div_rect = b_div.getBoundingClientRect()
+      let fingerprint_rect = fingerprint.getBoundingClientRect()
+
+
+
+
+      let target = 1350
+      console.log(target);
+      // console.log('triangle top', triangle_rect);
+
+      fingerprint.addEventListener('click', function(e) {
+        // window.scrollTo(0, triangle_rect.top )
+
+        let direction_of_target = null
+        window.scrollY < target ? direction_of_target = 'down' : direction_of_target = 'up'
+
+        let distance_from_target = Math.abs(window.scrollY - target)
+
+        console.log('scroll y :', window.scrollY);
+
+        console.log('distance :', distance_from_target, '\ndirection :', direction_of_target);
+
+
+        console.log(triangle_rect);
+        let c = 1, init_scroll_y = window.scrollY
+
+        let gas_pedal_on_scroll = setInterval(function() {
+
+          if (direction_of_target == 'up') {
+            window.scrollTo(0, init_scroll_y - c)
+
+          } else if (direction_of_target == 'down') {
+            window.scrollTo(0, init_scroll_y + c)
+          }
+
+          c+=5
+
+          if((direction_of_target == 'up' && window.scrollY <= target) || (direction_of_target == 'down' && window.scrollY >= target)) {
+            clearInterval(gas_pedal_on_scroll)
+          }
+
+        }, 1)
+
+
+      });
+    </script>
+
+    <div class="section" style="background-color:#212121;position:relative;top:-20px;z-index:50">
+      <!-- <div class="row">
+        <div class="col s6">
+          <h2 style="color:white;">potatopotatopotatopotato</h2>
+        </div>
+      </div> -->
+
+
+      <div class="row" style="top:-14px;">
+        <!-- info banner -->
+        <div id="info-banner" class="section z-depth-5" style="top:-14px;">
+          <nav class="fadeInLeft" style="height: 150px;background-color:#eee;">
             <div class="container" style="height:100%;">
               <div class="row" style="height:100%;">
 
-                <div id="banner-sub-item-01" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;background-color:#ccc;">
-
-                  <span id="banner-sub-item-01-title">
-                    robotics
-                  </span>
-
+                <div id="banner-item-01" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;background-color:#ccc;">
+                  Tech
                 </div>
-                <div id="banner-sub-item-02" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
-
-                  <span id="banner-sub-item-02-title">
-                    <span class="hide-on-med-and-down truncate">
-                      virtual reality
-                    </span>
-                    <span class="hide-on-large-only">
-                      vr
-                    </span>
-                  </span>
-
+                <div id="banner-item-02" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+                  Collective
                 </div>
-                <div id="banner-sub-item-03" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
-
-                  <span id="banner-sub-item-03-title">
-                    <span class="hide-on-med-and-down truncate">
-                      game development
-                    </span>
-                    <span class="hide-on-large-only truncate">
-                      game dev.
-                    </span>
-                  </span>
-
-                </div>
-                <div id="banner-sub-item-04" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
-
-                  <span id="banner-sub-item-04-title">
-                    <span class="hide-on-med-and-down truncate">
-                      automotive
-                    </span>
-                    <span class="hide-on-large-only truncate">
-                      auto
-                    </span>
-                  </span>
-
+                <div id="banner-item-03" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
+                  Art
                 </div>
               </div>
             </div>
           </nav>
-        </div>
+          <div class="row z-depth-5">
+            <nav  style="height: 100px;">
+              <div class="container" style="height:100%;">
+                <div class="row" style="height:100%;">
 
+                  <div id="banner-sub-item-01" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;background-color:#ccc;">
 
-        <div class="row z-depth-5 " style="position:absolute;width:100%;height:25em; background-color:white;z-index:-1;top:40em;">
-          <div class="" id="parallax-02">
-            <img src="images/patterns/particles_plax.png" style="min-width:100%;" alt="">
+                    <span id="banner-sub-item-01-title">
+                      robotics
+                    </span>
+
+                  </div>
+                  <div id="banner-sub-item-02" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
+
+                    <span id="banner-sub-item-02-title">
+                      <span class="hide-on-med-and-down truncate">
+                        virtual reality
+                      </span>
+                      <span class="hide-on-large-only">
+                        vr
+                      </span>
+                    </span>
+
+                  </div>
+                  <div id="banner-sub-item-03" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
+
+                    <span id="banner-sub-item-03-title">
+                      <span class="hide-on-med-and-down truncate">
+                        game development
+                      </span>
+                      <span class="hide-on-large-only truncate">
+                        game dev.
+                      </span>
+                    </span>
+
+                  </div>
+                  <div id="banner-sub-item-04" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;color:#303038;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
+
+                    <span id="banner-sub-item-04-title">
+                      <span class="hide-on-med-and-down truncate">
+                        automotive
+                      </span>
+                      <span class="hide-on-large-only truncate">
+                        auto
+                      </span>
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+            </nav>
           </div>
-        </div>
-
-        <!-- <script type="text/javascript">
-          $(document).ready(function(){
-            $('.parallax').parallax()
-
-          })
-        </script> -->
-
-        <!-- <div class="row">
-
-        </div> -->
-
-        <div id="" class="row container">
-          <!-- column -->
-          <div class="col s12 m12 l12">
-            <div id="cardpanel01" class="card-panel z-depth-5" style="background-color:#424242;z-index:4;padding: 0 0 1em 0;">
-              <div class="container" style="padding-top:3%;">
-
-                <h2 style="color:#eee">
-                  redefining education through
-                  <span id="banner-header" style="color:#fa9c42;">
-                    robotics
-                  </span>
-                </h2>
-                <p id="banner-body-text" style="font-size:150%;max-height:10%;margin-bottom:50px;">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div class="parallax-container" style="z-index:1;height:300px;margin-bottom:50px;">
-                <div class="parallax" >
-                  <img id="plax_img" src="images/ao-vr.jpg" alt="">
-                </div>
-              </div>
-
-              <script type="text/javascript">
-                $(document).ready(function(){
-                  $('.parallax').parallax()
-                  $('.parallax-02').parallax()
-
-                })
-              </script>
 
 
-              <div class="container">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <div class="card-panel article-card hoverable z-depth-5">
-
-                      <div class="row header-row">
-                        <div class="col s8" >
-                          <h5>article title</h5>
-                          <a href="#"><h6>sub-title</h6></a>
-                        </div>
-                        <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
-                          <img class="article-icon-image" src="icons/flat/009-wrench.png">
-                        </div>
-                      </div>
-                      <div class="row content-row">
-                        <div class="col s12">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row article-button-row">
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <!-- article card -->
-                  <div class="col s12 m6 l6">
-                    <div class="card-panel article-card hoverable z-depth-5">
-
-                      <div class="row header-row">
-                        <div class="col s8" >
-                          <h5>article title</h5>
-                          <a href="#"><h6>sub-title</h6></a>
-                        </div>
-                        <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
-                          <img class="article-icon-image" src="icons/flat/009-wrench.png">
-                        </div>
-                      </div>
-                      <div class="row content-row">
-                        <div class="col s12">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row article-button-row">
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                  <!-- article card -->
-                  <!-- <div class="col l4 hide-on-med-and-down">
-                    <div class="card-panel article-card hoverable z-depth-5">
-
-                      <div class="row header-row">
-                        <div class="col s8" >
-                          <h5>article title</h5>
-                          <a href="#"><h6>sub-title</h6></a>
-                        </div>
-                        <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
-                          <img class="article-icon-image" src="icons/flat/009-wrench.png">
-                        </div>
-                      </div>
-                      <div class="row content-row">
-                        <div class="col s12">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row article-button-row">
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div> -->
-                </div> <!-- end article card row -->
-              </div> <!-- end container div -->
-
-
-
-
-
-              <!-- <div class="row" style="height:100px;">
-                <div class="col s6 card-panel hoverable valign-wrapper z-depth-5" style="background-color:white; text-align:center; height:100%;">
-                  <a href="#" id="link01" style="font-size:200%;color:#1a1a1a;">Read more...</a>
-                </div>
-                <div class="col s6 card-panel hoverable valign-wrapper z-depth-5" style="background-color:white; text-align:center; height:100%;">
-
-                  <a href="#" id="link02" style="font-size:200%;color:#1a1a1a;">Research...</a>
-                </div>
-              </div> -->
+          <div class="row z-depth-5 " style="position:absolute;width:100%;height:25em; background-color:white;z-index:-1;top:40em;">
+            <div class="" id="parallax-02">
+              <img src="images/patterns/particles_plax.png" style="min-width:100%;" alt="">
             </div>
           </div>
 
-          <!-- <div class="col l4 hide-on-med-and-down">
-            <div id="adj-card-panel-01-top" class="card-panel z-depth-5" style="background-color:#424242;height:100%;padding:0px;background-image:url(images/ao-vr.jpg); background-size:cover;">
+          <!-- <script type="text/javascript">
+            $(document).ready(function(){
+              $('.parallax').parallax()
 
-            </div>
-            <div id="adj-card-panel-01-bottom" class="card-panel z-depth-5" style="background-color:#424242;background-image:url(images/ao-vr.jpg);background-size:cover;">
+            })
+          </script> -->
 
-            </div>
+          <!-- <div class="row">
+
           </div> -->
 
-          <script type="text/javascript">
-            let cp01 = document.getElementById('cardpanel01')
-            let adjcp01top = document.getElementById('adj-card-panel-01-top')
-            let adjcp01bottom = document.getElementById('adj-card-panel-01-bottom')
-            let cprow = document.getElementById('card-panel-row-01')
-            let rect = cp01.getBoundingClientRect()
-            // console.log(cp01.getBoundingClientRect())
-            // adjcp01top.style.height = rect.height/2.1 + "px"
-            // adjcp01bottom.style.height = rect.height/2.1 + "px"
+          <div id="" class="row container">
+            <!-- column -->
+            <div class="col s12 m12 l12">
+              <div id="cardpanel01" class="card-panel z-depth-5" style="background-color:#424242;z-index:4;padding: 0 0 1em 0;">
+                <div class="container" style="padding-top:3%;">
 
-            // adjcp01top.style.height = rect.height/2.03 + "px"
-            // adjcp01bottom.style.height = rect.height/2.03 + "px"
+                  <h2 style="color:#eee">
+                    redefining education through
+                    <span id="banner-header" style="color:#fa9c42;">
+                      robotics
+                    </span>
+                  </h2>
+                  <p id="banner-body-text" style="font-size:150%;max-height:10%;margin-bottom:50px;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
 
-          </script>
-        </div>
+                <div class="parallax-container" style="z-index:1;height:300px;margin-bottom:50px;">
+                  <div class="parallax" >
+                    <img id="plax_img" src="images/ao-vr.jpg" alt="">
+                  </div>
+                </div>
+
+                <script type="text/javascript">
+                  $(document).ready(function(){
+                    $('.parallax').parallax()
+                    $('.parallax-02').parallax()
+
+                  })
+                </script>
+
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      <div class="card-panel article-card hoverable z-depth-5">
+
+                        <div class="row header-row">
+                          <div class="col s8" >
+                            <h5>article title</h5>
+                            <a href="#"><h6>sub-title</h6></a>
+                          </div>
+                          <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
+                            <img class="article-icon-image" src="icons/flat/009-wrench.png">
+                          </div>
+                        </div>
+                        <div class="row content-row">
+                          <div class="col s12">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row article-button-row">
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- article card -->
+                    <div class="col s12 m6 l6">
+                      <div class="card-panel article-card hoverable z-depth-5">
+
+                        <div class="row header-row">
+                          <div class="col s8" >
+                            <h5>article title</h5>
+                            <a href="#"><h6>sub-title</h6></a>
+                          </div>
+                          <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
+                            <img class="article-icon-image" src="icons/flat/009-wrench.png">
+                          </div>
+                        </div>
+                        <div class="row content-row">
+                          <div class="col s12">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row article-button-row">
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- article card -->
+                    <!-- <div class="col l4 hide-on-med-and-down">
+                      <div class="card-panel article-card hoverable z-depth-5">
+
+                        <div class="row header-row">
+                          <div class="col s8" >
+                            <h5>article title</h5>
+                            <a href="#"><h6>sub-title</h6></a>
+                          </div>
+                          <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
+                            <img class="article-icon-image" src="icons/flat/009-wrench.png">
+                          </div>
+                        </div>
+                        <div class="row content-row">
+                          <div class="col s12">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row article-button-row">
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                          <div class="col s4">
+                            <div class="card-panel hoverable article-button-panel">
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> -->
+                  </div> <!-- end article card row -->
+                </div> <!-- end container div -->
+
+
+
+
+
+                <!-- <div class="row" style="height:100px;">
+                  <div class="col s6 card-panel hoverable valign-wrapper z-depth-5" style="background-color:white; text-align:center; height:100%;">
+                    <a href="#" id="link01" style="font-size:200%;color:#1a1a1a;">Read more...</a>
+                  </div>
+                  <div class="col s6 card-panel hoverable valign-wrapper z-depth-5" style="background-color:white; text-align:center; height:100%;">
+
+                    <a href="#" id="link02" style="font-size:200%;color:#1a1a1a;">Research...</a>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <!-- <div class="col l4 hide-on-med-and-down">
+              <div id="adj-card-panel-01-top" class="card-panel z-depth-5" style="background-color:#424242;height:100%;padding:0px;background-image:url(images/ao-vr.jpg); background-size:cover;">
+
+              </div>
+              <div id="adj-card-panel-01-bottom" class="card-panel z-depth-5" style="background-color:#424242;background-image:url(images/ao-vr.jpg);background-size:cover;">
+
+              </div>
+            </div> -->
+
+            <script type="text/javascript">
+              let cp01 = document.getElementById('cardpanel01')
+              let adjcp01top = document.getElementById('adj-card-panel-01-top')
+              let adjcp01bottom = document.getElementById('adj-card-panel-01-bottom')
+              let cprow = document.getElementById('card-panel-row-01')
+              let rect = cp01.getBoundingClientRect()
+              // console.log(cp01.getBoundingClientRect())
+              // adjcp01top.style.height = rect.height/2.1 + "px"
+              // adjcp01bottom.style.height = rect.height/2.1 + "px"
+
+              // adjcp01top.style.height = rect.height/2.03 + "px"
+              // adjcp01bottom.style.height = rect.height/2.03 + "px"
+
+            </script>
+          </div>
+        </div> <!-- end info banner -->
       </div>
+
+
+    </div>
+
+
+
+
+
+
+      <!-- <div id="triangle-bottomleft" style="z-index:-3">
+
+
+
+      </div> -->
+
+
 
 
       <script type="text/javascript">
 
         // define the triangle's properties
-        $('#triangle-bottomleft').css("border-bottom", (window.innerWidth)+'px solid #303038')
-        $('#triangle-bottomleft').css("border-right", (window.innerWidth)+'px solid transparent')
+        $('#triangle-bottomleft').css("border-bottom", (window.innerWidth)+'px solid #212121')
+        $('#triangle-bottomleft').css("border-left", (window.innerWidth)+'px solid transparent')
+        // $('#triangle-bottomleft').css("border-left", (window.innerWidth)+'px solid #212121')
 
         // on scroll, rotate things
         $(window).scroll(function(){
@@ -451,9 +811,9 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         })
 
         let circ = document.getElementById('circ')
-        circ.style.left = '0'
-        circ.style.right = '0'
-        circ.style.marginLeft = '25%'
+        // circ.style.left = '0'
+        // circ.style.right = '0'
+        // circ.style.marginLeft = '25%'
         circ.style.marginRight = 'auto'
         // circ.style.marginRight = 'auto'
 
@@ -536,8 +896,6 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
               			<a  href="http://foundry10.org"  >
                       <div style="background-image:url('images/patterns/pattern-01.png'); height:20em;line-height:20em;">
-                        <!-- <img src="images/patterns/pattern-01.png" alt="" style="z-index:0; position:relative;"> -->
-
                         <img  src="images/ao-vr.jpg" style="width:100%; z-index:1;position:relative;vertical-align:middle;">
                       </div>
           						<div class="article-bottom-div">
@@ -702,9 +1060,9 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         <div class="container">
           <div class="row">
             <div class="col s6">
-              <a id="f10button" href="#">explore research</a>
+              <a class="f10button" href="#">explore research</a>
               <style media="screen">
-                #f10button {
+                .f10button {
                   padding: 17px 45px;
                   font: 700 14px/28px Roboto Condensed,sans-serif;
                   border: 2px solid #fa9c42;
@@ -716,7 +1074,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
                   /*padding: 17px 70px;*/
                   text-align: center;
                   text-transform: uppercase;
-                  border-image: linear-gradient(to bottom right, #ffa545 0%, #cb6535 100%);
+
                 }
               </style>
             </div>
@@ -901,9 +1259,9 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     <script type="text/javascript" src="js/particles.js">
 
      </script>
-    <script type="text/javascript" src="js/dropdown.js">
+    <!-- <script type="text/javascript" src="js/dropdown.js">
 
-    </script>
+    </script> -->
     <script type="text/javascript" src="js/app.js">
 
     </script>
