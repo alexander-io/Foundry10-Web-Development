@@ -26,10 +26,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
+      <link rel="stylesheet" href="/css/aos.css">
+      <script type="text/javascript" src="js/aos.js">
+
+      </script>
+
 
   </head>
   <body id="body">
 
+    <script type="text/javascript">
+      AOS.init()
+    </script>
     <!-- <nav id="top-nav-nav-01" >
       <div class="container" style="height:100%;">
         <div class="row" id="top-nav-row" >
@@ -132,7 +140,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       </div>
     </div> -->
 
-    <a href="#about-foundry10" style="z-index:100;" class="valign-wrapper;"><i class="material-icons md-36 z-depth-5" style="font-size:100px;position:fixed;background-color:#f99d43; border-radius:50%; color:white;z-index:100;right:3%;bottom:3%;">keyboard_arrow_down</i></a>
+    <a href="#" id="fixed-down-arrow" style="z-index:100;" class="valign-wrapper;"><i id="fixed-down-arrow-icon"class="material-icons md-36 z-depth-5" style="font-size:100px;position:fixed;background-color:#f99d43; border-radius:50%; color:white;z-index:100;right:3%;bottom:3%;">keyboard_arrow_down</i></a>
 
 
     <div class="container" style="color:#ffffff">
@@ -418,7 +426,9 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
               <br>
 
               <div class="center-align">
-                <a class="f10button center-align waves-effect" href="#">explore research</a>
+                <a class="f10button center-align "  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" href="#">explore research</a>
               </div>
 
             </div>
@@ -430,61 +440,6 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
     </div>
 
 
-    <script type="text/javascript">
-      let fingerprint = document.getElementById('finger-print');
-      let b_div = document.getElementById('bottom-div-top-sect');
-      let triangle = document.getElementById('triangle-bottomleft');
-      let bb_div = document.getElementById('bottom-of-top-sect');
-
-
-      let bb_div_rect = bb_div.getBoundingClientRect()
-      let triangle_rect = triangle.getBoundingClientRect()
-      let b_div_rect = b_div.getBoundingClientRect()
-      let fingerprint_rect = fingerprint.getBoundingClientRect()
-
-
-
-
-      let target = 1350
-      console.log(target);
-      // console.log('triangle top', triangle_rect);
-
-      fingerprint.addEventListener('click', function(e) {
-        // window.scrollTo(0, triangle_rect.top )
-
-        let direction_of_target = null
-        window.scrollY < target ? direction_of_target = 'down' : direction_of_target = 'up'
-
-        let distance_from_target = Math.abs(window.scrollY - target)
-
-        console.log('scroll y :', window.scrollY);
-
-        console.log('distance :', distance_from_target, '\ndirection :', direction_of_target);
-
-
-        console.log(triangle_rect);
-        let c = 1, init_scroll_y = window.scrollY
-
-        let gas_pedal_on_scroll = setInterval(function() {
-
-          if (direction_of_target == 'up') {
-            window.scrollTo(0, init_scroll_y - c)
-
-          } else if (direction_of_target == 'down') {
-            window.scrollTo(0, init_scroll_y + c)
-          }
-
-          c+=5
-
-          if((direction_of_target == 'up' && window.scrollY <= target) || (direction_of_target == 'down' && window.scrollY >= target)) {
-            clearInterval(gas_pedal_on_scroll)
-          }
-
-        }, 1)
-
-
-      });
-    </script>
 
     <div class="section" style="background-color:#212121;position:relative;top:-20px;z-index:50">
       <!-- <div class="row">
@@ -1255,6 +1210,107 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         </div>
       </div>
     </div>
+
+
+    <script type="text/javascript">
+      let fingerprint = document.getElementById('finger-print');
+      let b_div = document.getElementById('bottom-div-top-sect');
+      let triangle = document.getElementById('triangle-bottomleft');
+      let bb_div = document.getElementById('bottom-of-top-sect');
+
+      let fixed_down_arrow = document.getElementById('fixed-down-arrow');
+      let fixed_down_arrow_icon = document.getElementById('fixed-down-arrow-icon');
+
+
+      let bb_div_rect = bb_div.getBoundingClientRect()
+      let triangle_rect = triangle.getBoundingClientRect()
+      let b_div_rect = b_div.getBoundingClientRect()
+      let fingerprint_rect = fingerprint.getBoundingClientRect()
+
+
+      let info_banner = document.getElementById('info-banner')
+      // let rect = getBoundingClientRect(info_banner)
+      console.log(info_banner);
+
+      let target_00 = 1350, target_01 = 2150, target_02 = 2750, target_03 = 3350
+      // console.log(target);
+      // console.log('triangle top', triangle_rect);
+      // let color_range = {
+      //   target_00 : 'red',
+      //   target_01 : 'yellow',
+      //   target_02 : 'coral'
+      // }
+
+      let color_range = {}
+
+      let color_range_lst = [
+        target_00,
+        target_01,
+        target_02,
+        target_03
+      ]
+      let color_lst = [
+        '#ffab00', 'orange', '#ff5f2a', 'coral'
+      ]
+
+      for (x in color_range_lst) {
+        color_range[color_range_lst[x]] = color_lst[x]
+      }
+
+      console.log(color_range);
+      $(window).scroll(function(){
+        // console.log(color_range_lst.length);
+        // window.scrollY
+
+        // for (x in color_range) {
+        //   console.log(x);
+        // }
+
+
+        for (let i = 0; i < color_range_lst.length; i++) {
+          if (window.scrollY < color_range_lst[i]) {
+            // console.log(color_range_lst[i]);
+            // console.log(color_range['1350']);
+            fixed_down_arrow_icon.style.backgroundColor = color_range[color_range_lst[i]]
+            return
+          } else {
+            continue
+          }
+        }
+
+      })
+
+      fingerprint.addEventListener('click', function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:target_00}, 900);
+      })
+
+
+
+      fixed_down_arrow.addEventListener('click', function(e) {
+
+        event.preventDefault();
+
+        // if (window.scrollY < target_00 ) {
+        //   $('html,body').animate({scrollTop:target_00}, 900);
+        // }
+        // else if (window.scrollY < target_01) {
+        //   $('html,body').animate({scrollTop:target_01}, 900);
+        //
+        // }
+
+        for (x in color_range_lst) {
+          if (window.scrollY < color_range_lst[x]) {
+            $('html,body').animate({scrollTop:color_range_lst[x]}, 900)
+            return
+          }
+        }
+      });
+
+
+    </script>
+
+
 
     <script type="text/javascript" src="js/info_banner.js">
 
