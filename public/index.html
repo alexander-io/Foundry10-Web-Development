@@ -210,6 +210,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
               ]
 
               // define a queue struct
+
+
               let q = {
                 lst:[],
                 enqueue : function(elem) {
@@ -222,6 +224,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
                   lst.filter((elem) => this.enqueue(elem))
                 }
               }
+
+
 
               // loat titles into queue
               q.load(lst_of_titles)
