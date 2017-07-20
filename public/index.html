@@ -196,7 +196,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
           <div class="col s6">
             <div class="intro-header-box">
-              <h1 class="" id="intro-header">foundry10</h1>
+              <h1 class="" id="intro-header" style="">foundry10</h1>
 
             </div>
 
@@ -246,6 +246,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
                 intro_header.addClass('animated ' + animationName).one(animationEnd, function(){
                   // when the animation has ended, set visibility of elem to hidden & remove animation class
                   intro_header.css('visibility', 'hidden')
+                  // -webkit-backface-visibility: hidden;
+                  intro_header.css('-webkit-backface-visibility', 'hidden')
                   intro_header.removeClass('animated ' + animationName)
 
                   // we have a list of strings to display in our queue, dequeue one
@@ -260,15 +262,17 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
                   // want to fade element back in smoothly, use opacity. set the opacity of the header elem to 0.0, flip switch back to visible
                   let opacity = 0.0
                   intro_header.css('opacity', opacity)
-                  intro_header.css('visibility', 'visible')
                   // init gas on opacity as interval to increment and assign the opacity
                   let gas_on_opacity = setInterval(function(){
-                    opacity += .01
+                    opacity += .05
                     intro_header.css('opacity', opacity)
                     if (opacity >= 1.0) {
                       clearInterval(gas_on_opacity)
                     }
                   }, 25)
+                  intro_header.css('visibility', 'visible')
+                  intro_header.css('-webkit-backface-visibility', 'visible')
+
                 })
               }
 
