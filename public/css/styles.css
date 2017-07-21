@@ -396,11 +396,8 @@ p{
 #info-banner {
   position:relative;
   top:15em;
-  /*top:640px;*/
-  /*background-color:#f99d43;*/
   background-color: #ff6600;
   width:100%;
-  /*margin-top:10px;*/
   padding-top:2em;
   z-index:0
 }
