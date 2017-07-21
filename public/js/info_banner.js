@@ -19,6 +19,8 @@
 
   let banner_header = document.getElementById('banner-header');
 
+  let plax_img = document.getElementById('plax_img');
+
   // num_super_categories = 3
   // num_sub_categories = 4
   // 2D array of superXsub categories, 3x4 dimension
@@ -64,9 +66,6 @@
   }
 
 
-
-
-
   // define a function to call on nav-item click, set background color of all nav-items back to the initial value, white....
   let nav_items_to_white = function(){
     for (x in relationship){
@@ -80,7 +79,7 @@
     }
   }
 
-
+  // for a click on a nav-sub item, turn all other sub-nav elements to white
   let nav_sub_items_to_white = function(){
     for (x in sub_item_lst){
       try {
@@ -129,6 +128,10 @@
 
 
     // TODO : for each category click, need to update time image in the DOM with the image on record
+    // plax_img.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0] + ')'
+
+    plax_img.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0]
+
     // img_card_01.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0] + ')'
     //
     // img_card_02.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[1] + ')'
@@ -163,8 +166,8 @@
           'http://link1.org'
         ],
         images : [
-          'images/info_banner/vr-student.jpg',
-          'images/info_banner/ao-vr.jpg'
+          'images/info_banner/ao-vr.jpg',
+          'images/info_banner/vr-student.jpg'
         ]
       },
       game_dev : {
