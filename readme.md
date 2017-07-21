@@ -5,7 +5,6 @@
 ![material_dev](md_images/material_dev_001.png)
 
 ![grid_design](md_images/grid_design_00.png)
-<!-- ![mobile_material_dev](md_images/mobile_material_dev_000.png) -->
 
 ![infobanner landing](md_images/071117_dev_half.png)
 

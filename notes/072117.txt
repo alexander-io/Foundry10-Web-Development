@@ -1,0 +1,9 @@
+#### Alexander Harris
+#### Friday July 21th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Today I'm setting out to create vector graphics for the three pillar elements located near the top of the browser window.
