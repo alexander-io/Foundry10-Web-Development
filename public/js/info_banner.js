@@ -147,7 +147,7 @@
       robotics : {
         title : 'robotics',
         innerhtml_nav_text : 'robotics',
-        body : 'Robotics is the interdisciplinary branch of engineering and science that includes mechanical engineering, electrical engineering, computer science, and others. Robotics deals with the design, construction, operation, and use of robots, as well as computer systems for their control, sensory feedback, and information processing.',
+        body : 'Robotics is the interdisciplinary branch of engineering and science that includes mechanical engineering, electrical engineering, computer science, and others. Robotics deals with the design, construction, operation, and use of robots, as well as computer systems for their control and information processing.',
         links : [
           'l2',
           'l1'
@@ -166,7 +166,7 @@
           'http://link1.org'
         ],
         images : [
-          'images/info_banner/ao-vr.jpg',
+          'images/info_banner/ao-vr-crop.png',
           'images/info_banner/vr-student.jpg'
         ]
       },
@@ -202,13 +202,13 @@
       intern : {
         title : 'internships',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">internships</span><span class="hide-on-large-only truncate">intern</span>',
-        body : 'Internships for professional careers are similar in some ways but not as rigorous as apprenticeships for professions, trade and vocational jobs,[3] but the lack of standardisation and oversight leaves the term open to broad interpretation.[4][5] Interns may be college or university students, high school students, or post-graduate adults.',
+        body : 'Internships for professional careers are similar in some ways but not as rigorous as apprenticeships for professions, but the lack of standardisation and oversight leaves the term open to broad interpretation. Interns may be college or university students, high school students, or post-graduate adults.',
         links : [
           'http://link1.org',
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/foundry10-internships-thumb.png',
           'image_path_1'
         ]
       },
@@ -228,13 +228,13 @@
       early_education : {
         title : 'early education',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">early education</span><span class="hide-on-large-only truncate">early ed.</span>',
-        body : 'Early childhood education (ECE; also nursery education) is a branch of education theory which relates to the teaching of young children (formally and informally) up until the age of about eight. Infant/toddler education, a subset of early childhood education, denotes the education of children from birth to age two.',
+        body : 'Early childhood education is a branch of education theory which relates to the teaching of young children (formally and informally) up until the age of about eight. Infant/toddler education, a subset of early childhood education, denotes the education of children from birth to age two.',
         links : [
           'http://link1.org',
           'http://link1.org'
         ],
         images : [
-          'image_path_1',
+          'images/info_banner/side-by-side-oculus.jpg',
           'image_path_1'
         ]
       },
@@ -256,7 +256,7 @@
       artistic : {
         title : 'artistic design',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">artistic design</span><span class="hide-on-large-only truncate">design</span>',
-        body : 'esign is the creation of a plan or convention for the construction of an object, system or measurable human interaction (as in architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns). Design has different connotations in different fields (see design disciplines below). In some cases, the direct construction of an object (as in pottery, engineering, management, coding, and graphic design) is also considered to use design thinking.',
+        body : 'Design is the creation of a convention for the construction of an object, system or measurable human interaction. Design has different connotations in most fields. In some cases, the direct construction of an object. Pottery, engineering, coding, and graphic design are also considered to use design thinking.',
         links : [
           'http://link1.org',
           'http://link1.org'
@@ -269,7 +269,7 @@
       digital_audio : {
         title : 'digital audio',
         innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">digital audio</span><span class="hide-on-large-only truncate">audio.</span>',
-        body : 'Digital audio is a technology that can be used to record, store, generate, manipulate, and reproduce sound using audio signals that have been encoded in digital form. Following significant advances in digital audio technology during the 1970s, it gradually replaced analog audio technology in many areas of sound production.',
+        body : 'Digital audio is a technology that can be used to record, generate, manipulate, and reproduce sound using audio signals that have been encoded in digital form. Following significant advances in digital audio technology during the 1970s, it gradually replaced analog audio technology in many areas of sound production.',
         links : [
           'http://link1.org',
           'http://link1.org'
