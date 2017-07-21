@@ -6,4 +6,12 @@
 #### http://35.167.90.70
 #### https://github.com/alexander-io/foundry10-web-development
 
-Today I'm setting out to create vector graphics for the three pillar elements located near the top of the browser window.
+Today I'm setting out to create vector graphics for the three pillar elements located near the top of the browser window. This venture was successful, I've added vector graphics and have included a screen shot of the UI on the repository readme.md page.
+
+I've modified the info banner to include images for each of the 12 sub categories, these images are used to populate the info window on click.
+
+I've reduced the size of the particles 2d vector graphic animation element. It was taking 150% of the window height, now it takes 100%.
+
+Add animation on scroll to the article elements, swipe/fade in on scroll.
+
+Need to acquie Helvectics Neue from Tom; he mentioned that this is the company's sans-serif ont of choice.
