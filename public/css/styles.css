@@ -328,7 +328,7 @@ p{
 
 
 .sub-circ {
-  position : inherit;
+  position : absolute;
   border-radius : 50%;
   background-color : #ff5f2a;
   height : 75px;
@@ -383,11 +383,11 @@ p{
 }
 
 #circ {
-  position:absolute;
+  position:relative;
   border-radius:50%; background-color:#eaa22f;
   height:200px;
   width:200px;
-  top:20em;
+  /*top:20em;*/
   /*top:320px;*/
   /*right:0px;*/
   /*top:80em;*/
@@ -395,7 +395,7 @@ p{
 
 #info-banner {
   position:relative;
-  top:15em;
+  /*top:15em;*/
   background-color: #ff6600;
   width:100%;
   padding-top:2em;

@@ -366,20 +366,20 @@
     the_array_of_glory = assign_keys_to_array(the_array_of_glory)
 
 
-    tech_circ.addEventListener('click', function(e) {
-      Materialize.toast('Tech', 4000, 'circ-toast tech-toast')
-      tech_click()
-    });
-
-    art_circ.addEventListener('click', function(e) {
-      Materialize.toast('Art', 4000, 'circ-toast art-toast')
-      art_click()
-    });
-
-    collective_circ.addEventListener('click', function(e) {
-      Materialize.toast('Collective', 4000, 'circ-toast collective-toast')
-      collective_click()
-    });
+    // tech_circ.addEventListener('click', function(e) {
+    //   Materialize.toast('Tech', 4000, 'circ-toast tech-toast')
+    //   tech_click()
+    // });
+    //
+    // art_circ.addEventListener('click', function(e) {
+    //   Materialize.toast('Art', 4000, 'circ-toast art-toast')
+    //   art_click()
+    // });
+    //
+    // collective_circ.addEventListener('click', function(e) {
+    //   Materialize.toast('Collective', 4000, 'circ-toast collective-toast')
+    //   collective_click()
+    // });
 
     // use this tuple to track what the user has selected
     let info_banner_xy_array_position_tuple = {
