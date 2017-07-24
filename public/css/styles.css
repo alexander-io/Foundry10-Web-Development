@@ -170,8 +170,9 @@ a:visited{
   /*color:#f99d43;*/
 }
 nav {
-  color:black;
-  background-color: white;
+  color:white;
+  /*background-color: white;*/
+  background-color: #424242;
 }
 
 #nav-item-01, #nav-item-02, #nav-item-03 {
@@ -196,6 +197,7 @@ nav {
 
 .banner-item, .banner-sub-item {
   text-align: center;
+  color: white;
 }
 
 .banner-item:hover, .banner-sub-item:hover {
@@ -387,6 +389,7 @@ p{
   border-radius:50%; background-color:#eaa22f;
   height:200px;
   width:200px;
+
   /*top:20em;*/
   /*top:320px;*/
   /*right:0px;*/

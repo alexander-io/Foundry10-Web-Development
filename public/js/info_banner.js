@@ -71,7 +71,7 @@
     for (x in relationship){
 
       try {
-        relationship[x].nav.style.backgroundColor = '#eee'
+        relationship[x].nav.style.backgroundColor = '#212121'
 
       } catch (e) {
         console.log(e)
@@ -83,7 +83,7 @@
   let nav_sub_items_to_white = function(){
     for (x in sub_item_lst){
       try {
-        sub_item_lst[x].style.backgroundColor = 'white'
+        sub_item_lst[x].style.backgroundColor = '#424242'
       } catch (e) {
         console.log(e)
       }
@@ -413,7 +413,7 @@
     // user clicked on one of the 'tech' elements
     let tech_click = function() {
       nav_items_to_white()
-      tech.style.backgroundColor = '#ccc'
+      tech.style.backgroundColor = '#424242'
       // user clicked tech nav event listener, that's index 0, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 0
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
@@ -433,7 +433,7 @@
     // user clicked one of the collective elements
     let collective_click = function() {
       nav_items_to_white()
-      collective.style.backgroundColor = '#ccc'
+      collective.style.backgroundColor = '#424242'
       // user clicked collective nav event listener, that's index 1, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 1
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
@@ -451,7 +451,7 @@
     // define function to handle a click on an art element
     let art_click = function() {
       nav_items_to_white()
-      art.style.backgroundColor = '#ccc'
+      art.style.backgroundColor = '#424242'
       // user clicked art nav event listener, that's index 2, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 2
       // user clicked on a super-nav element, so assume they want the first sub-category displayed and set y to 0 for the 0th index
