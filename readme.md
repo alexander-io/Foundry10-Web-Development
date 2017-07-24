@@ -2,6 +2,8 @@
 ## [Live Site](http://foundry10.org)
 ## [Development Environment](http://opensail.io)
 
+![material_dev](md_images/jul_24_dev.png)
+
 ![material_dev](md_images/three_pillar_draft.png)
 
 ![material_dev](md_images/material_dev_001.png)
