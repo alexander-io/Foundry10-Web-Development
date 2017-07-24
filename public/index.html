@@ -357,7 +357,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
 
           <div class="graphic-container" style="height:50%;">
-            <img src="images/three_pillars/foundry10_education.png"
+            <img id="vec-circ-small" src="images/three_pillars/foundry10_education.png"
             style="width:100%;"
             alt="">
 
@@ -367,7 +367,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
             <h5 class="center" style="color:white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h5>
             <br>
             <div class="center-align">
-              <a class="f10button center-align "  href="#">explore research</a>
+              <a class="f10button center-align "  href="#">explore programs</a>
             </div>
           </div>
         </div>
@@ -394,7 +394,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
             <h5 class="center" style="color:white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. . </h5>
             <br>
             <div class="center-align">
-              <a class="f10button center-align "  href="#">explore research</a>
+              <a class="f10button center-align "  href="#">explore outreach</a>
             </div>
           </div>
 
@@ -432,7 +432,7 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
 
             <div class="graphic-container" style="height:50%;">
-              <img src="images/three_pillars/foundry10_education.png"
+              <img id="vec-circ-large" src="images/three_pillars/foundry10_education.png"
               style="width:100%;"
               alt="">
 
@@ -1229,10 +1229,26 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
         $('#triangle-bottomleft').css("border-left", (window.innerWidth)+'px solid transparent')
         // $('#triangle-bottomleft').css("border-left", (window.innerWidth)+'px solid #212121')
 
+        // let vec_circ = document.getElementById('vec-circ');
+
+        // let vec_circ =  $('#vec-circ')
+        // console.log(vec_circ);
+
         // on scroll, rotate things
         $(window).scroll(function(){
           var theta = $(window).scrollTop() / 256 % Math.PI;
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
+          $('#vec-circ-large').css({transform: 'rotate(' + theta + 'rad)'});
+          $('#vec-circ-small').css({transform: 'rotate(' + theta + 'rad)'});
+
+
+          // vec_circ.style.visibility = 'hidden'
+
+          // vec_circ.style.transform = 'rotate(' + theta + 'rad)'
+          // vec_circ.css({transform: 'rotate(' + theta + 'rad)'})
+
+
+          // $('#vec-circ').css({transform: 'rotate(' + theta + 'rad)'});
         })
 
         let circ = document.getElementById('circ')
