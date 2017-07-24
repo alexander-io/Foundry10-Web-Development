@@ -1,0 +1,11 @@
+#### Alexander Harris
+#### Monday July 24th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Today Tom has tasked me with restructuring the development environment. He has requested that I move the circle graphic to the footer, move animated rotating queue text to footer, move the info-banner to center page, apply links to footer.
+
+He mentioned that he is a fan of the vecotr images that I created. However, he would like to see more vector images so to find some that more closely correspond to the words research, programs, and outreach.
