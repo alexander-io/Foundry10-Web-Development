@@ -18,8 +18,18 @@
   let banner_sub_item_title_04 = document.getElementById('banner-sub-item-04-title');
 
   let banner_header = document.getElementById('banner-header');
-
   let plax_img = document.getElementById('plax_img');
+
+
+  let article_title_00 = document.getElementById('article-title-00');
+  let article_title_01 = document.getElementById('article-title-01');
+
+  let article_sub_title_00 = document.getElementById('article-sub-title-00');
+  let article_sub_title_01 = document.getElementById('article-sub-title-01');
+
+  let article_text_00 = document.getElementById('article-text-00');
+  let article_text_01 = document.getElementById('article-text-01');
+
 
   // num_super_categories = 3
   // num_sub_categories = 4
@@ -139,6 +149,228 @@
 
 
   }
+
+
+  let articles = {
+    robotics : [
+      {
+        title : 'Elementary After School Lego Club and Robotics Club',
+        sub_title : 'robotics',
+        text : 'As part of our work focused on after school programming, we partnered with an elementary school in the greater Seattle area to run a Lego building club for early elementary students (kindergarten and first grade) and a Lego Robotics club for intermediate elementary students (grades 4, 5 and 6). The program ran after school, twice a week for an hour each session, for four weeks. Each was led by classroom teachers with an interest in Legos and each developed their own club curricula and projects. All Lego building kits and robotics kids were donated as part of the after school project with foundry10. We also supplied stipends for the teachers to run the clubs. The goal was to provide opportunities, free of charge, for students to build, explore, and be creative in an after-school setting. Bus transportation was also provided by foundry10 so that there were no transportation barriers for interested students who wanted to attend.',
+        icon : 'wrench',
+        url_00 : 'http://foundry10.org/areas-overview/robotics/',
+        url_01 : 'http://foundry10.org/wp-content/uploads/2017/06/Elementary-Lego-and-Robotics.pdf'
+      } , {
+        title : 'Robotics Brief',
+        sub_title : 'Fall 2016',
+        text : 'Throughout the fall of the 2016-2017 school year, foundry10 ran robotics programs in two schools around Seattle: The Nova Project and Seattle Girl’s School. We were interested in how exposure to our student-led robotics program improved student confidence with technology, productive risk-taking, and the perception of robotics as a community exercise. We used a combination of likert-type scale survey questions and open-ended questions. We found some gains in these areas, but hope to expand our sample size to improve our understanding of the impact that this experience has on students.',
+        icon : 'gears',
+        url_00 : 'http://foundry10.org/areas-overview/robotics/',
+        url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Robotics-Fall-2016-brief.pdf'
+      }
+    ] ,
+    vr : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } ,  {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    game_dev : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    automotive : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    intern : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    gender_studies : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    early_education : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    professional_development : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    artistic_design : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    digital_audio : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    drama : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ] ,
+    hip_hop : [
+      {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      } , {
+        title : '',
+        sub_title : '',
+        text : '',
+        icon : '',
+        url_00  : '',
+        url_01  : ''
+      }
+    ]
+  }
+
+
+  // {
+  //   title : '',
+  //   sub_title : '',
+  //   text : '',
+  //   icon : '',
+  //   url  : ''
+  // } , {
+  //   title : '',
+  //   sub_title : '',
+  //   text : '',
+  //   icon : '',
+  //   url  : ''
+  // }
+
 
   // each sub-category should have data associated : title, body of text, two links, two images
   let tree = {
