@@ -150,32 +150,22 @@
     plax_img.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0]
 
 
-    // update article 0 title
-    article_title_00.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title
-
-    // update article 1 title
-    article_title_01.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].title
-
-
-    // update article 0 sub title
-    article_sub_title_00.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title
-
-    // update article 1 sub title
-    article_sub_title_01.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].sub_title
-
-
     // we've defined our truncation function by the number of words in the string, however -> sometimes words have variable length
     // because of this, we have variable paragraph lengths.
     // let this be a recursive function to check if the string is sort enough,
     // if not, split the string into an array, pop off the last element, convert back to string and recurse passing the shortened string as a parameter
-    let if_lengthy_string_remove_word = function(str) {
+    let if_lengthy_string_remove_word = function(str, num_chars) {
       let arr = []
-      if (str.length > 128) {
+      if (str.length > num_chars) {
         arr = str.split(' ')
         arr.pop()
         if_lengthy_string_remove_word(arr.join(' '))
       }
+      // console.log('final length of string :', str.length);
+      // shortened_string = str
+      // if (str.length <= 128) return str
       return str
+      // break
     }
 
 
@@ -191,12 +181,9 @@
 
         // are we at the word limit?
         if (i>=num_words) {
-          console.log('finally built string :', builder);
-          console.log('lengthy :', if_lengthy_string_remove_word(builder));
           // check number of characters
-          builder = if_lengthy_string_remove_word(builder)
-
-
+          builder = if_lengthy_string_remove_word(builder, num_words*4)
+          // concat the ellipses to the string
           builder += '...'
           return builder
         }
@@ -205,13 +192,30 @@
       }
       return builder
     }
+    // update article 0 title
+    article_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
+
+    // update article 1 title
+    article_title_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].title, 3)
+
+
+    // update article 0 sub title
+    article_sub_title_00.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title
+
+    // update article 1 sub title
+    article_sub_title_01.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].sub_title
+
+
+
+    let shortened_string = ''
+
 
 
     // update the text in article 1
     article_text_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
 
     // update the text in article 2
-    // article_text_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].text, 32)
+    article_text_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].text, 32)
 
 
 
@@ -716,7 +720,7 @@
           'images/info_banner/creativity-intern-3-768x263.jpg',
           'image_path_1'
         ],
-        aritcles : [
+        articles : [
           {
             title : 'Y-We Camp Report',
             sub_title : 'Artistic Design',
@@ -997,7 +1001,6 @@
 
     art.addEventListener('click', function(e) {
       art_click()
-
     });
 
     banner_sub_item_01.addEventListener('click', function(e) {
