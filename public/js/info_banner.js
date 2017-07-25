@@ -464,7 +464,7 @@
           'http://link1.org'
         ],
         images : [
-          'images/info_banner/side-by-side-oculus.jpg',
+          'images/info_banner/side-by-side-oculus.png',
           'image_path_1'
         ],
         articles : [
@@ -526,7 +526,7 @@
           'http://link1.org'
         ],
         images : [
-          'images/info_banner/creativity-intern-3-768x263.jpg',
+          'images/info_banner/creativity-intern-3-768x263.png',
           'image_path_1'
         ],
         articles : [
