@@ -213,7 +213,7 @@
         url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Learning-from-the-Pros.pdf'
       } , {
         title : 'Automotive Technology Research',
-        sub_title : '',
+        sub_title : 'automotive',
         text : 'Throughout our work with automotive technology, we have been studying how the students respond to the subject, and seek to answer our three critical questions for the program. The report below breaks down how we look at auto-tech, what is exciting to us in terms of learning, and some of the data that we have gathered on the subject so far.',
         icon : 'wrench',
         url_00  : 'http://foundry10.org/areas-overview/automotive/',
@@ -222,114 +222,115 @@
     ] ,
     intern : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Student-Led Internships',
+        sub_title : 'An Exploration of Interest, Motivation, and Process',
+        text : 'Through partnerships with schools that follow the Big Picture Model of learning (which includes internship experiences within the local community), afterschool programs and summer programs, we have developed what we call the “Student-Led Internship”. The design of this program, involving high school aged students, is developmentally appropriate, cognitively challenging and a more unstructured environment through which collaboration, creativity, entrepreneurial thinking, design thinking and constructivist learning emerge. In this environment intellectual risk-taking is not only encouraged, it is a necessary component for success. What is not necessary is having a project that works “right” or even looks like the idea that the students walked in the door with. The learning is in the process, not the product.',
+        icon : 'brick',
         url_00  : 'http://foundry10.org/areas-overview/internships/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/wp-content/uploads/2016/08/Student-Led-Internships.pdf'
       } , {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Summer 2016 Internship Findings',
+        sub_title : 'Internships',
+        text : 'This slideshow includes the findings from our internship program in the summer of 2016. The interns worked across a variety of subject areas from virtual reality to fashion to drone building. These findings are from the interview series that we conduct as a part of the program. Take a look at the report below for details!',
+        icon : 'display',
         url_00  : 'http://foundry10.org/areas-overview/internships/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/wp-content/uploads/2016/10/Summer-Internships-2016-Summary-of-Findings.pdf'
       }
     ] ,
     gender_studies : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Imagination, gender and their importance in perceived choices',
+        sub_title : 'Gender Studies',
+        text : 'One of the very first programs we ran was focused on a group of 5 female teens and their drive to try new things. Along with foundry10, the girls tried out a number of new and unusual activities ranging from skateboarding to blacksmithing to paintball. We talked to the girls about the experiences and how trying new things affected their view on the world and the choices available to them. In the summer of 2014, we shared this information with the Imaginative Education Research Group. You can find our slides with our findings below.',
+        icon : 'wrench',
         url_00  : 'http://foundry10.org/areas-overview/girls-programs/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/research/dota-2-exploratory-interviews/'
       } , {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
-        url_00  : 'http://foundry10.org/areas-overview/girls-programs/',
-        url_01  : ''
+        title : 'Shakespeare for Girls',
+        sub_title : 'Video',
+        text : 'This is a video demonstrating a gender studies drama related program : Shakespeare for girls.',
+        icon : 'book',
+        url_00  : 'https://youtu.be/KvRvEp6IEWg',
+        url_01  : 'http://foundry10.org/areas-overview/girls-programs/'
       }
     ] ,
     early_education : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Augmented Math/Reading Intervention',
+        sub_title : 'Elementary',
+        text : 'Foundry10 and an elementary school in the greater Seattle area teamed up together to augment the district funded math and reading spring after school intervention program. We were interested in providing additional funding so that 5th and 6th graders could receive support in the target subject areas, with smaller class sizes, under the guidance of certified classroom teachers. The intervention program ran for 7 sessions concurrently with the district funded program for grades K-4. The goal was to see improvements in both students’ academic performance in the targeted subject areas as well as in their attitudes towards the subject areas.',
+        icon : 'book',
         url_00  : 'http://foundry10.org/areas-overview/early-education/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/AugmentedMathReadingAnonymized.pdf'
       } , {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Shoreline Kindergarten Readiness Program Report',
+        sub_title : 'Early Education',
+        text : 'In Summer 2016, foundry10 collaborated with Shoreline School District to support a month-long kindergarten readiness program. Students coming in to kindergarten have a wide range of skill sets, with some students more prepared for the demands of kindergarten than others. To close the readiness gap, Shoreline approached us with the idea to design a summer class with the express purpose of preparing students for their first year in kindergarten. We decided to focus on boosting skills at this age, because of evidence that early intervention is particularly beneficial in closing achievement gaps. Elementary schools throughout the district identified students who were enrolled in kindergarten but hadn’t previously had preschool, and invited a small number of these students to participate. One class of seven students participated in July before starting kindergarten the following month.',
+        icon : 'brick',
         url_00  : 'http://foundry10.org/areas-overview/early-education/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/research/shoreline-kindergarten-readiness/'
       }
     ] ,
     professional_development : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Parkwood Intervention Program',
+        sub_title : 'Professional Development',
+        text : 'The Shoreline Schools Foundation and foundry10 partnered to create an original program at Parkwood Elementary, during spring break 2016. We joined creative/dramatic arts with traditional CORE curriculum for 5-days over Spring Break. Students testing at the cusp of being able to pass the SBAC in April were invited to the week-long intervention. In this program, dedicated teachers were paired with passionate teaching artists for ten full hours of preparation in the months leading up to the week-long experience. We found that providing this amount of time for creating imaginative curriculum between two different talented and capable educators would provide the unique context for a week-long break camp where traditional classroom curriculum could be experienced in an artful way.',
+        icon : 'brick',
         url_00  : 'http://foundry10.org/areas-overview/professional-development/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/research/parkwood-intervention-program-2/'
       } , {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'TAT LAB : Wonderwalls and Sharing Circles',
+        sub_title : 'Professional Development',
+        text : '“If there’s something you’re still wondering about, write it on this post it note and stick it to the wonder-wall and then come join me in a circle!” With over twenty hands in the air, the energy in the room at the Teaching Artist Training Lab, hosted by Seattle Children’s Theater, is palpable. The teachers just want to keep the discussion going and would do so well into the night. The wonder-wall serves as a great way to table topics for later discussion during lunch breaks, walks, and even drives home.',
+        icon : 'book',
         url_00  : 'http://foundry10.org/areas-overview/professional-development/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/subject-areas/tat-lab-professional-development-teaching-artists/'
       }
     ] ,
     artistic_design : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Y-We Camp Report',
+        sub_title : 'Artistic Design',
+        text : 'In this report, we dig into a fashion camp that we ran with Young Women Empowered. Please take at the document below to find out more about the camp and what we learned.',
+        icon : 'brush',
         url_00  : 'http://foundry10.org/areas-overview/artistic-design/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/research/y-we-camp-report/'
       } , {
-        title : '',
-        sub_title : '',
-        text : '',
+        title : 'Y-We Create Fashion Show ',
+        sub_title : 'Artistic Design',
+        text : 'The Y-We fashin show was documented for your viewing pleasure',
         icon : '',
-        url_00  : 'http://foundry10.org/areas-overview/artistic-design/',
-        url_01  : ''
+        url_00  : 'https://youtu.be/p6sw-tvxl_4',
+        url_01  : 'http://foundry10.org/areas-overview/artistic-design/'
       }
     ] ,
     digital_audio : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
+        title : 'Digital Audio Report',
+        sub_title : 'Audio, 2014 - 2016',
+        text : 'This report covers what we have learned over the past 3 years running digital audio programs in schools, with community partners, and on our own.
+We have been running digital audio programs since 2014, and have explored many different ways of offering and structuring the courses. While there is still so much to learn about the subject, the audio team at foundry10 has put together a report showcasing the work they have done and what they have learned about how high school students interact with digital audio. Please read the report below if you want to find out more about our audio program, its history, and what we have learned so far.',
         icon : '',
         url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/research/digital-audio-report-2014-2016/'
       } , {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Audio Workshops',
+        sub_title : 'Digital Audio',
+        text : 'A big part of learning to work with digital audio is expanding specific skillsets and learning fun new ways to create and manipulate sound. To supplement the program, we bring in exciting and fun events to showcase different functions and teach youth and adults alike.',
+        icon : 'brush',
         url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/subject-areas/audio-workshop-events/'
       }
     ] ,
     drama : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
+        title : 'Dramatic Storytelling and Literacy',
+        sub_title : 'Drama',
+        text : 'This article describes a method of exploring and expanding literacy using dramatic storytelling techniques. In this program, we paired drama teaching artists with teachers to engage young students in literacy-based exercises in a unique and fun way. You can download the report here: Dramatic Storytelling and Literacy',
+        icon : 'book',
         url_00  : 'http://foundry10.org/areas-overview/drama/',
-        url_01  : ''
+        url_01  : 'http://foundry10.org/research/dramatic-storytelling-literacy/'
       } , {
         title : '',
         sub_title : '',
