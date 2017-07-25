@@ -421,3 +421,37 @@ blockquote {
 .article-button-row {
   padding-right: 5%;
 }
+
+.article-card{
+  background-color: white;
+  height:20%;
+  border-left: 1em solid #ff6600;
+  padding: 1em 1em 1em 1em;
+}
+
+.article-icon-image {
+  max-width:100%; max-height:100%;display:block;
+}
+
+.article-button-panel {
+  background-color:#999;
+}
+.f10button {
+  padding: 17px 45px;
+  font: 700 14px/28px Roboto Condensed,sans-serif;
+  border: 2px solid #fa9c42;
+  color: #ffffff;
+  display: inline-block;
+  letter-spacing: 1.5px;
+  min-width: 275px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.article-blockquote {
+  height:48em;
+}
+
+.article-bottom-div {
+  margin-right: 1em;
+}
