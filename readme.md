@@ -1,8 +1,10 @@
 # foundry10 Web Development
-## [Live Site](http://foundry10.org)
 ## [Development Environment](http://opensail.io)
+## [Live Site](http://foundry10.org)
 
 ![material_dev](md_images/jul_24_dev.png)
+
+![articles_info_banner](md_images/article_info_banner.png)
 
 ![material_dev](md_images/three_pillar_draft.png)
 
