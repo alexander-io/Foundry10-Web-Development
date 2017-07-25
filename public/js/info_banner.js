@@ -33,6 +33,8 @@
   let article_text_truncate_00 = document.getElementById('article-text-00');
   let article_text_truncate_01 = document.getElementById('article-text-01');
 
+  let article_icon_00 = document.getElementById('article-icon-00');
+  let article_icon_01 = document.getElementById('article-icon-01');
 
   let article_link_00_00 = document.getElementById('article-link-00-00');
   let article_link_00_01 = document.getElementById('article-link-00-01');
@@ -200,16 +202,10 @@
 
 
     // update article 0 sub title
-    article_sub_title_00.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title
+    article_sub_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title, 4)
 
     // update article 1 sub title
-    article_sub_title_01.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].sub_title
-
-
-
-    let shortened_string = ''
-
-
+    article_sub_title_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].sub_title, 4)
 
     // update the text in article 1
     article_text_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
@@ -217,7 +213,10 @@
     // update the text in article 2
     article_text_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].text, 32)
 
+    // update article icons
+    article_icon_00.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].icon
 
+    article_icon_01.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].icon
 
 
     /*
@@ -229,6 +228,9 @@
 
     article_text_00
     article_text_01
+
+    article_icon_00
+    article_icon_01
 
     article_link_00_00
     article_link_00_01
@@ -462,7 +464,7 @@
   let icp = icon_path_prefix
 
   let icon_path = {
-    wrench : icp+'009-wrench.ong',
+    wrench : icp+'009-wrench.png',
     gears : icp+'001-gears.png',
     brick : icp+'003-brick.png',
     programmer : icp+'002-programmer.png',
