@@ -455,3 +455,27 @@ blockquote {
 .article-bottom-div {
   margin-right: 1em;
 }
+
+.trip-link {
+  color: white;
+}
+
+.col.s4.trip-link {
+}
+
+.wrapper {
+  padding-bottom: 1em;
+  border-bottom: 3px solid #ff5f2a;
+}
+
+#fixed-down-arrow-icon {
+  font-size:100px;
+  position:fixed;
+  background-color:#ff6600;
+  border-radius:50%;
+  color:white;
+  z-index:100;
+  right:3%;
+  bottom:3%;
+  border:10px solid #ff6600;
+}
