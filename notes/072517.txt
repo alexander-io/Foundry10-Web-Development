@@ -6,6 +6,24 @@
 #### http://35.167.90.70
 #### https://github.com/alexander-io/foundry10-web-development
 
+Another productive day in the office. In this paragraph I'll provide a brief list of features that were implemented today, then I'll use rest of the space in the document to give a step-by-step account of modifications/additions.
+
+  0. modified the data model so to associate two "articles" with each of the program areas
+
+  1. research article/program/brief content on foundry10.org and c&p titles, sub-titles, text-bodies, and links
+
+  2. for each of the articles, apply their corresponding data points in the model
+
+  3. bind the data from the model to the window (DOM) on mouse click for a particular category
+
+  4. constrain the dimensions of the photographs in the info-window module (now the images are looking closer to their intended dimensions in the window)
+
+  5. modify the arrow-scroll-navigation-button so to scroll through the page content on click
+
+  6. create a truncate() function to solve the issue of text-overflow from the articles (the function is noted below)
+
+  7. update text in info-banner, instead of "redefining education through <insert_area>" use "foundry10 is redefining education through <insert_area>"
+
 create data model for articles, replace two link structure in articles with double link, re-work footer to remove areas links
 
 info banner, added more content to articles data model including sub-title, icons and links
