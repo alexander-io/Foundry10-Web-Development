@@ -171,53 +171,53 @@
     ] ,
     vr : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
-        url_00  : '',
-        url_01  : ''
+        title : 'VR Pilot Program Initial Findings',
+        sub_title : 'virtual reality',
+        text : 'In the 2015-2016 school year, foundry10 put VR in the classrooms of 390 students in the US and Canada. Our objective was to collaborate with teachers to find out more about what really happens when VR enters the classroom. Through a series of surveys and interviews, we gathered data at the beginning, middle and end of the program in each school. The teachers used the technology in the way that made sense for them and their students, and as a result we were granted a view at a wide variety of different ideas for how VR can enhance classroom learning. Below are our initial reports,the dataset that includes the anonymized survey responses from the students in the program, and a brief description of the program itself. Please take a look and reach out to us if you have any thoughts or questions.',
+        icon : 'brick',
+        url_00  : 'http://foundry10.org/areas-overview/virtual-reality/',
+        url_01  : 'http://foundry10.org/research/vr-pilot-program-initial-findings/'
       } ,  {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
-        url_00  : '',
-        url_01  : ''
+        title : 'Making Learning Accessible in New Ways',
+        sub_title : 'virtual reality',
+        text : 'Exploring technology is a vital part of modern day students’ educational experiences. Often, however, schools come in on the tail-end of an emerging technology, thereby limiting students’ opportunities for exposure and skill development. Advanced technology can be considered a type of cultural capital which students can utilize in order to progress and navigate future career pathways. Virtual reality is one such advanced technology, now readily commercially available, which is making its way into classrooms. Our recent research focusing on the implementation of VR in classrooms provides information about how educators can make VR accessible to students. Access in virtually reality can be considered through multiple lenses and we discuss a few of them here. The first considers learning styles and nontraditional engagement, the second discusses access to a global education, and the third revolves around issues of social justice. We feel these areas are highly relevant considerations for educators as they consider the use of virtual reality.',
+        icon : 'programmer',
+        url_00  : 'http://foundry10.org/research_category/virtual-reality/',
+        url_01  : 'http://foundry10.org/research/virtual-reality-making-learning-accessible-in-new-ways/'
       }
     ] ,
     game_dev : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
-        url_00  : '',
-        url_01  : ''
+        title : 'Beyond Programming – The Power of Making Games',
+        sub_title : 'games and learning',
+        text : 'Art and creative expression have an interesting way of weaving in and out of classrooms, offering students the opportunity to explore their own ideas and minds. Video games are no different, and while most of the discussion about their use in classrooms centers on play, we at foundry10 wanted to examine the value of making games. Through easily accessible programs such as Scratch and Gamemaker, students from early elementary up through college are creating games and learning while doing it. We gathered surveys from 107 game design and development professionals and 300 middle school students, before and after a game development class, about the value of teaching game development in a middle school class. Then we compared the responses of the 7th- and 8th-graders with what the game developers said they felt would be important about making games. We hope this information will help teachers who are constructing game development classes, and show the broader view of the value inherent in game development that professional game makers can provide.',
+        icon : 'programmer',
+        url_00  : 'http://foundry10.org/areas-overview/games-and-learning/',
+        url_01  : 'http://foundry10.org/research/beyond-programming-the-power-of-making-games/'
       } , {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
-        url_00  : '',
-        url_01  : ''
+        title : 'Number processing ability and logitunal MOBA skill',
+        sub_title : 'games and learning',
+        text : 'The popularity of multiplayer online battle arena (MOBA) games provides an opportunity to examine how cognitive skills are linked with changes in player performance within a team-based game genre. There is evidence that video game experience in other genres is connected with specific cognitive skills such as visuospatial attention and working memory capacity. Links have also been observed outside of video games such as numerical intelligence being correlated with the performance of chess experts. In the present study, we investigated whether numerical and working memory ability measured at an initial time-point predicted changes in MOBA skill and gameplay frequency measured five months later. We observed that participants who scored higher on a number processing task had greater improvements in MOBA skill and that this link depended on the social context of the gameplay. Specifically, numerical skill was linked to player rankings generated from matches where they were paired with random individuals; no connection was observed with gameplay that took place with a familiar set of teammates. The results of the present study extend previous research indicating video gameplay is linked to specific cognitive skills, in the case of MOBAs being numerical processing. We suggest that the difference in the connection with number ability to gameplay with novel and familiar players is in line with evidence that the importance of individual performance and the sense of achievement can be reduced in team settings. We suggest that future research should examine what types of quantitative abilities are indicative of MOBA skill and the impact of those factors relative to social skills.',
+        icon : 'controller',
+        url_00  : 'http://foundry10.org/areas-overview/games-and-learning/',
+        url_01  : 'http://foundry10.org/research/number-processing-ability-and-logitunal-moba-skill/'
       }
     ] ,
     automotive : [
       {
-        title : '',
-        sub_title : '',
-        text : '',
-        icon : '',
-        url_00  : '',
-        url_01  : ''
+        title : 'Learning from the Pros',
+        sub_title : 'Lessons from Long Beach',
+        text : 'When we brought students to Long Beach to see Formula Drift, one of the most impactful parts of the experience was getting to meet real working professionals in the automotive industry. While integrating professionals has been a key part of many of our programs, automotive technology gets particular benefits from this as the industry is so broad and the pathways into it are not always clear. We wrote the below report to showcase what the students and teachers, in their own words, got from meeting with the pros.',
+        icon : 'wrench',
+        url_00  : 'http://foundry10.org/areas-overview/automotive/',
+        url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Learning-from-the-Pros.pdf'
       } , {
-        title : '',
+        title : 'Automotive Technology Research',
         sub_title : '',
-        text : '',
-        icon : '',
-        url_00  : '',
-        url_01  : ''
+        text : 'Throughout our work with automotive technology, we have been studying how the students respond to the subject, and seek to answer our three critical questions for the program. The report below breaks down how we look at auto-tech, what is exciting to us in terms of learning, and some of the data that we have gathered on the subject so far.',
+        icon : 'wrench',
+        url_00  : 'http://foundry10.org/areas-overview/automotive/',
+        url_01  : 'http://foundry10.org/wp-content/uploads/2016/07/AutomotiveTechnologyResearch.pdf'
       }
     ] ,
     intern : [
@@ -226,14 +226,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/internships/',
         url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/internships/',
         url_01  : ''
       }
     ] ,
@@ -243,14 +243,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/girls-programs/',
         url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/girls-programs/',
         url_01  : ''
       }
     ] ,
@@ -260,14 +260,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/early-education/',
         url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/early-education/',
         url_01  : ''
       }
     ] ,
@@ -277,14 +277,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/professional-development/',
         url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/professional-development/',
         url_01  : ''
       }
     ] ,
@@ -294,13 +294,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url  : ''
+        url_00  : 'http://foundry10.org/areas-overview/artistic-design/',
+        url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/artistic-design/',
         url_01  : ''
       }
     ] ,
@@ -310,14 +311,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
         url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
         url_01  : ''
       }
     ] ,
@@ -327,13 +328,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url  : ''
+        url_00  : 'http://foundry10.org/areas-overview/drama/',
+        url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/drama/',
         url_01  : ''
       }
     ] ,
@@ -343,14 +345,14 @@
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/hip-hop/',
         url_01  : ''
       } , {
         title : '',
         sub_title : '',
         text : '',
         icon : '',
-        url_00  : '',
+        url_00  : 'http://foundry10.org/areas-overview/hip-hop/',
         url_01  : ''
       }
     ]
