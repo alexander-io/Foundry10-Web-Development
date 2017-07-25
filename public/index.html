@@ -133,8 +133,8 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       </div>
     </div> -->
 
-    <a href="#" id="fixed-down-arrow" style="z-index:100;" class="valign-wrapper hide-on-med-and-down"><i id="fixed-down-arrow-icon"class="material-icons md-36 z-depth-5" style="font-size:100px;position:fixed;background-color:#f99d43; border-radius:50%; color:white;z-index:100;right:3%;bottom:3%;border:10px solid #ff6600">keyboard_arrow_down</i></a>
-
+    <a href="#" id="fixed-down-arrow" style="z-index:100;" class="valign-wrapper hide-on-med-and-down"><i id="fixed-down-arrow-icon"class="material-icons md-36 z-depth-5" style="font-size:100px;position:fixed;background-color:#ff6600; border-radius:50%; color:white;z-index:100;right:3%;bottom:3%;border:10px solid #ff6600">keyboard_arrow_down</i></a>
+    <!-- f99d43 -->
 
     <div class="container" style="color:#ffffff">
       <div class="section">
@@ -585,21 +585,21 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
               </p>
             </div>
 
-            <div class="parallax-container" style="z-index:1;height:350px;margin-bottom:50px;">
-              <div class="" >
-
-
+            <div class="" style="z-index:1;margin-bottom:50px;overflow:hidden;max-height:450px;">
+              <div class="" id="logo" >
                 <img id="plax_img" src="images/info_banner/DSC01400-1-e1472759462425.jpg" style="width:100%;" alt="">
+
+
 
               </div>
             </div>
 
             <script type="text/javascript">
-              $(document).ready(function(){
-                $('.parallax').parallax()
-                $('.parallax-02').parallax()
-
-              })
+              // $(document).ready(function(){
+              //   $('.parallax').parallax()
+              //   $('.parallax-02').parallax()
+              //
+              // })
             </script>
 
 
@@ -1443,31 +1443,45 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
 
 
     <script type="text/javascript">
-      let fingerprint = document.getElementById('finger-print');
-      let b_div = document.getElementById('bottom-div-top-sect');
-      let triangle = document.getElementById('triangle-bottomleft');
+      // let fingerprint = document.getElementById('finger-print');
+      // let b_div = document.getElementById('bottom-div-top-sect');
+      // let triangle = document.getElementById('triangle-bottomleft');
       let bb_div = document.getElementById('bottom-of-top-sect');
 
       let fixed_down_arrow = document.getElementById('fixed-down-arrow');
       let fixed_down_arrow_icon = document.getElementById('fixed-down-arrow-icon');
 
 
+      var body_rect = document.body.getBoundingClientRect()
+
+      console.log('body rectangle : ', body_rect);
 
       let info_banner = document.getElementById('info-banner')
-      console.log(info_banner);
+      let info_banner_rect = info_banner.getBoundingClientRect()
 
-      let target_00 = 1350, target_01 = 4170, target_02 = 5150, target_03 = 4750
 
+      // let circ = document.getElementById('circ');
+      let circ_rect = circ.getBoundingClientRect()
+      console.log('circ' ,circ);
+      console.log('circ rect : ', circ_rect);
+      let info_banner_offset = info_banner_rect.top - body_rect.top;
+      let circ_offset = circ_rect.top - body_rect.top
+
+
+      // console.log('info banner : ', info_banner, 'ib rect: ', info_banner_rect);
+      // console.log('info banner offset : ', info_banner_offset);
+      // console.log('circ offset :', circ_offset);
+
+      let target_00 = info_banner_offset, target_01 = circ_offset
       let color_range = {}
 
       let color_range_lst = [
         target_00,
-        target_01,
-        target_02,
-        target_03
+        target_01
       ]
+
       let color_lst = [
-        '#ffab00', 'orange', '#ff5f2a', 'coral'
+        '#ff6600', '#ffc91b'
       ]
 
       for (x in color_range_lst) {
@@ -1475,45 +1489,51 @@ px;height:40px;vertical-align:middle;" alt=""></span> <span class="hide-on-med-a
       }
 
       console.log(color_range);
+
+      let arrow_up = false
+
       $(window).scroll(function(){
 
+        if(!arrow_up && $(window).scrollTop() + $(window).height() == $(document).height()) {
+          arrow_up = true
+          fixed_down_arrow_icon.innerHTML = 'keyboard_arrow_up'
+          fixed_down_arrow_icon.style.backgroundColor = '#f99d43'
+          return
+        } else if (arrow_up && $(window).scrollTop() + $(window).height() != $(document).height()) {
+          fixed_down_arrow_icon.innerHTML = 'keyboard_arrow_down'
+          arrow_up = false
+        }
 
-
+        // modify the background color of the arrow element
         for (let i = 0; i < color_range_lst.length; i++) {
           if (window.scrollY < color_range_lst[i]) {
-            // console.log(color_range_lst[i]);
-            // console.log(color_range['1350']);
             fixed_down_arrow_icon.style.backgroundColor = color_range[color_range_lst[i]]
             return
           } else {
             continue
           }
         }
-
       })
 
 
 
       fixed_down_arrow.addEventListener('click', function(e) {
 
+
         event.preventDefault();
 
-        // if (window.scrollY < target_00 ) {
-        //   $('html,body').animate({scrollTop:target_00}, 900);
-        // }
-        // else if (window.scrollY < target_01) {
-        //   $('html,body').animate({scrollTop:target_01}, 900);
-        //
-        // }
-
-        for (x in color_range_lst) {
-          if (window.scrollY < color_range_lst[x]) {
-            $('html,body').animate({scrollTop:color_range_lst[x]}, 900)
-            return
+        if (arrow_up) {
+          $('html,body').animate({scrollTop:0}, 900)
+          return
+        } else {
+          for (x in color_range_lst) {
+            if (window.scrollY < color_range_lst[x]) {
+              $('html,body').animate({scrollTop:color_range_lst[x]}, 900)
+              return
+            }
           }
         }
       });
-
 
     </script>
 
