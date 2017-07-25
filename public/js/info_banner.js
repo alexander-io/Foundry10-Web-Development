@@ -458,6 +458,20 @@
   }
 */
 
+  let icon_path_prefix = 'icons/flat/'
+  let icp = icon_path_prefix
+
+  let icon_path = {
+    wrench : icp+'009-wrench.ong',
+    gears : icp+'001-gears.png',
+    brick : icp+'003-brick.png',
+    programmer : icp+'002-programmer.png',
+    controller : icp+'005-game-controller.png',
+    display : icp+'008-display.png',
+    book : icp+'007-book.png',
+    brush : icp+'012-paint-brush-1.png'
+  }
+
 
   // each sub-category should have data associated : title, body of text, two links, two images
   let tree = {
@@ -480,14 +494,14 @@
             title : 'Elementary After School Lego Club and Robotics Club',
             sub_title : 'robotics',
             text : 'As part of our work focused on after school programming, we partnered with an elementary school in the greater Seattle area to run a Lego building club for early elementary students (kindergarten and first grade) and a Lego Robotics club for intermediate elementary students (grades 4, 5 and 6). The program ran after school, twice a week for an hour each session, for four weeks. Each was led by classroom teachers with an interest in Legos and each developed their own club curricula and projects. All Lego building kits and robotics kids were donated as part of the after school project with foundry10. We also supplied stipends for the teachers to run the clubs. The goal was to provide opportunities, free of charge, for students to build, explore, and be creative in an after-school setting. Bus transportation was also provided by foundry10 so that there were no transportation barriers for interested students who wanted to attend.',
-            icon : 'wrench',
+            icon : icon_path.wrench,
             url_00 : 'http://foundry10.org/areas-overview/robotics/',
             url_01 : 'http://foundry10.org/wp-content/uploads/2017/06/Elementary-Lego-and-Robotics.pdf'
           } , {
             title : 'Robotics Brief',
             sub_title : 'Fall 2016',
             text : 'Throughout the fall of the 2016-2017 school year, foundry10 ran robotics programs in two schools around Seattle: The Nova Project and Seattle Girl’s School. We were interested in how exposure to our student-led robotics program improved student confidence with technology, productive risk-taking, and the perception of robotics as a community exercise. We used a combination of likert-type scale survey questions and open-ended questions. We found some gains in these areas, but hope to expand our sample size to improve our understanding of the impact that this experience has on students.',
-            icon : 'gears',
+            icon : icon_path.gears,
             url_00 : 'http://foundry10.org/areas-overview/robotics/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Robotics-Fall-2016-brief.pdf'
           }
@@ -510,14 +524,14 @@
             title : 'VR Pilot Program Initial Findings',
             sub_title : 'virtual reality',
             text : 'In the 2015-2016 school year, foundry10 put VR in the classrooms of 390 students in the US and Canada. Our objective was to collaborate with teachers to find out more about what really happens when VR enters the classroom. Through a series of surveys and interviews, we gathered data at the beginning, middle and end of the program in each school. The teachers used the technology in the way that made sense for them and their students, and as a result we were granted a view at a wide variety of different ideas for how VR can enhance classroom learning. Below are our initial reports,the dataset that includes the anonymized survey responses from the students in the program, and a brief description of the program itself. Please take a look and reach out to us if you have any thoughts or questions.',
-            icon : 'brick',
+            icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/virtual-reality/',
             url_01  : 'http://foundry10.org/research/vr-pilot-program-initial-findings/'
           } ,  {
             title : 'Making Learning Accessible in New Ways',
             sub_title : 'virtual reality',
             text : 'Exploring technology is a vital part of modern day students’ educational experiences. Often, however, schools come in on the tail-end of an emerging technology, thereby limiting students’ opportunities for exposure and skill development. Advanced technology can be considered a type of cultural capital which students can utilize in order to progress and navigate future career pathways. Virtual reality is one such advanced technology, now readily commercially available, which is making its way into classrooms. Our recent research focusing on the implementation of VR in classrooms provides information about how educators can make VR accessible to students. Access in virtually reality can be considered through multiple lenses and we discuss a few of them here. The first considers learning styles and nontraditional engagement, the second discusses access to a global education, and the third revolves around issues of social justice. We feel these areas are highly relevant considerations for educators as they consider the use of virtual reality.',
-            icon : 'programmer',
+            icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/research_category/virtual-reality/',
             url_01  : 'http://foundry10.org/research/virtual-reality-making-learning-accessible-in-new-ways/'
           }
@@ -540,14 +554,14 @@
             title : 'Beyond Programming – The Power of Making Games',
             sub_title : 'games and learning',
             text : 'Art and creative expression have an interesting way of weaving in and out of classrooms, offering students the opportunity to explore their own ideas and minds. Video games are no different, and while most of the discussion about their use in classrooms centers on play, we at foundry10 wanted to examine the value of making games. Through easily accessible programs such as Scratch and Gamemaker, students from early elementary up through college are creating games and learning while doing it. We gathered surveys from 107 game design and development professionals and 300 middle school students, before and after a game development class, about the value of teaching game development in a middle school class. Then we compared the responses of the 7th- and 8th-graders with what the game developers said they felt would be important about making games. We hope this information will help teachers who are constructing game development classes, and show the broader view of the value inherent in game development that professional game makers can provide.',
-            icon : 'programmer',
+            icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/areas-overview/games-and-learning/',
             url_01  : 'http://foundry10.org/research/beyond-programming-the-power-of-making-games/'
           } , {
             title : 'Number processing ability and logitunal MOBA skill',
             sub_title : 'games and learning',
             text : 'The popularity of multiplayer online battle arena (MOBA) games provides an opportunity to examine how cognitive skills are linked with changes in player performance within a team-based game genre. There is evidence that video game experience in other genres is connected with specific cognitive skills such as visuospatial attention and working memory capacity. Links have also been observed outside of video games such as numerical intelligence being correlated with the performance of chess experts. In the present study, we investigated whether numerical and working memory ability measured at an initial time-point predicted changes in MOBA skill and gameplay frequency measured five months later.',
-            icon : 'controller',
+            icon : icon_path.controller,
             url_00  : 'http://foundry10.org/areas-overview/games-and-learning/',
             url_01  : 'http://foundry10.org/research/number-processing-ability-and-logitunal-moba-skill/'
           }
@@ -570,14 +584,14 @@
             title : 'Learning from the Pros',
             sub_title : 'Lessons from Long Beach',
             text : 'When we brought students to Long Beach to see Formula Drift, one of the most impactful parts of the experience was getting to meet real working professionals in the automotive industry. While integrating professionals has been a key part of many of our programs, automotive technology gets particular benefits from this as the industry is so broad and the pathways into it are not always clear. We wrote the below report to showcase what the students and teachers, in their own words, got from meeting with the pros.',
-            icon : 'wrench',
+            icon : icon_path.gears,
             url_00  : 'http://foundry10.org/areas-overview/automotive/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Learning-from-the-Pros.pdf'
           } , {
             title : 'Automotive Technology Research',
             sub_title : 'automotive',
             text : 'Throughout our work with automotive technology, we have been studying how the students respond to the subject, and seek to answer our three critical questions for the program. The report below breaks down how we look at auto-tech, what is exciting to us in terms of learning, and some of the data that we have gathered on the subject so far.',
-            icon : 'wrench',
+            icon : icon_path.wrench,
             url_00  : 'http://foundry10.org/areas-overview/automotive/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2016/07/AutomotiveTechnologyResearch.pdf'
           }
@@ -603,14 +617,14 @@
             title : 'Student-Led Internships',
             sub_title : 'An Exploration of Interest, Motivation, and Process',
             text : 'Through partnerships with schools that follow the Big Picture Model of learning (which includes internship experiences within the local community), afterschool programs and summer programs, we have developed what we call the “Student-Led Internship”. The design of this program, involving high school aged students, is developmentally appropriate, cognitively challenging and a more unstructured environment through which collaboration, creativity, entrepreneurial thinking, design thinking and constructivist learning emerge. In this environment intellectual risk-taking is not only encouraged, it is a necessary component for success. What is not necessary is having a project that works “right” or even looks like the idea that the students walked in the door with. The learning is in the process, not the product.',
-            icon : 'brick',
+            icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/internships/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2016/08/Student-Led-Internships.pdf'
           } , {
             title : 'Summer 2016 Internship Findings',
             sub_title : 'Internships',
             text : 'This slideshow includes the findings from our internship program in the summer of 2016. The interns worked across a variety of subject areas from virtual reality to fashion to drone building. These findings are from the interview series that we conduct as a part of the program. Take a look at the report below for details!',
-            icon : 'display',
+            icon : icon_path.display,
             url_00  : 'http://foundry10.org/areas-overview/internships/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2016/10/Summer-Internships-2016-Summary-of-Findings.pdf'
           }
@@ -633,14 +647,14 @@
             title : 'Imagination, gender and their importance in perceived choices',
             sub_title : 'Gender Studies',
             text : 'One of the very first programs we ran was focused on a group of 5 female teens and their drive to try new things. Along with foundry10, the girls tried out a number of new and unusual activities ranging from skateboarding to blacksmithing to paintball. We talked to the girls about the experiences and how trying new things affected their view on the world and the choices available to them. In the summer of 2014, we shared this information with the Imaginative Education Research Group. You can find our slides with our findings below.',
-            icon : 'wrench',
+            icon : icon_path.wrench,
             url_00  : 'http://foundry10.org/areas-overview/girls-programs/',
             url_01  : 'http://foundry10.org/research/dota-2-exploratory-interviews/'
           } , {
             title : 'Shakespeare for Girls',
             sub_title : 'Video',
             text : 'This is a video demonstrating a gender studies drama related program : Shakespeare for girls.',
-            icon : 'book',
+            icon : icon_path.book,
             url_00  : 'https://youtu.be/KvRvEp6IEWg',
             url_01  : 'http://foundry10.org/areas-overview/girls-programs/'
           }
@@ -663,14 +677,14 @@
             title : 'Augmented Math/Reading Intervention',
             sub_title : 'Elementary',
             text : 'Foundry10 and an elementary school in the greater Seattle area teamed up together to augment the district funded math and reading spring after school intervention program. We were interested in providing additional funding so that 5th and 6th graders could receive support in the target subject areas, with smaller class sizes, under the guidance of certified classroom teachers. The intervention program ran for 7 sessions concurrently with the district funded program for grades K-4. The goal was to see improvements in both students’ academic performance in the targeted subject areas as well as in their attitudes towards the subject areas.',
-            icon : 'book',
+            icon : icon_path.book,
             url_00  : 'http://foundry10.org/areas-overview/early-education/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/AugmentedMathReadingAnonymized.pdf'
           } , {
             title : 'Shoreline Kindergarten Readiness Program Report',
             sub_title : 'Early Education',
             text : 'In Summer 2016, foundry10 collaborated with Shoreline School District to support a month-long kindergarten readiness program. Students coming in to kindergarten have a wide range of skill sets, with some students more prepared for the demands of kindergarten than others. To close the readiness gap, Shoreline approached us with the idea to design a summer class with the express purpose of preparing students for their first year in kindergarten. We decided to focus on boosting skills at this age, because of evidence that early intervention is particularly beneficial in closing achievement gaps. Elementary schools throughout the district identified students who were enrolled in kindergarten but hadn’t previously had preschool, and invited a small number of these students to participate. One class of seven students participated in July before starting kindergarten the following month.',
-            icon : 'brick',
+            icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/early-education/',
             url_01  : 'http://foundry10.org/research/shoreline-kindergarten-readiness/'
           }
@@ -693,14 +707,14 @@
             title : 'Parkwood Intervention Program',
             sub_title : 'Professional Development',
             text : 'The Shoreline Schools Foundation and foundry10 partnered to create an original program at Parkwood Elementary, during spring break 2016. We joined creative/dramatic arts with traditional CORE curriculum for 5-days over Spring Break. Students testing at the cusp of being able to pass the SBAC in April were invited to the week-long intervention. In this program, dedicated teachers were paired with passionate teaching artists for ten full hours of preparation in the months leading up to the week-long experience. We found that providing this amount of time for creating imaginative curriculum between two different talented and capable educators would provide the unique context for a week-long break camp where traditional classroom curriculum could be experienced in an artful way.',
-            icon : 'brick',
+            icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/professional-development/',
             url_01  : 'http://foundry10.org/research/parkwood-intervention-program-2/'
           } , {
             title : 'TAT LAB : Wonderwalls and Sharing Circles',
             sub_title : 'Professional Development',
             text : '“If there’s something you’re still wondering about, write it on this post it note and stick it to the wonder-wall and then come join me in a circle!” With over twenty hands in the air, the energy in the room at the Teaching Artist Training Lab, hosted by Seattle Children’s Theater, is palpable. The teachers just want to keep the discussion going and would do so well into the night. The wonder-wall serves as a great way to table topics for later discussion during lunch breaks, walks, and even drives home.',
-            icon : 'book',
+            icon : icon_path.book,
             url_00  : 'http://foundry10.org/areas-overview/professional-development/',
             url_01  : 'http://foundry10.org/subject-areas/tat-lab-professional-development-teaching-artists/'
           }
@@ -725,14 +739,14 @@
             title : 'Y-We Camp Report',
             sub_title : 'Artistic Design',
             text : 'In this report, we dig into a fashion camp that we ran with Young Women Empowered. Please take at the document below to find out more about the camp and what we learned.',
-            icon : 'brush',
+            icon : icon_path.brush,
             url_00  : 'http://foundry10.org/areas-overview/artistic-design/',
             url_01  : 'http://foundry10.org/research/y-we-camp-report/'
           } , {
             title : 'Y-We Create Fashion Show ',
             sub_title : 'Artistic Design',
             text : 'The Y-We fashin show was documented for your viewing pleasure',
-            icon : '',
+            icon : icon_path.brick,
             url_00  : 'https://youtu.be/p6sw-tvxl_4',
             url_01  : 'http://foundry10.org/areas-overview/artistic-design/'
           }
@@ -755,14 +769,14 @@
             title : 'Digital Audio Report',
             sub_title : 'Audio, 2014 - 2016',
             text : 'This report covers what we have learned over the past 3 years running digital audio programs in schools, with community partners, and on our own.We have been running digital audio programs since 2014, and have explored many different ways of offering and structuring the courses. While there is still so much to learn about the subject, the audio team at foundry10 has put together a report showcasing the work they have done and what they have learned about how high school students interact with digital audio. Please read the report below if you want to find out more about our audio program, its history, and what we have learned so far.',
-            icon : '',
+            icon : icon_path.brush,
             url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
             url_01  : 'http://foundry10.org/research/digital-audio-report-2014-2016/'
           } , {
             title : 'Audio Workshops',
             sub_title : 'Digital Audio',
             text : 'A big part of learning to work with digital audio is expanding specific skillsets and learning fun new ways to create and manipulate sound. To supplement the program, we bring in exciting and fun events to showcase different functions and teach youth and adults alike.',
-            icon : 'brush',
+            icon : icon_path.brush,
             url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
             url_01  : 'http://foundry10.org/subject-areas/audio-workshop-events/'
           }
@@ -785,14 +799,14 @@
             title : 'Dramatic Storytelling and Literacy',
             sub_title : 'Drama',
             text : 'This article describes a method of exploring and expanding literacy using dramatic storytelling techniques. In this program, we paired drama teaching artists with teachers to engage young students in literacy-based exercises in a unique and fun way. You can download the report here: Dramatic Storytelling and Literacy',
-            icon : 'book',
+            icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/areas-overview/drama/',
             url_01  : 'http://foundry10.org/research/dramatic-storytelling-literacy/'
           } , {
             title : 'Shoreline Reading Intervention at Briarcrest Elementary',
             sub_title : 'Drama',
             text : 'In the summer of 2016, foundry10 partnered with Shoreline Schools Foundation to bring a fuller iteration of the dramatic arts infused intervention program for summer school attendees. With four teaching artists who collaborated with one another on creating curriculum that infused literature and dramatic arts, they served ten different classes, grades K-3 and ELL, with a theater arts intervention.',
-            icon : 'brick',
+            icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/drama/',
             url_01  : 'http://foundry10.org/research/shoreline-reading-intervention-briarcrest-elementary/'
           }
@@ -815,14 +829,14 @@
             title : 'Parkwood Math and Reading Intervention',
             sub_title : 'Hip Hop',
             text : 'During the spring of 2016, foundry10 teamed up with Shoreline School District to provide a week-long math and reading program that had an integrated drama component with the goal of enhancing student skills and motivation. Shoreline Schools Foundation and foundry10 partnered to create an original program at Parkwood Elementary School Spring Break 2016 where we joined creative/dramatic arts with traditional CORE curriculum for 5-days over Spring Break. Students testing at the cusp of being able to pass the SBAC in April were invited to the week-long intervention. Four teachers were recruited for the program that targeted 3rd through 6th grade students. From April 18-22, foundry10 instructors provided classroom instruction, including 20 hours of integrated and direct instruction with drama to explore the content and structure of stories.',
-            icon : 'programmer',
+            icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/research/parkwood-math-and-reading-intervention-spring-2016/',
             url_01  : 'http://foundry10.org/areas-overview/hip-hop/'
           } , {
             title : 'The Importance of Frustration in Dance',
             sub_title : 'Hip Hop Dance',
             text : 'Working with dance students, we frequently encounter performance anxiety and frustration. However, we believe that encountering and overcoming these difficult feelings is one of the biggest challenges through which Hip Hop, and dance in general, creates value for students of all skill levels. Now, after nearly three years of dance programs, the team at foundry10 has put together a retrospective and qualitative view on how frustration and dance mix together to create confidence, discipline, and resilience in dancers.',
-            icon : 'gears',
+            icon : icon_path.gears,
             url_00  : 'http://foundry10.org/areas-overview/hip-hop/',
             url_01  : 'http://foundry10.org/research/the-importance-of-frustration-in-dance-2/'
           }
