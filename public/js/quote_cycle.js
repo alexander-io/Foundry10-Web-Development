@@ -70,7 +70,7 @@ The people who know kids best are the ones who work closely with them. With this
       quote_queue.enqueue(update)
 
       animateCss('slideInRight')
-      quote_text_header_jq.fadeTo(1250, 1)
+      quote_text_header_jq.fadeTo(750, 1)
     }, 1050)
   });
 
@@ -93,7 +93,7 @@ The people who know kids best are the ones who work closely with them. With this
       quote_text_header.innerHTML = update
       quote_queue.enqueue(update)
       animateCss('slideInLeft')
-      quote_text_header_jq.fadeTo(1250, 1)
+      quote_text_header_jq.fadeTo(750, 1)
     }, 1050)
   });
 
