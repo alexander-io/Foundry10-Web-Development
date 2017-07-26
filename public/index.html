@@ -25,8 +25,8 @@
         <div class="row">
 
           <div class="col s4 center-align" >
-            <h1 id="nav-header" class=""style="display:inline">
-              foundry10  &nbsp
+            <h1 id="nav-header" class="" style="display:inline; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; cursor:pointer;">
+              <a href="http://foundry10.org" style="color:white;">foundry10  </a>
             </h1>
           </div>
           <div class="col s6" style="padding-top:28.5px;padding-left:15px;">
@@ -37,14 +37,125 @@
             </a>
           </div>
         </div>
-        <div class="row" style="margin-bottom:0px;margin-top:40px;">
-          <div class="col s8 offset-s2">
-            <h2 class="center-align"><color style="color:#ff6600">"</color>A philanthropic research organization promoting education in non-traditional settings and subjects.<color style="color:#ff6600">"</color></h2>
+
+
+        <div class="row" style="margin-bottom:0px;margin-top:40px;height:280px;">
+
+
+          <div class="col s2 valign-wrapper" style="position:relative;height:100%;">
+
+            <div id="left-panel" class="waves waves-effect waves-light" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; ">
+              <div class="" style="width:100%;">
+                <h1 class="center-align">
+                  <i id="left-arrow" class="material-icons md-48" style="font-size:112.5%; " >
+                    keyboard_arrow_left
+                  </i>
+                </h1>
+              </div>
+
+            </div>
+
+
+
+
           </div>
+
+          <div id="quote-text-wrapper" class="col s8">
+            <h2 id="quote-text-header"class="center-align"><color style="color:#ff6600;">"</color><quote-text id="quote-text">A philanthropic research organization promoting education in non-traditional settings and subjects.</quote-text><color style="color:#ff6600">"</color></h2>
+          </div>
+
+
+            <div  class="col s2 valign-wrapper "  style="position:relative;height:100%;">
+              <div id="right-panel" class="waves waves-effect waves-light" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                <div class="" style="width:100%;">
+                  <h1 class="center-align">
+                    <i id="right-arrow" class="material-icons md-48" style="font-size:112.5%;" >
+                      keyboard_arrow_right
+                    </i>
+                  </h1>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+
         </div>
         <!-- #ff6600 -->
       </div>
 
+      <script type="text/javascript">
+
+        let
+        left_panel = document.getElementById('left-panel')
+        , left_panel_jq = $('#left-panel')
+        , right_panel = document.getElementById('right-panel')
+        , right_panel_jq = $('#right-panel')
+        , quote_text = document.getElementById('quote-text')
+        , quote_text_jq = $('#quote-text')
+        , quote_text_header = $('#quote-text-header')
+        , quote_text_wrapper = $('#quote-text-wrapper')
+        , left_arrow = document.getElementById('left-arrow')
+        , right_arrow = document.getElementById('right-arrow')
+
+        let animateCss = function (animationName) {
+
+          var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+          quote_text_header.addClass('animated ' + animationName).one(animationEnd, function() {
+
+              quote_text_header.removeClass('animated ' + animationName);
+          });
+        }
+
+
+
+
+        left_panel.style.cursor = "pointer"
+        right_panel.style.cursor = "pointer"
+
+        left_panel.addEventListener('mouseover', function(e) {
+          console.log('hover');
+          left_arrow.style.color = "#ff6600"
+        });
+
+        left_panel.addEventListener('mouseout', function(e) {
+          left_arrow.style.color = "white"
+        });
+
+        left_panel.addEventListener('click', function(e) {
+          quote_text_header.fadeTo(425, 0)
+          animateCss('slideOutLeft')
+          // TODO : modify queue and update innerhtml content
+          setTimeout(function(){
+            animateCss('slideInRight')
+            quote_text_header.fadeTo(1250, 1)
+          }, 1050)
+        });
+
+        right_panel.addEventListener('mouseover', function(e) {
+          console.log('hover');
+          right_arrow.style.color = "#ff6600"
+        });
+
+        right_panel.addEventListener('mouseout', function(e) {
+          right_arrow.style.color = "white"
+        });
+
+        right_panel.addEventListener('click', function(e) {
+          quote_text_header.fadeTo(425, 0)
+          animateCss('slideOutRight')
+          // TODO : modify queue and update innerhtml content
+          setTimeout(function(){
+            animateCss('slideInLeft')
+            quote_text_header.fadeTo(1250, 1)
+          }, 1050)
+        });
+
+
+      </script>
 
 
 
@@ -721,6 +832,8 @@
           var theta = $(window).scrollTop() / 256 % Math.PI;
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
           $('#vec-circ-large').css({transform: 'rotate(' + theta + 'rad)'});
+          $('#vec-circ-small').css({transform: 'rotate(' + theta + 'rad)'});
+
         })
 
         let circ = document.getElementById('circ')
