@@ -22,7 +22,7 @@
     , 'foundry10'
   ]
 
-  
+
   class Q {
       constructor () { this.lst = [] }
       enqueue (elem) { this.lst.push(elem) }
@@ -53,40 +53,6 @@
   // pass in a queue that has a loaded q.lst array (loaded with strings)
   let animateCss = function(q , animationName, jq, js) {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  //
-    // jqs.forEach(function(item, index, array){
-    //   item.addClass('animated ' + animationName).one(animationEnd, function(){
-    //     // when the animation has ended, set visibility of elem to hidden & remove animation class
-    //     item.css('visibility', 'hidden')
-    //     // -webkit-backface-visibility: hidden;
-    //     item.css('-webkit-backface-visibility', 'hidden')
-    //     item.removeClass('animated ' + animationName)
-    //
-    //     // we have a list of strings to display in our queue, dequeue one
-    //     let q_elem = q.dequeue()
-    //
-    //     // set the innerhtml text content to correspond with the text we just dequeued
-    //     jss[index].innerHTML = q_elem
-    //
-    //     // place text node to back of queue
-    //     q.enqueue(q_elem)
-    //
-    //     // want to fade element back in smoothly, use opacity. set the opacity of the header elem to 0.0, flip switch back to visible
-    //     let opacity = 0.0
-    //     item.css('opacity', opacity)
-    //     // init gas on opacity as interval to increment and assign the opacity
-    //     let gas_on_opacity = setInterval(function(){
-    //       opacity += .05
-    //       item.css('opacity', opacity)
-    //       if (opacity >= 1.0) {
-    //         clearInterval(gas_on_opacity)
-    //       }
-    //     }, 25)
-    //     item.css('visibility', 'visible')
-    //     item.css('-webkit-backface-visibility', 'visible')
-    //
-    //   })
-    // })
 
     // first add the animation class to the obj, this starts the animation on func call
     jq.addClass('animated ' + animationName).one(animationEnd, function(){
@@ -98,6 +64,12 @@
 
       // we have a list of strings to display in our queue, dequeue one
       let q_elem = q.dequeue()
+
+      if (q_elem == 'foundry10') {
+        js.style.color = '#ff6600'
+      } else {
+        js.style.color = 'white'
+      }
 
       // set the innerhtml text content to correspond with the text we just dequeued
       js.innerHTML = q_elem
