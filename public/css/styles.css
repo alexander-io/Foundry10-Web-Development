@@ -437,13 +437,13 @@ blockquote {
   background-color:#999;
 }
 .f10button {
-  padding: 17px 45px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   font: 700 14px/28px Roboto Condensed,sans-serif;
   border: 2px solid #fa9c42;
   color: #ffffff;
   display: inline-block;
-  letter-spacing: 1.5px;
-  min-width: 275px;
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
 }
