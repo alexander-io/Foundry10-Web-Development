@@ -86,77 +86,9 @@
         <!-- #ff6600 -->
       </div>
 
-      <script type="text/javascript">
-
-        let
-        left_panel = document.getElementById('left-panel')
-        , left_panel_jq = $('#left-panel')
-        , right_panel = document.getElementById('right-panel')
-        , right_panel_jq = $('#right-panel')
-        , quote_text = document.getElementById('quote-text')
-        , quote_text_jq = $('#quote-text')
-        , quote_text_header = $('#quote-text-header')
-        , quote_text_wrapper = $('#quote-text-wrapper')
-        , left_arrow = document.getElementById('left-arrow')
-        , right_arrow = document.getElementById('right-arrow')
-
-        let animateCss = function (animationName) {
-
-          var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-
-          quote_text_header.addClass('animated ' + animationName).one(animationEnd, function() {
-
-              quote_text_header.removeClass('animated ' + animationName);
-          });
-        }
 
 
-
-
-        left_panel.style.cursor = "pointer"
-        right_panel.style.cursor = "pointer"
-
-        left_panel.addEventListener('mouseover', function(e) {
-          console.log('hover');
-          left_arrow.style.color = "#ff6600"
-        });
-
-        left_panel.addEventListener('mouseout', function(e) {
-          left_arrow.style.color = "white"
-        });
-
-        left_panel.addEventListener('click', function(e) {
-          quote_text_header.fadeTo(425, 0)
-          animateCss('slideOutLeft')
-          // TODO : modify queue and update innerhtml content
-          setTimeout(function(){
-            animateCss('slideInRight')
-            quote_text_header.fadeTo(1250, 1)
-          }, 1050)
-        });
-
-        right_panel.addEventListener('mouseover', function(e) {
-          console.log('hover');
-          right_arrow.style.color = "#ff6600"
-        });
-
-        right_panel.addEventListener('mouseout', function(e) {
-          right_arrow.style.color = "white"
-        });
-
-        right_panel.addEventListener('click', function(e) {
-          quote_text_header.fadeTo(425, 0)
-          animateCss('slideOutRight')
-          // TODO : modify queue and update innerhtml content
-          setTimeout(function(){
-            animateCss('slideInLeft')
-            quote_text_header.fadeTo(1250, 1)
-          }, 1050)
-        });
-
-
-      </script>
-
+    <script src="js/quote_cycle.js" type="text/javascript"></script>
 
 
     <div class="section hide-on-large-only" id="bottom-of-top-sect"style="margin-bottom:50px;padding-top:0rem;">
