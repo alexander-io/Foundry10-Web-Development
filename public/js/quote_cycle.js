@@ -17,7 +17,7 @@
 
   let lst_of_quotes = [
     '<color style="color:#ff6600;">"</color><quote-text id="quote-text">A philanthropic research organization promoting education in non-traditional settings and subjects.</quote-text><color style="color:#ff6600">"</color>'
-    ,'<color style="color:#ff6600;">"</color><quote-text id="quote-text">We believe in transforming thoughts and ideas into action for students and the communities that support them.</quote-text><color style="color:#ff6600">"</color>'
+    ,'<color style="color:#ff6600;">"</color><quote-text id="quote-text">We believe in transforming ideas into action for students and the communities that support them.</quote-text><color style="color:#ff6600">"</color>'
     ,'<color style="color:#ff6600;">"</color><quote-text id="quote-text">We work cooperatively to empower teacher creativity and enhance both teacher and student ideas.</quote-text><color style="color:#ff6600">"</color>'
   ]
   /*
