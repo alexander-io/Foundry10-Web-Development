@@ -24,6 +24,10 @@
 
 ![mock-up](md_images/f10070517.png)
 
+![color00](md_images/color_00.png)
+![color01](md_images/color_01.png)
+
+
 #### Alexander Harris
 #### Tuesday July 25th, 2017
 #### foundry10 web development intern

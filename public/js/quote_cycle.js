@@ -69,6 +69,8 @@ The people who know kids best are the ones who work closely with them. With this
     left_arrow.style.color = "white"
   });
 
+
+  // left panel click event listner
   left_panel.addEventListener('click', function(e) {
     quote_text_header_jq.fadeTo(425, 0)
     animateCss('slideOutLeft')
