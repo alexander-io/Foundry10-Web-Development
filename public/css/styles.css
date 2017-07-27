@@ -4,7 +4,7 @@ body {
   background-color: white;
 }
 .card-panel {
-  background-color: #424242;
+  background-color: #484848;
 
 }
 
@@ -29,7 +29,7 @@ html, body {
   font-size: 200%;
   padding-left: 3em;
   padding-right: 3em;
-  border-left: 40px solid #424242;
+  border-left: 40px solid #484848;
 
   /*left:500px;
   top:100px;*/
@@ -172,7 +172,7 @@ a:visited{
 nav {
   color:white;
   /*background-color: white;*/
-  background-color: #424242;
+  background-color: #484848;
 }
 
 #nav-item-01, #nav-item-02, #nav-item-03 {
@@ -232,7 +232,7 @@ div.col.s6 {
 }
 
 /*span {
-  color: #424242;
+  color: #484848;
 }*/
 body {
   font-family: 'Bellefair', serif;
@@ -399,7 +399,8 @@ p{
 #info-banner {
   position:relative;
   /*top:15em;*/
-  background-color: #ff6600;
+  background-color: #d14e1d;
+  /*background-color: #991a00;*/
   width:100%;
   padding-top:2em;
   z-index:0
@@ -425,7 +426,7 @@ blockquote {
 .article-card{
   background-color: white;
   height:20%;
-  border-left: 1em solid #ff6600;
+  border-left: 1em solid #d14e1d;
   padding: 1em 1em 1em 1em;
 }
 
@@ -434,7 +435,7 @@ blockquote {
 }
 
 .article-button-panel {
-  background-color:#999;
+  background-color:#ff7e4a;
 }
 .f10button {
   padding-top: 17px;
@@ -472,11 +473,11 @@ blockquote {
 #fixed-down-arrow-icon {
   font-size:100px;
   position:fixed;
-  background-color:#ff6600;
+  background-color:#d14e1d;
   border-radius:50%;
   color:white;
   z-index:100;
   right:3%;
   bottom:3%;
-  border:10px solid #ff6600;
+  border:10px solid #d14e1d;
 }

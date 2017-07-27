@@ -16,7 +16,7 @@
   ]
 
   let color_lst = [
-    '#ff6600', '#ffc91b'
+    '#ff6600', '#ff7e4a'
   ]
 
   for (x in color_range_lst) {
