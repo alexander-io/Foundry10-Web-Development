@@ -6,6 +6,8 @@
 
 ![articles_info_banner](md_images/article_info_banner.png)
 
+![footer](md_images/footer_dev_00.png)
+
 ![material_dev](md_images/three_pillar_draft.png)
 
 ![material_dev](md_images/material_dev_001.png)
