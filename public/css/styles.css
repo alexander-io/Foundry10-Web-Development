@@ -360,7 +360,7 @@ p{
   position:absolute;
   right:0;
   width:100%;
-  height:100%;
+  height:50%;
   z-index:-20;
 }
 
@@ -480,4 +480,8 @@ blockquote {
   right:3%;
   bottom:3%;
   border:10px solid #d14e1d;
+}
+
+.page-footer {
+  background-color: #d14e1d;
 }
