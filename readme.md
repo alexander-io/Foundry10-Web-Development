@@ -6,7 +6,7 @@
 
 ![articles_info_banner](md_images/article_info_banner.png)
 
-![footer](md_images/footer_dev_00.png)
+![footer](md_images/footer_dev_01.png)
 
 ![material_dev](md_images/three_pillar_draft.png)
 
