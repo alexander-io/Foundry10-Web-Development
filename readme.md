@@ -2,6 +2,8 @@
 ## [Development Environment](http://opensail.io)
 ## [Live Site](http://foundry10.org)
 
+![quote wheel](md_images/quote_wheel.png)
+
 ![material_dev](md_images/jul_24_dev.png)
 
 ![articles_info_banner](md_images/article_info_banner.png)
