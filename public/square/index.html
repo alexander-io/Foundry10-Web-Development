@@ -266,7 +266,8 @@
       </div> <!-- end section -->
     </div>
 
-    <div class="mdc-grid-list">
+
+    <div class="mdc-grid-list container">
       <ul id="mount_ul" class="mdc-grid-list__tiles">
 
         <script type="text/javascript">
@@ -800,16 +801,7 @@
 
                     let img = document.createElement('img');
                     img.src = data.img[0].path
-                    // til_primary.style.backgroundImage = 'url(http://www.petmd.com/sites/default/files/scared-kitten-shutterstock_191443322.jpg)'
 
-
-
-                    // til_primary.style.backgroundImage = 'url(' + data.img[0].path + ')'
-                    //
-                    // til_primary.style.backgroundPositionX = 'left'
-                    // til_primary.style.backgroundPositionY = 'top'
-                    // til_primary.style.backgroundSize = 'cover'
-                    // til_primary.style.backgroundRepeat = 'no-repeat'
                     headr.appendChild(document.createTextNode( text_appendage));
                     // til_primary.appendChild(headr);
                     // til_primary.childNodes[0].style.color = 'white'
@@ -829,16 +821,16 @@
                     text.appendChild(t_node);
                     overlay.appendChild(text);
 
-                    overlay.style.position = 'absolute'
-                    overlay.id = 'o'+this.id
-                    overlay.style.bottom = 0
-                    overlay.style.left = 0
-                    overlay.style.right = 0
-                    overlay.style.backgroundColor = 'black'
-                    overlay.style.overflow = 'hidden'
-                    overlay.style.width = 0
-                    overlay.style.height = '100%'
-                    overlay.style.transition = '.5s ease'
+                    // overlay.style.position = 'absolute'
+                    // overlay.id = 'o'+this.id
+                    // overlay.style.bottom = 0
+                    // overlay.style.left = 0
+                    // overlay.style.right = 0
+                    // overlay.style.backgroundColor = 'black'
+                    // overlay.style.overflow = 'hidden'
+                    // overlay.style.width = 0
+                    // overlay.style.height = '100%'
+                    // overlay.style.transition = '.5s ease'
 
                     let mouse_in_img = false
                     let mouse_in_overlay = false
@@ -905,6 +897,7 @@
                     // til_primary.appendChild(mid);
 
 
+
                   }
 
                   square_queue.enqueue(sqp)
@@ -939,7 +932,7 @@
 
               } else if (data.lst && data.x && lock.is_free()) {
                 document.getElementById('tp' + this.id).expanded = false
-
+                console.log(document.getElementById('tp' + this.id));
                 // else, if exists and expanded, and lock is free, then collapse...
                 lock.aquire()
                 data.x = !data.x
