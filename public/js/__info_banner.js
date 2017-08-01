@@ -88,37 +88,37 @@
 
 
   // define a function to call on nav-item click, set background color of all nav-items back to the initial value, white....
-  // let nav_items_to_white = function(){
-  //   for (x in relationship){
-  //
-  //     try {
-  //       relationship[x].nav.style.backgroundColor = '#212121'
-  //
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   }
-  // }
+  let nav_items_to_white = function(){
+    for (x in relationship){
+
+      try {
+        relationship[x].nav.style.backgroundColor = '#212121'
+
+      } catch (e) {
+        console.log(e)
+      }
+    }
+  }
 
   // for a click on a nav-sub item, turn all other sub-nav elements to white
-  // let nav_sub_items_to_white = function(){
-  //   for (x in sub_item_lst){
-  //     try {
-  //       sub_item_lst[x].style.backgroundColor = '#484848'
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   }
-  // }
+  let nav_sub_items_to_white = function(){
+    for (x in sub_item_lst){
+      try {
+        sub_item_lst[x].style.backgroundColor = '#484848'
+      } catch (e) {
+        console.log(e)
+      }
+    }
+  }
 
 
   // add event listeners to each of the nav-sub-items to hide other elements and reveal 'this'
-  // for (x in sub_item_lst) {
-  //   sub_item_lst[x].addEventListener('click', function(e) {
-  //     nav_sub_items_to_white()
-  //     this.style.backgroundColor = '#ccc'
-  //   });
-  // }
+  for (x in sub_item_lst) {
+    sub_item_lst[x].addEventListener('click', function(e) {
+      nav_sub_items_to_white()
+      this.style.backgroundColor = '#ccc'
+    });
+  }
 
 
 
@@ -770,15 +770,15 @@
 
     // the user clicked on the super category, therefore set all sub-nav elements to white and initialize the 0th sub-nav item to have a grey background
     let init_reset_sub_nav = function(){
-      // nav_sub_items_to_white()
-      // banner_sub_item_01.style.backgroundColor = '#ccc'
+      nav_sub_items_to_white()
+      banner_sub_item_01.style.backgroundColor = '#ccc'
     }
 
 
     // user clicked on one of the 'tech' elements
     let tech_click = function() {
-      // nav_items_to_white()
-      // tech.style.backgroundColor = '#484848'
+      nav_items_to_white()
+      tech.style.backgroundColor = '#484848'
 
       // if (!tech.classList.contains('mdc-tab--active')) {
       //   tech.classList.add('mdc-tab--active')
@@ -804,8 +804,8 @@
 
     // user clicked one of the collective elements
     let collective_click = function() {
-      // nav_items_to_white()
-      // collective.style.backgroundColor = '#484848'
+      nav_items_to_white()
+      collective.style.backgroundColor = '#484848'
 
 
       // if (!collective.classList.contains('mdc-tab--active')) {
@@ -831,8 +831,8 @@
 
     // define function to handle a click on an art element
     let art_click = function() {
-      // nav_items_to_white()
-      // art.style.backgroundColor = '#484848'
+      nav_items_to_white()
+      art.style.backgroundColor = '#484848'
       // if (!art.classList.contains('mdc-tab--active')) {
       //   console.log('collect not contain active');
       //   art.classList.add('mdc-tab--active')
