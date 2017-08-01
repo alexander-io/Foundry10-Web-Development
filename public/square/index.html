@@ -292,6 +292,49 @@
           let color_queue = new Q()
           color_queue.load(orange_specturm)
 
+          // we've defined our truncation function by the number of words in the string, however -> sometimes words have variable length
+          // because of this, we have variable paragraph lengths.
+          // let this be a recursive function to check if the string is sort enough,
+          // if not, split the string into an array, pop off the last element, convert back to string and recurse passing the shortened string as a parameter
+          let if_lengthy_string_remove_word = function(str, num_chars) {
+            let arr = []
+            if (str.length > num_chars) {
+              arr = str.split(' ')
+              arr.pop()
+              if_lengthy_string_remove_word(arr.join(' '))
+            }
+            // console.log('final length of string :', str.length);
+            // shortened_string = str
+            // if (str.length <= 128) return str
+            return str
+            // break
+          }
+
+
+          // having some overflow issues with the text bodies, this function is a custom truncation function
+          // just pass in the string that needs to be truncated as the first parameter
+          // pass in the number of words as the second parameter,
+          // this function will append a ... to the end of the return string
+          let truncate = function(str, num_words) {
+            let text_words = str.split(' '), builder = '', i = 0
+
+            // for every wod in the string
+            for (word in text_words) {
+
+              // are we at the word limit?
+              if (i>=num_words) {
+                // check number of characters
+                builder = if_lengthy_string_remove_word(builder, num_words*4)
+                // concat the ellipses to the string
+                builder += '...'
+                return builder
+              }
+              builder += ' ' + text_words[word]
+              i++
+            }
+            return builder
+          }
+
 
           /*
            * simplified model
@@ -704,11 +747,15 @@
             tile_primary.id = 'tp' + tile.id
 
             let header2 = document.createElement('h5');
+            // header2.className = 'truncate'
             // console.log('subtitle : ', data.sub_title);
-            header2.appendChild(document.createTextNode(data.sub_title))
+
+            header2.appendChild(document.createTextNode(truncate(data.sub_title, 14)))
             header2.id = 'h2:'+tile.id
             header2.style.opacity = 0
             header2.style.transition = 'opacity .5s'
+            header2.style.position = 'relative'
+            header2.style.top = '-55px'
             // header2.style.transition = 'opacity 2s'
 
 
@@ -989,7 +1036,7 @@
               this.childNodes[0].style.color = '#ff6600'
 
               this.childNodes[0].style.transition = '.5s ease'
-              this.childNodes[0].style.transform = 'translateY(-15%)'
+              this.childNodes[0].style.transform = 'translateY(-25%)'
 
               // this.childNodes[1].style.transition = 'opacity .25s ease-in-out'
               // console.log('cn 1 :', this.childNodes[1]);
