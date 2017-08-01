@@ -679,6 +679,10 @@
             // select elemns, create some
             let tile = document.createElement('li'), tile_primary = document.createElement('div'), header = document.createElement('h1'),number = document.createTextNode(data.number)
 
+            if (data.number == 'robotics') {
+              tile_primary.style.border = '3px solid #ff6600'
+            }
+
             header.className = 'tp'
             header.appendChild(number)
 
@@ -1053,6 +1057,7 @@
         width:100%;
         vertical-align: middle;
         padding: 3%;
+        cursor: pointer;
       }
 
 
