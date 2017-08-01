@@ -633,7 +633,7 @@
             }
           }
 
-          let interval_time = 125
+          let interval_time = 100
 
           function insertAfter(newNode, referenceNode) {
               referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
@@ -1004,8 +1004,8 @@
 
               } else {
 
-                tile_primary.style.backgroundColor = 'white'
-                this.childNodes[0].style.color = '#212121'
+                tile_primary.style.backgroundColor = '#212121'
+                this.childNodes[0].style.color = 'white'
                 this.childNodes[0].style.transition = '.5s ease'
                 this.childNodes[0].style.transform = 'translateY(0%)'
 
@@ -1046,7 +1046,7 @@
       h1 {
         margin-top:0px;
         /*padding-top: 15%;*/
-        color: #212121;
+        color: white;
         vertical-align: middle;
         /*font-family: 'Plaster', cursive;*/
       }
@@ -1056,7 +1056,7 @@
       }
 
       .mdc-grid-tile__primary {
-        background-color:white;
+        background-color:#212121;
         width:100%;
         vertical-align: middle;
         padding: 3%;
