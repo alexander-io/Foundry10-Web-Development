@@ -688,7 +688,7 @@
             }
           }
 
-          let interval_time = 100
+          let interval_time = 125
 
           function insertAfter(newNode, referenceNode) {
               referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
@@ -779,7 +779,13 @@
 
                 tmp_lst_eh.push(elem)
               }
-
+              tmp_lst_eh.reverse()
+              // tmp_lst_eh.lst.reverse()
+              // let p_item = tmp_lst_eh.pop()
+              // while (p_item) {
+              //   p_item.remove()
+              //   p_item = tmp_lst_eh.pop()
+              // }
               let int = setInterval(function(){
                 if (tmp_lst_eh) {
                   try {
@@ -790,6 +796,7 @@
                 }
                 if (tmp_lst_eh.length == 0) {
                   lock.release()
+
                   clearInterval(int)
                 }
               }, interval_time)
@@ -862,7 +869,7 @@
               if (data.lst && !data.x && lock.is_free()) {
                 // console.log('whaa');
 
-                collapse_all(data)
+                // collapse_all(data)
 
                 lock.aquire()
                 let tmp_lst = []
@@ -954,67 +961,6 @@
                     text.appendChild(t_node);
                     overlay.appendChild(text);
 
-                    // overlay.style.position = 'absolute'
-                    // overlay.id = 'o'+this.id
-                    // overlay.style.bottom = 0
-                    // overlay.style.left = 0
-                    // overlay.style.right = 0
-                    // overlay.style.backgroundColor = 'black'
-                    // overlay.style.overflow = 'hidden'
-                    // overlay.style.width = 0
-                    // overlay.style.height = '100%'
-                    // overlay.style.transition = '.5s ease'
-
-                    let mouse_in_img = false
-                    let mouse_in_overlay = false
-
-                    // img.addEventListener('mouseover', function(e) {
-                    //   mouse_in_img = true
-                    //
-                    //
-                    //   if (mouse_in_img || mouse_in_overlay) {
-                    //     overlay.style.width = '100%'
-                    //   }
-                    //
-                    // });
-                    //
-                    // overlay.addEventListener('mouseover', function(e) {
-                    //   mouse_in_overlay = true
-                    //   if (mouse_in_img || mouse_in_overlay) {
-                    //     overlay.style.width = '100%'
-                    //   }
-                    // });
-
-                    // let flag = false
-                    // img.addEventListener('mouseenter', function(e) {
-                    //   if (!flag){
-                    //     overlay.style.width = '100%'
-                    //     setTimeout(function(){
-                    //
-                    //       flag = !flag
-                    //     }, 1000)
-                    //   }
-                    // })
-                    //
-                    // overlay.addEventListener('mouseout', function(e){
-                    //   console.log('mouseout');
-                    //   if (flag) {
-                    //     overlay.style.width = '0%'
-                    //     flag = !flag
-                    //   }
-                    //
-                    // });
-
-                    // overlay.style.transform = 'translate(-50%, -50%)'
-                    // overlay.style.-ms-transform: translate(-50%, -50%);
-                    // img.addEventListener('mouseover', function(e) {
-                    //   console.log('mouseover');
-                    //   this.style.opacity = '.7'
-                    // })
-                    // document.addEventListener('event', function(e) {
-                    //   // body...
-                    // });
-
 
                     // let mid = document.createElement('div');
                     // mid.className = 'middle'
@@ -1054,11 +1000,13 @@
                   tmp_lst.push(til)
                 }
 
+                collapse_all(data)
                 let gen_sub = setInterval(function(){
                   insertAfter(tmp_lst.pop(), tile)
                   // console.log(tmp_lst.length);
                   if (tmp_lst.length == 0){
                     lock.release()
+
                     clearInterval(gen_sub)
                   }
                 }, interval_time)
