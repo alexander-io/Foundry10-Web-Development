@@ -869,7 +869,7 @@
               if (data.lst && !data.x && lock.is_free()) {
                 // console.log('whaa');
 
-                // collapse_all(data)
+                collapse_all(data)
 
                 lock.aquire()
                 let tmp_lst = []
@@ -1000,7 +1000,7 @@
                   tmp_lst.push(til)
                 }
 
-                collapse_all(data)
+                // collapse_all(data)
                 let gen_sub = setInterval(function(){
                   insertAfter(tmp_lst.pop(), tile)
                   // console.log(tmp_lst.length);
