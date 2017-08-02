@@ -1,8 +1,8 @@
 (function() {
 
-  particlesJS.load('particles-js', 'assets/particles.json', function() {
-    console.log('particles!')
-  })
+  // particlesJS.load('particles-js', 'assets/particles.json', function() {
+  //   console.log('particles!')
+  // })
 
   window.onerror = function(err) {
     let err_lst = err.split(' ')
