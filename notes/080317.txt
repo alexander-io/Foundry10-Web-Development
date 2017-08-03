@@ -1,0 +1,17 @@
+#### Alexander Harris
+#### August 3rd, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://opensail.io/collapse
+#### http://opensail.io/square
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Work for today consisted primarily of creating an alternative module for displaying foundry10's organizational info. I created a expandible/collapsible module. The module is broken into three sections : tech, collective, and art.
+
+Each of these categories has three sub categories : tech = [robotics, vr, game dev, automotive], collective = [internships, gender studies, early education, professional development], art = [artistic design, digital audio, drama, hip hop]
+
+Add an event listener to each of the sub-category elements. On click event, expand the sub-category to display info/images related to the category AND collapse any other expanded sub categories.
+
+For the categorical groups, they each have a color assigned to them. My initial idea was to assign to all 12 categories (3x supercategories * 4x sub-categories per super) some color from the orange spectrum. Tom suggested that I use the orange, green, and purple spectrums.
