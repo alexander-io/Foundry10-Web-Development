@@ -8,6 +8,10 @@
 
 ![articles_info_banner](md_images/article_info_banner.png)
 
+![collapse](md_images/collapse.png)
+
+![collapse](md_images/collapse_active.png)
+
 ![square module](md_images/square_module.png)
 
 ![footer](md_images/footer_dev_01.png)
