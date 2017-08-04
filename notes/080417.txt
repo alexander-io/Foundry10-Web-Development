@@ -1,0 +1,30 @@
+#### Alexander Harris
+#### August 4rd, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://opensail.io/collapse
+#### http://opensail.io/square
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+web-development/design intern presentation :
+
+  what have I been working on?
+
+  what could this be used for?
+
+  describe each of the major elements
+
+  discuss the pros/cons of each design implementation
+
+  goals :
+    determine which design implementation is liked most by the team. how to determine which is most favorable? -> vote?
+
+    open the floor for creative suggestions from the team to improve designs
+
+    request replacemenet suggestions for headers, text bodies, quotes, icons, and images (really any element) from the team
+
+    challenge the team to access the site on their mobile device (during their free time) to help reveal break-points
+
+    determine title to describe the page : showcase, expose, what-we-do, etc. how to determine? -> vote?
