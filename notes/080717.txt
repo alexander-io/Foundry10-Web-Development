@@ -1,0 +1,61 @@
+#### Alexander Harris
+#### August 7rd, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://opensail.io/collapse
+#### http://opensail.io/square
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Today is an abbreviated day in the office for me as I have a research meeting to attend in Tacoma in the mid-afternoon. Since Tom is out of office today at Ti7, I made sure to mention to Lisa that I would be leaving office earlier than usual toady.
+
+This morning I'm devoting in part to reading articles related to custom css/javascript integration into wordpress. I found two seemingly related and useful links on this topic :
+https://www.ostraining.com/blog/wordpress/custom-js/
+and
+https://developer.wordpress.org/themes/basics/including-css-javascript/
+
+OS Training
+  can add custom javascript to a wordpress site via a WordPress plugin called "Header and Footer Scripts".
+
+  this plugin allows the following functionality :
+    scripts in header will load inside of the head tag
+    scripts in footer will load before closing the body tag
+
+  to install this plugin :
+    login to wordpress site
+    go to plugins > add new
+    search for 'header and footer scripts'
+    click 'install now' and activate the plugin
+
+  to use the plugin :
+    save custom javascript code into a file with the .js format
+    upload it into your site to this folder : wp-content/themes/<name_of_theme>/js/
+    go to settings > header and footer scripts
+
+  syntax example :
+    <script src="http://www.yoursite.any/wp-content/themes/your-theme/js/file.js"></script>
+
+  alternatively, avoid using a file by injecting javascript directly into the 'sripts in header' text input field :
+    <script>
+      let drink_coffee = (blend_preference) => sip(blend_preference)
+    </script>
+
+including css & javascript
+  reference : https://developer.wordpress.org/themes/basics/including-css-javascript/
+
+  to add custom scripts and stytles to wordpress, we'll create a function that will enqueue all of the scripts and styles.
+
+  when enqueuing a script or stylesheet, wordpress creates a handle and path to find your file and dependencies it may have and then you will use a hook that will insert your scripts and stylesheets
+
+  enqueueing scripts and stylesheets :
+
+    the proper way to add scripts and styles to your theme is to enqueue tthem in the functions.php files. the style.css file is required in all themes, but it may be necessary to add other files to extend teh functionality of the theme
+
+    note, wordpress includes a number of javascript files as part of the software package, including commonly used libraries such as jquery. before adding your own javascript, check to see if you can maske use of an included library
+
+  the basics :
+    1. enqueue the script or style using ->
+      wp_enqueue_script()
+        or
+      wp_enqueue_style()
