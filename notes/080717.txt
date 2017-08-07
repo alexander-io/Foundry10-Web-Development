@@ -59,3 +59,45 @@ including css & javascript
       wp_enqueue_script()
         or
       wp_enqueue_style()
+
+  style sheets :
+    the css style sheets are used to customize the presentation fo your theme. A stylesheet is also the file where information about your theme is stored. for this reason, the style.css file is required in every theme.
+
+    rather than loading the stylesheet in your header.php file, you should load it in using wp_enqueue_style. in order to load your main stylesheet, you can enqueue it in functions.php
+
+    to enqueue style.css :
+      wp_enqueue_style('style', get_style_uri());
+
+      // this will look for a stylesheet name 'style' and load it
+
+      // the basic function for enqueueing a style is ->
+      wp_enqueue_style($handle, $src, $deps, $ver, $media)
+
+      you can include these parameters :
+        $handle, name of the stylesheet
+        $src, location of the stylesheet (path?)
+        $deps, whether or not the stylesheet depends on another stylesheet. if it is set, this stylesheet will not be loaded unless its dependent on stylesheet is loaded first
+        $ver, sets the version number
+        $media, can specify which type of media to load this stylesheet in, such as 'all', 'screen', 'print', or 'handheld'
+
+      load a stylesheet named 'slider.css' in a folder named 'css' in theme's root directory, use :
+        wp_enqueue_style('slider', get_template_directory_uri() . '/css/slider/css', false, '1.1', 'all')
+
+  scripts :
+    any additional javascript files required by a theme should be loaded using wp_enqueue_script. this ensures proper loading and caching, and allows the use of conditional tags to target specific pages. these are optional
+
+    enqueue a script :
+      wp_enqueue_script($handle, $src, $deps, $ver, $in_footer)
+
+      @params = {
+        $handle : 'name of the script',
+        $src : 'location of the script',
+        $deps : 'array that can handle any script that new script depends on, ex->jquery',
+        $ver : 'list a version number',
+        $in_footer : 'boolean whether script is in footer rather than the header -> this is useful for avoiding the delay of loading the DOM tree'
+      }
+
+    enqueue function ex :
+      wp_enqueue_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), 1.1, true)
+
+    
