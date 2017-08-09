@@ -14,6 +14,39 @@
   </head>
   <body id="body" >
 
+    <img id="vec-circ-large-overlay"  src="images/three_pillars/foundry10_education.png"
+    style="position:fixed;left:50%;top:450px;transform:rotate(90deg);"
+    alt="">
+
+
+    <div id="left-door" style="position:fixed;background-color:#212121;height:100%;left:0;width:49.99%;z-index:5;border-right:5px solid #ff6600;">
+
+    </div>
+
+    <div id="right-door" style="position:fixed;background-color:#212121;height:100%;right:0;width:49.99%;z-index:5;border-left:5px solid #ff6600;">
+    </div>
+
+    <style media="screen">
+      #left-door, #right-door{
+        /*transition: translateX(50px) 2s;*/
+        /*-webkit-transition:all ease 0.3s;
+        left:200px;*/
+        /*transition: transform(translateX(100px)) 2s;*/
+        /*transition: 1s;
+        left 0;*/
+        /*transition: transform 2s ease-in-out;*/
+        /*transform: translateX(0);
+        transition: transform 2s ease-in-out;*/
+        transition: all ease 2s;
+        /*-webkit-transition:all ease 3s;
+        -webkit-transform:translateX(200px);*/
+      }
+      /*#vec-circ-large-overlay{
+        transition: transform ease 2s;
+      }*/
+    </style>
+
+
 
     <a href="#" id="fixed-down-arrow" class="valign-wrapper hide-on-med-and-down">
       <i id="fixed-down-arrow-icon" class="material-icons md-36 z-depth-5" >
@@ -455,6 +488,23 @@
       </div>
 
 
+
+      <script type="text/javascript">
+      let left_door = document.getElementById('left-door');
+      let right_door = document.getElementById('right-door');
+      // let vec_circ = document.getElementById('vec-circ-large');
+      // vec_circ.style.zIndex = 70
+      // console.log(circ);
+      // let circ = document.getElementById('vec-circ-large');
+      // ci
+      // left_door.style.transform = 'translateX(-100px)'
+      setTimeout(function(){
+        left_door.style.transform = 'translateX(-100%)'
+        right_door.style.transform = 'translateX(100%)'
+
+      }, 1000)
+      </script>
+
       <div class="row z-depth-5 " style="position:absolute;width:100%;height:25em; background-color:white;z-index:-1;top:40em;">
         <div class="" id="parallax-02">
           <img src="images/patterns/particles_plax.png" style="width:100%;" alt="">
@@ -637,7 +687,36 @@
                 </div>
               </div>
 
+              <script type="text/javascript">
+                let vec_circ_large = document.getElementById('vec-circ-large');
+                let vec_circ_large_overlay = document.getElementById('vec-circ-large-overlay');
 
+                let vec_circ_large_rect = vec_circ_large.getBoundingClientRect()
+                console.log(vec_circ_large_rect);
+
+                vec_circ_large_overlay.style.width = vec_circ_large_rect.width + 'px'
+                vec_circ_large_overlay.style.left = vec_circ_large_rect.left + 'px'
+                vec_circ_large_overlay.style.top = vec_circ_large_rect.top + 'px'
+                vec_circ_large_overlay.style.zIndex = 50;
+
+                vec_circ_large_overlay.style.transform = 'rotate(45deg)'
+                // transform : rotate(45deg)
+
+                vec_circ_large_overlay.style.transition = 'transform ease .5s'
+                // transition: transform ease 2s;
+
+
+                setTimeout(function(){
+                  // vec_circ_large_overlay.style.opacity = vec_circ_large_overlay.style.opacity - .01
+                  vec_circ_large_overlay.style.opacity = 0
+                },3000)
+
+                setTimeout(function(){
+                  vec_circ_large_overlay.style.transform = 'rotate(0deg)'
+                }, 250)
+
+
+              </script>
               <div id="queue-cycle" class="col s6">
                 <div class="intro-header-box">
                   <h1 class="center-align" id="intro-header" style="color:white;">foundry10</h1>

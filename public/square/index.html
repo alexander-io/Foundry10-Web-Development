@@ -853,7 +853,7 @@
 
 
 
-            tile_primary.expanded = false
+            // tile_primary.expanded = true
             // tile_primary.backgroundColor = 'blue'
             // console.log('set tile primary expanded : ', tile_primary.expanded);
 
@@ -881,7 +881,6 @@
                   data.x = !data.x // expand
                   // console.log('? tp' + this.id);
                   if (document.getElementById('tp' + this.id)) {
-
                     document.getElementById('tp' + this.id).expanded = true
                   }
                   // document.getElementById('tp'+this.id).backgroundColor = 'blue'
@@ -965,8 +964,8 @@
                       overlay.className = 'overlay'
                       let text = document.createElement('div');
                       text.className = 'text'
-                      let t_node = document.createTextNode(data.number)
-                      text.appendChild(t_node);
+                      // let t_node = document.createTextNode(data.number)
+                      // text.appendChild(t_node);
                       overlay.appendChild(text);
 
 
