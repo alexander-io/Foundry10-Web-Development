@@ -702,19 +702,31 @@
                 vec_circ_large_overlay.style.transform = 'rotate(45deg)'
                 // transform : rotate(45deg)
 
+                // vec_circ_large_overlay.style.transition = 'opacity ease .5s'
                 vec_circ_large_overlay.style.transition = 'transform ease .5s'
+
                 // transition: transform ease 2s;
 
 
                 setTimeout(function(){
                   // vec_circ_large_overlay.style.opacity = vec_circ_large_overlay.style.opacity - .01
-                  vec_circ_large_overlay.style.opacity = 0
+                  // vec_circ_large_overlay.style.opacity = 0
                 },3000)
 
                 setTimeout(function(){
                   vec_circ_large_overlay.style.transform = 'rotate(0deg)'
-                }, 250)
 
+                }, 250)
+                setTimeout(function () {
+                  // vec_circ_large_overlay.style.transition = 'transform ease .5s'
+                  vec_circ_large_overlay.style.transition = 'opacity ease .5s'
+                  vec_circ_large_overlay.style.opacity = 0;
+
+                    // vec_circ_large_overlay.style.opacity = 0
+                    // let int = setInterval(function(){
+                    //   vec_circ_large_overlay.style.opacity -= .01
+                    // }, 100)
+                },1200)
 
               </script>
               <div id="queue-cycle" class="col s6">
