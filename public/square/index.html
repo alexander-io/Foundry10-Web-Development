@@ -730,77 +730,83 @@
 
 
           let collapse_all = function(data) {
-            // console.log('collapse');
-            // for (let i = 0;i < f10.length; i++){
-            //   console.log(i);
-            // }
-            let i = 0;
-            for (x in f10) {
-              f10[x].x = false // everything isnt expanded
-              i++
-            }
 
-            for (let j = 0; j<i; j++){
-              // console.log(j);
-              // console.log(document.getElementById('tp'+j))
-              // console.log(document.getElementById('tp'+j).childNodes)
-              // console.log(document.getElementById('tp'+j).childNodes[0].textContent)
-              document.getElementById('tp'+j).expanded = false
-              try {
-                if (document.getElementById('tp'+j).childNodes[0].textContent == data.number) {
+            return new Promise(function(resolve, reject) {
 
-                } else {
-                  document.getElementById('tp'+j).childNodes[0].style.transform = 'translateY(0%)'
-                  document.getElementById('tp'+j).childNodes[0].style.color = 'white'
-
-                  document.getElementById('tp'+j).childNodes[1].style.opacity = 0
-
-                  document.getElementById('tp'+j).style.backgroundColor = '#212121'
-                  // document.getElementById('tp'+j).style.backgroundColor = '#212121'
-
-                  // console.log('color ', document.getElementById('tp'+j).backgroundColor);
-
+              let cont = false
+              let i = 0;
+              for (x in f10) {
+                if (f10[x].x && f10[x].x == true) {
+                  cont = true
                 }
-
-              } catch (e) {
-
-              } finally {
-
+                f10[x].x = false // everything isnt expanded
+                i++
               }
-              // else, if exists and expanded, and lock is free, then collapse...
-              lock.aquire()
-              // data.x = !data.x
 
-
-              let tmp_lst_eh = []
-
-              for (let i = 0; i < data.lst.length;i++){
-                let elem = document.getElementById(j+'s'+i)
-
-                tmp_lst_eh.push(elem)
+              if (!cont) {
+                resolve()
               }
-              tmp_lst_eh.reverse()
-              // tmp_lst_eh.lst.reverse()
-              // let p_item = tmp_lst_eh.pop()
-              // while (p_item) {
-              //   p_item.remove()
-              //   p_item = tmp_lst_eh.pop()
-              // }
-              let int = setInterval(function(){
-                if (tmp_lst_eh) {
-                  try {
-                    tmp_lst_eh.pop().remove()
-                  } catch(e) {
-                    // console.log(e);
+
+              for (let j = 0; j<i; j++){
+                // console.log(j);
+                // console.log(document.getElementById('tp'+j))
+                // console.log(document.getElementById('tp'+j).childNodes)
+                // console.log(document.getElementById('tp'+j).childNodes[0].textContent)
+                document.getElementById('tp'+j).expanded = false
+                try {
+                  if (document.getElementById('tp'+j).childNodes[0].textContent == data.number) {
+
+                  } else {
+                    document.getElementById('tp'+j).childNodes[0].style.transform = 'translateY(0%)'
+                    document.getElementById('tp'+j).childNodes[0].style.color = 'white'
+
+                    document.getElementById('tp'+j).childNodes[1].style.opacity = 0
+
+                    document.getElementById('tp'+j).style.backgroundColor = '#212121'
+                    // document.getElementById('tp'+j).style.backgroundColor = '#212121'
+
+                    // console.log('color ', document.getElementById('tp'+j).backgroundColor);
+
                   }
-                }
-                if (tmp_lst_eh.length == 0) {
-                  lock.release()
 
-                  clearInterval(int)
+                } catch (e) {
+
+                } finally {
+
                 }
-              }, interval_time)
-            }
+                // else, if exists and expanded, and lock is free, then collapse...
+                lock.aquire()
+                // data.x = !data.x
+
+
+                let tmp_lst_eh = []
+
+                // build list of sub elements
+                for (let i = 0; i < data.lst.length;i++){
+                  let elem = document.getElementById(j+'s'+i)
+                  tmp_lst_eh.push(elem)
+                }
+                //reverse list
+                tmp_lst_eh.reverse()
+
+                // on a time interval, remove elements
+                let int = setInterval(function(){
+                  if (tmp_lst_eh) {
+                    try {
+                      tmp_lst_eh.pop().remove()
+                    } catch(e) {
+                      // console.log(e);
+                    }
+                  }
+                  if (tmp_lst_eh.length == 0) {
+                    lock.release()
+
+                    clearInterval(int)
+                    resolve()
+                  }
+                }, interval_time)
+              }
+            })
           }
 
           // generate initial tiles
@@ -869,151 +875,157 @@
               if (data.lst && !data.x && lock.is_free()) {
                 // console.log('whaa');
 
-                collapse_all(data)
+                collapse_all(data).then(function(resolve, reject){
+                  lock.aquire()
+                  let tmp_lst = []
+                  data.x = !data.x // expand
+                  // console.log('? tp' + this.id);
+                  if (document.getElementById('tp' + this.id)) {
 
-                lock.aquire()
-                let tmp_lst = []
-                data.x = !data.x // expand
-                // console.log('? tp' + this.id);
-                document.getElementById('tp' + this.id).expanded = true
-                // document.getElementById('tp'+this.id).backgroundColor = 'blue'
+                    document.getElementById('tp' + this.id).expanded = true
+                  }
+                  // document.getElementById('tp'+this.id).backgroundColor = 'blue'
 
-                // console.log('set tile expanded : ', document.getElementById('tp' + this.id).expanded);
+                  // console.log('set tile expanded : ', document.getElementById('tp' + this.id).expanded);
 
-                for (x in data.lst) {
-                  let til = document.createElement('li'), til_primary = document.createElement('div')
+                  for (x in data.lst) {
+                    let til = document.createElement('li'), til_primary = document.createElement('div')
 
-                  let headr = document.createElement('h1')
+                    let headr = document.createElement('h1')
 
-                  let sqp = square_queue.dequeue()
-                  let text_appendage = data.number
+                    let sqp = square_queue.dequeue()
+                    let text_appendage = data.number
 
-                  if (sqp.title == 'about') {
-                    text_appendage = 'about'
-                    headr.appendChild(document.createTextNode( text_appendage));
-                    til_primary.appendChild(headr);
-
-
-                    let h5 = document.createElement('h5');
-                    h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
-                    til_primary.appendChild(h5);
-                  } else if (sqp.title == 'read more') {
-                    text_appendage = 'read more'
-                    headr.appendChild(document.createTextNode( text_appendage));
-                    til_primary.appendChild(headr);
+                    if (sqp.title == 'about') {
+                      text_appendage = 'about'
+                      headr.appendChild(document.createTextNode( text_appendage));
+                      til_primary.appendChild(headr);
 
 
-                    let h5 = document.createElement('h5');
-                    h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
-                    til_primary.appendChild(h5);
+                      let h5 = document.createElement('h5');
+                      h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
+                      til_primary.appendChild(h5);
+                    } else if (sqp.title == 'read more') {
+                      text_appendage = 'read more'
+                      headr.appendChild(document.createTextNode( text_appendage));
+                      til_primary.appendChild(headr);
 
 
-                  } else if (sqp.title == 'research') {
-                    text_appendage = 'research'
-                    headr.appendChild(document.createTextNode( text_appendage));
-                    til_primary.appendChild(headr);
-
-                    let h5 = document.createElement('h5');
-                    h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
-                    til_primary.appendChild(h5);
+                      let h5 = document.createElement('h5');
+                      h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
+                      til_primary.appendChild(h5);
 
 
-                  } else if (sqp.title == 'articles') {
-                    text_appendage = 'articles'
-                    headr.appendChild(document.createTextNode( text_appendage));
-                    til_primary.appendChild(headr);
+                    } else if (sqp.title == 'research') {
+                      text_appendage = 'research'
+                      headr.appendChild(document.createTextNode( text_appendage));
+                      til_primary.appendChild(headr);
 
-                    let h5 = document.createElement('h5');
-                    h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
-                    til_primary.appendChild(h5);
-
-                  } else if (sqp.title == 'program') {
-                    text_appendage = 'program'
-                    headr.appendChild(document.createTextNode( text_appendage));
-                    til_primary.appendChild(headr);
-
-                    let h5 = document.createElement('h5');
-                    h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
-                    til_primary.appendChild(h5);
-
-                  } else if (sqp.title == 'image') {
-                    text_appendage = 'image'
-
-                    let img = document.createElement('img');
-                    img.src = data.img[0].path
-
-                    headr.appendChild(document.createTextNode( text_appendage));
-                    // til_primary.appendChild(headr);
-                    // til_primary.childNodes[0].style.color = 'white'
-                    til_primary.style.opacity = '50%'
-                    img.id = 'im'+this.id
-                    img.className = 'image'
-                    img.style.position = 'absolute'
-                    img.style.top = 0
-                    img.style.left = 0
-                    img.style.height = '100%'
-
-                    let overlay = document.createElement('div');
-                    overlay.className = 'overlay'
-                    let text = document.createElement('div');
-                    text.className = 'text'
-                    let t_node = document.createTextNode(data.number)
-                    text.appendChild(t_node);
-                    overlay.appendChild(text);
+                      let h5 = document.createElement('h5');
+                      h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
+                      til_primary.appendChild(h5);
 
 
-                    // let mid = document.createElement('div');
-                    // mid.className = 'middle'
-                    // text.appendChild(t_node);
-                    // mid.appendChild(text);
-                    let container = document.createElement('div');
-                    container.className = 'container'
-                    container.appendChild(img);
-                    container.appendChild(overlay);
-                    // til_primary.appendChild(img);
-                    // til_primary.appendChild(overlay)
-                    til_primary.appendChild(container)
-                    // til_primary.appendChild(mid);
+                    } else if (sqp.title == 'articles') {
+                      text_appendage = 'articles'
+                      headr.appendChild(document.createTextNode( text_appendage));
+                      til_primary.appendChild(headr);
+
+                      let h5 = document.createElement('h5');
+                      h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
+                      til_primary.appendChild(h5);
+
+                    } else if (sqp.title == 'program') {
+                      text_appendage = 'program'
+                      headr.appendChild(document.createTextNode( text_appendage));
+                      til_primary.appendChild(headr);
+
+                      let h5 = document.createElement('h5');
+                      h5.appendChild(document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '));
+                      til_primary.appendChild(h5);
+
+                    } else if (sqp.title == 'image') {
+                      text_appendage = 'image'
+
+                      let img = document.createElement('img');
+                      img.src = data.img[0].path
+
+                      headr.appendChild(document.createTextNode( text_appendage));
+                      // til_primary.appendChild(headr);
+                      // til_primary.childNodes[0].style.color = 'white'
+                      til_primary.style.opacity = '50%'
+                      img.id = 'im'+this.id
+                      img.className = 'image'
+                      img.style.position = 'absolute'
+                      img.style.top = 0
+                      img.style.left = 0
+                      img.style.height = '100%'
+
+                      let overlay = document.createElement('div');
+                      overlay.className = 'overlay'
+                      let text = document.createElement('div');
+                      text.className = 'text'
+                      let t_node = document.createTextNode(data.number)
+                      text.appendChild(t_node);
+                      overlay.appendChild(text);
+
+
+                      // let mid = document.createElement('div');
+                      // mid.className = 'middle'
+                      // text.appendChild(t_node);
+                      // mid.appendChild(text);
+                      let container = document.createElement('div');
+                      container.className = 'container'
+                      container.appendChild(img);
+                      container.appendChild(overlay);
+                      // til_primary.appendChild(img);
+                      // til_primary.appendChild(overlay)
+                      til_primary.appendChild(container)
+                      // til_primary.appendChild(mid);
 
 
 
+                    }
+
+                    square_queue.enqueue(sqp)
+
+
+                    til.className = "mdc-grid-tile"
+                    til_primary.className = 'mdc-grid-tile__primary sub'
+
+                    let c = color_queue.dequeue()
+                    til_primary.style.backgroundColor = "#"+c
+                    color_queue.enqueue(c)
+                    til.style.width = tile_with
+
+                    til_primary.style.textAlign = 'center'
+
+
+                    til.appendChild(til_primary)
+                    til.id = tile.id + 's' + tmp_lst.length
+                    til.className += ' ' +tile.id +'s'
+
+                    tmp_lst.push(til)
                   }
 
-                  square_queue.enqueue(sqp)
+                  // generate sub-squares
+
+                  let gen_sub = setInterval(function(){
+                    insertAfter(tmp_lst.pop(), tile)
+                    if (tmp_lst.length == 0){
+                      lock.release()
+
+                      clearInterval(gen_sub)
+                    }
+                  }, interval_time)
+                })
 
 
-                  til.className = "mdc-grid-tile"
-                  til_primary.className = 'mdc-grid-tile__primary sub'
 
-                  let c = color_queue.dequeue()
-                  til_primary.style.backgroundColor = "#"+c
-                  color_queue.enqueue(c)
-                  til.style.width = tile_with
-
-                  til_primary.style.textAlign = 'center'
-
-
-                  til.appendChild(til_primary)
-                  til.id = tile.id + 's' + tmp_lst.length
-                  til.className += ' ' +tile.id +'s'
-
-                  tmp_lst.push(til)
-                }
-
-                // collapse_all(data)
-                let gen_sub = setInterval(function(){
-                  insertAfter(tmp_lst.pop(), tile)
-                  // console.log(tmp_lst.length);
-                  if (tmp_lst.length == 0){
-                    lock.release()
-
-                    clearInterval(gen_sub)
-                  }
-                }, interval_time)
 
               } else if (data.lst && data.x && lock.is_free()) {
                 document.getElementById('tp' + this.id).expanded = false
-                // console.log(document.getElementById('tp' + this.id));
+
                 // else, if exists and expanded, and lock is free, then collapse...
                 lock.aquire()
                 data.x = !data.x

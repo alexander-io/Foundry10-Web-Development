@@ -274,13 +274,17 @@
 
           <ul id="collapse-ul" class="collapsible popout" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header ">
+              <div class="collapsible-header " style="width:100%;">
+                <div id="inner" class="inner">
+                  <!-- <p>hello world</p> -->
 
-                <i class="material-icons" style="float:none;">build</i>
-                <h5>
-                  robotics
+                  <h3>
+                    <i class="material-icons" style="">build</i>
+                    robotics
+                  </h3>
 
-                </h5>
+
+                </div>
               </div>
               <div class="collapsible-body" style="background-size:cover;background-image:url(images/info_banner/robotics.jpg)">
 
@@ -394,7 +398,14 @@
               </div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons" style="float:none;">graphic_eq</i>virtual reality</div>
+              <div class="collapsible-header">
+                <h3>
+                  <i class="material-icons" style=" ">
+                    graphic_eq
+                  </i>
+                  virtual reality
+                </h3>
+              </div>
               <div class="collapsible-body" style="background-image:url(images/info_banner/ao-vr-crop.png);background-size:cover;">
 
                 <div class="row">
@@ -1605,6 +1616,12 @@
         </div>
       </div>
     </div>
+    <style media="screen">
+    .inner {
+      display: table;
+      margin: 0 auto;
+    }
+    </style>
     <style media="screen">
       .collapsible-header {
         background-color: white;
