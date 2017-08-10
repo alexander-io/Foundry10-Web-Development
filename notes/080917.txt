@@ -1,0 +1,13 @@
+#### Alexander Harris
+#### August 9rd, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://opensail.io/collapse
+#### http://opensail.io/square
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Today I met with the cyber security-group after their session with the cyber security professional that dropped into the office today. Although only one member of thr group could attend, it seemed to be an informative experience for both of them because of their communication.
+
+In addition to meeting with the cyber security group, I implemented a animation on page load to consider for the page. The idea was to use gun-metal style material to open as if doors to a forge/foundry, not unlike the large metal doors that exist at the entry way to our building. This is an experimental implementation, I'm certainly going to need another perspective or five before I can be convinced that it's a good idea.
