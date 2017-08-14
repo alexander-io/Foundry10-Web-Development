@@ -5,9 +5,8 @@ let port = 8080
 app.use(express.static('public'))
 
 // listen for requests from clients for index.html
-app.get('/index.html', function(req, res){
-
-})
+// app.get('/index.html', function(req, res){
+// })
 
 // start listening infinitely
 app.listen(port, function(){

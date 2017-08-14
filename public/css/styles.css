@@ -47,7 +47,7 @@ html, body {
   right: 0;
   width: 50%;
   height: 50%;
-  z-index: -98;
+  /*z-index: -98;*/
   pointer-events: none;
   background-color: #aaa;
 }
