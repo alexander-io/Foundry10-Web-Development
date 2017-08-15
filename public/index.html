@@ -61,7 +61,7 @@
             </div>
 
             <div id="quote-text-wrapper" class="col s8 valign-wrapper" style="height:100%;">
-              <h4 id="quote-text-header"class="center-align"><color style="color:#d14e1d;">"</color><quote-text id="quote-text">A philanthropic research organization promoting education in non-traditional settings and subjects.</quote-text><color style="color:#d14e1d">"</color></h4>
+              <h2 id="quote-text-header"class="center-align"><color style="color:#d14e1d;">"</color><quote-text id="quote-text">A philanthropic research organization promoting education in non-traditional settings and subjects.</quote-text><color style="color:#d14e1d">"</color></h2>
             </div>
 
 
@@ -268,20 +268,28 @@
 
     <div id="s1" class="section" style="background-color:white;">
 
+
       <div class="container">
-        <div class="z-depth-5" style="background-color:#ff6600;height:400px;width:400px;position:fixed;top:40%;z-index:0">
+        <div class="" id="float-square" style="background-color:#ff6600;height:200px;width:200px;position:fixed;top:40%;z-index:0; transition: border ease 2s;box-sizing:border-box;">
+          <div class="" id="float-square-tr" style="background-color:#ff6600;height:200px;width:200px;position:relative;left:200px;z-index:0; transition: all ease 2s;box-sizing:border-box;">
+          </div>
+          <div class="" id="float-square-bl" style="background-color:#ff6600;height:200px;width:200px;position:relative;z-index:0; transition: all ease 2s;box-sizing:border-box;">
+            <div class="" id="float-square-br" style="background-color:#ff6600;height:200px;width:200px;position:relative;left:200px;z-index:0; transition: all ease 2s;box-sizing:border-box;">
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="col s6 offset-s6">
-            <h1 id="s1h1"class="center-align">RESEARCH
+            <h1 id="s1h1" class="center-align"><span style="white-space:nowrap;">RESEARCH</span>
             <hr>
-            <l style="font-size:50%;">what the actual</l>
+            <l id="l"  style="font-size:50%;white-space:wrap;line-height:0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</l>
           </h1>
 
           </div>
         </div>
       </div>
     </div>
+
     <div id="s2"class="section" style="position:relative;background-color:#212121;z-index:6">
       <div class="container">
 
@@ -291,6 +299,21 @@
             <hr>
             <l style="font-size:50%;">what the actual</l>
           </h1>
+
+          </div>
+          <div class="col s6">
+            <div id="sqtocirc"class="" style="position:relative; top:600px; height:200px;width:200px;background-color:#ff6600;transition: border-radius 1s ease;">
+
+            </div>
+            <script type="text/javascript">
+              let sqtocirc = document.getElementById('sqtocirc');
+
+              sqtocirc.addEventListener('click', function(e) {
+                sqtocirc.style.borderRadius = '50%'
+              });
+
+            </script>
+
 
           </div>
         </div>
@@ -314,13 +337,34 @@
     <div id="s4"class="section" style="background-color:#212121;"></div>
 
     <script type="text/javascript">
+      let float_square = document.getElementById('float-square');
+      let float_square_tr = document.getElementById('float-square-tr');
+      let float_square_bl = document.getElementById('float-square-bl');
+      let float_square_br = document.getElementById('float-square-br');
+
+      let ss1h1 = document.getElementById('s1h1');
+      let s1h1_rect = ss1h1.getBoundingClientRect()
+      console.log(s1h1_rect);
+      float_square.addEventListener('click', function(e) {
+        float_square.style.border = '30px solid white'
+        float_square_tr.className = 'z-depth-5'
+        float_square_tr.style.backgroundColor = 'orange'
+        float_square_bl.className = 'z-depth-5'
+        float_square_bl.style.backgroundColor = 'orange'
+        float_square_br.className = 'z-depth-5'
+
+      });
+
+    </script>
+
+    <script type="text/javascript">
       let s1 = document.getElementById('s1'), s2 = document.getElementById('s2'), s3 = document.getElementById('s3'), s4 = document.getElementById('s4');
 
       let s1h1 = document.getElementById('s1h1');
       let s2h1 = document.getElementById('s2h1');
       let s3h1 = document.getElementById('s3h1');
 
-      let header_dividend_offset = 2.4
+      let header_dividend_offset = 2.7
 
       let w_height = window.innerHeight
       console.log('height', window.innerHeight);
@@ -466,70 +510,11 @@
             bsi4.style.color = 'white'
           })
           </script>
-          <!-- <div class="row" style="height:100%;">
 
-            <div id="banner-item-01" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:white;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;background-color:#424242;">
-              Tech
-            </div>
-            <div id="banner-item-02" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:white;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
-              Collective
-            </div>
-            <div id="banner-item-03" class="col s4 m4 l4 banner-item hoverable" style="letter-spacing:3px;font-weight:bold;color:white;font-size:200%;height:100%; vertical-align:middle;padding-top:40px;">
-              Art
-            </div>
-          </div> -->
         </div>
       </nav>
       <div class="row z-depth-5">
-        <!-- <nav  style="height: 100px;">
-          <div class="container" style="height:100%;">
-            <div class="row" style="height:100%;">
 
-              <div id="banner-sub-item-01" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;background-color:#ccc;">
-
-                <span id="banner-sub-item-01-title">
-                  robotics
-                </span>
-
-              </div>
-              <div id="banner-sub-item-02" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
-
-                <span id="banner-sub-item-02-title">
-                  <span class="hide-on-med-and-down truncate">
-                    virtual reality
-                  </span>
-                  <span class="hide-on-large-only">
-                    vr
-                  </span>
-                </span>
-
-              </div>
-              <div id="banner-sub-item-03" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
-
-                <span id="banner-sub-item-03-title">
-                  <span class="hide-on-med-and-down truncate">
-                    game development
-                  </span>
-                  <span class="hide-on-large-only truncate">
-                    game dev.
-                  </span>
-                </span>
-
-              </div>
-              <div id="banner-sub-item-04" class="col s3 m3 l3 banner-sub-item hoverable" style="letter-spacing:3px;font-weight:bold;font-size:200%;height:100%; vertical-align:middle;padding-top:20px;">
-
-                <span id="banner-sub-item-04-title">
-                  <span class="hide-on-med-and-down truncate">
-                    automotive
-                  </span>
-                  <span class="hide-on-large-only truncate">
-                    auto
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </nav> -->
       </div>
 
 
@@ -676,9 +661,7 @@
 
 
     <div class="" id="" style="">
-      <!-- <div class="" style="position:absolute; max-width:100%;" > -->
-        <!-- <div id="triangle-bottomleft" style="z-index:5; position:relative;">
-        </div> -->
+
         <div class="" style="background-color:#212121;position:relative;top:-5px;padding-top:75px;">
 
           <div class="container"style="">
@@ -717,49 +700,6 @@
                 </div>
               </div>
 
-              <!-- <script type="text/javascript">
-                let vec_circ_large = document.getElementById('vec-circ-large');
-                let vec_circ_large_overlay = document.getElementById('vec-circ-large-overlay');
-
-                let vec_circ_large_rect = vec_circ_large.getBoundingClientRect()
-                console.log(vec_circ_large_rect);
-
-                vec_circ_large_overlay.style.width = vec_circ_large_rect.width + 'px'
-                vec_circ_large_overlay.style.left = vec_circ_large_rect.left + 'px'
-                vec_circ_large_overlay.style.top = vec_circ_large_rect.top + 'px'
-                // vec_circ_large_overlay.style.top = '40%'
-                vec_circ_large_overlay.style.zIndex = 50;
-
-                vec_circ_large_overlay.style.transform = 'rotate(45deg)'
-                // transform : rotate(45deg)
-
-                // vec_circ_large_overlay.style.transition = 'opacity ease .5s'
-                vec_circ_large_overlay.style.transition = 'transform ease .5s'
-
-                // transition: transform ease 2s;
-
-
-                setTimeout(function(){
-                  // vec_circ_large_overlay.style.opacity = vec_circ_large_overlay.style.opacity - .01
-                  // vec_circ_large_overlay.style.opacity = 0
-                },3000)
-
-                setTimeout(function(){
-                  vec_circ_large_overlay.style.transform = 'rotate(0deg)'
-
-                }, 250)
-                setTimeout(function () {
-                  // vec_circ_large_overlay.style.transition = 'transform ease .5s'
-                  vec_circ_large_overlay.style.transition = 'opacity ease .5s'
-                  vec_circ_large_overlay.style.opacity = 0;
-
-                    // vec_circ_large_overlay.style.opacity = 0
-                    // let int = setInterval(function(){
-                    //   vec_circ_large_overlay.style.opacity -= .01
-                    // }, 100)
-                },1200)
-
-              </script> -->
               <div id="queue-cycle" class="col s6">
                 <div class="intro-header-box">
                   <h1 class="center-align" id="intro-header" style="color:white;">foundry10</h1>
@@ -816,142 +756,6 @@
           </div>
 
 
-            <!-- <div class="container" style="margin-top:200px;">
-              <div class="section">
-                <div class="row">
-                  <div class="col s4">
-
-
-                    <div class="card-panel article-card hoverable z-depth-5" >
-
-                      <div class="row header-row">
-                        <div class="col s8" >
-                          <h5>article title</h5>
-                          <a href="#"><h6>sub-title</h6></a>
-                        </div>
-                        <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
-                          <img class="article-icon-image" src="icons/flat/009-wrench.png">
-                        </div>
-                      </div>
-                      <div class="row content-row">
-                        <div class="col s12">
-                          <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row article-button-row">
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-
-                  </div>
-                  <div class="col s4">
-
-
-                    <div class="card-panel article-card hoverable z-depth-5" >
-
-                      <div class="row header-row">
-                        <div class="col s8" >
-                          <h5>article title</h5>
-                          <a href="#"><h6>sub-title</h6></a>
-                        </div>
-                        <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
-                          <img class="article-icon-image" src="icons/flat/012-paint-brush-1.png">
-                        </div>
-                      </div>
-                      <div class="row content-row">
-                        <div class="col s12">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row article-button-row">
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-
-                  </div>
-                  <div class="col s4">
-
-
-                    <div class="card-panel article-card hoverable z-depth-5" >
-
-                      <div class="row header-row">
-                        <div class="col s8" >
-                          <h5>article title</h5>
-                          <a href="#"><h6>sub-title</h6></a>
-                        </div>
-                        <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
-                          <img class="article-icon-image" src="icons/flat/007-book.png">
-                        </div>
-                      </div>
-                      <div class="row content-row">
-                        <div class="col s12">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <z class="truncate"> incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</z>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row article-button-row">
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                        <div class="col s4">
-                          <div class="card-panel hoverable article-button-panel">
-
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-
-                  </div>
-
-                </div>
-              </div>
-            </div> -->
 
 
             <footer class="page-footer">
@@ -995,72 +799,74 @@
             </div>
           </div>
         </footer>
-
-            <!-- <div class="section" style="background-color:#484848;">
-
-              <div class="container" style="background-color:#484848">
-                <div class="row" style="margin-top:150px;">
-
-                  <div class="col s6">
-                    <ul style="font-size:200%;" class="center">
-                      <li><a href="#">areas of interest</a></li>
-                      <li><a href="#">teach with portals</a></li>
-                      <li><a href="#">partners</a></li>
-                      <li><a href="#">our team</a></li>
-                      <li><a href="#">contact us</a></li>
-                    </ul>
-                  </div>
-
-
-                  <div class="col s6">
-                    <div class="center-align">
-                      <a class="f10button center-align "  href="#">about us</a>
-                    </div>
-                    <div class="center-align">
-                      <a class="f10button center-align "  href="#">explore research</a>
-                    </div>
-                    <div class="center-align">
-                      <a class="f10button center-align "  href="#">explore research</a>
-                    </div>
-                    <div class="center-align">
-                      <a class="f10button center-align "  href="#">explore research</a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div> -->
         </div>
       <!-- </div> -->
     </div>
 
     <!--  216, 67, 21 -> D84315 -->
 
-    <!--
-    color key
-
-    primary : d14e1d
-    primary-light : ff7e4a
-    primary-dark : 991a00
-
-    secondary : 212121
-    secondary-light : 484848
-    secondary-dark : 000000
-    -->
-
-
-    <!-- #d14e1d, f10 hex color -->
-    <!-- #d14e1d, f10 hex color -->
-
 
 
       <script type="text/javascript">
+      let fs = document.getElementById('float-square');
+
+      if ($(window).scrollTop() >= 1150) {
+        fs.style.position = 'absolute'
+
+        let float_square = document.getElementById('float-square');
+        let float_square_tr = document.getElementById('float-square-tr');
+        let float_square_bl = document.getElementById('float-square-bl');
+        let float_square_br = document.getElementById('float-square-br');
+
+        let ss1h1 = document.getElementById('s1h1');
+        let s1h1_rect = ss1h1.getBoundingClientRect()
+        console.log(s1h1_rect);
+
+
+        // ss1h1.style.top = '1840.9549560546875px'
+        fs.style.top = '1840.9549560546875px'
+        // let dist = s1h1_rect.bottom
+
+        float_square.style.border = '30px solid white'
+        float_square_tr.className = 'z-depth-5'
+        float_square_tr.style.backgroundColor = 'orange'
+        float_square_bl.className = 'z-depth-5'
+        float_square_bl.style.backgroundColor = 'orange'
+        float_square_br.className = 'z-depth-5'
+
+      }
+
+
+
+
+
 
         // on scroll, rotate things
         $(window).scroll(function(){
           var theta = $(window).scrollTop() / 256 % Math.PI;
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
+
+          // console.log($(window).scrollTop());
+          if ($(window).scrollTop() >= 1150) {
+            fs.style.position = 'absolute'
+            fs.style.top = '1840.9549560546875px'
+            let float_square = document.getElementById('float-square');
+            let float_square_tr = document.getElementById('float-square-tr');
+            let float_square_bl = document.getElementById('float-square-bl');
+            let float_square_br = document.getElementById('float-square-br');
+
+            let ss1h1 = document.getElementById('s1h1');
+            let s1h1_rect = ss1h1.getBoundingClientRect()
+            // console.log(s1h1_rect);
+            float_square.style.border = '30px solid white'
+            float_square_tr.className = 'z-depth-5'
+            float_square_tr.style.backgroundColor = 'orange'
+            float_square_bl.className = 'z-depth-5'
+            float_square_bl.style.backgroundColor = 'orange'
+            float_square_br.className = 'z-depth-5'
+
+          }
+
           // $('#vec-circ-large').css({transform: 'rotate(' + theta + 'rad)'});
           // $('#vec-circ-small').css({transform: 'rotate(' + theta + 'rad)'});
 

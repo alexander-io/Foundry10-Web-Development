@@ -1,0 +1,15 @@
+#### Alexander Harris
+#### August 14rd, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://opensail.io/collapse
+#### http://opensail.io/square
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+Today's work consisted mainly of seeking feedback from co-workers (the creatives) on the recent implementations of elements for the site. I was able to spend time collaborating with Ethan and Tim.
+
+Once major concern with the design I have is an abrupt transition from the "three-pillars" of foundry10 (research, programs, and outreach) to the section devoted to the subject areas. I am working to implement content to smoothe the transition between both of these sections. My idea was to further describe the significance of the three-pillars while demonstrating their relation to the subject-areas. In order to do this, I have expanded a section of space between these two sections and reserved it for the further explanation of the three-pillars and the demonstration of their relation to the subject areas.
+
+I also had the awesome opportunity to work with the cyber security group on their venture. They are making considerable progress on their project. It was a win for me to see them launch a remote server, program the server side script for handling http requests, configure port forwarding on the server, execute the server-side script to listen on port 8080 for requests, and access their site live on the internet.
