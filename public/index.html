@@ -35,7 +35,6 @@
       <div class="container" style="color:#ffffff;margin-top:40px;z-depth:5;">
 
           <div class="row">
-
             <div class="col s4 center-align" >
               <h1 id="nav-header" class="" style="display:inline; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; cursor:pointer;">
                 <a href="http://foundry10.org" style="color:white;">foundry10  </a>
@@ -242,11 +241,11 @@
               <div class="graphic-container" style="height:50%;">
                 <img src="images/three_pillars/alternative_4x4_grid_web.png"
                 style="width:100%;-moz-transform: scaleX(-1);
-          -o-transform: scaleX(-1);
-          -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-          filter: FlipH;
-          -ms-filter: FlipH;"
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                filter: FlipH;
+                -ms-filter: FlipH;"
                 alt="">
               </div>
 
@@ -291,41 +290,15 @@
       </div>
     </div>
 
-    <!-- <div id="sqtocirc"class="" style="position:fixed; top:600px; height:400px;width:400px;background-color:#ff6600;transition: border-radius 1s ease;z-index:13;">
-
-    </div> -->
-
-    <!-- <div class="section" style="z-index:30;">
-
-      <div class="container" >
-        <div class="col s6">
-
-        </div>
-        <div class="col s6">
-          <div id="sqtocirc"class="" style="position:fixed; top:600px; height:400px;width:400px;background-color:#ff6600;transition: border-radius 1s ease;">
-
-          </div>
-          <script type="text/javascript">
-          let sqtocirc = document.getElementById('sqtocirc');
-
-          sqtocirc.addEventListener('click', function(e) {
-            sqtocirc.style.borderRadius = '50%'
-          });
-
-          </script>
 
 
-        </div>
-      </div>
-    </div> -->
 
-
-    <div id="s2"class="section" style="position:relative;background-color:#212121;">
+    <div id="s2"class="section" style="position:relative;background-color:#212121;z-index:5;">
       <div class="container">
 
         <div class="row">
           <div class="col s6 ">
-            <h1 id="s2h1"class="center-align" style="color:white;r">PROGRAMS
+            <h1 id="s2h1"class="center-align" style="color:white;">PROGRAMS
             <hr>
             <l style="font-size:50%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</l>
           </h1>
@@ -333,7 +306,7 @@
           </div>
 
           <div class="col s6">
-            <div id="sqtocirc"class="" style="position:relative; top:600px; height:400px;width:400px;background-color:#ff6600;transition: border-radius 1.5s ease;background-size:cover;background-image:url(images/three_pillars/foundry10_education.png);">
+            <div id="sqtocirc"class="" style="position:relative;border-radius:15%;  height:400px;width:400px;background-color:#ff6600;transition: border-radius 1.5s ease;background-size:cover;background-image:url(images/three_pillars/foundry10_education.png);">
 
             </div>
 
@@ -345,6 +318,16 @@
     <div id="s3"class="section" style="background-color:#484848;">
       <div class="container">
 
+        <div class="" id="float-square2" style="background-color:#ff6600;height:200px;width:200px; position:relative; transition: border ease 2s;box-sizing:border-box;">
+          <div class="" id="float-square-tr2" style="background-color:#ff6600;height:200px;width:200px;position:relative;left:200px;z-index:0; transition: all ease 2s;box-sizing:border-box;">
+          </div>
+          <div class="" id="float-square-bl2" style="background-color:#ff6600;height:200px;width:200px;position:relative;z-index:0; transition: all ease 2s;box-sizing:border-box;">
+            <div class="" id="float-square-br" style="background-color:#ff6600;height:200px;width:200px;position:relative;left:200px;z-index:0; transition: all ease 2s;box-sizing:border-box;">
+            </div>
+          </div>
+        </div>
+
+
         <div class="row">
           <div class="col s6">
 
@@ -352,7 +335,7 @@
           <div class="col s6 ">
             <h1 id="s3h1"class="center-align" style="color:white;">OUTREACH
             <hr>
-            <l style="font-size:50%;">what the actual</l>
+            <l style="font-size:50%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</l>
           </h1>
 
           </div>
@@ -360,7 +343,7 @@
       </div>
 
     </div>
-    <div id="s4"class="section" style="background-color:#212121;"></div>
+    <div id="s4"class="section" style="background-color:white;"></div>
 
     <script type="text/javascript">
       let float_square = document.getElementById('float-square');
@@ -370,16 +353,16 @@
 
       let ss1h1 = document.getElementById('s1h1');
       let s1h1_rect = ss1h1.getBoundingClientRect()
-      console.log(s1h1_rect);
-      float_square.addEventListener('click', function(e) {
-        float_square.style.border = '30px solid white'
-        float_square_tr.className = 'z-depth-5'
-        float_square_tr.style.backgroundColor = 'orange'
-        float_square_bl.className = 'z-depth-5'
-        float_square_bl.style.backgroundColor = 'orange'
-        float_square_br.className = 'z-depth-5'
-
-      });
+      // console.log(s1h1_rect);
+      // float_square.addEventListener('click', function(e) {
+      //   float_square.style.border = '30px solid white'
+      //   float_square_tr.className = 'z-depth-5'
+      //   float_square_tr.style.backgroundColor = 'orange'
+      //   float_square_bl.className = 'z-depth-5'
+      //   float_square_bl.style.backgroundColor = 'orange'
+      //   float_square_br.className = 'z-depth-5'
+      //
+      // });
 
     </script>
 
@@ -401,13 +384,20 @@
       s4.style.height = w_height + 'px'
 
       s1h1.style.position = 'relative'
-      s1h1.style.top = w_height/header_dividend_offset + 'px'
+      s1h1.style.top = (w_height/header_dividend_offset)-((w_height/header_dividend_offset)*.1) + 'px'
 
       s2h1.style.position = 'relative'
-      s2h1.style.top = w_height/header_dividend_offset + 'px'
+      s2h1.style.top = (w_height/header_dividend_offset)-((w_height/header_dividend_offset)*.1) + 'px'
 
       s3h1.style.position = 'relative'
-      s3h1.style.top = w_height/header_dividend_offset + 'px'
+      s3h1.style.top = (w_height/header_dividend_offset)-((w_height/header_dividend_offset)*.1)  + 'px'
+
+    </script>
+
+
+    <script type="text/javascript">
+      // let outreach_square = document.getElementById('float-square2');
+
 
     </script>
 
@@ -836,16 +826,26 @@
       <script type="text/javascript">
       let fs = document.getElementById('float-square');
       let sqtocirc = document.getElementById('sqtocirc');
+      let outreach_square = document.getElementById('float-square2');
 
-      if ($(window).scrollTop() > 2950){
+      let ss2h1 = document.getElementById('s2h1');
+      let ss2h1_rect = ss2h1.getBoundingClientRect()
+      console.log('ss2h1 rect', ss2h1_rect);
+      console.log('ss2h1 rect top', ss2h1_rect.top);
+      sqtocirc.style.top = s2h1.style.top
+      // sqtocirc.style.top = ss2h1_rect.top + 'px'
+
+
+
+      if ($(window).scrollTop() > 2650){
         sqtocirc.style.borderRadius = '50%'
         setTimeout(function(){
-          sqtocirc.style.transition = 'background-color 2s ease'
+          sqtocirc.style.transition = 'background-color 1s ease'
           sqtocirc.style.backgroundColor = '#212121'
         }, 1050)
       }
 
-      if ($(window).scrollTop() >= 1150) {
+      if ($(window).scrollTop() >= 1050) {
         fs.style.position = 'absolute'
 
         let float_square = document.getElementById('float-square');
@@ -855,11 +855,19 @@
 
         let ss1h1 = document.getElementById('s1h1');
         let s1h1_rect = ss1h1.getBoundingClientRect()
-        console.log(s1h1_rect);
+        console.log('s1h1 rect:', s1h1_rect);
+        console.log('s1h1 top offset', ss1h1.offsetTop);
 
+        let s3h1 = document.getElementById('s3h1');
+        console.log(s3h1);
+        // console.log(let s3h1_rect = s3h1.getBoundingClientRect());
+        // let s3h1_rect = s3h1.getBoundingClientRect()
+        let s3h1_rect = s3h1.getBoundingClientRect()
+        console.log(s3h1_rect);
 
         // ss1h1.style.top = '1840.9549560546875px'
-        fs.style.top = '1840.9549560546875px'
+        // fs.style.top = '1740.9549560546875px'
+        fs.style.top = (ss1h1.offsetTop)-((ss1h1.offsetTop)*.05) + 'px'
         // let dist = s1h1_rect.bottom
 
         float_square.style.border = '30px solid white'
@@ -871,6 +879,15 @@
 
       }
 
+      // console.log(outreach_square.scrollTop);
+
+      // let outreach_rect = outreach_square.getBoundingClientRect()
+      // console.log(outreach_rect);
+      // console.log(outreach_rect);
+      // console.log(outreach_square.offsetTop);
+      // console.log('s3h1 rect:', s3h1_rect);
+
+
 
 
 
@@ -881,10 +898,20 @@
           var theta = $(window).scrollTop() / 256 % Math.PI;
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
 
+          if ($(window).scrollTop()+600 >= outreach_square.offsetTop) {
+            outreach_square.style.position = 'fixed'
+            outreach_square.style.top = '600px'
+          } else {
+            console.log('out of range');
+            // outreach_square.style.top = undefined
+            // outreach_square.style.position = 'absolute'
+          }
           // console.log($(window).scrollTop());
           if ($(window).scrollTop() >= 1150) {
             fs.style.position = 'absolute'
-            fs.style.top = '1840.9549560546875px'
+            // fs.style.top = '1840.9549560546875px'
+            fs.style.top = (s1h1.offsetTop)-((s1h1.offsetTop)*.05) + 'px'
+
             let float_square = document.getElementById('float-square');
             let float_square_tr = document.getElementById('float-square-tr');
             let float_square_bl = document.getElementById('float-square-bl');
@@ -902,10 +929,10 @@
 
           }
 
-          if ($(window).scrollTop() > 2950){
+          if ($(window).scrollTop() > 2750){
             sqtocirc.style.borderRadius = '50%'
             setTimeout(function(){
-              sqtocirc.style.transition = 'background-color 2s ease'
+              sqtocirc.style.transition = 'background-color 1s ease'
               sqtocirc.style.backgroundColor = '#212121'
             }, 1050)
           }
