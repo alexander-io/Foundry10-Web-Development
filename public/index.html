@@ -345,8 +345,9 @@
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500"
-            style="background-color:#ff6600; height:400px; width:400px; position: relative;">
-
+            style="background-color:#ff6600; height:400px; width:400px; position: relative; padding:50%;">
+              <div class="" style="background-color:#212121;height:100%;width:100%;padding:3%;">
+              </div>
             </div>
           </div>
           <div class="col s6 ">
@@ -1137,6 +1138,16 @@
       let targetOffset = $("#sqtocirc").offset().top
       console.log('taget offset', targetOffset);
 
+      let outreach_offset = $('#lastsq').offset().top
+
+      if ($(window).scrollTop() > outreach_offset - (window.innerHeight/2)){
+        setTimeout(function(){
+          last_sq.style.transition = 'padding 1s ease'
+          last_sq.style.padding = '1%'
+        }, 1000)
+      }
+
+
 
       if ($(window).scrollTop() > targetOffset- (window.innerHeight/2)){
         sqtocirc.style.borderRadius = '50%'
@@ -1227,6 +1238,13 @@
               sqtocirc.style.transition = 'background-color 1s ease'
               sqtocirc.style.backgroundColor = '#212121'
             }, 1050)
+          }
+
+          if ($(window).scrollTop() > outreach_offset - (window.innerHeight/2)){
+            setTimeout(function(){
+              last_sq.style.transition = 'padding 1s ease'
+              last_sq.style.padding = '1%'
+            }, 1000)
           }
 
           // $('#vec-circ-large').css({transform: 'rotate(' + theta + 'rad)'});
