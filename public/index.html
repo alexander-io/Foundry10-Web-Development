@@ -702,7 +702,7 @@
         </script>
       </div>
     </div> <!-- end info banner -->
-    <div class="section">
+    <!-- <div class="section">
       <div class="container">
 
         <div class="row">
@@ -939,9 +939,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
 
 
     $(document).ready(function(){
@@ -961,7 +961,7 @@
       height:20px;
       width:20px;
     }
-    </style>
+    </style> -->
 
     <div class="" id="" style="">
 
@@ -1134,8 +1134,11 @@
       // subareasq.style.top = ss4h1.style.top
 
 
+      let targetOffset = $("#sqtocirc").offset().top
+      console.log('taget offset', targetOffset);
 
-      if ($(window).scrollTop() > 2650){
+
+      if ($(window).scrollTop() > targetOffset- (window.innerHeight/2)){
         sqtocirc.style.borderRadius = '50%'
         setTimeout(function(){
           sqtocirc.style.transition = 'background-color 1s ease'
@@ -1196,15 +1199,6 @@
           var theta = $(window).scrollTop() / 256 % Math.PI;
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
 
-          // if ($(window).scrollTop()+600 >= outreach_square.offsetTop) {
-          //   outreach_square.style.position = 'fixed'
-          //   outreach_square.style.top = '600px'
-          // } else {
-          //   console.log('out of range');
-          //   // outreach_square.style.top = undefined
-          //   // outreach_square.style.position = 'absolute'
-          // }
-          // console.log($(window).scrollTop());
           if ($(window).scrollTop() >= 1150) {
             fs.style.position = 'absolute'
             // fs.style.top = '1840.9549560546875px'
@@ -1227,7 +1221,7 @@
 
           }
 
-          if ($(window).scrollTop() > 2750){
+          if ($(window).scrollTop() > (targetOffset-window.innerHeight/2)){
             sqtocirc.style.borderRadius = '50%'
             setTimeout(function(){
               sqtocirc.style.transition = 'background-color 1s ease'
