@@ -16,8 +16,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
 
+    <link rel="stylesheet" href="/css/aos.css">
+    <script type="text/javascript" src="js/aos.js">
 
-
+    </script>
+    <script>
+      AOS.init();
+    </script>
 
     <style media="screen">
       #left-door, #right-door{
@@ -306,7 +311,8 @@
           </div>
 
           <div class="col s6">
-            <div id="sqtocirc"class="" style="position:relative;border-radius:15%;  height:400px;width:400px;background-color:#ff6600;transition: border-radius 1.5s ease;background-size:cover;background-image:url(images/three_pillars/foundry10_education.png);">
+            <div id="sqtocirc"class=""
+             style="position:relative;border-radius:15%;  height:400px;width:400px;background-color:#ff6600;transition: border-radius 1.5s ease;background-size:cover;background-image:url(images/three_pillars/foundry10_education.png);">
 
             </div>
 
@@ -318,19 +324,25 @@
     <div id="s3"class="section" style="background-color:#484848;">
       <div class="container">
 
-        <div class="" id="float-square2" style="background-color:#ff6600;height:200px;width:200px; position:relative; transition: border ease 2s;box-sizing:border-box;">
+        <!-- <div class="" id="float-square2" style="background-color:#ff6600;height:200px;width:200px; position:relative; transition: border ease 2s;box-sizing:border-box;">
           <div class="" id="float-square-tr2" style="background-color:#ff6600;height:200px;width:200px;position:relative;left:200px;z-index:0; transition: all ease 2s;box-sizing:border-box;">
           </div>
           <div class="" id="float-square-bl2" style="background-color:#ff6600;height:200px;width:200px;position:relative;z-index:0; transition: all ease 2s;box-sizing:border-box;">
             <div class="" id="float-square-br" style="background-color:#ff6600;height:200px;width:200px;position:relative;left:200px;z-index:0; transition: all ease 2s;box-sizing:border-box;">
             </div>
           </div>
-        </div>
+        </div> -->
 
 
         <div class="row">
           <div class="col s6">
+            <div id="lastsq" class=""
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            style="background-color:#ff6600; height:400px; width:400px; position: relative;">
 
+            </div>
           </div>
           <div class="col s6 ">
             <h1 id="s3h1"class="center-align" style="color:white;">OUTREACH
@@ -343,7 +355,26 @@
       </div>
 
     </div>
-    <div id="s4"class="section" style="background-color:white;"></div>
+    <div id="s4"class="section" style="background-color:white;">
+      <div class="container">
+
+        <div class="row">
+          <div class="col s12 l6">
+            <h1 id="s4h1" style="text-align:center;">SUBJECT AREAS
+              <hr>
+              <l style="font-size:50%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</l>
+
+            </h1>
+          </div>
+          <div class="col s12 l6">
+            <div id="subareasq"class="" style="position:relative;background-color:lime;height:400px;width:400px;">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <script type="text/javascript">
       let float_square = document.getElementById('float-square');
@@ -367,11 +398,12 @@
     </script>
 
     <script type="text/javascript">
-      let s1 = document.getElementById('s1'), s2 = document.getElementById('s2'), s3 = document.getElementById('s3'), s4 = document.getElementById('s4');
+      let s1 = document.getElementById('s1'), s2 = document.getElementById('s2'), s3 = document.getElementById('s3'), s4 = document.getElementById('s4')
 
       let s1h1 = document.getElementById('s1h1');
       let s2h1 = document.getElementById('s2h1');
       let s3h1 = document.getElementById('s3h1');
+      let s4h1 = document.getElementById('s4h1');
 
       let header_dividend_offset = 2.7
 
@@ -391,6 +423,9 @@
 
       s3h1.style.position = 'relative'
       s3h1.style.top = (w_height/header_dividend_offset)-((w_height/header_dividend_offset)*.1)  + 'px'
+
+      s4h1.style.position = 'relative'
+      s4h1.style.top = (w_height/header_dividend_offset)-((w_height/header_dividend_offset)*.1)  + 'px'
 
     </script>
 
@@ -826,7 +861,7 @@
       <script type="text/javascript">
       let fs = document.getElementById('float-square');
       let sqtocirc = document.getElementById('sqtocirc');
-      let outreach_square = document.getElementById('float-square2');
+      // let outreach_square = document.getElementById('float-square2');
 
       let ss2h1 = document.getElementById('s2h1');
       let ss2h1_rect = ss2h1.getBoundingClientRect()
@@ -834,6 +869,17 @@
       console.log('ss2h1 rect top', ss2h1_rect.top);
       sqtocirc.style.top = s2h1.style.top
       // sqtocirc.style.top = ss2h1_rect.top + 'px'
+
+
+      let ss3h1 = document.getElementById('s3h1');
+      let ss3h1_rect = ss3h1.getBoundingClientRect()
+      let last_sq = document.getElementById('lastsq');
+      last_sq.style.top = ss3h1.style.top
+
+
+      let ss4h1 = document.getElementById('s4h1');
+      let subareasq = document.getElementById('subareasq');
+      subareasq.style.top = ss4h1.style.top
 
 
 
@@ -898,14 +944,14 @@
           var theta = $(window).scrollTop() / 256 % Math.PI;
           $('#logo-click').css({transform: 'rotate(' + theta + 'rad)'});
 
-          if ($(window).scrollTop()+600 >= outreach_square.offsetTop) {
-            outreach_square.style.position = 'fixed'
-            outreach_square.style.top = '600px'
-          } else {
-            console.log('out of range');
-            // outreach_square.style.top = undefined
-            // outreach_square.style.position = 'absolute'
-          }
+          // if ($(window).scrollTop()+600 >= outreach_square.offsetTop) {
+          //   outreach_square.style.position = 'fixed'
+          //   outreach_square.style.top = '600px'
+          // } else {
+          //   console.log('out of range');
+          //   // outreach_square.style.top = undefined
+          //   // outreach_square.style.position = 'absolute'
+          // }
           // console.log($(window).scrollTop());
           if ($(window).scrollTop() >= 1150) {
             fs.style.position = 'absolute'
@@ -975,6 +1021,8 @@
     <script type="text/javascript" src="js/info_banner.js"></script>
 
     <!-- <script type="text/javascript" src="js/particles.js"></script> -->
+
+
 
     <script type="text/javascript" src="js/app.js"></script>
   </body>
