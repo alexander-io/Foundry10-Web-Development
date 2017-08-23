@@ -346,7 +346,11 @@
             data-aos-easing="linear"
             data-aos-duration="1500"
             style="background-color:#ff6600; height:400px; width:400px; position: relative; padding:50%;">
-              <div class="" style="background-color:#212121;height:100%;width:100%;padding:3%;">
+              <div id="lastsqi" class="" style="background-color:#212121;height:100%;width:100%;padding:50%; transition: padding 1s ease">
+                <div id="lastsqii" class="" style="background-color:#ff6600;height:100%;width:100%;padding:50%; transition: padding 1s ease">
+                  <div id="lastsqii" class="" style="background-color:white;height:100%;width:100%;padding:50%; transition: padding 1s ease">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1143,8 +1147,14 @@
       if ($(window).scrollTop() > outreach_offset - (window.innerHeight/2)){
         setTimeout(function(){
           last_sq.style.transition = 'padding 1s ease'
-          last_sq.style.padding = '1%'
-        }, 1000)
+          last_sq.style.padding = '5%'
+          setTimeout(function(){
+            document.getElementById('lastsqi').style.padding = '5%'
+            setTimeout(function(){
+              document.getElementById('lastsqii').style.padding = '20%'
+            }, 500)
+          }, 500)
+        }, 1100)
       }
 
 
@@ -1243,8 +1253,14 @@
           if ($(window).scrollTop() > outreach_offset - (window.innerHeight/2)){
             setTimeout(function(){
               last_sq.style.transition = 'padding 1s ease'
-              last_sq.style.padding = '1%'
-            }, 1000)
+              last_sq.style.padding = '5%'
+              setTimeout(function(){
+                document.getElementById('lastsqi').style.padding = '5%'
+                setTimeout(function(){
+                  document.getElementById('lastsqii').style.padding = '20%'
+                }, 500)
+              }, 500)
+            }, 1100)
           }
 
           // $('#vec-circ-large').css({transform: 'rotate(' + theta + 'rad)'});
