@@ -880,11 +880,23 @@
       if ($(window).scrollTop() > outreach_offset - (window.innerHeight/2)){
         setTimeout(function(){
           last_sq.style.transition = 'padding 1s ease'
-          last_sq.style.padding = '5%'
+          last_sq.style.padding = '8%'
           setTimeout(function(){
-            document.getElementById('lastsqi').style.padding = '5%'
+            document.getElementById('lastsqi').style.padding = '8%'
             setTimeout(function(){
               document.getElementById('lastsqii').style.padding = '20%'
+              setTimeout(function(){
+                // document.getElementById('lastsqii').style.transform = 'translate()'
+
+                document.getElementById('lastsqii').style.transition = 'transform 2s ease'
+                // document.getElementById('lastsqii').style.position = 'relative'
+                document.getElementById('lastsqii').style.transform = 'translate(130px,-130px)'
+                // document.getElementById('lastsqii').style.transition = 'translate 1s ease'
+                // document.getElementById('lastsqii').style.transform = 'translate(100,100)'
+                // document.getElementById('lastsqii').style.backgroundColor = 'lime'
+
+              }, 1000)
+              // document.getElementById('lastsqii').style.translate(100,100)
             }, 500)
           }, 500)
         }, 1100)
