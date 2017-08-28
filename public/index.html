@@ -887,8 +887,10 @@
               document.getElementById('lastsqii').style.padding = '20%'
               setTimeout(function(){
                 document.getElementById('lastsqii').style.transition = 'transform 2s ease'
-                document.getElementById('lastsqii').style.transform = 'translate(130px,-130px)'
-              }, 1200)
+                setTimeout(function(){
+                  document.getElementById('lastsqii').style.transform = 'translate(130px,-130px)'
+                }, 300)
+              }, 1100)
             }, 500)
           }, 500)
         }, 1100)
