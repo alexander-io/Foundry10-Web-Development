@@ -888,7 +888,6 @@
               setTimeout(function(){
                 document.getElementById('lastsqii').style.transition = 'transform 2s ease'
                 document.getElementById('lastsqii').style.transform = 'translate(130px,-130px)'
-
               }, 1200)
             }, 500)
           }, 500)
@@ -896,7 +895,7 @@
       }
 
 
-
+      // if we've reachecd the target in terms of scroll position, then trigger animation
       if ($(window).scrollTop() > targetOffset- (window.innerHeight/2)){
         sqtocirc.style.borderRadius = '50%'
         setTimeout(function(){
@@ -905,9 +904,9 @@
         }, 1050)
       }
 
+      // first animation float-square, when reach trigger scroll point -> trigger animation
       if ($(window).scrollTop() >= 1050) {
         fs.style.position = 'absolute'
-
         let float_square = document.getElementById('float-square');
         let float_square_tr = document.getElementById('float-square-tr');
         let float_square_bl = document.getElementById('float-square-bl');

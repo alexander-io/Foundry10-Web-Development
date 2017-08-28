@@ -8,6 +8,10 @@ body {
 
 }
 
+#explore-research-large, #explore-research-small, #explore-programs-large, #explore-programs-small, #explore-outreach-large, #explore-outreach-small {
+  cursor: pointer;
+}
+
 div.drag-target{
   width:0px;
 }
@@ -17,8 +21,6 @@ body p {
 }
 
 html, body {
-  /*width: 100%;*/
-  /*overflow: hidden;*/
   overflow-x: hidden;
   background-color: #212121;
 }
