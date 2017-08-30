@@ -20,6 +20,7 @@
     ,'<color style="color:#ff6600;">"</color><quote-text id="quote-text">We believe in transforming ideas into action for students and the communities that support them.</quote-text><color style="color:#ff6600">"</color>'
     ,'<color style="color:#ff6600;">"</color><quote-text id="quote-text">We work cooperatively to empower teacher creativity and enhance both teacher and student ideas.</quote-text><color style="color:#ff6600">"</color>'
   ]
+  
   /*
 The people who know kids best are the ones who work closely with them. With this in mind, we work cooperatively to empower teacher creativity and enhance both teacher and student ideas.
   */
