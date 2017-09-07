@@ -22,7 +22,7 @@ body p {
 
 html, body {
   overflow-x: hidden;
-  background-color: #212121;
+  /*background-color: #212121;*/
 }
 
 .circ-toast {
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 #nav-wrap{
-  background-color:#212121;
+  /*background-color:#212121;*/
   border-top:20px solid black;
   height:250%;
   margin-bottom:1px;
