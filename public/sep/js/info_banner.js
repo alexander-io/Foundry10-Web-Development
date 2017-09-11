@@ -294,14 +294,33 @@
             text : 'As part of our work focused on after school programming, we partnered with an elementary school in the greater Seattle area to run a Lego building club for early elementary students (kindergarten and first grade) and a Lego Robotics club for intermediate elementary students (grades 4, 5 and 6). The program ran after school, twice a week for an hour each session, for four weeks. Each was led by classroom teachers with an interest in Legos and each developed their own club curricula and projects. All Lego building kits and robotics kids were donated as part of the after school project with foundry10. We also supplied stipends for the teachers to run the clubs. The goal was to provide opportunities, free of charge, for students to build, explore, and be creative in an after-school setting. Bus transportation was also provided by foundry10 so that there were no transportation barriers for interested students who wanted to attend.',
             icon : icon_path.wrench,
             url_00 : 'http://foundry10.org/areas-overview/robotics/',
-            url_01 : 'http://foundry10.org/wp-content/uploads/2017/06/Elementary-Lego-and-Robotics.pdf'
+            url_01 : 'http://foundry10.org/wp-content/uploads/2017/06/Elementary-Lego-and-Robotics.pdf',
+            type : 'article'
           } , {
             title : 'Robotics Brief',
             sub_title : 'Education Meets Robotics',
             text : 'Throughout the fall of the 2016-2017 school year, foundry10 ran robotics programs in two schools around Seattle: The Nova Project and Seattle Girl’s School. We were interested in how exposure to our student-led robotics program improved student confidence with technology, productive risk-taking, and the perception of robotics as a community exercise. We used a combination of likert-type scale survey questions and open-ended questions. We found some gains in these areas, but hope to expand our sample size to improve our understanding of the impact that this experience has on students.',
             icon : icon_path.gears,
             url_00 : 'http://foundry10.org/areas-overview/robotics/',
-            url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Robotics-Fall-2016-brief.pdf'
+            url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Robotics-Fall-2016-brief.pdf',
+            type : 'article'
+          },
+          {
+            title : 'Sammamish Leads',
+            sub_title : 'High School, Leads Summer Program',
+            text : 'Sammamish Leads is open to all students entering grades 9-12 at Sammamish, Interlake and Big Picture. If the program is filled to capacity, we give first priority to students that would be the first in their family to go to and graduate from college. Interest in Leads is growing, however we still anticipate being able to serve all students who are interested in participating in the program this summer.',
+            icon : icon_path.gears,
+            url_00 : 'http://foundry10.org/areas-overview/robotics/',
+            url_01  : 'https://www.bsd405.org/sammamish/about/leads/',
+            type : 'program'
+          },
+          {
+            title : 'Robotics Gear Review and Recommendations',
+            sub_title : 'Robotics Hardware Options for Educators',
+            text : 'There are a ton of options available to educators looking to explore robotics. In many cases, it can be tricky to know where to start. Our robotics program is largely student-driven, meaning students have great input on what tools and techniques are used in the course. This has exposed us to a wide variety of hardware, software, and resources along with feedback from the students and the educators that we work with.',
+            url_00 : 'http://foundry10.org/subject-areas/robotics-gear-review-recommendations/',
+            url_01 : 'http://foundry10.org/subject-areas/robotics-gear-review-recommendations/',
+            type : 'program'
           }
         ]
       },
