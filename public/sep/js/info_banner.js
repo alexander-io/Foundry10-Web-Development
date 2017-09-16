@@ -270,6 +270,14 @@
     brush : icp+'012-paint-brush-1.png'
   }
 
+  // {
+  //   title : '',
+  //   sub_title : '',
+  //   text : '',
+  //   url_00 : '',
+  //   url_01 : '',
+  //   type : ''
+  // }
 
   // each sub-category should have data associated : title, body of text, two links, two images
   let tree = {
@@ -343,14 +351,32 @@
             text : 'In the 2015-2016 school year, foundry10 put VR in the classrooms of 390 students in the US and Canada. Our objective was to collaborate with teachers to find out more about what really happens when VR enters the classroom. Through a series of surveys and interviews, we gathered data at the beginning, middle and end of the program in each school. The teachers used the technology in the way that made sense for them and their students, and as a result we were granted a view at a wide variety of different ideas for how VR can enhance classroom learning. Below are our initial reports,the dataset that includes the anonymized survey responses from the students in the program, and a brief description of the program itself. Please take a look and reach out to us if you have any thoughts or questions.',
             icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/virtual-reality/',
-            url_01  : 'http://foundry10.org/research/vr-pilot-program-initial-findings/'
+            url_01  : 'http://foundry10.org/research/vr-pilot-program-initial-findings/',
+            type : 'article'
           } ,  {
             title : 'Making Learning Accessible in New Ways',
             sub_title : 'Virtual reality',
             text : 'Exploring technology is a vital part of modern day students’ educational experiences. Often, however, schools come in on the tail-end of an emerging technology, thereby limiting students’ opportunities for exposure and skill development. Advanced technology can be considered a type of cultural capital which students can utilize in order to progress and navigate future career pathways. Virtual reality is one such advanced technology, now readily commercially available, which is making its way into classrooms. Our recent research focusing on the implementation of VR in classrooms provides information about how educators can make VR accessible to students. Access in virtually reality can be considered through multiple lenses and we discuss a few of them here. The first considers learning styles and nontraditional engagement, the second discusses access to a global education, and the third revolves around issues of social justice. We feel these areas are highly relevant considerations for educators as they consider the use of virtual reality.',
             icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/research_category/virtual-reality/',
-            url_01  : 'http://foundry10.org/research/virtual-reality-making-learning-accessible-in-new-ways/'
+            url_01  : 'http://foundry10.org/research/virtual-reality-making-learning-accessible-in-new-ways/',
+            type : 'article'
+          },
+          {
+            title : 'Applied VR in Schools, 2016-2017',
+            sub_title : 'Elementary Findings',
+            text : 'This report includes a description of the schools involved, feedback from the students and teachers involved, the outcomes of their work with VR, and an outline of the technical challenges of implementing VR with younger audiences.',
+            url_00 : 'http://foundry10.org/areas-overview/virtual-reality/',
+            url_01 : 'http://foundry10.org/research/applied-vr-schools-2016-2017-elementary-findings/',
+            type : 'article'
+          },
+          {
+            title : 'Student and Educator Resources',
+            sub_title : 'VR in the Classroom',
+            text : 'Interested in finding out more about VR, trying it in your classroom, or connecting with us about it? Head over to our VR resources page.',
+            url_00 : 'http://foundry10.org/subject-areas/vr-student-educator-resources/',
+            url_01 : 'https://docs.google.com/document/d/1vXclcgzSqMdl0B59gHtXKh_I6UMglFnOzfb5hJ-627E/edit',
+            type : 'program'
           }
         ]
       },
@@ -373,14 +399,16 @@
             text : 'Art and creative expression have an interesting way of weaving in and out of classrooms, offering students the opportunity to explore their own ideas and minds. Video games are no different, and while most of the discussion about their use in classrooms centers on play, we at foundry10 wanted to examine the value of making games. Through easily accessible programs such as Scratch and Gamemaker, students from early elementary up through college are creating games and learning while doing it. We gathered surveys from 107 game design and development professionals and 300 middle school students, before and after a game development class, about the value of teaching game development in a middle school class. Then we compared the responses of the 7th- and 8th-graders with what the game developers said they felt would be important about making games. We hope this information will help teachers who are constructing game development classes, and show the broader view of the value inherent in game development that professional game makers can provide.',
             icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/areas-overview/games-and-learning/',
-            url_01  : 'http://foundry10.org/research/beyond-programming-the-power-of-making-games/'
+            url_01  : 'http://foundry10.org/research/beyond-programming-the-power-of-making-games/',
+            type : 'article'
           } , {
             title : 'Number processing ability and logitunal MOBA skill',
             sub_title : 'Games and Learning',
             text : 'The popularity of multiplayer online battle arena (MOBA) games provides an opportunity to examine how cognitive skills are linked with changes in player performance within a team-based game genre. There is evidence that video game experience in other genres is connected with specific cognitive skills such as visuospatial attention and working memory capacity. Links have also been observed outside of video games such as numerical intelligence being correlated with the performance of chess experts. In the present study, we investigated whether numerical and working memory ability measured at an initial time-point predicted changes in MOBA skill and gameplay frequency measured five months later.',
             icon : icon_path.controller,
             url_00  : 'http://foundry10.org/areas-overview/games-and-learning/',
-            url_01  : 'http://foundry10.org/research/number-processing-ability-and-logitunal-moba-skill/'
+            url_01  : 'http://foundry10.org/research/number-processing-ability-and-logitunal-moba-skill/',
+            type : 'article'
           }
         ]
       },
@@ -410,7 +438,8 @@
             text : 'Throughout our work with automotive technology, we have been studying how the students respond to the subject, and seek to answer our three critical questions for the program. The report below breaks down how we look at auto-tech, what is exciting to us in terms of learning, and some of the data that we have gathered on the subject so far.',
             icon : icon_path.wrench,
             url_00  : 'http://foundry10.org/areas-overview/automotive/',
-            url_01  : 'http://foundry10.org/wp-content/uploads/2016/07/AutomotiveTechnologyResearch.pdf'
+            url_01  : 'http://foundry10.org/wp-content/uploads/2016/07/AutomotiveTechnologyResearch.pdf',
+            type : 'article'
           }
         ]
       }
