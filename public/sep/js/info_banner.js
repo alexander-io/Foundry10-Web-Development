@@ -723,14 +723,39 @@
             icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/areas-overview/drama/',
             url_01  : 'http://foundry10.org/research/dramatic-storytelling-literacy/',
-            type : ''
+            type : 'article'
           } , {
             title : 'Shoreline Reading Intervention at Briarcrest Elementary',
             sub_title : 'Early Ed. Theater',
             text : 'In the summer of 2016, foundry10 partnered with Shoreline Schools Foundation to bring a fuller iteration of the dramatic arts infused intervention program for summer school attendees. With four teaching artists who collaborated with one another on creating curriculum that infused literature and dramatic arts, they served ten different classes, grades K-3 and ELL, with a theater arts intervention.',
             icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/drama/',
-            url_01  : 'http://foundry10.org/research/shoreline-reading-intervention-briarcrest-elementary/'
+            url_01  : 'http://foundry10.org/research/shoreline-reading-intervention-briarcrest-elementary/',
+            type : 'article'
+          },
+          {
+            title : 'Arts Meet Academics : An Interview Over Spring Break',
+            sub_title : 'This article covers spring break Arts-Academic Intervention',
+            text : 'Sometimes, quantitative research cannot capture the engagement and energy new activities and minds can bring to a classroom. This editorial article covers a program we ran that created large amounts of excitement for teachers, artists, and especially students all working and learning together.',
+            url_00 : 'http://foundry10.org/subject-areas/arts-meets-academics-intervention-spring-break/',
+            url_01 : 'http://foundry10.org/areas-overview/drama/',
+            type : 'program'
+          },
+          {
+            title : 'Dramatic Storytelling and Literacy',
+            sub_title : 'This article describes a method of exploring and expanding literacy using dramatic storytellign techniques.',
+            text : 'We define dramatic storytelling as a collective, shared, collaborative storytelling with a connection to a real book. In our examples, the appropriate age range for this style of dramatic storytelling is traditionally suitable for ages three to seven. For our design, we utilized local dramatic teaching artists to come in and work alongside teachers in classrooms. Our goal was to have classroom teachers able to lead the exercises, in their regular classrooms, largely unassisted by the teaching artists, by the end of the program. In our model of dramatic storytelling, the primary storyteller, the teaching artist or adult, has the trajectory of the story arc based on an actual text, but the details are created by the children through a shared storytelling experience. Research suggests that reading and storytelling have a complementary relationship with one another with regard to language development and story comprehension; the two methods offer different benefits and combined with one another, provide an additive effect on overall reading development . (Isbell et al., 2004). Therefore, as a fusion of reading and storytelling, dramatic storytelling is likely able to strengthen both sets of skills.',
+            url_00 : 'http://foundry10.org/research/dramatic-storytelling-literacy/',
+            url_01 : 'http://foundry10.org/wp-content/uploads/2017/02/dramatic-storytelling.pdf',
+            type : 'article'
+          },
+          {
+            title : 'Dramatic Storytelling in Pre-Kindergarten',
+            sub_title : 'Our research suggests that dramatic storytelling in early childhood education enhances student engagement.',
+            text : 'The dramatic arts have the power to transform classrooms into spaces for imaginative exploration. For the past three years we’ve run a dramatic storytelling program at Shoreline Children’s Center with students age three and four. Our program integrates dramatic storytelling with vocabulary retention and literacy training to create a fun experience for all learners, teachers included. One of the biggest goals of this has been to find out more about how to connect the teachers with the skills they need use dramatic arts in the classroom throughout the year, even in the absence of teaching artist support.',
+            url_00 : 'http://foundry10.org/subject-areas/dramatic-storytelling-pre-kidnergarten/',
+            url_01 : 'http://foundry10.org/areas-overview/drama/',
+            type : 'program'
           }
         ]
       },
@@ -753,14 +778,32 @@
             text : 'During the spring of 2016, foundry10 teamed up with Shoreline School District to provide a week-long math and reading program that had an integrated drama component with the goal of enhancing student skills and motivation. Shoreline Schools Foundation and foundry10 partnered to create an original program at Parkwood Elementary School Spring Break 2016 where we joined creative/dramatic arts with traditional CORE curriculum for 5-days over Spring Break. Students testing at the cusp of being able to pass the SBAC in April were invited to the week-long intervention. Four teachers were recruited for the program that targeted 3rd through 6th grade students. From April 18-22, foundry10 instructors provided classroom instruction, including 20 hours of integrated and direct instruction with drama to explore the content and structure of stories.',
             icon : icon_path.programmer,
             url_00  : 'http://foundry10.org/research/parkwood-math-and-reading-intervention-spring-2016/',
-            url_01  : 'http://foundry10.org/areas-overview/hip-hop/'
+            url_01  : 'http://foundry10.org/areas-overview/hip-hop/',
+            type : 'article'
           } , {
             title : 'The Importance of Frustration in Dance',
             sub_title : 'Hip Hop Dance',
             text : 'Working with dance students, we frequently encounter performance anxiety and frustration. However, we believe that encountering and overcoming these difficult feelings is one of the biggest challenges through which Hip Hop, and dance in general, creates value for students of all skill levels. Now, after nearly three years of dance programs, the team at foundry10 has put together a retrospective and qualitative view on how frustration and dance mix together to create confidence, discipline, and resilience in dancers.',
             icon : icon_path.gears,
             url_00  : 'http://foundry10.org/areas-overview/hip-hop/',
-            url_01  : 'http://foundry10.org/research/the-importance-of-frustration-in-dance-2/'
+            url_01  : 'http://foundry10.org/research/the-importance-of-frustration-in-dance-2/',
+            type : 'program'
+          },
+          {
+            title : 'Cultivating Agency in High School Dancers',
+            sub_title : 'How do high school dancers connect with their air outside of the practices and performances offered by their schools?',
+            text : 'How do high school dancers connect with their art outside of the practices and performances offered by their schools? We asked dancers in our programs and were surprised to find that many of them have no formalized way of furthering their skills and passion beyond school offerings. So, to expand the minds of dancers in our programs, we offered classes and workshops throughout the summer to show students the wealth of opportunities that exist outside of academic settings. These offerings included courses, one-off workshops, and a panel of experts talking about choreography.',
+            url_00 : 'http://foundry10.org/subject-areas/cultivating-agency-in-high-school-dancers/',
+            url_01 : 'http://foundry10.org/wp-content/uploads/2016/09/cultivating-agency-in-hip-hop.pdf',
+            type : 'program'
+          },
+          {
+            title : 'Parkwood Math and Reading Intervention',
+            sub_title : 'Spring 2016',
+            text : 'During the spring of 2016, foundry10 teamed up with Shoreline School District to provide a week-long math and reading program that had an integrated drama component with the goal of enhancing student skills and motivation. See the results here!',
+            url_00 : 'http://foundry10.org/areas-overview/hip-hop/',
+            url_01 : 'http://foundry10.org/research/parkwood-math-and-reading-intervention-spring-2016/',
+            type : 'article'
           }
         ]
       }
