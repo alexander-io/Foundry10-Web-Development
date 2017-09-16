@@ -426,12 +426,21 @@
         ],
         articles : [
           {
+              title : 'Taking Students to Formula Drift',
+              sub_title : 'We Combined Our Love of Learning and Cars to design an Out-of_State Educational Field Trip for Local Automotive Students',
+              text : 'In 2017, for the second year in a row, we combined our love of learning and cars to design an out-of-state educational field trip for local automotive students and their instructors. Last year, we took five students to Mazda Raceway Laguna Seca and Canepa to watch and interact with professional IMSA race teams and learn about automotive history and restoration. This year, our data from students showed that they would be most interested in attending an event in the Formula Drift series. So, we set out to create an interesting, valuable, and exciting learning experience for local students and believe we succeeded in just that.',
+              url_00 : 'http://foundry10.org/subject-areas/formula-drift-streets-long-beach-petersen-automotive-museum/',
+              url_01 : 'http://foundry10.org/areas-overview/automotive/',
+              type : 'program'
+          },
+          {
             title : 'Learning from the Pros',
             sub_title : 'Lessons from Long Beach',
             text : 'When we brought students to Long Beach to see Formula Drift, one of the most impactful parts of the experience was getting to meet real working professionals in the automotive industry. While integrating professionals has been a key part of many of our programs, automotive technology gets particular benefits from this as the industry is so broad and the pathways into it are not always clear. We wrote the below report to showcase what the students and teachers, in their own words, got from meeting with the pros.',
             icon : icon_path.gears,
             url_00  : 'http://foundry10.org/areas-overview/automotive/',
-            url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Learning-from-the-Pros.pdf'
+            url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Learning-from-the-Pros.pdf',
+            type : 'article'
           } , {
             title : 'Automotive Technology Research',
             sub_title : 'Automotive Research',
