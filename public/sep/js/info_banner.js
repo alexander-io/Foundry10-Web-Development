@@ -368,7 +368,7 @@
             text : 'This report includes a description of the schools involved, feedback from the students and teachers involved, the outcomes of their work with VR, and an outline of the technical challenges of implementing VR with younger audiences.',
             url_00 : 'http://foundry10.org/areas-overview/virtual-reality/',
             url_01 : 'http://foundry10.org/research/applied-vr-schools-2016-2017-elementary-findings/',
-            type : 'article'
+            type : 'Program'
           },
           {
             title : 'Student and Educator Resources',
@@ -409,6 +409,14 @@
             url_00  : 'http://foundry10.org/areas-overview/games-and-learning/',
             url_01  : 'http://foundry10.org/research/number-processing-ability-and-logitunal-moba-skill/',
             type : 'article'
+          },
+          {
+            title : 'Study Finds Number Processing Task Predicts Improvements in Gaming Skill',
+            sub_title : 'foundry10',
+            text : 'Foundry10\'s work on DOTA2 has been covered in PsyPost, a blog that covers current research in psychology. Come take a look at the article here and read about our study!',
+            url_00 : '',
+            url_01 : '',
+            type : ''
           }
         ]
       },
