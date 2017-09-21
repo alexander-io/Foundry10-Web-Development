@@ -330,7 +330,7 @@
                   <div id="left-panel" class="waves waves-effect waves-light" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; ">
                     <div class="" style="width:100%;">
                       <h1 class="center-align" style="margin-top:150px;">
-                        <i id="left-arrow" class="material-icons md-48" style="font-size:112.5%; " >
+                        <i id="carousel-left-arrow" class="material-icons md-48" style="font-size:112.5%; " >
                           keyboard_arrow_left
                         </i>
                       </h1>
@@ -430,7 +430,7 @@
                   <div id="right-panel" class="waves waves-effect waves-light" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
                     <div class="" style="width:100%;">
                       <h1 class="center-align"style="margin-top:150px;">
-                        <i id="right-arrow" class="material-icons md-48" style="font-size:112.5%;" >
+                        <i id="carousel-right-arrow" class="material-icons md-48" style="font-size:112.5%;" >
                           keyboard_arrow_right
                         </i>
                       </h1>
@@ -443,6 +443,41 @@
         </div>
 
 
+        <script type="text/javascript">
+          let carousel_left_arrow = document.getElementById('carousel-left-arrow'),
+          carousel_right_arrow = document.getElementById('carousel-right-arrow')
+
+          let carousel_panel = document.getElementById('carousel-panel-00');
+          carousel_panel.style.opacity = '1'
+
+          let carousel_panels = document.getElementsByClassName('carousel-panel');
+
+          carousel_right_arrow.addEventListener('click', function(e) {
+            console.log('right arrow click event');
+            carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
+            carousel_panel.style.transform = 'translate(200px, 0px)'
+            carousel_panel.style.opacity = '0'
+          });
+
+          carousel_left_arrow.addEventListener('click', function(e){
+            console.log('left arrow click event');
+            carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
+            carousel_panel.style.transform = 'translate(-200px, 0px)'
+            carousel_panel.style.opacity = '0'
+          })
+
+        </script>
+
+        <style media="screen">
+          /*.fade {
+            opacity: 1;
+            transform : opacity .25s ease-in-out;
+          }
+
+          .fade:hover{
+            opacity: 0.5;
+          }*/
+        </style>
 
         <script type="text/javascript">
           let cp01 = document.getElementById('cardpanel01')
