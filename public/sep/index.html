@@ -444,6 +444,44 @@
 
 
         <script type="text/javascript">
+
+          function DoublyLinkedList(){
+             this.head = null;
+          }
+
+          DoublyLinkedList.prototype.push = function(val){
+             var head = this.head,
+                 current = head,
+                 previous = head;
+            if(!head){
+                this.head = {value: val, previous:null, next:null };
+            }
+            else{
+                while(current && current.next){
+                   previous = current;
+                   current = current.next;
+                }
+               current.next = {value: val, previous:current, next:null}
+            }
+          }
+
+          //test at least once
+          var xlist = new DoublyLinkedList();
+          xlist.push(2);
+          xlist.push(3);
+          xlist.push(4);
+          xlist.push(5);
+          // console.log(xlist.head.next);
+
+          let curr = xlist.head
+          while(curr) {
+            console.log(curr);
+            curr = curr.next
+          }
+
+          //trust me it works
+
+
           let carousel_left_arrow = document.getElementById('carousel-left-arrow'),
           carousel_right_arrow = document.getElementById('carousel-right-arrow')
 
