@@ -1,4 +1,7 @@
 (function(){
+
+  let carousel_panel_00 = document.getElementById('carousel_panel_00');
+
   let tech = document.getElementById('banner-item-01')
   let collective = document.getElementById('banner-item-02')
   let art = document.getElementById('banner-item-03')
@@ -125,6 +128,16 @@
 
   // take an object -> sub category
   let display = function(){
+
+    let reset_carousel_panel = function() {
+      // carousel_panel_00.style.transform = 'translate(-200px, 0px)'
+      // carousel_panel_00.style.transform = 'translate(200px, 0px)'
+      let init_carousel_panel = document.getElementById('carousel-panel-00')
+      init_carousel_panel.style.transform = 'translate(0px, 0px)'
+      // console.log(document.getElementById('carousel-panel-00'));
+    }
+    reset_carousel_panel()
+
     let header = document.getElementById('banner-header'), banner_body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02'), img_card_01 = document.getElementById('adj-card-panel-01-top'), img_card_02 = document.getElementById('adj-card-panel-01-bottom');
 
     // TODO : select the other elements in the DOM that need updating (i.e., the top card-panel and bottom card-panel)
