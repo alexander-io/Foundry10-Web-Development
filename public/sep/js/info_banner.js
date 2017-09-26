@@ -2,6 +2,9 @@
 
   let carousel_panel_00 = document.getElementById('carousel_panel_00');
 
+  let carousel_panel_mount = document.getElementById('carousel-panel-mount');
+
+
   let tech = document.getElementById('banner-item-01')
   let collective = document.getElementById('banner-item-02')
   let art = document.getElementById('banner-item-03')
@@ -34,7 +37,7 @@
   let article_text_01 = document.getElementById('article-text-01');
 
   let article_text_truncate_00 = document.getElementById('article-text-00');
-  let article_text_truncate_01 = document.getElementById('article-text-01');
+  let article_text_truncate_01 = document.getElementById('le-text-01');
 
   let article_icon_00 = document.getElementById('article-icon-00');
   let article_icon_01 = document.getElementById('article-icon-01');
@@ -88,40 +91,6 @@
       hiphop : banner_sub_item_04
     }
   }
-
-
-  // define a function to call on nav-item click, set background color of all nav-items back to the initial value, white....
-  // let nav_items_to_white = function(){
-  //   for (x in relationship){
-  //
-  //     try {
-  //       relationship[x].nav.style.backgroundColor = '#212121'
-  //
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   }
-  // }
-
-  // for a click on a nav-sub item, turn all other sub-nav elements to white
-  // let nav_sub_items_to_white = function(){
-  //   for (x in sub_item_lst){
-  //     try {
-  //       sub_item_lst[x].style.backgroundColor = '#484848'
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   }
-  // }
-
-
-  // add event listeners to each of the nav-sub-items to hide other elements and reveal 'this'
-  // for (x in sub_item_lst) {
-  //   sub_item_lst[x].addEventListener('click', function(e) {
-  //     nav_sub_items_to_white()
-  //     this.style.backgroundColor = '#ccc'
-  //   });
-  // }
 
 
 
@@ -236,10 +205,6 @@
 
     article_icon_01.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].icon
 
-
-
-
-
     /*
     article_title_00
     article_title_01
@@ -258,21 +223,7 @@
     article_link_01_00
     article_link_01_01
     */
-
-
-
-
-
-
-    // img_card_01.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0] + ')'
-    //
-    // img_card_02.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[1] + ')'
-
-
-
   }
-
-
 
   let icon_path_prefix = 'icons/flat/'
   let icp = icon_path_prefix
@@ -893,22 +844,6 @@
     // setup array with keys
     the_array_of_glory = assign_keys_to_array(the_array_of_glory)
 
-
-    // tech_circ.addEventListener('click', function(e) {
-    //   Materialize.toast('Tech', 4000, 'circ-toast tech-toast')
-    //   tech_click()
-    // });
-    //
-    // art_circ.addEventListener('click', function(e) {
-    //   Materialize.toast('Art', 4000, 'circ-toast art-toast')
-    //   art_click()
-    // });
-    //
-    // collective_circ.addEventListener('click', function(e) {
-    //   Materialize.toast('Collective', 4000, 'circ-toast collective-toast')
-    //   collective_click()
-    // });
-
     // use this tuple to track what the user has selected
     let info_banner_xy_array_position_tuple = {
       super : 0,
@@ -928,13 +863,8 @@
       banner_sub_item_01.classList.add('mdc-tab--active')
 
       try {
-        // document.querySelector('#basic-sub-tab-bar')
-        // let bstb = document.getElementById('#basic-sub-tab-bar')
-        // mdc.tabs.MDCTabBar.attachTo(N)
+
         mdc.tabs.MDCTabBar.attachTo(document.querySelector('#basic-sub-tab-bar'))
-        // document.getElementsByClassName('basic-sub-tab-bar')
-        // mdc.tabs.MDCTabBar.attachTo(document.getElementsByClassName('basic-sub-tab-bar'))
-        // mdc.tabs.MDCTabBar.attachTo(bstb)
 
         // mdc.autoInit()
       } catch (e) {
@@ -970,14 +900,6 @@
 
     // user clicked on one of the 'tech' elements
     let tech_click = function() {
-      // nav_items_to_white()
-      // tech.style.backgroundColor = '#484848'
-
-      // if (!tech.classList.contains('mdc-tab--active')) {
-      //   tech.classList.add('mdc-tab--active')
-      //   art.classList.remove('mdc-tab--active')
-      //   collective.classList.remove('mdc-tab--active')
-      // }
 
       // user clicked tech nav event listener, that's index 0, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 0
