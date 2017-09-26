@@ -129,11 +129,16 @@
   // take an object -> sub category
   let display = function(){
 
+    info_banner_xy_array_position_tuple
+
     let reset_carousel_panel = function() {
       // carousel_panel_00.style.transform = 'translate(-200px, 0px)'
       // carousel_panel_00.style.transform = 'translate(200px, 0px)'
       let init_carousel_panel = document.getElementById('carousel-panel-00')
+      // init_carousel_panel.style.transition = 'opacity 1s ease'
+
       init_carousel_panel.style.transform = 'translate(0px, 0px)'
+      init_carousel_panel.style.opacity = '1'
       // console.log(document.getElementById('carousel-panel-00'));
     }
     reset_carousel_panel()
