@@ -129,7 +129,7 @@
   // take an object -> sub category
   let display = function(){
 
-    info_banner_xy_array_position_tuple
+    // info_banner_xy_array_position_tuple
 
     let reset_carousel_panel = function() {
       // carousel_panel_00.style.transform = 'translate(-200px, 0px)'
@@ -212,12 +212,12 @@
       }
       return builder
     }
+
     // update article 0 title
     article_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
 
     // update article 1 title
     article_title_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].title, 3)
-
 
     // update article 0 sub title
     article_sub_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title, 4)
