@@ -1,9 +1,13 @@
 (function(){
+  let carousel_left_arrow = document.getElementById('carousel-left-arrow'),
+  carousel_right_arrow = document.getElementById('carousel-right-arrow')
 
+  let carousel_panel = document.getElementById('carousel-panel-00');
+  carousel_panel.style.opacity = '1'
+
+  let carousel_panel_clone_1 = carousel_panel.cloneNode(true)
   let carousel_panel_00 = document.getElementById('carousel_panel_00');
-
-  let carousel_panel_mount = document.getElementById('carousel-panel-mount');
-
+  let carousel_panel_mount = document.getElementById('carousel-panel-mount')
 
   let tech = document.getElementById('banner-item-01')
   let collective = document.getElementById('banner-item-02')
@@ -91,9 +95,6 @@
       hiphop : banner_sub_item_04
     }
   }
-
-
-
 
   // take an object -> sub category
   let display = function(){
@@ -379,6 +380,7 @@
             title : 'Study Finds Number Processing Task Predicts Improvements in Gaming Skill',
             sub_title : 'foundry10',
             text : 'Foundry10\'s work on DOTA2 has been covered in PsyPost, a blog that covers current research in psychology. Come take a look at the article here and read about our study!',
+            icon : icon_path.controller,
             url_00 : '',
             url_01 : '',
             type : ''
@@ -402,6 +404,7 @@
               title : 'Taking Students to Formula Drift',
               sub_title : 'We Combined Our Love of Learning and Cars to design an Out-of_State Educational Field Trip for Local Automotive Students',
               text : 'In 2017, for the second year in a row, we combined our love of learning and cars to design an out-of-state educational field trip for local automotive students and their instructors. Last year, we took five students to Mazda Raceway Laguna Seca and Canepa to watch and interact with professional IMSA race teams and learn about automotive history and restoration. This year, our data from students showed that they would be most interested in attending an event in the Formula Drift series. So, we set out to create an interesting, valuable, and exciting learning experience for local students and believe we succeeded in just that.',
+              icon : icon_path.gears,
               url_00 : 'http://foundry10.org/subject-areas/formula-drift-streets-long-beach-petersen-automotive-museum/',
               url_01 : 'http://foundry10.org/areas-overview/automotive/',
               type : 'program'
@@ -462,6 +465,7 @@
             title : 'Fall 2017 Intern Application',
             sub_title : 'The High School Application for Fall 2017 is Open',
             text : 'The high school internship application for Fall 2017 is open! You can find the application form here! The deadline for proposals is 11:59pm on Monday, September 18, 2017.',
+            icon : icon_path.display,
             url_00 : 'https://docs.google.com/forms/d/e/1FAIpQLSdUMRl1Wkeu161Yqg3N7vNAvUTboSN1o69UjQaSisTM1pY0jQ/viewform',
             url_01 : 'http://foundry10.org/areas-overview/internships/',
             type : 'program'
@@ -566,6 +570,7 @@
             title : 'Applied Professional Development',
             sub_title : 'Our Approach to Professional Development is a Little Different',
             text : 'While we typically focus on adolescent learning, teacher and educator learning is also a major interest of ours here at foundry10. Our approach to professional development is a little different, and is focused on applying new skills and techniques directly into the classroom. This model of applied professional development involves working with teachers in their classrooms on these new techniques, and we have quite a few stories to share about this work and the opportunities and challenges it presents.',
+            icon : icon_path.book,
             url_00 : 'http://foundry10.org/subject-areas/applied-work-professional-development/',
             url_01 : 'http://foundry10.org/areas-overview/professional-development/',
             type : 'program'
@@ -574,6 +579,7 @@
             title : 'A foundry10 Approach to PD',
             sub_title : 'Throughout our work in PD, we have been reviewing and discussing our own view on how educators explore their fields and passion areas.',
             text : 'Throughout our work in PD, we have been reviewing and discussing our own view on how educators explore their fields and passion areas. This has evolved as we have explored the concepts collaboratively with educators across different subjects and populations. We have put together a report showcasing how this experience has shaped our view on PD.',
+            icon : icon_path.book,
             url_00 : 'http://foundry10.org/subject-areas/a-foundry10-approach-to-professional-development/',
             url_01 : 'http://foundry10.org/areas-overview/internships/',
             type : 'program'
@@ -614,6 +620,7 @@
             title : 'Student Fashion Program',
             sub_title : 'foundry10 is hosting a co-ed fashion program for middle and high school program',
             text : 'Foundry10 is hosting a co-ed fashion program for middle and high school students running from January thru March. Learn how to design and construct your very own clothing in a group collection. This group will meet once a week, Wednesdays from 3:30-6:30pm at the foundry10 building. Students can find the sign-up form here!',
+            icon : icon_path.brush,
             url_00 : 'https://docs.google.com/forms/d/e/1FAIpQLSfTSd0asqGm7kzGzvrQ_wI8wh_pGsoIxeXJFNEKhPRHL563Uw/viewform',
             url_01 : 'http://foundry10.org/areas-overview/artistic-design/',
             type : 'program'
@@ -654,6 +661,7 @@
             title : 'Summer Remixing 2016',
             sub_title : 'Remixing the Summer at foundry10',
             text : 'There are still some slots open for Summer Remixing, and jumping in a little late is no problem! The program runs Tue/Thurs from 6-8pm. Email tom@foundry10.org for more info!',
+            icon : icon_path.brush,
             url_00 : 'http://foundry10.org/areas-overview/digital-audio/',
             url_01 : 'http://foundry10.org/areas-overview/digital-audio/',
             type : 'article'
@@ -662,6 +670,7 @@
             title : 'SAM Remix',
             sub_title : 'March 2016',
             text : 'In March, 2016, we partnered with the Seattle Art Museum to supplement their Remix event with some of our digital audio expertise to give attendees the feel for remixing. The event was a big success and we have created a video about it! Check it out!',
+            icon : icon_path.brush,
             url_00 : 'http://foundry10.org/areas-overview/digital-audio/',
             url_01 : 'http://foundry10.org/subject-areas/seattle-art-museum-remix-2016/',
             type : 'program'
@@ -670,6 +679,7 @@
             title : 'Digital Audio Report',
             sub_title : '2014-2016',
             text : 'This report covers what we have learned over the past 3 years running digital audio programs in schools, with community partners, and on our own!',
+            icon : icon_path.brush,
             url_00 : 'http://foundry10.org/research/digital-audio-report-2014-2016/',
             url_01 : 'http://foundry10.org/areas-overview/digital-audio/',
             type : 'article'
@@ -710,6 +720,7 @@
             title : 'Arts Meet Academics : An Interview Over Spring Break',
             sub_title : 'This article covers spring break Arts-Academic Intervention',
             text : 'Sometimes, quantitative research cannot capture the engagement and energy new activities and minds can bring to a classroom. This editorial article covers a program we ran that created large amounts of excitement for teachers, artists, and especially students all working and learning together.',
+            icon : icon_path.programmer,
             url_00 : 'http://foundry10.org/subject-areas/arts-meets-academics-intervention-spring-break/',
             url_01 : 'http://foundry10.org/areas-overview/drama/',
             type : 'program'
@@ -718,6 +729,7 @@
             title : 'Dramatic Storytelling and Literacy',
             sub_title : 'This article describes a method of exploring and expanding literacy using dramatic storytellign techniques.',
             text : 'We define dramatic storytelling as a collective, shared, collaborative storytelling with a connection to a real book. In our examples, the appropriate age range for this style of dramatic storytelling is traditionally suitable for ages three to seven. For our design, we utilized local dramatic teaching artists to come in and work alongside teachers in classrooms. Our goal was to have classroom teachers able to lead the exercises, in their regular classrooms, largely unassisted by the teaching artists, by the end of the program. In our model of dramatic storytelling, the primary storyteller, the teaching artist or adult, has the trajectory of the story arc based on an actual text, but the details are created by the children through a shared storytelling experience. Research suggests that reading and storytelling have a complementary relationship with one another with regard to language development and story comprehension; the two methods offer different benefits and combined with one another, provide an additive effect on overall reading development . (Isbell et al., 2004). Therefore, as a fusion of reading and storytelling, dramatic storytelling is likely able to strengthen both sets of skills.',
+            icon : icon_path.brick,
             url_00 : 'http://foundry10.org/research/dramatic-storytelling-literacy/',
             url_01 : 'http://foundry10.org/wp-content/uploads/2017/02/dramatic-storytelling.pdf',
             type : 'article'
@@ -726,6 +738,7 @@
             title : 'Dramatic Storytelling in Pre-Kindergarten',
             sub_title : 'Our research suggests that dramatic storytelling in early childhood education enhances student engagement.',
             text : 'The dramatic arts have the power to transform classrooms into spaces for imaginative exploration. For the past three years we’ve run a dramatic storytelling program at Shoreline Children’s Center with students age three and four. Our program integrates dramatic storytelling with vocabulary retention and literacy training to create a fun experience for all learners, teachers included. One of the biggest goals of this has been to find out more about how to connect the teachers with the skills they need use dramatic arts in the classroom throughout the year, even in the absence of teaching artist support.',
+            icon : icon_path.programmer,
             url_00 : 'http://foundry10.org/subject-areas/dramatic-storytelling-pre-kidnergarten/',
             url_01 : 'http://foundry10.org/areas-overview/drama/',
             type : 'program'
@@ -766,6 +779,7 @@
             title : 'Cultivating Agency in High School Dancers',
             sub_title : 'How do high school dancers connect with their air outside of the practices and performances offered by their schools?',
             text : 'How do high school dancers connect with their art outside of the practices and performances offered by their schools? We asked dancers in our programs and were surprised to find that many of them have no formalized way of furthering their skills and passion beyond school offerings. So, to expand the minds of dancers in our programs, we offered classes and workshops throughout the summer to show students the wealth of opportunities that exist outside of academic settings. These offerings included courses, one-off workshops, and a panel of experts talking about choreography.',
+            icon : icon_path.gears,
             url_00 : 'http://foundry10.org/subject-areas/cultivating-agency-in-high-school-dancers/',
             url_01 : 'http://foundry10.org/wp-content/uploads/2016/09/cultivating-agency-in-hip-hop.pdf',
             type : 'program'
@@ -774,6 +788,7 @@
             title : 'Parkwood Math and Reading Intervention',
             sub_title : 'Spring 2016',
             text : 'During the spring of 2016, foundry10 teamed up with Shoreline School District to provide a week-long math and reading program that had an integrated drama component with the goal of enhancing student skills and motivation. See the results here!',
+            icon : icon_path.programmer,
             url_00 : 'http://foundry10.org/areas-overview/hip-hop/',
             url_01 : 'http://foundry10.org/research/parkwood-math-and-reading-intervention-spring-2016/',
             type : 'article'
@@ -858,12 +873,8 @@
       banner_sub_item_01.classList.add('mdc-tab--active')
 
       try {
-
         mdc.tabs.MDCTabBar.attachTo(document.querySelector('#basic-sub-tab-bar'))
-
-        // mdc.autoInit()
       } catch (e) {
-        // console.log(e);
 
       } finally {
 
@@ -907,7 +918,6 @@
       display()
     }
 
-
     // user clicked one of the collective elements
     let collective_click = function() {
 
@@ -942,7 +952,6 @@
       // populate windows with categorical content
       display()
     }
-
 
     tech.addEventListener('click', function(e) {
       tech_click()
@@ -982,6 +991,8 @@
     }
 
 
+    // CAROUSEL
+
     function DoublyLinkedList(){
        this.head = null;
     }
@@ -1004,24 +1015,30 @@
 
     //test at least once
     var xlist = new DoublyLinkedList();
-    xlist.push(2);
-    xlist.push(3);
-    xlist.push(4);
-    xlist.push(5);
+    let carousel_panel_list = new DoublyLinkedList()
 
-    let curr = xlist.head
-    while(curr) {
-      console.log(curr);
-      curr = curr.next
+
+    let print_all_lst_elems = function(lst) {
+      let curr = lst.head
+      while(curr) {
+        console.log(curr);
+        curr = curr.next
+      }
     }
 
-    let carousel_left_arrow = document.getElementById('carousel-left-arrow'),
-    carousel_right_arrow = document.getElementById('carousel-right-arrow')
+    let create_panel
 
-    let carousel_panel = document.getElementById('carousel-panel-00');
-    carousel_panel.style.opacity = '1'
+    // print_all_lst_elems(carousel_panel_list)
 
-    let carousel_panel_clone_1 = carousel_panel.cloneNode(true)
+
+    // let curr = xlist.head
+    // while(curr) {
+    //   console.log(curr);
+    //   curr = curr.next
+    // }
+
+
+
     console.log('clone :', carousel_panel_clone_1);
 
     let carousel_panels = document.getElementsByClassName('carousel-panel');
@@ -1034,7 +1051,6 @@
       // transition the current carousel panel off screen
       carousel_panel.style.transform = 'translate(200px, 0px)'
       carousel_panel.style.opacity = '0'
-
 
       // transition queued panel onto screen
       carousel_panel_clone_1.style.transform = 'translate(-200px, 0px)'
@@ -1056,10 +1072,6 @@
       carousel_panel.style.transform = 'translate(-200px, 0px)'
       carousel_panel.style.opacity = '0'
     })
-
-
-
-    
 
 
 })()
