@@ -1161,11 +1161,39 @@
           content_row_col_child.appendChild(content_row_col_child_para)
         content_row.appendChild(content_row_col_child)
 
+      let button_row = document.createElement('div');
+      button_row.className = 'row article-button-row'
+        let button_row_col_first_child = document.createElement('div');
+        button_row_col_first_child.className = 'col s6'
+          let button_row_col_first_child_link = document.createElement('a');
+          button_row_col_first_child_link.id = 'article-link-00-00'
+            let button_row_col_first_child_link_card_panel = document.createElement('div');
+            button_row_col_first_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
+            button_row_col_first_child_link_card_panel.style.backgroundColor = '#3d2289'
 
+            button_row_col_first_child_link.appendChild(button_row_col_first_child_link_card_panel)
+          button_row_col_first_child.appendChild(button_row_col_first_child_link)
+        button_row.appendChild(button_row_col_first_child)
 
+        let button_row_col_second_child = document.createElement('div');
+          button_row_col_second_child.className = 'col s6'
+          let button_row_col_second_child_link = document.createElement('a');
+          button_row_col_second_child_link.id = 'article-link-00-00'
+            let button_row_col_second_child_link_card_panel = document.createElement('div');
+            button_row_col_second_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
+            button_row_col_second_child_link_card_panel.style.backgroundColor = '#3d2289'
+
+            button_row_col_second_child_link.appendChild(button_row_col_second_child_link_card_panel)
+          button_row_col_second_child.appendChild(button_row_col_second_child_link)
+        button_row.appendChild(button_row_col_second_child)
+
+        button_row.appendChild(button_row_col_first_child)
+        button_row.appendChild(button_row_col_second_child)
 
       card_panel.appendChild(header_row)
       card_panel.appendChild(content_row)
+      card_panel.appendChild(button_row)
+
       card_panel_col_wrapper.appendChild(card_panel)
       test_mount.appendChild(card_panel_col_wrapper);
 
