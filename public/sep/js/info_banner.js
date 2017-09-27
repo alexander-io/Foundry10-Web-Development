@@ -158,7 +158,14 @@
     // document.getElementById('carousel-panel-mount').appendChild(curr.value)
     curr = curr.next
 
-    carousel_panel_wrapper.appendChild(curr.value)
+    try {
+
+      carousel_panel_wrapper.appendChild(curr.value)
+    } catch (e) {
+
+    } finally {
+
+    }
     // document.getElementById('carousel-panel-mount').appendChild(curr.value)
     document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
     carousel_panel = carousel_panel_wrapper
@@ -293,6 +300,7 @@
     article_link_01_01
     */
   }
+
 
   let icon_path_prefix = 'icons/flat/'
   let icp = icon_path_prefix
@@ -1328,4 +1336,7 @@
 
       }, 1000)
     })
+
+    display()
+
 })()
