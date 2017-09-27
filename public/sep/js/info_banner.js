@@ -57,6 +57,7 @@
   // 2D array of superXsub categories, 3x4 dimension
   let the_array_of_glory = []
 
+  let global_lst_of_carousel_panels
 
   // define a list of all of the sub items
   let sub_item_lst = []
@@ -142,17 +143,17 @@
   // take an object -> sub category
   let display = function(){
 
-    create_lst_of_carousel_panels()
+    let lst_of_carousel_panels = create_lst_of_carousel_panels()
 
-    let reset_carousel_panel = function() {
-      let init_carousel_panel = document.getElementById('carousel-panel-00')
-      // init_carousel_panel.style.transition = 'opacity 1s ease'
-
-      init_carousel_panel.style.transform = 'translate(0px, 0px)'
-      init_carousel_panel.style.opacity = '1'
-      // console.log(document.getElementById('carousel-panel-00'));
-    }
-    reset_carousel_panel()
+    // let reset_carousel_panel = function() {
+    //   let init_carousel_panel = document.getElementById('carousel-panel-00')
+    //   // init_carousel_panel.style.transition = 'opacity 1s ease'
+    //
+    //   init_carousel_panel.style.transform = 'translate(0px, 0px)'
+    //   init_carousel_panel.style.opacity = '1'
+    //   // console.log(document.getElementById('carousel-panel-00'));
+    // }
+    // reset_carousel_panel()
 
     let header = document.getElementById('banner-header'), banner_body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02'), img_card_01 = document.getElementById('adj-card-panel-01-top'), img_card_02 = document.getElementById('adj-card-panel-01-bottom');
 
@@ -337,6 +338,7 @@
             title : 'Robotics Gear Review and Recommendations',
             sub_title : 'Robotics Hardware Options for Educators',
             text : 'There are a ton of options available to educators looking to explore robotics. In many cases, it can be tricky to know where to start. Our robotics program is largely student-driven, meaning students have great input on what tools and techniques are used in the course. This has exposed us to a wide variety of hardware, software, and resources along with feedback from the students and the educators that we work with.',
+            icon : icon_path.gears,
             url_00 : 'http://foundry10.org/subject-areas/robotics-gear-review-recommendations/',
             url_01 : 'http://foundry10.org/subject-areas/robotics-gear-review-recommendations/',
             type : 'program'
@@ -377,6 +379,7 @@
             title : 'Applied VR in Schools, 2016-2017',
             sub_title : 'Elementary Findings',
             text : 'This report includes a description of the schools involved, feedback from the students and teachers involved, the outcomes of their work with VR, and an outline of the technical challenges of implementing VR with younger audiences.',
+            icon : icon_path.programmer,
             url_00 : 'http://foundry10.org/areas-overview/virtual-reality/',
             url_01 : 'http://foundry10.org/research/applied-vr-schools-2016-2017-elementary-findings/',
             type : 'Program'
@@ -385,6 +388,7 @@
             title : 'Student and Educator Resources',
             sub_title : 'VR in the Classroom',
             text : 'Interested in finding out more about VR, trying it in your classroom, or connecting with us about it? Head over to our VR resources page.',
+            icon : icon_path.programmer,
             url_00 : 'http://foundry10.org/subject-areas/vr-student-educator-resources/',
             url_01 : 'https://docs.google.com/document/d/1vXclcgzSqMdl0B59gHtXKh_I6UMglFnOzfb5hJ-627E/edit',
             type : 'program'
@@ -1060,9 +1064,9 @@
 
     //test at least once
     var xlist = new DoublyLinkedList();
-    let carousel_panel_list = new DoublyLinkedList()
 
     let create_lst_of_carousel_panels = function(){
+      let carousel_panel_list = new DoublyLinkedList()
 
       // // update article 0 title
       // article_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
@@ -1097,107 +1101,112 @@
       }
 
       let articles = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles
-      for (x in articles) {
-        console.log(articles[x]);
+      for (let x = 0; x < articles.length; x++) {
+        // console.log(articles[x]);
+        // the mount point is id="test-area"
+        let test_mount = document.getElementById('test-area');
+        // console.log(test_mount);
+
+        let card_panel_col_wrapper = document.createElement('div');
+        card_panel_col_wrapper.className = 'col s12 m4 l4'
+
+        let card_panel = document.createElement("div");
+        card_panel.className = 'card-panel article-card hoverable z-depth-5'
+        card_panel.style.height = "400px"
+        card_panel.style.borderLeft = '1em solid #3d2289'
+
+
+        let header_row = document.createElement('div');
+        header_row.className = 'row header-row'
+
+          let col_s8_header_child = document.createElement('div');
+          col_s8_header_child.className = 'col s8'
+
+            let header_five = document.createElement('h5');
+            header_five.style.minHeight = '70px'
+            header_five.style.maxHeight = '70px'
+            header_five.style.marginBottom = '10px'
+
+            // TODO, generalize -> change the 0 to the iteratior once you put this into a loop
+            header_five.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].title, 3)
+            // header_five.id=""
+
+            let header_link = document.createElement('a');
+            header_link.href = '#'
+            header_link.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].sub_title, 4)
+
+            col_s8_header_child.appendChild(header_five)
+            col_s8_header_child.appendChild(header_link)
+
+          let col_s4_icon = document.createElement('div');
+          col_s4_icon.className = 'col s4'
+          col_s4_icon.style.backgroundImage = "url('images/patterns/pattern-01.png')"
+
+            let col_s4_icon_image = document.createElement('img');
+            col_s4_icon_image.className = 'article-icon-image'
+            col_s4_icon_image.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].icon
+
+            col_s4_icon.appendChild(col_s4_icon_image)
+
+          header_row.appendChild(col_s8_header_child)
+          header_row.appendChild(col_s4_icon)
+
+        let content_row = document.createElement('div');
+        content_row.className = 'row content-row'
+        content_row.style.minHeight = '150px'
+        content_row.style.maxHeight = '150px'
+          let content_row_col_child = document.createElement('div');
+          content_row_col_child.className = 'col s12'
+            let content_row_col_child_para = document.createElement('p');
+            content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
+
+            content_row_col_child.appendChild(content_row_col_child_para)
+          content_row.appendChild(content_row_col_child)
+
+        let button_row = document.createElement('div');
+        button_row.className = 'row article-button-row'
+          let button_row_col_first_child = document.createElement('div');
+          button_row_col_first_child.className = 'col s6'
+            let button_row_col_first_child_link = document.createElement('a');
+            button_row_col_first_child_link.id = 'article-link-00-00'
+              let button_row_col_first_child_link_card_panel = document.createElement('div');
+              button_row_col_first_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
+              button_row_col_first_child_link_card_panel.style.backgroundColor = '#3d2289'
+
+              button_row_col_first_child_link.appendChild(button_row_col_first_child_link_card_panel)
+            button_row_col_first_child.appendChild(button_row_col_first_child_link)
+          button_row.appendChild(button_row_col_first_child)
+
+          let button_row_col_second_child = document.createElement('div');
+            button_row_col_second_child.className = 'col s6'
+            let button_row_col_second_child_link = document.createElement('a');
+            button_row_col_second_child_link.id = 'article-link-00-00'
+              let button_row_col_second_child_link_card_panel = document.createElement('div');
+              button_row_col_second_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
+              button_row_col_second_child_link_card_panel.style.backgroundColor = '#3d2289'
+
+              button_row_col_second_child_link.appendChild(button_row_col_second_child_link_card_panel)
+            button_row_col_second_child.appendChild(button_row_col_second_child_link)
+          button_row.appendChild(button_row_col_second_child)
+
+          button_row.appendChild(button_row_col_first_child)
+          button_row.appendChild(button_row_col_second_child)
+
+        card_panel.appendChild(header_row)
+        card_panel.appendChild(content_row)
+        card_panel.appendChild(button_row)
+        card_panel_col_wrapper.appendChild(card_panel)
+
+        carousel_panel_list.push(card_panel_col_wrapper)
       }
 
-      // the mount point is id="test-area"
-      let test_mount = document.getElementById('test-area');
-      // console.log(test_mount);
-
-      let card_panel_col_wrapper = document.createElement('div');
-      card_panel_col_wrapper.className = 'col s12 m4 l4'
-
-      let card_panel = document.createElement("div");
-      card_panel.className = 'card-panel article-card hoverable z-depth-5'
-      card_panel.style.height = "400px"
-      card_panel.style.borderLeft = '1em solid #3d2289'
-
-
-      let header_row = document.createElement('div');
-      header_row.className = 'row header-row'
-
-        let col_s8_header_child = document.createElement('div');
-        col_s8_header_child.className = 'col s8'
-
-          let header_five = document.createElement('h5');
-          header_five.style.minHeight = '70px'
-          header_five.style.maxHeight = '70px'
-          header_five.style.marginBottom = '10px'
-
-          // TODO, generalize -> change the 0 to the iteratior once you put this into a loop
-          header_five.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
-          // header_five.id=""
-
-          let header_link = document.createElement('a');
-          header_link.href = '#'
-          header_link.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title, 4)
-
-          col_s8_header_child.appendChild(header_five)
-          col_s8_header_child.appendChild(header_link)
-
-        let col_s4_icon = document.createElement('div');
-        col_s4_icon.className = 'col s4'
-        col_s4_icon.style.backgroundImage = "url('images/patterns/pattern-01.png')"
-
-          let col_s4_icon_image = document.createElement('img');
-          col_s4_icon_image.className = 'article-icon-image'
-          col_s4_icon_image.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].icon
-
-          col_s4_icon.appendChild(col_s4_icon_image)
-
-        header_row.appendChild(col_s8_header_child)
-        header_row.appendChild(col_s4_icon)
-
-      let content_row = document.createElement('div');
-      content_row.className = 'row content-row'
-      content_row.style.minHeight = '150px'
-      content_row.style.maxHeight = '150px'
-        let content_row_col_child = document.createElement('div');
-        content_row_col_child.className = 'col s12'
-          let content_row_col_child_para = document.createElement('p');
-          content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
-
-          content_row_col_child.appendChild(content_row_col_child_para)
-        content_row.appendChild(content_row_col_child)
-
-      let button_row = document.createElement('div');
-      button_row.className = 'row article-button-row'
-        let button_row_col_first_child = document.createElement('div');
-        button_row_col_first_child.className = 'col s6'
-          let button_row_col_first_child_link = document.createElement('a');
-          button_row_col_first_child_link.id = 'article-link-00-00'
-            let button_row_col_first_child_link_card_panel = document.createElement('div');
-            button_row_col_first_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
-            button_row_col_first_child_link_card_panel.style.backgroundColor = '#3d2289'
-
-            button_row_col_first_child_link.appendChild(button_row_col_first_child_link_card_panel)
-          button_row_col_first_child.appendChild(button_row_col_first_child_link)
-        button_row.appendChild(button_row_col_first_child)
-
-        let button_row_col_second_child = document.createElement('div');
-          button_row_col_second_child.className = 'col s6'
-          let button_row_col_second_child_link = document.createElement('a');
-          button_row_col_second_child_link.id = 'article-link-00-00'
-            let button_row_col_second_child_link_card_panel = document.createElement('div');
-            button_row_col_second_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
-            button_row_col_second_child_link_card_panel.style.backgroundColor = '#3d2289'
-
-            button_row_col_second_child_link.appendChild(button_row_col_second_child_link_card_panel)
-          button_row_col_second_child.appendChild(button_row_col_second_child_link)
-        button_row.appendChild(button_row_col_second_child)
-
-        button_row.appendChild(button_row_col_first_child)
-        button_row.appendChild(button_row_col_second_child)
-
-      card_panel.appendChild(header_row)
-      card_panel.appendChild(content_row)
-      card_panel.appendChild(button_row)
-
-      card_panel_col_wrapper.appendChild(card_panel)
-      test_mount.appendChild(card_panel_col_wrapper);
-
+      // console.log(carousel_panel_list);
+      // test_mount.appendChild(card_panel_col_wrapper);
+      print_all_lst_elems(carousel_panel_list)
+      global_lst_of_carousel_panels = carousel_panel_list
+      return carousel_panel_list
     }
+
 
 
     let print_all_lst_elems = function(lst) {
@@ -1207,6 +1216,7 @@
         curr = curr.next
       }
     }
+    create_lst_of_carousel_panels()
 
     let create_panel
 
@@ -1225,16 +1235,32 @@
       carousel_panel.style.opacity = '0'
 
       // transition queued panel onto screen
-      carousel_panel_clone_1.style.transform = 'translate(-200px, 0px)'
-      carousel_panel_clone_1.style.transition += ' transform 1s ease'
-      carousel_panel_clone_1.style.transform = 'translate(0px, 0px)'
-      carousel_panel_clone_1.opacity = '1'
+      // carousel_panel_clone_1.style.transform = 'translate(-200px, 0px)'
+      // carousel_panel_clone_1.style.transition += ' transform 1s ease'
+      // carousel_panel_clone_1.style.transform = 'translate(0px, 0px)'
+      // carousel_panel_clone_1.opacity = '1'
+
+
+      console.log(global_lst_of_carousel_panels.head.next.value);
 
       // wait until animation has finished to remove the initial panel
       setTimeout(function(){
         carousel_panel.remove()
 
-        document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
+        let carousel_panel_wrapper = document.createElement('div')
+
+        let curr = global_lst_of_carousel_panels.head.next
+        carousel_panel_wrapper.appendChild(curr.value)
+
+        // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
+        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
+        curr = curr.next
+
+        carousel_panel_wrapper.appendChild(curr.value)
+        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
+        document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
+        carousel_panel = carousel_panel_wrapper
+
       }, 1000)
     });
 
