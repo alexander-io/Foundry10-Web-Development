@@ -1129,10 +1129,43 @@
           header_five.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
           // header_five.id=""
 
+          let header_link = document.createElement('a');
+          header_link.href = '#'
+          header_link.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title, 4)
+
           col_s8_header_child.appendChild(header_five)
+          col_s8_header_child.appendChild(header_link)
+
+        let col_s4_icon = document.createElement('div');
+        col_s4_icon.className = 'col s4'
+        col_s4_icon.style.backgroundImage = "url('images/patterns/pattern-01.png')"
+
+          let col_s4_icon_image = document.createElement('img');
+          col_s4_icon_image.className = 'article-icon-image'
+          col_s4_icon_image.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].icon
+
+          col_s4_icon.appendChild(col_s4_icon_image)
+
         header_row.appendChild(col_s8_header_child)
+        header_row.appendChild(col_s4_icon)
+
+      let content_row = document.createElement('div');
+      content_row.className = 'row content-row'
+      content_row.style.minHeight = '150px'
+      content_row.style.maxHeight = '150px'
+        let content_row_col_child = document.createElement('div');
+        content_row_col_child.className = 'col s12'
+          let content_row_col_child_para = document.createElement('p');
+          content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
+
+          content_row_col_child.appendChild(content_row_col_child_para)
+        content_row.appendChild(content_row_col_child)
+
+
+
 
       card_panel.appendChild(header_row)
+      card_panel.appendChild(content_row)
       card_panel_col_wrapper.appendChild(card_panel)
       test_mount.appendChild(card_panel_col_wrapper);
 
