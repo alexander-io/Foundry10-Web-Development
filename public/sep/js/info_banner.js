@@ -98,11 +98,7 @@
   // take an object -> sub category
   let display = function(){
 
-    // info_banner_xy_array_position_tuple
-
     let reset_carousel_panel = function() {
-      // carousel_panel_00.style.transform = 'translate(-200px, 0px)'
-      // carousel_panel_00.style.transform = 'translate(200px, 0px)'
       let init_carousel_panel = document.getElementById('carousel-panel-00')
       // init_carousel_panel.style.transition = 'opacity 1s ease'
 
@@ -791,7 +787,6 @@
       // initialize all values of array to 0
       for (let i = 0; i < 3; i++){
          arr.push(Array(4).fill(0))
-
       }
     }
     zero_array(the_array_of_glory)
@@ -878,10 +873,6 @@
         try {
           sub_item_title_lst[i].innerHTML = tree_branch[x].innerhtml_nav_text
 
-
-
-
-
           ++i
         } catch (e) {
           console.log(e);
@@ -919,16 +910,6 @@
 
     // user clicked one of the collective elements
     let collective_click = function() {
-      // nav_items_to_white()
-      // collective.style.backgroundColor = '#484848'
-
-
-      // if (!collective.classList.contains('mdc-tab--active')) {
-      //   console.log('collect not contain active');
-      //   collective.classList.add('mdc-tab--active')
-      //   art.classList.remove('mdc-tab--active')
-      //   tech.classList.remove('mdc-tab--active')
-      // }
 
       // user clicked collective nav event listener, that's index 1, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 1
@@ -946,14 +927,6 @@
 
     // define function to handle a click on an art element
     let art_click = function() {
-      // nav_items_to_white()
-      // art.style.backgroundColor = '#484848'
-      // if (!art.classList.contains('mdc-tab--active')) {
-      //   console.log('collect not contain active');
-      //   art.classList.add('mdc-tab--active')
-      //   collective.classList.remove('mdc-tab--active')
-      //   tech.classList.remove('mdc-tab--active')
-      // }
 
       // user clicked art nav event listener, that's index 2, update info_banner_xy_array_position_tuple
       info_banner_xy_array_position_tuple.super = 2
@@ -1007,4 +980,86 @@
     let cl = function(){
       console.log(info_banner_xy_array_position_tuple)
     }
+
+
+    function DoublyLinkedList(){
+       this.head = null;
+    }
+
+    DoublyLinkedList.prototype.push = function(val){
+       var head = this.head,
+           current = head,
+           previous = head;
+      if(!head){
+          this.head = {value: val, previous:null, next:null };
+      }
+      else{
+          while(current && current.next){
+             previous = current;
+             current = current.next;
+          }
+         current.next = {value: val, previous:current, next:null}
+      }
+    }
+
+    //test at least once
+    var xlist = new DoublyLinkedList();
+    xlist.push(2);
+    xlist.push(3);
+    xlist.push(4);
+    xlist.push(5);
+
+    let curr = xlist.head
+    while(curr) {
+      console.log(curr);
+      curr = curr.next
+    }
+
+    let carousel_left_arrow = document.getElementById('carousel-left-arrow'),
+    carousel_right_arrow = document.getElementById('carousel-right-arrow')
+
+    let carousel_panel = document.getElementById('carousel-panel-00');
+    carousel_panel.style.opacity = '1'
+
+    let carousel_panel_clone_1 = carousel_panel.cloneNode(true)
+    console.log('clone :', carousel_panel_clone_1);
+
+    let carousel_panels = document.getElementsByClassName('carousel-panel');
+
+    carousel_right_arrow.addEventListener('click', function(e) {
+      console.log('right arrow click event');
+
+      carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
+
+      // transition the current carousel panel off screen
+      carousel_panel.style.transform = 'translate(200px, 0px)'
+      carousel_panel.style.opacity = '0'
+
+
+      // transition queued panel onto screen
+      carousel_panel_clone_1.style.transform = 'translate(-200px, 0px)'
+      carousel_panel_clone_1.style.transition += ' transform 1s ease'
+      carousel_panel_clone_1.style.transform = 'translate(0px, 0px)'
+      carousel_panel_clone_1.opacity = '1'
+
+      // wait until animation has finished to remove the initial panel
+      setTimeout(function(){
+        carousel_panel.remove()
+
+        document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
+      }, 1000)
+    });
+
+    carousel_left_arrow.addEventListener('click', function(e){
+      console.log('left arrow click event');
+      carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
+      carousel_panel.style.transform = 'translate(-200px, 0px)'
+      carousel_panel.style.opacity = '0'
+    })
+
+
+
+    
+
+
 })()

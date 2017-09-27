@@ -282,47 +282,6 @@
               </div>
             </div>
 
-            <!-- carousel here -->
-            <!-- <div class="container">
-
-                  <div class="row" style="margin-bottom:0px;">
-
-
-                    <div class="col s2 valign-wrapper" style="position:relative;height:100%;">
-                      <div id="left-panel" class="waves waves-effect waves-light" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; ">
-                        <div class="" style="width:100%;">
-                          <h1 class="center-align">
-                            <i id="left-arrow" class="material-icons md-48" style="font-size:112.5%; " >
-                              keyboard_arrow_left
-                            </i>
-                          </h1>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="quote-text-wrapper" class="col s8 valign-wrapper" style="height:100%;">
-                      <h2 id="quote-text-header"class="center-align"><color style="color:#d14e1d;">"</color><quote-text id="quote-text">A philanthropic research organization promoting education in non-traditional settings and subjects.</quote-text><color style="color:#d14e1d">"</color></h2>
-                    </div>
-
-
-                      <div  class="col s2 valign-wrapper "  style="position:relative;height:100%;">
-                        <div id="right-panel" class="waves waves-effect waves-light" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
-                          <div class="" style="width:100%;">
-                            <h1 class="center-align">
-                              <i id="right-arrow" class="material-icons md-48" style="font-size:112.5%;" >
-                                keyboard_arrow_right
-                              </i>
-                            </h1>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div> -->
-                <!-- #d14e1d -->
-              <!-- <div class="container"> -->
-
-
-
               <!-- <script src="js/quote_cycle.js" type="text/javascript"></script> -->
               <div class="row">
 
@@ -447,93 +406,80 @@
 
         <script type="text/javascript">
 
-          function DoublyLinkedList(){
-             this.head = null;
-          }
-
-          DoublyLinkedList.prototype.push = function(val){
-             var head = this.head,
-                 current = head,
-                 previous = head;
-            if(!head){
-                this.head = {value: val, previous:null, next:null };
-            }
-            else{
-                while(current && current.next){
-                   previous = current;
-                   current = current.next;
-                }
-               current.next = {value: val, previous:current, next:null}
-            }
-          }
-
-          //test at least once
-          var xlist = new DoublyLinkedList();
-          xlist.push(2);
-          xlist.push(3);
-          xlist.push(4);
-          xlist.push(5);
-          // console.log(xlist.head.next);
-
-          let curr = xlist.head
-          while(curr) {
-            console.log(curr);
-            curr = curr.next
-          }
-
-          //trust me it works
-
-
-          let carousel_left_arrow = document.getElementById('carousel-left-arrow'),
-          carousel_right_arrow = document.getElementById('carousel-right-arrow')
-
-          let carousel_panel = document.getElementById('carousel-panel-00');
-          carousel_panel.style.opacity = '1'
-
-          let carousel_panel_clone_1 = carousel_panel.cloneNode(true)
-          console.log('clone :', carousel_panel_clone_1);
-          // carousel_panel_clone_1.style.transition = 'opacity 1s ease'
-          // carousel_panel_clone_1.style.opacity = '0'
-          // carousel_panel_clone_1.style.visibility = 'hidden'
-          // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
-
-          let carousel_panels = document.getElementsByClassName('carousel-panel');
-
-          carousel_right_arrow.addEventListener('click', function(e) {
-            console.log('right arrow click event');
-
-
-            carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
-
-            // transition the current carousel panel off screen
-            carousel_panel.style.transform = 'translate(200px, 0px)'
-            carousel_panel.style.opacity = '0'
-
-
-            // transition queued panel onto screen
-            carousel_panel_clone_1.style.transform = 'translate(-200px, 0px)'
-            carousel_panel_clone_1.style.transition += ' transform 1s ease'
-            carousel_panel_clone_1.style.transform = 'translate(0px, 0px)'
-            carousel_panel_clone_1.opacity = '1'
-
-            //
-            // carousel_panel.style.visibility = 'hidden'
-            // wait until animation has finished to remove the initial panel
-            setTimeout(function(){
-              carousel_panel.remove()
-
-              document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
-            }, 1000)
-
-
-          });
-
-          carousel_left_arrow.addEventListener('click', function(e){
-            console.log('left arrow click event');
-            carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
-            carousel_panel.style.transform = 'translate(-200px, 0px)'
-            carousel_panel.style.opacity = '0'
-          })
+          // function DoublyLinkedList(){
+          //    this.head = null;
+          // }
+          //
+          // DoublyLinkedList.prototype.push = function(val){
+          //    var head = this.head,
+          //        current = head,
+          //        previous = head;
+          //   if(!head){
+          //       this.head = {value: val, previous:null, next:null };
+          //   }
+          //   else{
+          //       while(current && current.next){
+          //          previous = current;
+          //          current = current.next;
+          //       }
+          //      current.next = {value: val, previous:current, next:null}
+          //   }
+          // }
+          //
+          // //test at least once
+          // var xlist = new DoublyLinkedList();
+          // xlist.push(2);
+          // xlist.push(3);
+          // xlist.push(4);
+          // xlist.push(5);
+          //
+          // let curr = xlist.head
+          // while(curr) {
+          //   console.log(curr);
+          //   curr = curr.next
+          // }
+          //
+          // let carousel_left_arrow = document.getElementById('carousel-left-arrow'),
+          // carousel_right_arrow = document.getElementById('carousel-right-arrow')
+          //
+          // let carousel_panel = document.getElementById('carousel-panel-00');
+          // carousel_panel.style.opacity = '1'
+          //
+          // let carousel_panel_clone_1 = carousel_panel.cloneNode(true)
+          // console.log('clone :', carousel_panel_clone_1);
+          //
+          // let carousel_panels = document.getElementsByClassName('carousel-panel');
+          //
+          // carousel_right_arrow.addEventListener('click', function(e) {
+          //   console.log('right arrow click event');
+          //
+          //   carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
+          //
+          //   // transition the current carousel panel off screen
+          //   carousel_panel.style.transform = 'translate(200px, 0px)'
+          //   carousel_panel.style.opacity = '0'
+          //
+          //
+          //   // transition queued panel onto screen
+          //   carousel_panel_clone_1.style.transform = 'translate(-200px, 0px)'
+          //   carousel_panel_clone_1.style.transition += ' transform 1s ease'
+          //   carousel_panel_clone_1.style.transform = 'translate(0px, 0px)'
+          //   carousel_panel_clone_1.opacity = '1'
+          //
+          //   // wait until animation has finished to remove the initial panel
+          //   setTimeout(function(){
+          //     carousel_panel.remove()
+          //
+          //     document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
+          //   }, 1000)
+          // });
+          //
+          // carousel_left_arrow.addEventListener('click', function(e){
+          //   console.log('left arrow click event');
+          //   carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
+          //   carousel_panel.style.transform = 'translate(-200px, 0px)'
+          //   carousel_panel.style.opacity = '0'
+          // })
 
         </script>
 
