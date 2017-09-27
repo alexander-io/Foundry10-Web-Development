@@ -99,6 +99,8 @@
   // take an object -> sub category
   let display = function(){
 
+    create_lst_of_carousel_panels()
+
     let reset_carousel_panel = function() {
       let init_carousel_panel = document.getElementById('carousel-panel-00')
       // init_carousel_panel.style.transition = 'opacity 1s ease'
@@ -1017,6 +1019,46 @@
     var xlist = new DoublyLinkedList();
     let carousel_panel_list = new DoublyLinkedList()
 
+    let create_lst_of_carousel_panels = function(){
+
+      // // update article 0 title
+      // article_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
+      //
+      // // update article 1 title
+      // article_title_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].title, 3)
+      //
+      // // update article 0 sub title
+      // article_sub_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title, 4)
+      //
+      // // update article 1 sub title
+      // article_sub_title_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].sub_title, 4)
+      //
+      // // update the text in article 1
+      // article_text_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
+      //
+      // // update the text in article 2
+      // article_text_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].text, 32)
+      //
+      // // update article icons
+      // article_icon_00.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].icon
+      //
+      // article_icon_01.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].icon
+
+      let branch = 'tech' // initialize the bnranch to tech
+      if (info_banner_xy_array_position_tuple.super == 0) {
+        branch = 'tech'
+      } else if (info_banner_xy_array_position_tuple.super == 1) {
+        branch = 'collective'
+      } else if (info_banner_xy_array_position_tuple.super == 2) {
+        branch = 'art'
+      }
+
+      let articles = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles
+      for (x in articles) {
+        console.log(articles[x]);
+      }
+    }
+
 
     let print_all_lst_elems = function(lst) {
       let curr = lst.head
@@ -1028,21 +1070,11 @@
 
     let create_panel
 
-    // print_all_lst_elems(carousel_panel_list)
-
-
-    // let curr = xlist.head
-    // while(curr) {
-    //   console.log(curr);
-    //   curr = curr.next
-    // }
-
-
-
     console.log('clone :', carousel_panel_clone_1);
 
     let carousel_panels = document.getElementsByClassName('carousel-panel');
 
+    // right arrow event listener
     carousel_right_arrow.addEventListener('click', function(e) {
       console.log('right arrow click event');
 
@@ -1066,12 +1098,11 @@
       }, 1000)
     });
 
+    // left arrow event listener
     carousel_left_arrow.addEventListener('click', function(e){
       console.log('left arrow click event');
       carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
       carousel_panel.style.transform = 'translate(-200px, 0px)'
       carousel_panel.style.opacity = '0'
     })
-
-
 })()
