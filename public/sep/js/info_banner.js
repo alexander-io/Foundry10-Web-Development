@@ -51,6 +51,7 @@
   let article_link_01_00 = document.getElementById('article-link-01-00');
   let article_link_01_01 = document.getElementById('article-link-01-01');
 
+  let curr_carousel_panel = 0
 
   // num_super_categories = 3
   // num_sub_categories = 4
@@ -145,12 +146,37 @@
 
     let lst_of_carousel_panels = create_lst_of_carousel_panels()
 
+
+    carousel_panel.remove()
+
+    let carousel_panel_wrapper = document.createElement('div')
+
+    let curr = lst_of_carousel_panels.head.next
+    carousel_panel_wrapper.appendChild(curr.value)
+
+    // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
+    // document.getElementById('carousel-panel-mount').appendChild(curr.value)
+    curr = curr.next
+
+    carousel_panel_wrapper.appendChild(curr.value)
+    // document.getElementById('carousel-panel-mount').appendChild(curr.value)
+    document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
+    carousel_panel = carousel_panel_wrapper
+
+
     // let reset_carousel_panel = function() {
     //   let init_carousel_panel = document.getElementById('carousel-panel-00')
     //   // init_carousel_panel.style.transition = 'opacity 1s ease'
     //
-    //   init_carousel_panel.style.transform = 'translate(0px, 0px)'
+    //   // init_carousel_panel.style.transform = 'translate(0px, 0px)'
     //   init_carousel_panel.style.opacity = '1'
+    //   try {
+    //
+    //   } catch (e) {
+    //
+    //   } finally {
+    //
+    //   }
     //   // console.log(document.getElementById('carousel-panel-00'));
     // }
     // reset_carousel_panel()
@@ -1054,7 +1080,7 @@
           this.head = {value: val, previous:null, next:null };
       }
       else{
-          while(current && current.next){
+          while(current && current.next && current.next != head){
              previous = current;
              current = current.next;
           }
@@ -1129,11 +1155,12 @@
 
             // TODO, generalize -> change the 0 to the iteratior once you put this into a loop
             header_five.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].title, 3)
-            // header_five.id=""
+            header_five.id = "article-title-00"
 
             let header_link = document.createElement('a');
             header_link.href = '#'
             header_link.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].sub_title, 4)
+            header_link.id = 'article-sub-title-00'
 
             col_s8_header_child.appendChild(header_five)
             col_s8_header_child.appendChild(header_link)
@@ -1227,18 +1254,10 @@
     // right arrow event listener
     carousel_right_arrow.addEventListener('click', function(e) {
       console.log('right arrow click event');
-
       carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
-
       // transition the current carousel panel off screen
       carousel_panel.style.transform = 'translate(200px, 0px)'
       carousel_panel.style.opacity = '0'
-
-      // transition queued panel onto screen
-      // carousel_panel_clone_1.style.transform = 'translate(-200px, 0px)'
-      // carousel_panel_clone_1.style.transition += ' transform 1s ease'
-      // carousel_panel_clone_1.style.transform = 'translate(0px, 0px)'
-      // carousel_panel_clone_1.opacity = '1'
 
 
       console.log(global_lst_of_carousel_panels.head.next.value);
@@ -1249,7 +1268,15 @@
 
         let carousel_panel_wrapper = document.createElement('div')
 
-        let curr = global_lst_of_carousel_panels.head.next
+        let curr
+        curr = global_lst_of_carousel_panels.head
+        let x = 0
+        while (x<curr_carousel_panel) {
+          curr = curr.next
+          x++
+        }
+
+        // let curr = global_lst_of_carousel_panels[0]
         carousel_panel_wrapper.appendChild(curr.value)
 
         // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
@@ -1270,5 +1297,35 @@
       carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
       carousel_panel.style.transform = 'translate(-200px, 0px)'
       carousel_panel.style.opacity = '0'
+
+      console.log(global_lst_of_carousel_panels.head.next.value);
+
+      // wait until animation has finished to remove the initial panel
+      setTimeout(function(){
+        carousel_panel.remove()
+
+        let carousel_panel_wrapper = document.createElement('div')
+
+        let curr
+        curr = global_lst_of_carousel_panels.head
+        let x = 0
+        while (x<curr_carousel_panel) {
+          curr = curr.next
+          x++
+        }
+
+        // let curr = global_lst_of_carousel_panels[0]
+        carousel_panel_wrapper.appendChild(curr.value)
+
+        // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
+        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
+        curr = curr.next
+
+        carousel_panel_wrapper.appendChild(curr.value)
+        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
+        document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
+        carousel_panel = carousel_panel_wrapper
+
+      }, 1000)
     })
 })()
