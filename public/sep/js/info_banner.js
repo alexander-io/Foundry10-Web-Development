@@ -1224,7 +1224,7 @@
 
             let header_link = document.createElement('a');
             header_link.href = '#'
-            header_link.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].sub_title, 4)
+            header_link.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].sub_title, 3)
             header_link.id = 'article-sub-title-00'
 
             col_s8_header_child.appendChild(header_five)
