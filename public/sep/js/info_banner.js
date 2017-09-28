@@ -572,6 +572,15 @@
             url_00 : 'https://docs.google.com/forms/d/e/1FAIpQLSdUMRl1Wkeu161Yqg3N7vNAvUTboSN1o69UjQaSisTM1pY0jQ/viewform',
             url_01 : 'http://foundry10.org/areas-overview/internships/',
             type : 'program'
+          },
+          {
+            title : 'In Pursuit of Passion',
+            sub_title : 'How do students discover their passions amidst all of the pressures of high school life?',
+            text : 'How do students discover their passions amidst all of the pressures of high school life? Through our internship program, we have learned much about the way students think about their interest and how they discover their passion.',
+            icon : icon_path.brick,
+            url_00 : 'http://foundry10.org/subject-areas/students-pursuing-passion-internships-exploration-and-discovery/',
+            url_01 : 'http://foundry10.org/areas-overview/internships/',
+            type : 'program'
           }
         ]
       },
