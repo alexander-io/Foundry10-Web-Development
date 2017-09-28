@@ -613,6 +613,23 @@
             url_00  : 'https://youtu.be/KvRvEp6IEWg',
             url_01  : 'http://foundry10.org/areas-overview/girls-programs/',
             type : 'program'
+          }, {
+            title : 'Shakespeare for Girls',
+            sub_title : 'Gender Video',
+            text : 'This is a video demonstrating a gender studies drama related program : Shakespeare for girls.',
+            icon : icon_path.book,
+            url_00  : 'https://youtu.be/KvRvEp6IEWg',
+            url_01  : 'http://foundry10.org/areas-overview/girls-programs/',
+            type : 'program'
+          },
+          {
+            title : 'Dramatic Storytelling in Pre-Kidnergarten',
+            sub_title : 'Our research suggests that dramatic storytelling',
+            text : 'Our research suggests that dramatic storytelling in early childhood education enhances student engagement. Teachers are learning ways to implement dramatic arts in their everyday Pre-K and K classrooms.',
+            icon : icon_path.brick,
+            url_00 : 'http://foundry10.org/subject-areas/dramatic-storytelling-pre-kidnergarten/',
+            url_01 : 'http://foundry10.org/areas-overview/early-education/',
+            type : 'program'
           }
         ]
       },
@@ -788,15 +805,7 @@
             url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
             url_01  : 'http://foundry10.org/research/digital-audio-report-2014-2016/',
             type : 'program'
-          } , {
-            title : 'Audio Workshops',
-            sub_title : 'Digital Audio',
-            text : 'A big part of learning to work with digital audio is expanding specific skillsets and learning fun new ways to create and manipulate sound. To supplement the program, we bring in exciting and fun events to showcase different functions and teach youth and adults alike.',
-            icon : icon_path.brush,
-            url_00  : 'http://foundry10.org/areas-overview/digital-audio/',
-            url_01  : 'http://foundry10.org/subject-areas/audio-workshop-events/',
-            type : 'article'
-          },
+          } ,
           {
             title : 'Summer Remixing 2016',
             sub_title : 'Remixing the Summer at foundry10',
@@ -855,15 +864,6 @@
             url_00  : 'http://foundry10.org/areas-overview/drama/',
             url_01  : 'http://foundry10.org/research/shoreline-reading-intervention-briarcrest-elementary/',
             type : 'article'
-          },
-          {
-            title : 'Arts Meet Academics : An Interview Over Spring Break',
-            sub_title : 'This article covers spring break Arts-Academic Intervention',
-            text : 'Sometimes, quantitative research cannot capture the engagement and energy new activities and minds can bring to a classroom. This editorial article covers a program we ran that created large amounts of excitement for teachers, artists, and especially students all working and learning together.',
-            icon : icon_path.programmer,
-            url_00 : 'http://foundry10.org/subject-areas/arts-meets-academics-intervention-spring-break/',
-            url_01 : 'http://foundry10.org/areas-overview/drama/',
-            type : 'program'
           },
           {
             title : 'Dramatic Storytelling and Literacy',
@@ -1250,7 +1250,7 @@
           let content_row_col_child = document.createElement('div');
           content_row_col_child.className = 'col s12'
             let content_row_col_child_para = document.createElement('p');
-            content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
+            content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 30)
 
             content_row_col_child.appendChild(content_row_col_child_para)
           content_row.appendChild(content_row_col_child)
