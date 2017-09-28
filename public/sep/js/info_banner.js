@@ -215,49 +215,6 @@
     plax_img.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0]
 
 
-    // // we've defined our truncation function by the number of words in the string, however -> sometimes words have variable length
-    // // because of this, we have variable paragraph lengths.
-    // // let this be a recursive function to check if the string is sort enough,
-    // // if not, split the string into an array, pop off the last element, convert back to string and recurse passing the shortened string as a parameter
-    // let if_lengthy_string_remove_word = function(str, num_chars) {
-    //   let arr = []
-    //   if (str.length > num_chars) {
-    //     arr = str.split(' ')
-    //     arr.pop()
-    //     if_lengthy_string_remove_word(arr.join(' '))
-    //   }
-    //   // console.log('final length of string :', str.length);
-    //   // shortened_string = str
-    //   // if (str.length <= 128) return str
-    //   return str
-    //   // break
-    // }
-    //
-    //
-    // // having some overflow issues with the text bodies, this function is a custom truncation function
-    // // just pass in the string that needs to be truncated as the first parameter
-    // // pass in the number of words as the second parameter,
-    // // this function will append a ... to the end of the return string
-    // let truncate = function(str, num_words) {
-    //   let text_words = str.split(' '), builder = '', i = 0
-    //
-    //   // for every wod in the string
-    //   for (word in text_words) {
-    //
-    //     // are we at the word limit?
-    //     if (i>=num_words) {
-    //       // check number of characters
-    //       builder = if_lengthy_string_remove_word(builder, num_words*4)
-    //       // concat the ellipses to the string
-    //       builder += '...'
-    //       return builder
-    //     }
-    //     builder += ' ' + text_words[word]
-    //     i++
-    //   }
-    //   return builder
-    // }
-
     // update article 0 title
     article_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
 
@@ -1204,8 +1161,16 @@
         let card_panel = document.createElement("div");
         card_panel.className = 'card-panel article-card hoverable z-depth-5'
         card_panel.style.height = "400px"
-        card_panel.style.borderLeft = '1em solid #3d2289'
 
+        if (articles[x].type == 'article') {
+          card_panel.style.borderLeft = '1em solid #26706a'
+        } else if ( articles[x].type == 'program') {
+          card_panel.style.borderLeft = '1em solid #3d2289'
+        }
+
+
+        // 3d2289
+        // 26706a
 
         let header_row = document.createElement('div');
         header_row.className = 'row header-row'
@@ -1263,7 +1228,12 @@
             button_row_col_first_child_link.id = 'article-link-00-00'
               let button_row_col_first_child_link_card_panel = document.createElement('div');
               button_row_col_first_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
-              button_row_col_first_child_link_card_panel.style.backgroundColor = '#3d2289'
+
+              if (articles[x].type == 'article') {
+                button_row_col_first_child_link_card_panel.style.backgroundColor = '#26706a'
+              } else if ( articles[x].type == 'program') {
+                button_row_col_first_child_link_card_panel.style.backgroundColor = '#3d2289'
+              }
 
               button_row_col_first_child_link.appendChild(button_row_col_first_child_link_card_panel)
             button_row_col_first_child.appendChild(button_row_col_first_child_link)
@@ -1275,7 +1245,13 @@
             button_row_col_second_child_link.id = 'article-link-00-00'
               let button_row_col_second_child_link_card_panel = document.createElement('div');
               button_row_col_second_child_link_card_panel.className = 'card-panel hoverable article-button-panel'
-              button_row_col_second_child_link_card_panel.style.backgroundColor = '#3d2289'
+
+              if (articles[x].type == 'article') {
+                button_row_col_second_child_link_card_panel.style.backgroundColor = '#26706a'
+
+              } else if ( articles[x].type == 'program') {
+                button_row_col_second_child_link_card_panel.style.backgroundColor = '#3d2289'
+              }
 
               button_row_col_second_child_link.appendChild(button_row_col_second_child_link_card_panel)
             button_row_col_second_child.appendChild(button_row_col_second_child_link)
