@@ -510,7 +510,8 @@
             url_00  : 'http://foundry10.org/areas-overview/automotive/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/Learning-from-the-Pros.pdf',
             type : 'article'
-          } , {
+          } ,
+          {
             title : 'Automotive Technology Research',
             sub_title : 'Automotive Research',
             text : 'Throughout our work with automotive technology, we have been studying how the students respond to the subject, and seek to answer our three critical questions for the program. The report below breaks down how we look at auto-tech, what is exciting to us in terms of learning, and some of the data that we have gathered on the subject so far.',
@@ -518,6 +519,15 @@
             url_00  : 'http://foundry10.org/areas-overview/automotive/',
             url_01  : 'http://foundry10.org/wp-content/uploads/2016/07/AutomotiveTechnologyResearch.pdf',
             type : 'article'
+          },
+          {
+            title : 'Breaking the Circuit',
+            sub_title : 'The Northshore Automotive Technology Program students and teacher have undertaken a challenge...',
+            text : 'The Northshore Automotive Technology Program students and teacher have undertaken a tremendous challenge: To set a world record for an AC powered dragster. This is not a project typically undertaken by high school students, but under the guidance of their teacher, these students rose to the challenge. Breaking the Circuit tells the story of this ambitious group and their race car.',
+            icon : icon_path.gears,
+            url_00 : 'https://youtu.be/mkVK4kofuGA',
+            url_01 : 'http://foundry10.org/areas-overview/automotive/',
+            type : 'program'
           }
         ]
       }
@@ -1363,9 +1373,19 @@
         curr = global_lst_of_carousel_panels.head
         let x = 0
         while (x<curr_carousel_panel) {
+          if (curr == null) {
+            curr = global_lst_of_carousel_panels.head
+          }
           curr = curr.next
           x++
         }
+
+        if (curr == null) {
+          curr = global_lst_of_carousel_panels.head
+        }
+
+        curr_carousel_panel+=2
+
 
         // let curr = global_lst_of_carousel_panels[0]
         carousel_panel_wrapper.appendChild(curr.value)
