@@ -460,13 +460,23 @@
             type : 'article'
           },
           {
-            title : 'Study Finds Number Processing Task Predicts Improvements in Gaming Skill',
+            title : 'Improvements in Gaming Skill',
             sub_title : 'foundry10',
             text : 'Foundry10\'s work on DOTA2 has been covered in PsyPost, a blog that covers current research in psychology. Come take a look at the article here and read about our study!',
             icon : icon_path.controller,
-            url_00 : '',
-            url_01 : '',
-            type : ''
+            url_00 : 'http://www.psypost.org/2017/02/study-finds-number-processing-task-predicts-improvements-gaming-skill-47866',
+            url_01 : 'http://foundry10.org/areas-overview/games-and-learning/',
+            type : 'article'
+          },
+          {
+            title : 'Why eSports Tournaments Make Great Venues for Research',
+            sub_title : 'viewership of eSports has been expanding rapidly',
+            text : 'The introduction of eSports to the "mainstream" is one of the many interesting developments of the tech revolution, and it is a particularly important one to youth.',
+            icon : icon_path.programmer,
+            url_00 : 'http://www.dota2.com/play/',
+            url_01 : 'https://www.gamasutra.com/blogs/TomSwanson/20160602/273908/Why_eSports_Tournaments_Make_Great_Venues_for_Research.php',
+            type : 'program'
+
           }
         ]
       },
@@ -601,6 +611,15 @@
         ],
         articles : [
           {
+            title : 'Dramatic Storytelling in Pre-Kidnergarten',
+            sub_title : 'Our research suggests that dramatic storytelling',
+            text : 'Our research suggests that dramatic storytelling in early childhood education enhances student engagement. Teachers are learning ways to implement dramatic arts in their everyday Pre-K and K classrooms.',
+            icon : icon_path.brick,
+            url_00 : 'http://foundry10.org/subject-areas/dramatic-storytelling-pre-kidnergarten/',
+            url_01 : 'http://foundry10.org/areas-overview/early-education/',
+            type : 'program'
+          },
+          {
             title : 'Augmented Math/Reading Intervention',
             sub_title : 'Elementary Education',
             text : 'Foundry10 and an elementary school in the greater Seattle area teamed up together to augment the district funded math and reading spring after school intervention program. We were interested in providing additional funding so that 5th and 6th graders could receive support in the target subject areas, with smaller class sizes, under the guidance of certified classroom teachers. The intervention program ran for 7 sessions concurrently with the district funded program for grades K-4. The goal was to see improvements in both students’ academic performance in the targeted subject areas as well as in their attitudes towards the subject areas.',
@@ -612,6 +631,14 @@
             title : 'Shoreline Kindergarten Readiness Program Report',
             sub_title : 'Early Education Report',
             text : 'In Summer 2016, foundry10 collaborated with Shoreline School District to support a month-long kindergarten readiness program. Students coming in to kindergarten have a wide range of skill sets, with some students more prepared for the demands of kindergarten than others. To close the readiness gap, Shoreline approached us with the idea to design a summer class with the express purpose of preparing students for their first year in kindergarten. We decided to focus on boosting skills at this age, because of evidence that early intervention is particularly beneficial in closing achievement gaps. Elementary schools throughout the district identified students who were enrolled in kindergarten but hadn’t previously had preschool, and invited a small number of these students to participate. One class of seven students participated in July before starting kindergarten the following month.',
+            icon : icon_path.brick,
+            url_00  : 'http://foundry10.org/areas-overview/early-education/',
+            url_01  : 'http://foundry10.org/research/shoreline-kindergarten-readiness/',
+            type : 'article'
+          }, {
+            title : 'Kindergarten Reader\'s Theater Curriculum Collaboration',
+            sub_title : 'we are discovering what it means to collaborate with teachers in their classrooms',
+            text : 'Connecting teaching artists with teachers is a key part of many of our programs, and we are discovering what it means to collaborate with teachers in their classrooms. Our early education program utilizes this model to create valuable experiences for our youngest learners.',
             icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/early-education/',
             url_01  : 'http://foundry10.org/research/shoreline-kindergarten-readiness/',
@@ -690,14 +717,16 @@
             text : 'In this report, we dig into a fashion camp that we ran with Young Women Empowered. Please take at the document below to find out more about the camp and what we learned.',
             icon : icon_path.brush,
             url_00  : 'http://foundry10.org/areas-overview/artistic-design/',
-            url_01  : 'http://foundry10.org/research/y-we-camp-report/'
+            url_01  : 'http://foundry10.org/research/y-we-camp-report/',
+            type : 'article'
           } , {
             title : 'Y-We Create Fashion Show ',
             sub_title : 'Fashoion Show Video',
             text : 'The Y-We fashin show was documented for your viewing pleasure',
             icon : icon_path.brick,
             url_00  : 'https://youtu.be/p6sw-tvxl_4',
-            url_01  : 'http://foundry10.org/areas-overview/artistic-design/'
+            url_01  : 'http://foundry10.org/areas-overview/artistic-design/',
+            type : 'program'
           },
           {
             title : 'Student Fashion Program',
@@ -706,6 +735,15 @@
             icon : icon_path.brush,
             url_00 : 'https://docs.google.com/forms/d/e/1FAIpQLSfTSd0asqGm7kzGzvrQ_wI8wh_pGsoIxeXJFNEKhPRHL563Uw/viewform',
             url_01 : 'http://foundry10.org/areas-overview/artistic-design/',
+            type : 'program'
+          },
+          {
+            title : 'Y-We Lead 2016',
+            sub_title : 'artistic design 2016',
+            text : 'In 2016, we worked with a Y-We to enable young women to try out some new and creative activities.Throughout 2016, we have worked with Y-We Create, a branch of the year-long program: Y-We Lead. This program was designed to have young women meet up and try out new and creative activities. Exploring new and imaginative activities like glassblowing, jewelry making and screen printing, the students got hands on and tried out some crafts they would not have had the opportunity to otherwise.',
+            icon : icon_path.brick,
+            url_00 : 'http://foundry10.org/subject-areas/y-we-lead-2016/',
+            url_01 : 'http://foundry10.org/wp-content/uploads/2016/07/Y-We-Lead-report.pdf',
             type : 'program'
           }
         ]
@@ -1242,8 +1280,6 @@
       return carousel_panel_list
     }
 
-
-
     let print_all_lst_elems = function(lst) {
       let curr = lst.head
       while(curr) {
@@ -1280,10 +1316,19 @@
         curr = global_lst_of_carousel_panels.head
         let x = 0
         while (x<curr_carousel_panel) {
+          if (curr == null) {
+            curr = global_lst_of_carousel_panels.head
+          }
           curr = curr.next
           x++
         }
 
+        if (curr == null) {
+          curr = global_lst_of_carousel_panels.head
+        }
+
+        curr_carousel_panel+=2
+        console.log('curr carousel panel :', curr_carousel_panel);
         // let curr = global_lst_of_carousel_panels[0]
         carousel_panel_wrapper.appendChild(curr.value)
 
