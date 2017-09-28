@@ -373,7 +373,7 @@
             icon : icon_path.programmer,
             url_00 : 'http://foundry10.org/areas-overview/virtual-reality/',
             url_01 : 'http://foundry10.org/research/applied-vr-schools-2016-2017-elementary-findings/',
-            type : 'Program'
+            type : 'program'
           },
           {
             title : 'Student and Educator Resources',
@@ -611,6 +611,14 @@
             url_00 : 'http://foundry10.org/subject-areas/dramatic-storytelling-pre-kidnergarten/',
             url_01 : 'http://foundry10.org/areas-overview/early-education/',
             type : 'program'
+          }, {
+            title : 'Shoreline Kindergarten Readiness Program Report',
+            sub_title : 'Early Education Report',
+            text : 'In Summer 2016, foundry10 collaborated with Shoreline School District to support a month-long kindergarten readiness program. Students coming in to kindergarten have a wide range of skill sets, with some students more prepared for the demands of kindergarten than others. To close the readiness gap, Shoreline approached us with the idea to design a summer class with the express purpose of preparing students for their first year in kindergarten. We decided to focus on boosting skills at this age, because of evidence that early intervention is particularly beneficial in closing achievement gaps. Elementary schools throughout the district identified students who were enrolled in kindergarten but hadn’t previously had preschool, and invited a small number of these students to participate. One class of seven students participated in July before starting kindergarten the following month.',
+            icon : icon_path.brick,
+            url_00  : 'http://foundry10.org/areas-overview/early-education/',
+            url_01  : 'http://foundry10.org/research/shoreline-kindergarten-readiness/',
+            type : 'article'
           },
           {
             title : 'Augmented Math/Reading Intervention',
@@ -621,14 +629,6 @@
             url_01  : 'http://foundry10.org/wp-content/uploads/2017/06/AugmentedMathReadingAnonymized.pdf',
             type : 'program'
           } , {
-            title : 'Shoreline Kindergarten Readiness Program Report',
-            sub_title : 'Early Education Report',
-            text : 'In Summer 2016, foundry10 collaborated with Shoreline School District to support a month-long kindergarten readiness program. Students coming in to kindergarten have a wide range of skill sets, with some students more prepared for the demands of kindergarten than others. To close the readiness gap, Shoreline approached us with the idea to design a summer class with the express purpose of preparing students for their first year in kindergarten. We decided to focus on boosting skills at this age, because of evidence that early intervention is particularly beneficial in closing achievement gaps. Elementary schools throughout the district identified students who were enrolled in kindergarten but hadn’t previously had preschool, and invited a small number of these students to participate. One class of seven students participated in July before starting kindergarten the following month.',
-            icon : icon_path.brick,
-            url_00  : 'http://foundry10.org/areas-overview/early-education/',
-            url_01  : 'http://foundry10.org/research/shoreline-kindergarten-readiness/',
-            type : 'article'
-          }, {
             title : 'Kindergarten Reader\'s Theater Curriculum Collaboration',
             sub_title : 'we are discovering what it means to collaborate with teachers in their classrooms',
             text : 'Connecting teaching artists with teachers is a key part of many of our programs, and we are discovering what it means to collaborate with teachers in their classrooms. Our early education program utilizes this model to create valuable experiences for our youngest learners.',
@@ -659,7 +659,7 @@
             icon : icon_path.brick,
             url_00  : 'http://foundry10.org/areas-overview/professional-development/',
             url_01  : 'http://foundry10.org/research/parkwood-intervention-program-2/',
-            type : 'program'
+            type : 'article'
           } , {
             title : 'TAT LAB : Wonderwalls and Sharing Circles',
             sub_title : 'Professional Development',
@@ -676,7 +676,7 @@
             icon : icon_path.book,
             url_00 : 'http://foundry10.org/subject-areas/applied-work-professional-development/',
             url_01 : 'http://foundry10.org/areas-overview/professional-development/',
-            type : 'program'
+            type : 'article'
           },
           {
             title : 'A foundry10 Approach to PD',
@@ -685,7 +685,7 @@
             icon : icon_path.book,
             url_00 : 'http://foundry10.org/subject-areas/a-foundry10-approach-to-professional-development/',
             url_01 : 'http://foundry10.org/areas-overview/internships/',
-            type : 'program'
+            type : 'article'
           }
         ]
       }
@@ -989,13 +989,11 @@
     }
 
 
-
     // the user clicked on the super category, therefore set all sub-nav elements to white and initialize the 0th sub-nav item to have a grey background
     let init_reset_sub_nav = function(){
       // nav_sub_items_to_white()
       // banner_sub_item_01.style.backgroundColor = '#ccc'
     }
-
 
     // user clicked on one of the 'tech' elements
     let tech_click = function() {
@@ -1333,9 +1331,21 @@
 
         carousel_panel_wrapper.appendChild(curr.value)
         // document.getElementById('carousel-panel-mount').appendChild(curr.value)
-        document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
-        carousel_panel = carousel_panel_wrapper
 
+        carousel_panel_wrapper.style.opacity = '0'
+        carousel_panel_wrapper.style.transform = 'translate(-200px, 0)'
+
+
+        document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
+        carousel_panel_wrapper.style.transition = 'transform 1s ease, opacity 1s ease'
+
+        setTimeout(function(){
+
+          carousel_panel_wrapper.style.opacity = '1'
+          carousel_panel_wrapper.style.transform = 'translate(0px,0px)'
+        },100)
+
+        carousel_panel = carousel_panel_wrapper
       }, 1000)
     });
 
@@ -1380,8 +1390,23 @@
         curr = curr.next
 
         carousel_panel_wrapper.appendChild(curr.value)
+
+        carousel_panel_wrapper.style.opacity = '0'
+        carousel_panel_wrapper.style.transform = 'translate(200px, 0)'
+
+
+
+
         // document.getElementById('carousel-panel-mount').appendChild(curr.value)
         document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
+
+        carousel_panel_wrapper.style.transition = 'transform 1s ease, opacity 1s ease'
+        setTimeout(function(){
+          carousel_panel_wrapper.style.opacity = '1'
+          carousel_panel_wrapper.style.transform = 'translate(0px,0px)'
+        },100)
+
+
         carousel_panel = carousel_panel_wrapper
 
       }, 1000)
