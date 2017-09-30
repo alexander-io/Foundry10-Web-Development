@@ -39,12 +39,62 @@
 
 
 #### Alexander Harris
+#### September 30th, 2017
+#### foundry10 web development intern
+#### http://foundry10.org
+#### http://opensail.io
+#### http://35.167.90.70
+#### https://github.com/alexander-io/foundry10-web-development
+
+
+TODO_lst = {
+
+  @ opensail.io/sep
+  shorten horizontal rule
+  decrease opacity of title header backdrop
+  increase font size of super categories
+  lighten carousel arrows (black/orange doubly marked)
+  remove title-cycle at top of page
+
+  @ article card-panels
+  add 'research' or 'programs' in {}
+      ...........
+      .      {} .
+      .         .
+      .         .
+      .         .
+      .         .
+      .         .
+      ...........
+
+  @ lower navigation bar
+  add animation
+  v--- on click for tech, collective, or art...
+  [[tech],[collective],[art]]
+  [[category 0],[category 1],[category 2],[category 3]]
+  ^---- add animation to lower navigation bar on click of top navigation bar
+
+  @ carousel
+    for each state of the carousel enforce there to be one program and one research update visible
+        .....   .....
+        .   .   .   .
+    <   . a .   . b .  >
+        .   .   .   .
+        .....   .....
+
+    a = research update, purple (smoke)
+    b = program update, teal (with orange dots)
+}
+
+
+#### Alexander Harris
 #### Tuesday July 25th, 2017
 #### foundry10 web development intern
 #### http://foundry10.org
 #### http://opensail.io
 #### http://35.167.90.70
 #### https://github.com/alexander-io/foundry10-web-development
+
 
 create data model for articles, replace two link structure in articles with double link, re-work footer to remove areas links
 

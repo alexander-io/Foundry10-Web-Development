@@ -1266,8 +1266,6 @@
         carousel_panel_list.push(card_panel_col_wrapper)
       }
 
-      // console.log(carousel_panel_list);
-      // test_mount.appendChild(card_panel_col_wrapper);
       print_all_lst_elems(carousel_panel_list)
       global_lst_of_carousel_panels = carousel_panel_list
       return carousel_panel_list
@@ -1280,22 +1278,19 @@
         curr = curr.next
       }
     }
+
     create_lst_of_carousel_panels()
 
     let create_panel
-
-    console.log('clone :', carousel_panel_clone_1);
 
     let carousel_panels = document.getElementsByClassName('carousel-panel');
 
     // right arrow event listener
     carousel_right_arrow.addEventListener('click', function(e) {
-      console.log('right arrow click event');
       carousel_panel.style.transition = 'transform 1s ease, opacity 1s ease'
       // transition the current carousel panel off screen
       carousel_panel.style.transform = 'translate(200px, 0px)'
       carousel_panel.style.opacity = '0'
-
 
       console.log(global_lst_of_carousel_panels.head.next.value);
 
@@ -1325,12 +1320,9 @@
         // let curr = global_lst_of_carousel_panels[0]
         carousel_panel_wrapper.appendChild(curr.value)
 
-        // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
-        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
         curr = curr.next
 
         carousel_panel_wrapper.appendChild(curr.value)
-        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
 
         carousel_panel_wrapper.style.opacity = '0'
         carousel_panel_wrapper.style.transform = 'translate(-200px, 0)'
@@ -1381,21 +1373,14 @@
 
         curr_carousel_panel+=2
 
-
-        // let curr = global_lst_of_carousel_panels[0]
         carousel_panel_wrapper.appendChild(curr.value)
 
-        // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
-        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
         curr = curr.next
 
         carousel_panel_wrapper.appendChild(curr.value)
 
         carousel_panel_wrapper.style.opacity = '0'
         carousel_panel_wrapper.style.transform = 'translate(200px, 0)'
-
-
-
 
         // document.getElementById('carousel-panel-mount').appendChild(curr.value)
         document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
@@ -1406,12 +1391,9 @@
           carousel_panel_wrapper.style.transform = 'translate(0px,0px)'
         },100)
 
-
         carousel_panel = carousel_panel_wrapper
 
       }, 1000)
     })
-
     display()
-
 })()
