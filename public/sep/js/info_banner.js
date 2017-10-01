@@ -1156,8 +1156,12 @@
 
         if (articles[x].type == 'article') {
           card_panel.style.borderLeft = '1em solid #26706a'
+          card_panel_col_wrapper.className += ' research-type'
+          card_panel.className += ' research-type'
         } else if ( articles[x].type == 'program') {
           card_panel.style.borderLeft = '1em solid #3d2289'
+          card_panel_col_wrapper.className += ' program-type'
+          card_panel.className += ' program-type'
         }
 
 
@@ -1296,6 +1300,9 @@
 
         let curr
         curr = global_lst_of_carousel_panels.head
+
+
+
         let x = 0
         while (x<curr_carousel_panel) {
           if (curr == null) {
@@ -1352,6 +1359,8 @@
 
         let curr
         curr = global_lst_of_carousel_panels.head
+
+
         let x = 0
         while (x<curr_carousel_panel) {
           if (curr == null) {
@@ -1367,9 +1376,43 @@
 
         curr_carousel_panel+=2
 
+        console.log('curr value classlst :', curr.value.classList.value);
+
+        // let curr_carousel_panel_classlst_arr = JSON.parse("["+ curr.value.classList.value +"]")
+        let curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
+        console.log('after curr valuse classLst :', curr_carousel_panel_classlst_arr);
+        // let class_lst_copy = curr.value.classList
+
+        while (!curr_carousel_panel_classlst_arr.includes('program-type')){
+          // move to next element
+          if (curr == null || curr.next == null) {
+            curr = global_lst_of_carousel_panels.head
+          } else {
+            curr = curr.next
+          }
+
+          curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
+        }
+
         carousel_panel_wrapper.appendChild(curr.value)
 
+
         curr = curr.next
+        while (!curr_carousel_panel_classlst_arr.includes('research-type')){
+          // move to next element
+          if (curr == null || curr.next == null) {
+            curr = global_lst_of_carousel_panels.head
+          } else {
+            curr = curr.next
+          }
+
+          curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
+        }
+        // while (!curr.value.classList.includes('research-type')){
+        //   curr = curr.next
+        // }
+        console.log('glob lst :', curr.value.classList);
+
 
         carousel_panel_wrapper.appendChild(curr.value)
 
