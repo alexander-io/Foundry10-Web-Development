@@ -1048,16 +1048,13 @@
       display()
     }
 
-
     let animate_lower_links = function(){
       console.log('animate lower links called');
       banner_sub_item_01.className += ' animated fadeIn'
       banner_sub_item_03.className += ' animated fadeIn'
       banner_sub_item_02.className += ' animated fadeIn'
       banner_sub_item_04.className += ' animated fadeIn'
-
       setTimeout(function(){
-
         banner_sub_item_01.classList.remove('animated')
         banner_sub_item_01.classList.remove('fadeIn')
         banner_sub_item_02.classList.remove('animated')
@@ -1067,10 +1064,7 @@
         banner_sub_item_04.classList.remove('animated')
         banner_sub_item_04.classList.remove('fadeIn')
       }, 500)
-
     }
-
-
 
     tech.addEventListener('click', function(e) {
       animate_lower_links()
