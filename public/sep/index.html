@@ -248,7 +248,6 @@
               </div>
             </div>
 
-              <!-- <script src="js/quote_cycle.js" type="text/javascript"></script> -->
               <div class="row">
 
                 <div class="col s1 offset-s1 valign-wrapper" style="position:relative;height:100%;">
@@ -258,6 +257,20 @@
                         <i id="carousel-left-arrow" class="material-icons md-48 waves waves-effect waves-light" style="font-size:112.5%;color:#ff6600; " >
                           keyboard_arrow_left
                         </i>
+                        <i id="carousel-left-arrow-decor" class="material-icons md-48 waves waves-effect waves-light" style="font-size:112.5%;color:white;" >
+                          keyboard_arrow_left
+                        </i>
+
+                        <script type="text/javascript">
+                          let carousel_left_arrow = document.getElementById('carousel-left-arrow');
+                          let left_arrow_decor = document.getElementById('carousel-left-arrow-decor');
+                          let left_arrow_rect = carousel_left_arrow.getBoundingClientRect()
+                          let left_arrow_decor_rect = left_arrow_decor.getBoundingClientRect()
+                          let top_difference =   left_arrow_rect.top - left_arrow_decor_rect.top
+                          left_arrow_decor.style.top = (top_difference) + 'px'
+                          left_arrow_decor.style.left = '10px'
+                        </script>
+
                       </h1>
                     </div>
                   </div>
