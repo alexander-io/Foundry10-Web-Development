@@ -53,9 +53,6 @@
 
   let curr_carousel_panel = 0
 
-  // num_super_categories = 3
-  // num_sub_categories = 4
-  // 2D array of superXsub categories, 3x4 dimension
   let the_array_of_glory = []
 
   let global_lst_of_carousel_panels
@@ -170,24 +167,6 @@
     document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
     carousel_panel = carousel_panel_wrapper
 
-
-    // let reset_carousel_panel = function() {
-    //   let init_carousel_panel = document.getElementById('carousel-panel-00')
-    //   // init_carousel_panel.style.transition = 'opacity 1s ease'
-    //
-    //   // init_carousel_panel.style.transform = 'translate(0px, 0px)'
-    //   init_carousel_panel.style.opacity = '1'
-    //   try {
-    //
-    //   } catch (e) {
-    //
-    //   } finally {
-    //
-    //   }
-    //   // console.log(document.getElementById('carousel-panel-00'));
-    // }
-    // reset_carousel_panel()
-
     let header = document.getElementById('banner-header'), banner_body = document.getElementById('banner-body-text'), link1 = document.getElementById('link01'), link2 = document.getElementById('link02'), img_card_01 = document.getElementById('adj-card-panel-01-top'), img_card_02 = document.getElementById('adj-card-panel-01-bottom');
 
     // TODO : select the other elements in the DOM that need updating (i.e., the top card-panel and bottom card-panel)
@@ -199,12 +178,6 @@
     } else if (info_banner_xy_array_position_tuple.super == 2) {
       branch = 'art'
     }
-
-    // console.log('tree branch :',  tree[branch])
-    // console.log('art branch :', tree['art'])
-    // cl()
-    // test print indexing into hash table
-    // console.log(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title)
 
     header.innerHTML = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].title
 
@@ -1234,7 +1207,7 @@
           let content_row_col_child = document.createElement('div');
           content_row_col_child.className = 'col s12'
             let content_row_col_child_para = document.createElement('p');
-            content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 30)
+            content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].text, 30)
 
             content_row_col_child.appendChild(content_row_col_child_para)
           content_row.appendChild(content_row_col_child)
