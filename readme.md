@@ -46,7 +46,6 @@
 #### http://35.167.90.70
 #### https://github.com/alexander-io/foundry10-web-development
 
-
 TODO_lst = {
 
   @ opensail.io/sep
