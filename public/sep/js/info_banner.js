@@ -56,6 +56,9 @@
   let the_array_of_glory = []
 
   let global_lst_of_carousel_panels
+  let global_lst_of_carousel_panels_research_update
+  let global_lst_of_carousel_panels_program_update
+
 
   // define a list of all of the sub items
   let sub_item_lst = []
@@ -1108,6 +1111,9 @@
     let create_lst_of_carousel_panels = function(){
       let carousel_panel_list = new DoublyLinkedList()
 
+      let research_update_lst = new DoublyLinkedList()
+      let program_update_lst = new DoublyLinkedList()
+
       // // update article 0 title
       // article_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
       //
@@ -1261,11 +1267,27 @@
         card_panel.appendChild(button_row)
         card_panel_col_wrapper.appendChild(card_panel)
 
+
+        // |||||||||||||||||||||||||||
+        if (articles[x].type == 'article') {
+          research_update_lst.push(card_panel_col_wrapper)
+        } else if ( articles[x].type == 'program') {
+          program_update_lst.push(card_panel_col_wrapper)
+        }
+
+
         carousel_panel_list.push(card_panel_col_wrapper)
+
       }
 
       print_all_lst_elems(carousel_panel_list)
       global_lst_of_carousel_panels = carousel_panel_list
+      global_lst_of_carousel_panels_research_update = research_update_lst
+      global_lst_of_carousel_panels_program_update = program_update_lst
+
+
+
+
       return carousel_panel_list
     }
 
@@ -1292,6 +1314,19 @@
 
       console.log(global_lst_of_carousel_panels.head.next.value);
 
+      /*
+      yo
+        i just made two new lists of carousel panels
+          global_lst_of_carousel_panels_program_update
+          global_lst_of_carousel_panels_research_update
+
+        they contain strictly panels associated with either program updates or research updates
+          when selecting a panel to populate through to the window, select a panel from either of these two lists
+          this will allow easier enforcement of the rule requiring there to be one of each program and research update visibile for each carousel state
+
+      */
+
+
       // wait until animation has finished to remove the initial panel
       setTimeout(function(){
         carousel_panel.remove()
@@ -1299,21 +1334,22 @@
         let carousel_panel_wrapper = document.createElement('div')
 
         let curr
-        curr = global_lst_of_carousel_panels.head
+        // curr = global_lst_of_carousel_panels.head
+        curr = global_lst_of_carousel_panels_program_update.head
 
 
 
         let x = 0
         while (x<curr_carousel_panel) {
           if (curr == null) {
-            curr = global_lst_of_carousel_panels.head
+            curr = global_lst_of_carousel_panels_program_update.head
           }
           curr = curr.next
           x++
         }
 
         if (curr == null) {
-          curr = global_lst_of_carousel_panels.head
+          curr = global_lst_of_carousel_panels_program_update.head
         }
 
         curr_carousel_panel+=2
@@ -1321,7 +1357,7 @@
         // let curr = global_lst_of_carousel_panels[0]
         carousel_panel_wrapper.appendChild(curr.value)
 
-        curr = curr.next
+        curr = global_lst_of_carousel_panels_research_update.head
 
         carousel_panel_wrapper.appendChild(curr.value)
 
