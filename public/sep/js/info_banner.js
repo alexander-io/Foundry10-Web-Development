@@ -88,11 +88,7 @@
       arr.pop()
       if_lengthy_string_remove_word(arr.join(' '))
     }
-    // console.log('final length of string :', str.length);
-    // shortened_string = str
-    // if (str.length <= 128) return str
     return str
-    // break
   }
 
 
@@ -155,21 +151,6 @@
 
     let carousel_panel_wrapper = document.createElement('div')
 
-    // let curr = lst_of_carousel_panels.head.next
-    // carousel_panel_wrapper.appendChild(curr.value)
-    //
-    // // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
-    // // document.getElementById('carousel-panel-mount').appendChild(curr.value)
-    // curr = curr.next
-    //
-    // try {
-    //
-    //   carousel_panel_wrapper.appendChild(curr.value)
-    // } catch (e) {
-    //
-    // } finally {
-    //
-    // }
     curr_program_panel = null
     curr_research_panel = null
 
@@ -1077,59 +1058,42 @@
     tech.addEventListener('click', function(e) {
       animate_lower_links()
       tech_click()
-      // curr_program_panel = null
-      // curr_research_panel = null
     });
 
     collective.addEventListener('click', function(e) {
       animate_lower_links()
       collective_click()
-      // curr_program_panel = null
-      // curr_research_panel = null
     });
 
     art.addEventListener('click', function(e) {
       animate_lower_links()
       art_click()
-      // curr_program_panel = null
-      // curr_research_panel = null
     });
 
     banner_sub_item_01.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 0
       display()
-      // curr_program_panel = null
-      // curr_research_panel = null
     });
 
     banner_sub_item_02.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 1
       display()
-      // curr_program_panel = null
-      // curr_research_panel = null
     });
 
     banner_sub_item_03.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 2
       display()
-      // curr_program_panel = null
-      // curr_research_panel = null
     });
 
     banner_sub_item_04.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 3
       display()
-      // curr_program_panel = null
-      // curr_research_panel = null
     });
 
     // XXX testing function for logging the state of the info-banner
     let cl = function(){
       console.log(info_banner_xy_array_position_tuple)
     }
-
-
-    // CAROUSEL
 
     function DoublyLinkedList(){
        this.head = null;
@@ -1203,7 +1167,7 @@
             header_five.style.maxHeight = '70px'
             header_five.style.marginBottom = '10px'
 
-            // TODO, generalize -> change the 0 to the iteratior once you put this into a loop
+            //  generalize -> change the 0 to the iteratior once you put this into a loop
             header_five.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].title, 3)
             header_five.id = "article-title-00"
 
@@ -1446,6 +1410,7 @@
         document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
 
         carousel_panel_wrapper.style.transition = 'transform 1s ease, opacity 1s ease'
+
         setTimeout(function(){
           carousel_panel_wrapper.style.opacity = '1'
           carousel_panel_wrapper.style.transform = 'translate(0px,0px)'
