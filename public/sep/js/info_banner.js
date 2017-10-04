@@ -155,21 +155,49 @@
 
     let carousel_panel_wrapper = document.createElement('div')
 
-    let curr = lst_of_carousel_panels.head.next
-    carousel_panel_wrapper.appendChild(curr.value)
+    // let curr = lst_of_carousel_panels.head.next
+    // carousel_panel_wrapper.appendChild(curr.value)
+    //
+    // // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
+    // // document.getElementById('carousel-panel-mount').appendChild(curr.value)
+    // curr = curr.next
+    //
+    // try {
+    //
+    //   carousel_panel_wrapper.appendChild(curr.value)
+    // } catch (e) {
+    //
+    // } finally {
+    //
+    // }
+    curr_program_panel = null
+    curr_research_panel = null
 
-    // document.getElementById('carousel-panel-mount').appendChild(carousel_panel_clone_1);
-    // document.getElementById('carousel-panel-mount').appendChild(curr.value)
-    curr = curr.next
-
-    try {
-
-      carousel_panel_wrapper.appendChild(curr.value)
-    } catch (e) {
-
-    } finally {
-
+    if (!curr_program_panel) {
+      curr_program_panel = global_lst_of_carousel_panels_program_update.head
+    } else {
+      if (curr_program_panel.next) {
+        curr_program_panel = curr_program_panel.next
+      } else {
+        curr_program_panel = global_lst_of_carousel_panels_program_update.head
+      }
     }
+
+    carousel_panel_wrapper.appendChild(curr_program_panel.value)
+
+    if (!curr_research_panel) {
+      curr_research_panel = global_lst_of_carousel_panels_research_update.head
+    } else {
+      if (curr_research_panel.next) {
+        curr_research_panel = curr_research_panel.next
+      } else {
+        curr_research_panel = global_lst_of_carousel_panels_research_update.head
+      }
+    }
+
+    carousel_panel_wrapper.appendChild(curr_research_panel.value)
+
+
     // document.getElementById('carousel-panel-mount').appendChild(curr.value)
     document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
     carousel_panel = carousel_panel_wrapper
@@ -1049,52 +1077,50 @@
     tech.addEventListener('click', function(e) {
       animate_lower_links()
       tech_click()
-
-      curr_program_panel = null
-      curr_research_panel = null
-
+      // curr_program_panel = null
+      // curr_research_panel = null
     });
 
     collective.addEventListener('click', function(e) {
       animate_lower_links()
       collective_click()
-      curr_program_panel = null
-      curr_research_panel = null
+      // curr_program_panel = null
+      // curr_research_panel = null
     });
 
     art.addEventListener('click', function(e) {
       animate_lower_links()
       art_click()
-      curr_program_panel = null
-      curr_research_panel = null
+      // curr_program_panel = null
+      // curr_research_panel = null
     });
 
     banner_sub_item_01.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 0
       display()
-      curr_program_panel = null
-      curr_research_panel = null
+      // curr_program_panel = null
+      // curr_research_panel = null
     });
 
     banner_sub_item_02.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 1
       display()
-      curr_program_panel = null
-      curr_research_panel = null
+      // curr_program_panel = null
+      // curr_research_panel = null
     });
 
     banner_sub_item_03.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 2
       display()
-      curr_program_panel = null
-      curr_research_panel = null
+      // curr_program_panel = null
+      // curr_research_panel = null
     });
 
     banner_sub_item_04.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 3
       display()
-      curr_program_panel = null
-      curr_research_panel = null
+      // curr_program_panel = null
+      // curr_research_panel = null
     });
 
     // XXX testing function for logging the state of the info-banner
@@ -1130,32 +1156,8 @@
 
     let create_lst_of_carousel_panels = function(){
       let carousel_panel_list = new DoublyLinkedList()
-
       let research_update_lst = new DoublyLinkedList()
       let program_update_lst = new DoublyLinkedList()
-
-      // // update article 0 title
-      // article_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].title, 3)
-      //
-      // // update article 1 title
-      // article_title_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].title, 3)
-      //
-      // // update article 0 sub title
-      // article_sub_title_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].sub_title, 4)
-      //
-      // // update article 1 sub title
-      // article_sub_title_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].sub_title, 4)
-      //
-      // // update the text in article 1
-      // article_text_00.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].text, 32)
-      //
-      // // update the text in article 2
-      // article_text_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].text, 32)
-      //
-      // // update article icons
-      // article_icon_00.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].icon
-      //
-      // article_icon_01.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].icon
 
       let branch = 'tech' // initialize the bnranch to tech
       if (info_banner_xy_array_position_tuple.super == 0) {
@@ -1168,10 +1170,9 @@
 
       let articles = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles
       for (let x = 0; x < articles.length; x++) {
-        // console.log(articles[x]);
+
         // the mount point is id="test-area"
         let test_mount = document.getElementById('test-area');
-        // console.log(test_mount);
 
         let card_panel_col_wrapper = document.createElement('div');
         card_panel_col_wrapper.className = 'col s12 m4 l4'
@@ -1190,9 +1191,6 @@
           card_panel.className += ' program-type'
         }
 
-
-        // 3d2289
-        // 26706a
 
         let header_row = document.createElement('div');
         header_row.className = 'row header-row'
@@ -1287,26 +1285,19 @@
         card_panel.appendChild(button_row)
         card_panel_col_wrapper.appendChild(card_panel)
 
-
-        // |||||||||||||||||||||||||||
         if (articles[x].type == 'article') {
           research_update_lst.push(card_panel_col_wrapper)
         } else if ( articles[x].type == 'program') {
           program_update_lst.push(card_panel_col_wrapper)
         }
 
-
         carousel_panel_list.push(card_panel_col_wrapper)
-
       }
 
       // print_all_lst_elems(carousel_panel_list)
       global_lst_of_carousel_panels = carousel_panel_list
       global_lst_of_carousel_panels_research_update = research_update_lst
       global_lst_of_carousel_panels_program_update = program_update_lst
-
-
-
 
       return carousel_panel_list
     }
@@ -1345,7 +1336,7 @@
           this will allow easier enforcement of the rule requiring there to be one of each program and research update visibile for each carousel state
 
       */
-      // console.log('global_lst_of_carousel_panels_program_update len :', global_lst_of_carousel_panels_program_update.length);
+
       console.log(global_lst_of_carousel_panels_program_update);
       let x = 0, cur = global_lst_of_carousel_panels_program_update.head
       while (cur != null) {
@@ -1353,7 +1344,7 @@
         cur = cur.next
       }
       console.log('global_lst_of_carousel_panels_program_update size :', x);
-      // console.log('global_lst_of_carousel_panels_research_update len :', global_lst_of_carousel_panels_research_update.length)
+
       console.log(global_lst_of_carousel_panels_research_update);
       x=0
       cur = global_lst_of_carousel_panels_research_update.head
@@ -1449,62 +1440,9 @@
 
         carousel_panel_wrapper.appendChild(curr_research_panel.value)
 
-        // let curr
-        // curr = global_lst_of_carousel_panels.head
-        //
-        // let x = 0
-        // while (x<curr_carousel_panel) {
-        //   if (curr == null) {
-        //     curr = global_lst_of_carousel_panels.head
-        //   }
-        //   curr = curr.next
-        //   x++
-        // }
-        //
-        // if (curr == null) {
-        //   curr = global_lst_of_carousel_panels.head
-        // }
-        //
-        // curr_carousel_panel+=2
-        //
-        // console.log('curr value classlst :', curr.value.classList.value);
-        //
-        // let curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
-        // console.log('after curr valuse classLst :', curr_carousel_panel_classlst_arr);
-        //
-        // while (!curr_carousel_panel_classlst_arr.includes('program-type')){
-        //   // move to next element
-        //   if (curr == null || curr.next == null) {
-        //     curr = global_lst_of_carousel_panels.head
-        //   } else {
-        //     curr = curr.next
-        //   }
-        //
-        //   curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
-        // }
-        //
-        // carousel_panel_wrapper.appendChild(curr.value)
-        //
-        // curr = curr.next
-        // while (!curr_carousel_panel_classlst_arr.includes('research-type')){
-        //   // move to next element
-        //   if (curr == null || curr.next == null) {
-        //     curr = global_lst_of_carousel_panels.head
-        //   } else {
-        //     curr = curr.next
-        //   }
-        //
-        //   curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
-        // }
-        //
-        // console.log('glob lst :', curr.value.classList);
-        //
-        // carousel_panel_wrapper.appendChild(curr.value)
-
         carousel_panel_wrapper.style.opacity = '0'
         carousel_panel_wrapper.style.transform = 'translate(200px, 0)'
 
-        // document.getElementById('carousel-panel-mount').appendChild(curr.value)
         document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
 
         carousel_panel_wrapper.style.transition = 'transform 1s ease, opacity 1s ease'
