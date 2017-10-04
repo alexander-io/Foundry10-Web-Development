@@ -55,6 +55,10 @@
 
   let the_array_of_glory = []
 
+
+  let curr_program_panel
+  let curr_research_panel
+
   let global_lst_of_carousel_panels
   let global_lst_of_carousel_panels_research_update
   let global_lst_of_carousel_panels_program_update
@@ -1045,36 +1049,52 @@
     tech.addEventListener('click', function(e) {
       animate_lower_links()
       tech_click()
+
+      curr_program_panel = null
+      curr_research_panel = null
+
     });
 
     collective.addEventListener('click', function(e) {
       animate_lower_links()
       collective_click()
+      curr_program_panel = null
+      curr_research_panel = null
     });
 
     art.addEventListener('click', function(e) {
       animate_lower_links()
       art_click()
+      curr_program_panel = null
+      curr_research_panel = null
     });
 
     banner_sub_item_01.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 0
       display()
+      curr_program_panel = null
+      curr_research_panel = null
     });
 
     banner_sub_item_02.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 1
       display()
+      curr_program_panel = null
+      curr_research_panel = null
     });
 
     banner_sub_item_03.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 2
       display()
+      curr_program_panel = null
+      curr_research_panel = null
     });
 
     banner_sub_item_04.addEventListener('click', function(e) {
       info_banner_xy_array_position_tuple.sub = 3
       display()
+      curr_program_panel = null
+      curr_research_panel = null
     });
 
     // XXX testing function for logging the state of the info-banner
@@ -1280,7 +1300,7 @@
 
       }
 
-      print_all_lst_elems(carousel_panel_list)
+      // print_all_lst_elems(carousel_panel_list)
       global_lst_of_carousel_panels = carousel_panel_list
       global_lst_of_carousel_panels_research_update = research_update_lst
       global_lst_of_carousel_panels_program_update = program_update_lst
@@ -1325,7 +1345,23 @@
           this will allow easier enforcement of the rule requiring there to be one of each program and research update visibile for each carousel state
 
       */
-
+      // console.log('global_lst_of_carousel_panels_program_update len :', global_lst_of_carousel_panels_program_update.length);
+      console.log(global_lst_of_carousel_panels_program_update);
+      let x = 0, cur = global_lst_of_carousel_panels_program_update.head
+      while (cur != null) {
+        x+=1
+        cur = cur.next
+      }
+      console.log('global_lst_of_carousel_panels_program_update size :', x);
+      // console.log('global_lst_of_carousel_panels_research_update len :', global_lst_of_carousel_panels_research_update.length)
+      console.log(global_lst_of_carousel_panels_research_update);
+      x=0
+      cur = global_lst_of_carousel_panels_research_update.head
+      while (cur != null) {
+        x+=1
+        cur = cur.next
+      }
+      console.log('global_lst_of_carousel_panels_research_update size :', x);
 
       // wait until animation has finished to remove the initial panel
       setTimeout(function(){
@@ -1333,37 +1369,32 @@
 
         let carousel_panel_wrapper = document.createElement('div')
 
-        let curr
-        // curr = global_lst_of_carousel_panels.head
-        curr = global_lst_of_carousel_panels_program_update.head
-
-
-
-        let x = 0
-        while (x<curr_carousel_panel) {
-          if (curr == null) {
-            curr = global_lst_of_carousel_panels_program_update.head
+        if (!curr_program_panel) {
+          curr_program_panel = global_lst_of_carousel_panels_program_update.head
+        } else {
+          if (curr_program_panel.next) {
+            curr_program_panel = curr_program_panel.next
+          } else {
+            curr_program_panel = global_lst_of_carousel_panels_program_update.head
           }
-          curr = curr.next
-          x++
         }
 
-        if (curr == null) {
-          curr = global_lst_of_carousel_panels_program_update.head
+        carousel_panel_wrapper.appendChild(curr_program_panel.value)
+
+        if (!curr_research_panel) {
+          curr_research_panel = global_lst_of_carousel_panels_research_update.head
+        } else {
+          if (curr_research_panel.next) {
+            curr_research_panel = curr_research_panel.next
+          } else {
+            curr_research_panel = global_lst_of_carousel_panels_research_update.head
+          }
         }
 
-        curr_carousel_panel+=2
-        console.log('curr carousel panel :', curr_carousel_panel);
-        // let curr = global_lst_of_carousel_panels[0]
-        carousel_panel_wrapper.appendChild(curr.value)
-
-        curr = global_lst_of_carousel_panels_research_update.head
-
-        carousel_panel_wrapper.appendChild(curr.value)
+        carousel_panel_wrapper.appendChild(curr_research_panel.value)
 
         carousel_panel_wrapper.style.opacity = '0'
         carousel_panel_wrapper.style.transform = 'translate(-200px, 0)'
-
 
         document.getElementById('carousel-panel-mount').appendChild(carousel_panel_wrapper)
         carousel_panel_wrapper.style.transition = 'transform 1s ease, opacity 1s ease'
@@ -1393,64 +1424,82 @@
 
         let carousel_panel_wrapper = document.createElement('div')
 
-        let curr
-        curr = global_lst_of_carousel_panels.head
 
-
-        let x = 0
-        while (x<curr_carousel_panel) {
-          if (curr == null) {
-            curr = global_lst_of_carousel_panels.head
-          }
-          curr = curr.next
-          x++
-        }
-
-        if (curr == null) {
-          curr = global_lst_of_carousel_panels.head
-        }
-
-        curr_carousel_panel+=2
-
-        console.log('curr value classlst :', curr.value.classList.value);
-
-        // let curr_carousel_panel_classlst_arr = JSON.parse("["+ curr.value.classList.value +"]")
-        let curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
-        console.log('after curr valuse classLst :', curr_carousel_panel_classlst_arr);
-        // let class_lst_copy = curr.value.classList
-
-        while (!curr_carousel_panel_classlst_arr.includes('program-type')){
-          // move to next element
-          if (curr == null || curr.next == null) {
-            curr = global_lst_of_carousel_panels.head
+        if (!curr_program_panel) {
+          curr_program_panel = global_lst_of_carousel_panels_program_update.head
+        } else {
+          if (curr_program_panel.next) {
+            curr_program_panel = curr_program_panel.next
           } else {
-            curr = curr.next
+            curr_program_panel = global_lst_of_carousel_panels_program_update.head
           }
-
-          curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
         }
 
-        carousel_panel_wrapper.appendChild(curr.value)
+        carousel_panel_wrapper.appendChild(curr_program_panel.value)
 
-
-        curr = curr.next
-        while (!curr_carousel_panel_classlst_arr.includes('research-type')){
-          // move to next element
-          if (curr == null || curr.next == null) {
-            curr = global_lst_of_carousel_panels.head
+        if (!curr_research_panel) {
+          curr_research_panel = global_lst_of_carousel_panels_research_update.head
+        } else {
+          if (curr_research_panel.next) {
+            curr_research_panel = curr_research_panel.next
           } else {
-            curr = curr.next
+            curr_research_panel = global_lst_of_carousel_panels_research_update.head
           }
-
-          curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
         }
-        // while (!curr.value.classList.includes('research-type')){
+
+        carousel_panel_wrapper.appendChild(curr_research_panel.value)
+
+        // let curr
+        // curr = global_lst_of_carousel_panels.head
+        //
+        // let x = 0
+        // while (x<curr_carousel_panel) {
+        //   if (curr == null) {
+        //     curr = global_lst_of_carousel_panels.head
+        //   }
         //   curr = curr.next
+        //   x++
         // }
-        console.log('glob lst :', curr.value.classList);
-
-
-        carousel_panel_wrapper.appendChild(curr.value)
+        //
+        // if (curr == null) {
+        //   curr = global_lst_of_carousel_panels.head
+        // }
+        //
+        // curr_carousel_panel+=2
+        //
+        // console.log('curr value classlst :', curr.value.classList.value);
+        //
+        // let curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
+        // console.log('after curr valuse classLst :', curr_carousel_panel_classlst_arr);
+        //
+        // while (!curr_carousel_panel_classlst_arr.includes('program-type')){
+        //   // move to next element
+        //   if (curr == null || curr.next == null) {
+        //     curr = global_lst_of_carousel_panels.head
+        //   } else {
+        //     curr = curr.next
+        //   }
+        //
+        //   curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
+        // }
+        //
+        // carousel_panel_wrapper.appendChild(curr.value)
+        //
+        // curr = curr.next
+        // while (!curr_carousel_panel_classlst_arr.includes('research-type')){
+        //   // move to next element
+        //   if (curr == null || curr.next == null) {
+        //     curr = global_lst_of_carousel_panels.head
+        //   } else {
+        //     curr = curr.next
+        //   }
+        //
+        //   curr_carousel_panel_classlst_arr = curr.value.classList.value.split(' ')
+        // }
+        //
+        // console.log('glob lst :', curr.value.classList);
+        //
+        // carousel_panel_wrapper.appendChild(curr.value)
 
         carousel_panel_wrapper.style.opacity = '0'
         carousel_panel_wrapper.style.transform = 'translate(200px, 0)'
