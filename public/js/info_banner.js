@@ -214,12 +214,9 @@
     article_text_01.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].text, 32)
 
     // update article icons
-    article_icon_00.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].icon
-
-    article_icon_01.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].icon
-
-
-
+    // article_icon_00.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[0].icon
+    //
+    // article_icon_01.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[1].icon
 
 
     /*
@@ -242,19 +239,10 @@
     */
 
 
-
-
-
-
     // img_card_01.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[0] + ')'
     //
     // img_card_02.style.backgroundImage = 'url(' + tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].images[1] + ')'
-
-
-
   }
-
-
 
   let icon_path_prefix = 'icons/flat/'
   let icp = icon_path_prefix

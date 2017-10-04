@@ -1,0 +1,432 @@
+   <!DOCTYPE html>
+<html>
+  <head>
+    <title>foundry10</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/animate.css">
+  </head>
+  <body id="body" style="background-color:black;">
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/materialize.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="/css/material-components-web.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/aos.css">
+    <script type="text/javascript" src="js/aos.js">
+
+    </script>
+    <script>
+      AOS.init();
+    </script>
+
+    <style media="screen">
+      #left-door, #right-door{
+        transition: transform 2s ease-in-out;
+        transition: all ease 2s;
+      }
+    </style>
+
+
+    <nav id="nav"
+    style="
+    font-family: 'Helvetica';
+    font-size : 75%;
+      background-color: black;
+      font-weight:600;
+      "
+    >
+      <div class="row">
+        <img class="left"src="images/nav.png" alt="">
+        <div class="container center">
+          <div class="col s2">
+            <a class="nav-link" href="#">Areas</a>
+          </div>
+          <div class="col s2">
+            <a class="nav-link" href="#">Research</a>
+          </div>
+          <div class="col s2">
+            <a class="nav-link" href="#">Partners</a>
+          </div>
+          <div class="col s2">
+            <a class="nav-link" href="#">Our Team</a>
+          </div>
+          <div class="col s2">
+            <a class="nav-link" href="#">About Us</a>
+          </div>
+          <div class="col s2">
+            <a class="nav-link" href="#">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <style media="screen">
+      #nav {
+        background-color: #cb6535;
+      }
+
+      .nav-link {
+        font-size: 200%;
+      }
+    </style>
+
+    <script type="text/javascript">
+      let nav = document.getElementById('nav');
+
+    </script>
+
+    <div class="section" style="background-color:black;background-image:url(images/mast_gradient_up.jpg);background-position:cover;background-repeat:no-repeat;background-size:100%;position:relative;z-index:0;height:800px;">
+      <div class="container"12style="color:#ffffff;margin-top:40px;z-depth:5;">
+          <br>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col s6">
+              <br><br><br>
+              <hr style="height:10px;background-color:#cb6535;border:0px;width:75%;">
+              <h1 style="text-align:center;color:white;">What We Do</h1>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </div>
+      <br><br><br>
+
+    </div>
+    <div class="container" style="background-color:rgba(0,0,0,.7);position:relative;top:-150px;z-index:16;">
+
+    </div>
+    <div id="info-banner" class="section z-depth-5" style="top:-360px;background-color:black;">
+
+      <nav class="" style="height: 240px;background-color:black;">
+        <div class="container" style="height:100%;">
+
+          <nav id="basic-tab-bar" class="mdc-tab-bar" style="height:100px;">
+            <a id="banner-item-01" class="mdc-tab mdc-tab--active" style="color:white;background-color:#212121;font-size:180%;" >Tech</a>
+            <a id="banner-item-02" class="mdc-tab" style="color:white;background-color:#212121;font-size:180%;" >Cross Disciplinary</a>
+            <a id="banner-item-03" class="mdc-tab" style="color:white;background-color:#212121;font-size:180%;" >Art </a>
+            <span style="background-color:#d14e1d;"class="mdc-tab-bar__indicator"></span>
+          </nav>
+          <script type="text/javascript">
+            let bi1 = document.getElementById('banner-item-01'), bi2 = document.getElementById('banner-item-02'), bi3 = document.getElementById('banner-item-03');
+
+            bi1.addEventListener('mouseover', function(e) {
+              bi1.style.color = '#d14e1d'
+            });
+            bi1.addEventListener('mouseout', function(e) {
+              bi1.style.color = 'white'
+            })
+
+            bi2.addEventListener('mouseover', function(e) {
+              bi2.style.color = '#d14e1d'
+            });
+            bi2.addEventListener('mouseout', function(e) {
+              bi2.style.color = 'white'
+            })
+
+            bi3.addEventListener('mouseover', function(e) {
+              bi3.style.color = '#d14e1d'
+            });
+            bi3.addEventListener('mouseout', function(e) {
+              bi3.style.color = 'white'
+            })
+
+          </script>
+          <div class="mdc-tab-bar-scroller__indicator mdc-tab-bar-scroller__indicator--forward">
+            <a class="mdc-tab-bar-scroller__indicator__inner material-icons" href="#" aria-label="scroll forward button">
+              navigate_next
+            </a>
+          </div>
+
+          <nav id="basic-sub-tab-bar" class="mdc-tab-bar" style="height:100px;">
+            <a id="banner-sub-item-01" class="mdc-tab mdc-tab--active" style="color:white;background-color:#212121;font-size:150%;" ><span id="banner-sub-item-01-title">
+              robotics
+            </span></a>
+            <a id="banner-sub-item-02" class="mdc-tab" style="color:white;background-color:#212121;font-size:150%;" >
+              <span id="banner-sub-item-02-title">
+                <span class="hide-on-med-and-down truncate">
+                  virtual reality
+                </span>
+                <span class="hide-on-large-only">
+                  vr
+                </span>
+              </span>
+            </a>
+            <a id="banner-sub-item-03" class="mdc-tab" style="color:white;background-color:#212121;font-size:150%;" >
+              <span id="banner-sub-item-03-title">
+                <span class="hide-on-med-and-down truncate">
+                  game development
+                </span>
+                <span class="hide-on-large-only truncate">
+                  game dev.
+                </span>
+              </span>
+            </a>
+            <a id="banner-sub-item-04" class="mdc-tab" style="color:white;background-color:#212121;font-size:150%;" >
+              <span id="banner-sub-item-04-title">
+                <span class="hide-on-med-and-down truncate">
+                  automotive
+                </span>
+                <span class="hide-on-large-only truncate">
+                  auto
+                </span>
+              </span>
+            </a>
+            <span style="background-color:#d14e1d;"class="mdc-tab-bar__indicator"></span>
+          </nav>
+          <div class="mdc-tab-bar-scroller__indicator mdc-tab-bar-scroller__indicator--forward">
+            <a class="mdc-tab-bar-scroller__indicator__inner material-icons" href="#" aria-label="scroll forward button">
+              navigate_next
+            </a>
+          </div>
+
+          <script type="text/javascript">
+          let bsi1 = document.getElementById('banner-sub-item-01'), bsi2 = document.getElementById('banner-sub-item-02'), bsi3 = document.getElementById('banner-sub-item-03'), bsi4 = document.getElementById('banner-sub-item-04');
+
+          bsi1.addEventListener('mouseover', function(e) {
+            bsi1.style.color = '#d14e1d'
+          });
+          bsi1.addEventListener('mouseout', function(e) {
+            bsi1.style.color = 'white'
+          })
+
+          bsi2.addEventListener('mouseover', function(e) {
+            bsi2.style.color = '#d14e1d'
+          });
+          bsi2.addEventListener('mouseout', function(e) {
+            bsi2.style.color = 'white'
+          })
+
+          bsi3.addEventListener('mouseover', function(e) {
+            bsi3.style.color = '#d14e1d'
+          });
+          bsi3.addEventListener('mouseout', function(e) {
+            bsi3.style.color = 'white'
+          })
+
+          bsi4.addEventListener('mouseover', function(e) {
+            bsi4.style.color = '#d14e1d'
+          });
+          bsi4.addEventListener('mouseout', function(e) {
+            bsi4.style.color = 'white'
+          })
+          </script>
+
+        </div>
+      </nav>
+
+
+      <div id="" class="row container" style="">
+        <div class="col s12 m12 l12">
+          <div id="cardpanel01" class="card-panel z-depth-5" style="background-color:#424242;z-index:4;padding: 0 0 1em 0;">
+            <div class="container" style="padding-top:3%;">
+
+              <h2 style="color:white; text-align:center">
+                <span style="color:#ff6600;">
+                  foundry10
+                </span>
+                is redefining education through
+                <span  id="banner-header" style="color:#ff6600;border-bottom: 4px solid white;">
+                  robotics
+                </span>
+              </h2>
+              <p id="banner-body-text" style="font-size:150%;max-height:10%;margin-bottom:50px;color:white;">
+                Robotics is the interdisciplinary branch of engineering and science that includes mechanical engineering, electrical engineering, computer science, and others. Robotics deals with the design, construction, operation, and use of robots, as well as computer systems for their control and information processing.
+              </p>
+            </div>
+
+            <div class="" style="z-index:1;margin-bottom:50px;overflow:hidden;max-height:450px;min-height:450px;">
+              <div class="" id="logo" >
+                <img id="plax_img" src="images/info_banner/DSC01400-1-e1472759462425.jpg" style="width:100%;" alt="">
+              </div>
+            </div>
+
+              <div class="row">
+
+                <div class="col s1 offset-s1 valign-wrapper" style="position:relative;height:100%;">
+                  <div id="left-panel" class="" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; ">
+                    <div class="" style="width:100%;">
+                      <h1 class="center-align" style="margin-top:150px;">
+                        <i id="carousel-left-arrow" class="material-icons md-48 waves waves-effect waves-light" style="font-size:112.5%;color:#ff6600; " >
+                          keyboard_arrow_left
+                        </i>
+                        <i id="carousel-left-arrow-decor" class="material-icons md-48 waves waves-effect waves-light" style="font-size:112.5%;color:white;z-index:0;" >
+                          keyboard_arrow_left
+                        </i>
+                        <script type="text/javascript">
+                          let carousel_left_arrow = document.getElementById('carousel-left-arrow');
+                          let left_arrow_decor = document.getElementById('carousel-left-arrow-decor');
+                          let left_arrow_rect = carousel_left_arrow.getBoundingClientRect()
+                          let left_arrow_decor_rect = left_arrow_decor.getBoundingClientRect()
+                          top_difference =   left_arrow_rect.top - left_arrow_decor_rect.top
+                          left_arrow_decor.style.top = (top_difference) + 'px'
+                          left_arrow_decor.style.left = '10px'
+                        </script>
+
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="" id="carousel-panel-mount">
+
+              <div class="carousel-panel" id="carousel-panel-00">
+                <div class="col s12 m4 l4">
+                  <div class="card-panel article-card hoverable z-depth-5" style="height:400px;border-left: 1em solid #3d2289;">
+                    <div class="row header-row">
+                      <div class="col s8" >
+                        <h5 id="article-title-00" style="min-height:70px; max-height:70px;margin-bottom:10px">Elementary Atfer School...</h5>
+                        <a href="#">
+                          <h5 id="article-sub-title-00" style="min-height:20px;max-height:20px;">
+                            Elementary Robotics
+                          </h5>
+                        </a>
+                      </div>
+                      <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
+                        <!-- <img id="article-icon-00" class="article-icon-image" src="icons/flat/009-wrench.png"> -->
+                      </div>
+                    </div>
+                    <div class="row content-row" style="min-height:150px; max-height:150px;">
+                      <div class="col s12">
+                        <p id="article-text-00" >
+
+                          As part of our work focused on after school programming, we partnered with an elementary school in the greater Seattle area to run a Lego building club for early elementary students (kindergarten...
+                          <z id="article-text-truncate-00" class="truncate"></z>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row article-button-row" >
+                      <div class="col s6">
+                        <a id="article-link-00-00"href="#">
+                          <div class="card-panel hoverable article-button-panel" style="background-color:#3d2289;">
+
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col s6">
+                        <a id="article-link-00-01"href="#">
+                          <div class="card-panel hoverable article-button-panel" style="background-color:#3d2289;">
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- article card -->
+                <div class="col s12 m4 l4">
+                  <div class="card-panel article-card hoverable z-depth-5" style="height:400px;border-left: 1em solid #26706a;">
+
+                    <div class="row header-row" >
+                      <div class="col s8" >
+                        <h5 id="article-title-01" style="min-height:70px; max-height:70px;margin-bottom:10px">Robotics Brief</h5>
+                        <a href="#"><h5 id="article-sub-title-01" style="min-height:20px;max-height:20px;">Education Meets Robotics</h5></a>
+                      </div>
+                      <div class="col s4" style="background-image:url('images/patterns/pattern-01.png');">
+                        <img id="article-icon-01" class="article-icon-image" src="icons/flat/001-gears.png">
+                      </div>
+                    </div>
+                    <div class="row content-row" style="min-height:150px; max-height:150px;">
+                      <div class="col s12">
+                        <p id="article-text-01" >
+                          Throughout the fall of the 2016-2017 school year, foundry10 ran robotics programs in two schools around Seattle: The Nova Project and Seattle Girl’s School. We were interested in how exposure to our... <z id="article-text-truncate-01" class="truncate"></z>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row article-button-row">
+                      <div class="col s6">
+                        <a id="article-link-01-00"href="#">
+                          <div class="card-panel hoverable article-button-panel"style="background-color:#26706a;">
+
+                            <!-- #26706a -->
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col s6">
+                        <a id="article-link-01-01"href="#">
+                          <div class="card-panel hoverable article-button-panel"style="background-color:#26706a;">
+
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- end of carousel panel -->
+            </div>
+
+
+                <div  class="col s1 valign-wrapper "  style="position:relative;height:100%;">
+                  <div id="right-panel" class="" style="width:100%;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <div class="" style="width:100%;">
+                      <h1 class="center-align"style="margin-top:150px;">
+                        <i id="carousel-right-arrow" class="material-icons md-48 waves waves-effect waves-light" style="font-size:112.5%;color:#ff6600;" >
+                          keyboard_arrow_right
+                        </i>
+                        <i id="carousel-right-arrow-decor" class="material-icons md-48 waves waves-effect waves-light" style="font-size:112.5%;color:white;z-index:0;" >
+                          keyboard_arrow_right
+                        </i>
+                        <script type="text/javascript">
+                          let carousel_right_arrow = document.getElementById('carousel-right-arrow');
+                          let right_arrow_decor = document.getElementById('carousel-right-arrow-decor');
+                          let right_arrow_rect = carousel_right_arrow.getBoundingClientRect()
+                          let right_arrow_decor_rect = right_arrow_decor.getBoundingClientRect()
+                          let top_difference =   right_arrow_rect.top - right_arrow_decor_rect.top
+                          right_arrow_decor.style.top = (top_difference) + 'px'
+                          right_arrow_decor.style.right = '10px'
+                        </script>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- <div class="" id="test-area">
+
+            </div> -->
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          let cp01 = document.getElementById('cardpanel01')
+          let adjcp01top = document.getElementById('adj-card-panel-01-top')
+          let adjcp01bottom = document.getElementById('adj-card-panel-01-bottom')
+          let cprow = document.getElementById('card-panel-row-01')
+          let rect = cp01.getBoundingClientRect()
+
+
+        </script>
+      </div>
+    </div> <!-- end info banner -->
+    <div class="" style="position:relative;">
+      <img src="images/gradient_footer_img.png" alt="" style="width:100%;">
+    </div>
+
+    <!--  216, 67, 21 -> D84315 -->
+
+
+    <script src="js/material-components-web.min.js"></script>
+
+    <script>mdc.autoInit()</script>
+
+    <script type="text/javascript">
+
+      mdc.tabs.MDCTabBar.attachTo(document.querySelector('#basic-tab-bar'))
+
+      mdc.tabs.MDCTabBar.attachTo(document.querySelector('#basic-sub-tab-bar'))
+
+    </script>
+
+    <script type="text/javascript" src="js/animation_loop.js"></script>
+
+    <script type="text/javascript" src="js/info_banner.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
