@@ -1181,16 +1181,52 @@
 
           let col_s4_icon = document.createElement('div');
           col_s4_icon.className = 'col s4'
-          col_s4_icon.style.backgroundImage = "url('images/patterns/pattern-01.png')"
 
-            let col_s4_icon_image = document.createElement('img');
-            col_s4_icon_image.className = 'article-icon-image'
+          // col_s4_icon.style.borderRadius = '50%'
+          if (articles[x].type == 'article') {
+            col_s4_icon.style.backgroundImage = "url('images/patterns/pattern-01.png')"
 
-            // TODO : apply program or research update where icon used to be
-            
+          } else if (articles[x].type == 'program') {
+            col_s4_icon.style.backgroundImage = "url('images/patterns/purplesmoke.png')"
+
+          }
+
+
+
+          let icon_header = document.createElement('h1');
+          icon_header.style.fontWeight = '900'
+            if (articles[x].type == 'article') {
+              icon_header.innerHTML = 'Research'
+            } else if (articles[x].type == 'program') {
+              icon_header.innerHTML = 'Program'
+            }
+            icon_header.style.color = '#fa9c42'
+            icon_header.style.fontFamily = "Roboto Condensed, sans-serif"
+            icon_header.style.fontSize = '100%'
+            icon_header.style.textAlign = 'center'
+            col_s4_icon.appendChild(icon_header)
+
+
+            // let col_s4_icon_image = document.createElement('img');
+            // col_s4_icon_image.className = 'article-icon-image'
+            //
+            // // TODO : apply program or research update where icon used to be
+            //
+            // if (articles[x].type == 'article') {
+            //   col_s4_icon_image.src = 'images/blk.jpg'
+            //   // col_s4_icon_image.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].icon
+            //
+            //
+            // } else if ( articles[x].type == 'program') {
+            //   col_s4_icon_image.src = 'images/blk.jpg'
+            //
+            //   // col_s4_icon_image.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].icon
+            //
+            // }
+
             // col_s4_icon_image.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].icon
 
-            col_s4_icon.appendChild(col_s4_icon_image)
+            // col_s4_icon.appendChild(col_s4_icon_image)
 
           header_row.appendChild(col_s8_header_child)
           header_row.appendChild(col_s4_icon)
