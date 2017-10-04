@@ -1185,6 +1185,9 @@
 
             let col_s4_icon_image = document.createElement('img');
             col_s4_icon_image.className = 'article-icon-image'
+
+            // TODO : apply program or research update where icon used to be
+            
             // col_s4_icon_image.src = tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].icon
 
             col_s4_icon.appendChild(col_s4_icon_image)
