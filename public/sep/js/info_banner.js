@@ -1196,11 +1196,12 @@
           let icon_header = document.createElement('h1');
           icon_header.style.fontWeight = '900'
             if (articles[x].type == 'article') {
+              icon_header.style.color = '#26706a'
               icon_header.innerHTML = 'Research'
             } else if (articles[x].type == 'program') {
               icon_header.innerHTML = 'Program'
+              icon_header.style.color = 'white'
             }
-            icon_header.style.color = '#fa9c42'
             icon_header.style.fontFamily = "Roboto Condensed, sans-serif"
             icon_header.style.fontSize = '100%'
             icon_header.style.textAlign = 'center'
