@@ -1160,7 +1160,7 @@
         header_row.className = 'row header-row'
 
           let col_s8_header_child = document.createElement('div');
-          col_s8_header_child.className = 'col s8'
+          col_s8_header_child.className = 'col s7'
 
             let header_five = document.createElement('h5');
             header_five.style.minHeight = '70px'
@@ -1180,7 +1180,7 @@
             // col_s8_header_child.appendChild(header_link)
 
           let col_s4_icon = document.createElement('div');
-          col_s4_icon.className = 'col s4'
+          col_s4_icon.className = 'col s5'
 
           // col_s4_icon.style.borderRadius = '50%'
           if (articles[x].type == 'article') {
@@ -1194,6 +1194,7 @@
 
 
           let icon_header = document.createElement('h1');
+          icon_header.style.textAlign = 'center'
           icon_header.style.fontWeight = '900'
             if (articles[x].type == 'article') {
               icon_header.style.color = '#26706a'
