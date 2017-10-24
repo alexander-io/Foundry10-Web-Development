@@ -1239,7 +1239,7 @@
           let content_row_col_child = document.createElement('div');
           content_row_col_child.className = 'col s12'
             let content_row_col_child_para = document.createElement('p');
-            content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].text, 30)
+            content_row_col_child_para.innerHTML = truncate(tree[branch][the_array_of_glory[info_banner_xy_array_position_tuple.super][info_banner_xy_array_position_tuple.sub]].articles[x].text, 20)
 
             content_row_col_child.appendChild(content_row_col_child_para)
           content_row.appendChild(content_row_col_child)
