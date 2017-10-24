@@ -376,8 +376,8 @@
         ]
       },
       game_dev : {
-        title : 'game development',
-        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">game development</span><span class="hide-on-large-only truncate">game dev. </span>',
+        title : 'game dev.',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">game dev.</span><span class="hide-on-large-only truncate">game dev. </span>',
         body : 'Video game development is the process of creating a video game. Development is undertaken by a game developer, which may range from one person to a large business. Traditional commercial PC and console games are normally funded by a publisher and take several years to develop.',
         links : [
           'http://link1.org',
@@ -427,8 +427,8 @@
         ]
       },
       automotive : {
-        title : 'automotive',
-        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">automotive</span><span class="hide-on-large-only truncate">auto</span>',
+        title : 'auto',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">auto</span><span class="hide-on-large-only truncate">auto</span>',
         body : 'The automotive industry is a wide range of companies and organizations involved in the design, development, manufacturing, marketing, and selling of motor vehicles, some of them are called automakers. It is one of the world\'s most important economic sectors by revenue.',
         links : [
           'http://link1.org',
@@ -532,7 +532,7 @@
       },
       gender : {
         title : 'gender studies',
-        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">gender studies</span><span class="hide-on-large-only truncate">gender</span>',
+        innerhtml_nav_text : '<span class="hide-on-med-and-down truncate">gender</span><span class="hide-on-large-only truncate">gender</span>',
         body : 'Gender studies is a field for interdisciplinary study devoted to gender identity and gendered representation as central categories of analysis. This field includes women\'s studies (concerning women, feminism, gender, and politics), men\'s studies and queer studies.',
         links : [
           'http://link1.org',
