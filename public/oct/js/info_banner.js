@@ -1177,7 +1177,7 @@
             header_link.id = 'article-sub-title-00'
 
             col_s8_header_child.appendChild(header_five)
-            col_s8_header_child.appendChild(header_link)
+            // col_s8_header_child.appendChild(header_link)
 
           let col_s4_icon = document.createElement('div');
           col_s4_icon.className = 'col s4'
@@ -1231,6 +1231,7 @@
 
           header_row.appendChild(col_s8_header_child)
           header_row.appendChild(col_s4_icon)
+          // header_row.appendChild(header_link)
 
         let content_row = document.createElement('div');
         content_row.className = 'row content-row'
@@ -1285,8 +1286,12 @@
           button_row.appendChild(button_row_col_second_child)
 
         card_panel.appendChild(header_row)
+        card_panel.appendChild(header_link)
         card_panel.appendChild(content_row)
         card_panel.appendChild(button_row)
+
+
+
         card_panel_col_wrapper.appendChild(card_panel)
 
         if (articles[x].type == 'article') {
